@@ -23,6 +23,8 @@ import {
   plugin_filter_defaults,
   plugin_annotate,
   markup_editor_defaults,
+  createMarkupEditorToolStyles,
+  createMarkupEditorToolStyle,
 } from "@pqina/pintura";
 
 import {
@@ -33,6 +35,7 @@ import {
   LocaleAnnotate,
   LocaleMarkupEditor,
 } from "@pqina/pintura/locale/en_GB";
+import { text } from "stream/consumers";
 
 setPlugins(plugin_crop, plugin_finetune, plugin_filter, plugin_annotate);
 
@@ -69,6 +72,25 @@ export default function Example() {
           src={"./image.jpeg"}
           onLoad={(res) => console.log("load image", res)}
           onProcess={({ dest }) => setResult(URL.createObjectURL(dest))}
+          markupEditorToolStyles={createMarkupEditorToolStyles({text:createMarkupEditorToolStyle('text',{
+                        // Set default text shape background to transparent
+                        backgroundColor: [0, 0, 0, 0],
+
+                        // Set default text shape outline to 0 width and white
+                        textOutline: ['0%', [1, 1, 1]],
+
+                        // Set default text shadow, shadow will not be drawn if x, y, and blur are 0.
+                        textShadow: ['0%', '0%', '0%', [0, 0, 0, 0.5]],
+
+                        // Allow newlines in inline text
+                        disableNewline: false,
+
+                        // Align to left by default, this triggers always showing the text align control
+                        textAlign: 'left',
+
+                        // Enable text formatting
+                        format: 'html',
+                    })})}
         />
       </div>
 
