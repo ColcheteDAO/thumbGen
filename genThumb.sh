@@ -1,3 +1,2 @@
-magick -define jpeg:size=320x320 public/image.jpeg \
-      -thumbnail '320x320>' \
-      -background black -gravity center -extent 320x320  outfile.gif
+magick -size 1280x720 -fill cyan -background none -pointsize 24 label:Hat   -gravity North outfile.jpeg
+magick composite  image.jpeg outfile.jpeg   compose_under.png
