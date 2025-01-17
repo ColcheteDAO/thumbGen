@@ -1,3 +1,4 @@
+index=0
 folder=''
 while IFS= read -r line; do
   headingCounter=$(echo $line | grep -o '#' | wc -l)
@@ -5,10 +6,11 @@ while IFS= read -r line; do
     lastChar=$((${#line}+2))
     folder=$(echo "$line" | cut -c 3-$lastChar)
   else
+    index=$((${index}+1))
     lastChar=$((${#line}+2))
     title=$(echo "$line" | cut -c 4-$lastChar)
-    bash genThumb.sh "$title"
+    bash genThumb.sh "$title" 
     mkdir -p "out/$folder"
-    mv compose_under.png "out/$folder/$title".png 
+    mv compose_under.png "out/$folder/$folder$index".png 
   fi
 done < videos.md
