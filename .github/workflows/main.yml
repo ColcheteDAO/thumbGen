@@ -8,6 +8,8 @@ jobs:
   thumGen:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Process videos
         id: processVideos
         run: bash processVideos.sh
