@@ -1,4 +1,3 @@
-alias magick='convert'
 magick -size 1280x720 xc:"rgba(27,33,44,1)" outfile.png
 magick "$2".png -resize 870x510!  image.png
 magick composite -gravity southeast image.png outfile.png   compose_under.png

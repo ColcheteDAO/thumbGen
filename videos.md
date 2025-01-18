@@ -4,5 +4,7 @@
 ## Separar títulos por categorias #11
 ## Nomear por categoria e índice #12
 ## Gerar imagem de capa dinâmica #13
+## Configurar CI básica #14
+## Instalar magick #15
 # leetCode
 ## code do leet #1
