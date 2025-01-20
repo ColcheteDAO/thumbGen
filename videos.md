@@ -8,5 +8,7 @@
 ## Instalar magick na CI #15
 ## Como usar compose com convert #16
 ## Finalizar geração das imagens #17
+## Adicionar fonte no linux via bash #18
+## Como gerar artefatos github actions #19
 # leetCode
 ## code do leet #1
