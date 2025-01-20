@@ -6,5 +6,7 @@
 ## Gerar imagem de capa dinâmica #13
 ## Configurar CI básica #14
 ## Instalar magick na CI #15
+## Como usar compose com convert #16
+## Finalizar geração das imagens #17
 # leetCode
 ## code do leet #1
