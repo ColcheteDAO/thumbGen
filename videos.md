@@ -18,5 +18,7 @@
 ## Finalizar geração das imagens #17
 ## Adicionar fonte no linux via bash #18
 ## Como gerar artefatos github actions #19
+## Como usar composite com convert #20
+## Como gerar artefatos github actions #21
 # leetCode
 ## code do leet #1
