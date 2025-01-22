@@ -22,6 +22,6 @@
 ## Como gerar artefatos github actions #21
 [video](https://youtu.be/fWuKATcXDF0)
 ## Salvar e exibir id do vídeo #22
-## Atualizar thumnail via google API #23
+## Atualizar thumbnail youtube via API #23
 # leetCode
 ## code do leet #1
