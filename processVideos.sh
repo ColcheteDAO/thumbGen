@@ -1,6 +1,7 @@
 index=0
 folder=''
 path=''
+ACCESS_TOKEN=$(curl  --location --request POST "https://oauth2.googleapis.com/token?client_secret=$1&grant_type=refresh_token&refresh_token=$2&client_id=$3" | jq .access_token | tr -d '"')
 while IFS= read -r line; do
   headingCounter=$(echo $line | grep -o '#' | wc -l)
   videoCount=$(echo $line | grep -o '\[video\]' | wc -l)
@@ -20,7 +21,7 @@ while IFS= read -r line; do
     lastChar=$((${#line}-1))
     videoId=$(echo "$line" | cut -c 26-$lastChar)
     curl --request POST -v "https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=${videoId}&uploadType=media" \
-    --header "Authorization: Bearer $1" \
+    --header "Authorization: Bearer $ACCESS_TOKEN" \
     --header 'Content-Type: image/jpeg' \
     --data-binary "@$path"
   fi
