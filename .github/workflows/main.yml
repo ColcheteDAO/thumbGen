@@ -6,13 +6,14 @@ on:
 
 jobs:
   thumGen:
+    environment: main
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Process videos
         id: processVideos
-        run: pwd && sudo mv OpenSans-ExtraBold.ttf /usr/local/share/fonts/OpenSans-ExtraBold.ttf && sudo apt update && sudo apt install imagemagick && bash processVideos.sh
+        run: pwd && sudo mv OpenSans-ExtraBold.ttf /usr/local/share/fonts/OpenSans-ExtraBold.ttf && sudo apt update && sudo apt install imagemagick && bash processVideos.sh ${{ secrets.YOUTUBE_ACCESS_TOKEN }}
       - uses: actions/upload-artifact@v4
         with:
          name: my-artifact
