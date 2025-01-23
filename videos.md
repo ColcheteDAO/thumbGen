@@ -26,6 +26,6 @@
 ## Atualizar thumbnail Github Actions #24
 [video](https://youtu.be/-9NOZatdQe)
 ## Atualizar refresh token youtube #25
-[video](https://youtu.be/fWuKATcXDF0)
+[video](https://youtu.be/IwfeL6ljr88)
 # leetCode
 ## code do leet #1
