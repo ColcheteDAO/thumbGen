@@ -27,5 +27,9 @@
 [video](https://youtu.be/-9NOZatdQe0)
 ## Atualizar refresh token youtube #25
 [video](https://youtu.be/IwfeL6ljr88)
+## Como debugar o projeto #26
+[video](https://youtu.be/qr5LTIogHxQ)
+## Checar descrição antes de atualizar capa #27
+[video](https://youtu.be/uQsDlfDhkxc)
 # leetCode
 ## code do leet #1
