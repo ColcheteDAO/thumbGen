@@ -20,9 +20,12 @@ while IFS= read -r line; do
   elif [ $videoCount = 1 ]; then
     lastChar=$((${#line}-1))
     videoId=$(echo "$line" | cut -c 26-$lastChar)
+    curl "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=$videoId" \
+    --header "Authorization: Bearer $ACCESS_TOKEN" \
+    --header "Accept: application/json" 
     curl --request POST -v "https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" \
     --header "Authorization: Bearer $ACCESS_TOKEN" \
-    --header 'Content-Type: image/jpeg' \
+    --header "Content-Type: image/jpeg" \
     --data-binary "@$path"
   fi
 done < videos.md
