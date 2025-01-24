@@ -24,7 +24,7 @@
 ## Salvar e exibir id do vídeo #22
 ## Atualizar thumbnail youtube via API #23
 ## Atualizar thumbnail Github Actions #24
-[video](https://youtu.be/-9NOZatdQe)
+[video](https://youtu.be/-9NOZatdQe0)
 ## Atualizar refresh token youtube #25
 [video](https://youtu.be/IwfeL6ljr88)
 # leetCode
