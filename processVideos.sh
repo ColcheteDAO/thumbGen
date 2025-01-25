@@ -24,7 +24,7 @@ while IFS= read -r line; do
     --header "Authorization: Bearer $ACCESS_TOKEN" \
     --header "Accept: application/json")
     descriptionLen=$(echo listReq | jq .items[0].snippet.description | wc -m) 
-    if [ $descriptionLen < 10 ]; then
+    if [ $descriptionLen -lt 10 ]; then
       curl --request POST -v "https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" \
       --header "Authorization: Bearer $ACCESS_TOKEN" \
       --header "Content-Type: image/jpeg" \
