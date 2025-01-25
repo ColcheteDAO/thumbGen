@@ -31,12 +31,12 @@ while IFS= read -r line; do
       --header "Authorization: Bearer $ACCESS_TOKEN" \
       --header "Content-Type: image/jpeg" \
       --data-binary "@$path"
-    curl --request PUT \
-      'https://youtube.googleapis.com/youtube/v3/videos?part=snippet' \
-      --header "Authorization: Bearer $ACCESS_TOKEN" \
-      --header "Accept: application/json" \
-      --header "Content-Type: application/json" \
-      --data "{"id":"qr5LTIogHxQ","snippet":{"description":"abc","title":"$titleVideo","categoryId":"$categoryId"}}"
+    # curl --request PUT \
+    #   'https://youtube.googleapis.com/youtube/v3/videos?part=snippet' \
+    #   --header "Authorization: Bearer $ACCESS_TOKEN" \
+    #   --header "Accept: application/json" \
+    #   --header "Content-Type: application/json" \
+    #   --data "{"id":"qr5LTIogHxQ","snippet":{"description":"abc","title":"$titleVideo","categoryId":"$categoryId"}}"
     fi
   fi
 done < videos.md
