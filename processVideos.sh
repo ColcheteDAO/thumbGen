@@ -23,21 +23,20 @@ while IFS= read -r line; do
     listReq=$(curl "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=$videoId" \
     --header "Authorization: Bearer $ACCESS_TOKEN" \
     --header "Accept: application/json")
-    echo $listReq | jq .items[0].snippet.categoryId
-    echo $listReq | jq .items[0].snippet.title
+    videoId=$(echo $listReq | jq .items[0].snippet.categoryId)
+    categoryId=$(echo $listReq | jq .items[0].snippet.title)
     descriptionLen=$(echo $listReq | jq .items[0].snippet.description | wc -m)
-    # echo '{"id":"qr5LTIogHxQ","snippet":{"description":"abc","title":"'$titleVideo'","categoryId":"'$categoryId'"}}'
     if [ $descriptionLen -lt 10 ]; then
       curl --request POST -v "https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" \
       --header "Authorization: Bearer $ACCESS_TOKEN" \
       --header "Content-Type: image/jpeg" \
       --data-binary "@$path"
-      # curl --request PUT \
-      # 'https://youtube.googleapis.com/youtube/v3/videos?part=snippet' \
-      # --header "Authorization: Bearer $ACCESS_TOKEN" \
-      # --header "Accept: application/json" \
-      # --header "Content-Type: application/json" \
-      # --data '{"id":"qr5LTIogHxQ","snippet":{"description":"abc","title":"'$titleVideo'","categoryId":"'$categoryId'"}}'
+      curl --request PUT \
+      'https://youtube.googleapis.com/youtube/v3/videos?part=snippet' \
+      --header "Authorization: Bearer $ACCESS_TOKEN" \
+      --header "Accept: application/json" \
+      --header "Content-Type: application/json" \
+      --data '{"id":"qr5LTIogHxQ","snippet":{"description":"abc","title":"'$titleVideo'","categoryId":"'$categoryId'"}}'
     fi
   fi
 done < videos.md
