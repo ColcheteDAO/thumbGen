@@ -24,8 +24,7 @@ while IFS= read -r line; do
     --header "Authorization: Bearer $ACCESS_TOKEN" \
     --header "Accept: application/json")
     descriptionLen=$(echo listReq | jq .items[0].snippet.description | wc -m)
-    echo listReq | jq .items[0].snippet
-    echo listReq | jq .items[0].snippet.title
+    echo listReq | jq .items[0]
     titleVideo=$(echo listReq | jq .items[0].snippet.title) 
     categoryId=$(echo listReq | jq .items[0].snippet.categoryId)
     echo '{"id":"qr5LTIogHxQ","snippet":{"description":"abc","title":"'$titleVideo'","categoryId":"'$categoryId'"}}'
