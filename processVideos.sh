@@ -25,7 +25,8 @@ while IFS= read -r line; do
     --header "Accept: application/json")
     descriptionLen=$(echo listReq | jq .items[0].snippet.description | wc -m) 
     titleVideo=$(echo listReq | jq .items[0].snippet.title) 
-    categoryId=$(echo listReq | jq .items[0].snippet.categoryId) 
+    categoryId=$(echo listReq | jq .items[0].snippet.categoryId)
+    echo '{"id":"qr5LTIogHxQ","snippet":{"description":"abc","title":"'$titleVideo'","categoryId":"'$categoryId'"}}'
     if [ $descriptionLen -lt 10 ]; then
       curl --request POST -v "https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" \
       --header "Authorization: Bearer $ACCESS_TOKEN" \
