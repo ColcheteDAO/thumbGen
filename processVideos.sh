@@ -24,11 +24,19 @@ while IFS= read -r line; do
     --header "Authorization: Bearer $ACCESS_TOKEN" \
     --header "Accept: application/json")
     descriptionLen=$(echo listReq | jq .items[0].snippet.description | wc -m) 
+    titleVideo=$(echo listReq | jq .items[0].snippet.title) 
+    categoryId=$(echo listReq | jq .items[0].snippet.categoryId) 
     if [ $descriptionLen -lt 10 ]; then
       curl --request POST -v "https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" \
       --header "Authorization: Bearer $ACCESS_TOKEN" \
       --header "Content-Type: image/jpeg" \
       --data-binary "@$path"
+    curl --request PUT \
+      'https://youtube.googleapis.com/youtube/v3/videos?part=snippet&key=[YOUR_API_KEY]' \
+      --header 'Authorization: Bearer [YOUR_ACCESS_TOKEN]' \
+      --header 'Accept: application/json' \
+      --header 'Content-Type: application/json' \
+      --data "{"id":"qr5LTIogHxQ","snippet":{"description":"abc","title":"$titleVideo","categoryId":"$categoryId"}}"
     fi
   fi
 done < videos.md
