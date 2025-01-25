@@ -23,8 +23,8 @@ while IFS= read -r line; do
     listReq=$(curl "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=$videoId" \
     --header "Authorization: Bearer $ACCESS_TOKEN" \
     --header "Accept: application/json")
-    descriptionLen=$(echo listReq | jq .items[0].snippet.description | wc -m)
-    echo listReq
+    descriptionLen=$(echo $listReq | jq .items[0].snippet.description | wc -m)
+    echo $listReq
     # echo '{"id":"qr5LTIogHxQ","snippet":{"description":"abc","title":"'$titleVideo'","categoryId":"'$categoryId'"}}'
     if [ $descriptionLen -lt 10 ]; then
       curl --request POST -v "https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" \
