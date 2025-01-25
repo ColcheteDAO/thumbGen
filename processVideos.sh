@@ -37,7 +37,7 @@ while IFS= read -r line; do
       --header "Authorization: Bearer $ACCESS_TOKEN" \
       --header "Accept: application/json" \
       --header "Content-Type: application/json" \
-      --data '{"id":"'$videoId'","snippet":{"description":"abc","title":"'$titleVideo'","categoryId":"'$categoryId'"}}'
+      --data '{"id":"'$videoId'","snippet":{"description":"abc","title":"'$titleVideo'","categoryId":"28"}}'
     fi
   fi
 done < videos.md
