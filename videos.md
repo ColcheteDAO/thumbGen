@@ -31,5 +31,9 @@
 [video](https://youtu.be/qr5LTIogHxQ)
 ## Checar descrição antes de atualizar capa #27
 [video](https://youtu.be/uQsDlfDhkxc)
+## Atualizar descrição menor que 10 #28
+[video](https://youtu.be/E_Z0duxle14)
+## Atualizar descrição valor padrão #29
+[video](https://youtu.be/a_iD5rQcTnc)
 # leetCode
 ## code do leet #1
