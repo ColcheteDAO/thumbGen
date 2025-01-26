@@ -12,7 +12,7 @@ while IFS= read -r line; do
     folder=$(echo "$line" | cut -c 3-$lastChar)
     index=0
     fillDescription=true
-  elif [ $fillDescription = true];then
+  elif $fillDescription ; then
     echo "HERE"
     fillDescription=false
     description=$(echo $line)
