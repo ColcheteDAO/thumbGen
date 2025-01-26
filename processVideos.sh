@@ -2,7 +2,11 @@ index=0
 folder=''
 path=''
 description=''
+playlistAll=''
+playlistSpecific=''
 fillDescription=false
+playlistIndex=0
+declare -A playlists
 ACCESS_TOKEN=$(curl  --location --request POST "https://oauth2.googleapis.com/token?client_secret=$1&grant_type=refresh_token&refresh_token=$2&client_id=$3" | jq .access_token | tr -d '"')
 while IFS= read -r line; do
   headingCounter=$(echo $line | grep -o '#' | wc -l)
@@ -13,13 +17,15 @@ while IFS= read -r line; do
     folder=$(echo "$line" | cut -c 3-$lastChar)
     index=0
     fillDescription=true
+    playlistIndex=0
   elif $fillDescription ; then
     fillDescription=false
     description=$(echo $line)
   elif [ $playlistCount = 1 ]; then
     lastChar=$((${#line}-1))
     playlistId=$(echo "$line" | cut -c 51-$lastChar)
-    echo $playlistId
+    playlists[playlistIndex] = $playlistId
+    playlistIndex=$(($playlistIndex + 1))
   elif [ $headingCounter = 3 ]; then
     index=$((${index}+1))
     lastChar=$((${#line}+2))
@@ -49,6 +55,12 @@ while IFS= read -r line; do
       --header "Accept: application/json" \
       --header "Content-Type: application/json" \
       --data '{"id":"'$videoId'","snippet":{"description":"'"$description"'","title":"'"$titleVideo"'","categoryId":"28"}}'
+      curl --request POST \
+      "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet" \
+      --header "Authorization: Bearer $ACCESS_TOKEN" \
+      --header "Accept: application/json" \
+      --header "Content-Type: application/json" \
+      --data '{"snippet":{"playlistId":"'"$playlists[0]"'","position":0,"resourceId":{"kind":"youtube#video","videoId":"'$videoId'"}}}'
     fi
   fi
 done < videos.md
