@@ -18,7 +18,7 @@ while IFS= read -r line; do
     description=$(echo $line)
   elif [ $playlistCount = 1 ]; then
     lastChar=$((${#line}-1))
-    playlistId=$(echo "$line" | cut -c 50-$lastChar)
+    playlistId=$(echo "$line" | cut -c 51-$lastChar)
     echo $playlistId
   elif [ $headingCounter = 3 ]; then
     index=$((${index}+1))
