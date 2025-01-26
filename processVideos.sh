@@ -7,15 +7,19 @@ ACCESS_TOKEN=$(curl  --location --request POST "https://oauth2.googleapis.com/to
 while IFS= read -r line; do
   headingCounter=$(echo $line | grep -o '#' | wc -l)
   videoCount=$(echo $line | grep -o '\[video\]' | wc -l)
+  playlistCount=$(echo $line | grep -o '\[playlist\]' | wc -l)
   if [ $headingCounter = 1 ]; then
     lastChar=$((${#line}+2))
     folder=$(echo "$line" | cut -c 3-$lastChar)
     index=0
     fillDescription=true
   elif $fillDescription ; then
-    echo "HERE"
     fillDescription=false
     description=$(echo $line)
+  elif [ $videoCount = 1 ]; then
+    lastChar=$((${#line}-1))
+    playlistId=$(echo "$line" | cut -c 50-$lastChar)
+    echo $playlistId
   elif [ $headingCounter = 3 ]; then
     index=$((${index}+1))
     lastChar=$((${#line}+2))
