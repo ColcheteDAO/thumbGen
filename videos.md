@@ -1,4 +1,5 @@
 # thumbGen
+Repo:\nhttps://github.com/ColcheteDAO/thumbGen
 ## Configuração inicial #1
 ## Exibição da imagem #2
 ## Mudando para o MAGICK #3
