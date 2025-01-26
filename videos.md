@@ -38,5 +38,9 @@ Repo:\nhttps://github.com/ColcheteDAO/thumbGen
 [video](https://youtu.be/E_Z0duxle14)
 ## Atualizar descrição valor padrão #29
 [video](https://youtu.be/a_iD5rQcTnc)
+## Atualizar descrição valor personalizado #30
+[video](https://youtu.be/LiyeRXpzdAs)
+## Adicionar video a playlist #31
+[video](https://youtu.be/gEJ7hOMHunU)
 # leetCode
 ## code do leet #1
