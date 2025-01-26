@@ -5,7 +5,8 @@ description=''
 playlistAll=''
 playlistSpecific=''
 fillDescription=false
-playlistIndex=0
+list1=''
+list2=''
 declare -A playlists
 ACCESS_TOKEN=$(curl  --location --request POST "https://oauth2.googleapis.com/token?client_secret=$1&grant_type=refresh_token&refresh_token=$2&client_id=$3" | jq .access_token | tr -d '"')
 while IFS= read -r line; do
@@ -24,7 +25,11 @@ while IFS= read -r line; do
   elif [ $playlistCount = 1 ]; then
     lastChar=$((${#line}-1))
     playlistId=$(echo "$line" | cut -c 51-$lastChar)
-    playlists[$(echo $playlistIndex)] = $playlistId
+    if [playlistIndex = 0 ]; then
+      list1 = playlistId 
+    else
+      list2 = playlistId 
+    fi
     playlistIndex=$(($playlistIndex + 1))
   elif [ $headingCounter = 3 ]; then
     index=$((${index}+1))
@@ -60,7 +65,7 @@ while IFS= read -r line; do
       --header "Authorization: Bearer $ACCESS_TOKEN" \
       --header "Accept: application/json" \
       --header "Content-Type: application/json" \
-      --data '{"snippet":{"playlistId":"'"$playlists[0]"'","position":0,"resourceId":{"kind":"youtube#video","videoId":"'$videoId'"}}}'
+      --data '{"snippet":{"playlistId":"'"$list1"'","position":0,"resourceId":{"kind":"youtube#video","videoId":"'$videoId'"}}}'
     fi
   fi
 done < videos.md
