@@ -25,7 +25,7 @@ while IFS= read -r line; do
   elif [ $playlistCount = 1 ]; then
     lastChar=$((${#line}-1))
     playlistId=$(echo "$line" | cut -c 51-$lastChar)
-    if [playlistIndex = 0 ]; then
+    if [ $playlistIndex = 0 ]; then
       list1 = playlistId 
     else
       list2 = playlistId 
