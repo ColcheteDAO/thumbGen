@@ -16,7 +16,7 @@ while IFS= read -r line; do
   elif $fillDescription ; then
     fillDescription=false
     description=$(echo $line)
-  elif [ $videoCount = 1 ]; then
+  elif [ $playlistCount = 1 ]; then
     lastChar=$((${#line}-1))
     playlistId=$(echo "$line" | cut -c 50-$lastChar)
     echo $playlistId
