@@ -26,9 +26,9 @@ while IFS= read -r line; do
     lastChar=$((${#line}-1))
     playlistId=$(echo "$line" | cut -c 51-$lastChar)
     if [ $playlistIndex = 0 ]; then
-      list1 = $playlistId 
+      list1=$(echo $playlistId) 
     else
-      list2 = $playlistId 
+      list2=$(echo $playlistId) 
     fi
     playlistIndex=$(($playlistIndex + 1))
   elif [ $headingCounter = 3 ]; then
