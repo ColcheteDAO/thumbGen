@@ -42,5 +42,9 @@ Repo:\nhttps://github.com/ColcheteDAO/thumbGen
 [video](https://youtu.be/LiyeRXpzdAs)
 ## Adicionar video a playlist #31
 [video](https://youtu.be/gEJ7hOMHunU)
+## Bug em playlist automáticas #32
+[video](https://youtu.be/vhvDjh6oAh8)
+## Definir idioma vídeo #33
+[video](https://youtu.be/B0oYwuh3idE)
 # leetCode
 ## code do leet #1
