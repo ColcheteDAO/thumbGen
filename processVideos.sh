@@ -66,6 +66,12 @@ while IFS= read -r line; do
       --header "Accept: application/json" \
       --header "Content-Type: application/json" \
       --data '{"snippet":{"playlistId":"'"$list1"'","position":0,"resourceId":{"kind":"youtube#video","videoId":"'$videoId'"}}}'
+      curl --request POST \
+      "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet" \
+      --header "Authorization: Bearer $ACCESS_TOKEN" \
+      --header "Accept: application/json" \
+      --header "Content-Type: application/json" \
+      --data '{"snippet":{"playlistId":"'"$list2"'","position":0,"resourceId":{"kind":"youtube#video","videoId":"'$videoId'"}}}'
     fi
   fi
 done < videos.md
