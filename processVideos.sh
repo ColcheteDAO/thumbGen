@@ -66,7 +66,7 @@ while IFS= read -r line; do
       --header "Authorization: Bearer $ACCESS_TOKEN" \
       --header "Accept: application/json" \
       --header "Content-Type: application/json" \
-      --data '{"id":"'$videoId'","snippet":{"description":"'"$description"'","title":"'"$titleVideo"'","categoryId":"28"}}'
+      --data '{"id":"'$videoId'","snippet":{"description":"'"$description"'","title":"'"$titleVideo"'","categoryId":"28","defaultLanguage":"pt-BR"}}'
       curl --request POST \
       "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet" \
       --header "Authorization: Bearer $ACCESS_TOKEN" \
