@@ -31,9 +31,6 @@ while IFS= read -r line; do
       list2=$(echo $playlistId) 
     fi
     playlistIndex=$(($playlistIndex + 1))
-    echo '----------------------'
-    echo $playlistIndex
-    echo '----------------------'
   elif [ $headingCounter = 3 ]; then
     index=$((${index}+1))
     lastChar=$((${#line}+2))
@@ -53,10 +50,6 @@ while IFS= read -r line; do
     echo $titleVideo
     descriptionLen=$(echo $listReq | jq .items[0].snippet.description | wc -m)
     if [ $descriptionLen -lt 10 ]; then
-      echo '----------------------'
-      echo $list1
-      echo $list2
-      echo '----------------------'
       curl --request POST -v "https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" \
       --header "Authorization: Bearer $ACCESS_TOKEN" \
       --header "Content-Type: image/jpeg" \
@@ -66,7 +59,7 @@ while IFS= read -r line; do
       --header "Authorization: Bearer $ACCESS_TOKEN" \
       --header "Accept: application/json" \
       --header "Content-Type: application/json" \
-      --data '{"id":"'$videoId'","snippet":{"description":"'"$description"'","title":"'"$titleVideo"'","categoryId":"28","defaultLanguage":"pt-BR"}}'
+      --data '{"id":"'$videoId'","snippet":{"description":"'"$description"'","title":"'"$titleVideo"'","categoryId":"28","defaultLanguage":"pt-BR","defaultAudioLanguage":"pt-BR"}}'
       curl --request POST \
       "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet" \
       --header "Authorization: Bearer $ACCESS_TOKEN" \
