@@ -50,28 +50,29 @@ while IFS= read -r line; do
     echo $titleVideo
     descriptionLen=$(echo $listReq | jq .items[0].snippet.description | wc -m)
     if [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ]; then
-      curl --request POST -v "https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" \
-      --header "Authorization: Bearer $ACCESS_TOKEN" \
-      --header "Content-Type: image/jpeg" \
-      --data-binary "@$path"
-      curl --request PUT \
-      'https://youtube.googleapis.com/youtube/v3/videos?part=snippet' \
-      --header "Authorization: Bearer $ACCESS_TOKEN" \
-      --header "Accept: application/json" \
-      --header "Content-Type: application/json" \
-      --data '{"id":"'$videoId'","snippet":{"description":"'"$description"'","title":"'"$titleVideo"'","categoryId":"28","defaultLanguage":"pt-BR","defaultAudioLanguage":"pt-BR","tags":["github actions"]}}'
-      curl --request POST \
-      "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet" \
-      --header "Authorization: Bearer $ACCESS_TOKEN" \
-      --header "Accept: application/json" \
-      --header "Content-Type: application/json" \
-      --data '{"snippet":{"playlistId":"'"$list1"'","resourceId":{"kind":"youtube#video","videoId":"'$videoId'"}}}'
-      curl --request POST \
-      "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet" \
-      --header "Authorization: Bearer $ACCESS_TOKEN" \
-      --header "Accept: application/json" \
-      --header "Content-Type: application/json" \
-      --data '{"snippet":{"playlistId":"'"$list2"'","resourceId":{"kind":"youtube#video","videoId":"'$videoId'"}}}'
+      echo $4
+      # curl --request POST -v "https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" \
+      # --header "Authorization: Bearer $ACCESS_TOKEN" \
+      # --header "Content-Type: image/jpeg" \
+      # --data-binary "@$path"
+      # curl --request PUT \
+      # 'https://youtube.googleapis.com/youtube/v3/videos?part=snippet' \
+      # --header "Authorization: Bearer $ACCESS_TOKEN" \
+      # --header "Accept: application/json" \
+      # --header "Content-Type: application/json" \
+      # --data '{"id":"'$videoId'","snippet":{"description":"'"$description"'","title":"'"$titleVideo"'","categoryId":"28","defaultLanguage":"pt-BR","defaultAudioLanguage":"pt-BR","tags":["github actions"]}}'
+      # curl --request POST \
+      # "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet" \
+      # --header "Authorization: Bearer $ACCESS_TOKEN" \
+      # --header "Accept: application/json" \
+      # --header "Content-Type: application/json" \
+      # --data '{"snippet":{"playlistId":"'"$list1"'","resourceId":{"kind":"youtube#video","videoId":"'$videoId'"}}}'
+      # curl --request POST \
+      # "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet" \
+      # --header "Authorization: Bearer $ACCESS_TOKEN" \
+      # --header "Accept: application/json" \
+      # --header "Content-Type: application/json" \
+      # --data '{"snippet":{"playlistId":"'"$list2"'","resourceId":{"kind":"youtube#video","videoId":"'$videoId'"}}}'
     fi
   fi
 done < videos.md
