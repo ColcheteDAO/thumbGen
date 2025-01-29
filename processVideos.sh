@@ -52,7 +52,7 @@ while IFS= read -r line; do
     if [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ]; then
       echo $4
       echo $descriptionLen
-      echo $listReq | jq .items[0].snippet.description
+      echo $listReq | jq .items[0]
       # curl --request POST -v "https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" \
       # --header "Authorization: Bearer $ACCESS_TOKEN" \
       # --header "Content-Type: image/jpeg" \
