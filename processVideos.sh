@@ -49,7 +49,7 @@ while IFS= read -r line; do
     titleVideo=$(echo $listReq | jq -r .items[0].snippet.title)
     echo $titleVideo
     descriptionLen=$(echo $listReq | jq .items[0].snippet.description | wc -m)
-    if [ $descriptionLen -lt 10 ]; then
+    if [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ]; then
       curl --request POST -v "https://www.googleapis.com/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" \
       --header "Authorization: Bearer $ACCESS_TOKEN" \
       --header "Content-Type: image/jpeg" \

@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Process videos
         id: processVideos
-        run: pwd && sudo mv OpenSans-ExtraBold.ttf /usr/local/share/fonts/OpenSans-ExtraBold.ttf && sudo apt update && sudo apt install imagemagick && bash processVideos.sh ${{ secrets.YOUTUBE_CLIENT_SECRET }} ${{ secrets.YOUTUBE_REFRESH_TOKEN }} ${{ secrets.YOUTUBE_CLIENT_ID }}
+        run: pwd && sudo mv OpenSans-ExtraBold.ttf /usr/local/share/fonts/OpenSans-ExtraBold.ttf && sudo apt update && sudo apt install imagemagick && bash processVideos.sh ${{ secrets.YOUTUBE_CLIENT_SECRET }} ${{ secrets.YOUTUBE_REFRESH_TOKEN }} ${{ secrets.YOUTUBE_CLIENT_ID }} ${{ vars.FORCE_RUN }}
       - uses: actions/upload-artifact@v4
         with:
          name: my-artifact
