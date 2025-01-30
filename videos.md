@@ -1,7 +1,8 @@
 # thumbGen
-Repo:\nhttps://github.com/ColcheteDAO/thumbGen
-[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)
-[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6-0d3pFM7_W2eQjUwWqHe5)
+Repo:\nhttps://github.com/ColcheteDAO/thumbGen  
+[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
+[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6-0d3pFM7_W2eQjUwWqHe5)  
+**index**: 22  
 ## Configuração inicial #1
 [video](https://youtu.be/yXydAGckYZ8)
 ## Exibição da imagem #2
