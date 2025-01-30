@@ -9,7 +9,7 @@ list1=''
 list2=''
 declare -A playlists
 startUpdateIndex=0
-# ACCESS_TOKEN=$(curl  --location --request POST "https://oauth2.googleapis.com/token?client_secret=$1&grant_type=refresh_token&refresh_token=$2&client_id=$3" | jq .access_token | tr -d '"')
+ACCESS_TOKEN=$(curl  --location --request POST "https://oauth2.googleapis.com/token?client_secret=$1&grant_type=refresh_token&refresh_token=$2&client_id=$3" | jq .access_token | tr -d '"')
 while IFS= read -r line; do
   headingCounter=$(echo $line | grep -o '#' | wc -l)
   videoCount=$(echo $line | grep -o '\[video\]' | wc -l)
