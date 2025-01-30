@@ -45,7 +45,7 @@ while IFS= read -r line; do
     lastChar=$((${#line}-3))
     startUpdateIndex=$(echo "$line" | cut -c 11-$lastChar)
   elif [ $videoCount = 1 ]; then
-    lastChar=$((${#line}-3))
+    lastChar=$((${#line}-1))
     videoId=$(echo "$line" | cut -c 26-$lastChar)
     listReq=$(curl "https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=$videoId" \
     --header "Authorization: Bearer $ACCESS_TOKEN" \
