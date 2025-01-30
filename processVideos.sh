@@ -41,7 +41,7 @@ while IFS= read -r line; do
     mkdir -p "out/$folder"
     path="out/$folder/$folder$index.png"
     mv compose_under.png $path
-  elif [ $startUpdateIndex = 1]; then
+  elif [ $startUpdateIndex = 1 ]; then
     lastChar=$((${#line}-3))
     startUpdateIndex=$(echo "$line" | cut -c 11-$lastChar)
   elif [ $videoCount = 1 ]; then
