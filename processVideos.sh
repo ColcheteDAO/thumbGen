@@ -59,12 +59,25 @@ while IFS= read -r line; do
       --header "Authorization: Bearer $ACCESS_TOKEN" \
       --header "Content-Type: image/jpeg" \
       --data-binary "@$path"
+      tags='"github actions","Magick"'
+      updateVideoJSON=$(printf '{
+                                  "id":"%s",
+                                  "snippet":
+                                  {
+                                    "description":"%s",
+                                    "title":"%s",
+                                    "categoryId":"%s",
+                                    "defaultLanguage":"%s",
+                                    "defaultAudioLanguage":"%s",
+                                    "tags":[%s]
+                                  }
+                                }' "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")
       curl --request PUT \
       'https://youtube.googleapis.com/youtube/v3/videos?part=snippet' \
       --header "Authorization: Bearer $ACCESS_TOKEN" \
       --header "Accept: application/json" \
       --header "Content-Type: application/json" \
-      --data '{"id":"'$videoId'","snippet":{"description":"'"$description"'","title":"'"$titleVideo"'","categoryId":"28","defaultLanguage":"pt-BR","defaultAudioLanguage":"pt-BR","tags":["github actions","Magick"]}}'
+      --data $updateVideoJSON
       curl --request POST \
       "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet" \
       --header "Authorization: Bearer $ACCESS_TOKEN" \
