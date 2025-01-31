@@ -46,6 +46,7 @@ Repo:\nhttps://github.com/ColcheteDAO/thumbGen
 ## Como gerar artefatos github actions #21
 [video](https://youtu.be/fWuKATcXDF0)
 ## Salvar e exibir id do vídeo #22
+[video](https://youtu.be/uOY-Rnr_828)
 ## Atualizar thumbnail youtube via API #23
 [video](https://youtu.be/Ve1kDzCMNmE)
 ## Atualizar thumbnail Github Actions #24

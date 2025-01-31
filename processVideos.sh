@@ -42,7 +42,7 @@ while IFS= read -r line; do
     path="out/$folder/$folder$index.png"
     mv compose_under.png $path
   elif [ $startUpdateIndexCount = 1 ]; then
-    lastChar=$((${#line}-3))
+    lastChar=$((${#line}-2))
     startUpdateIndex=$(echo "$line" | cut -c 11-$lastChar)
   elif [ $videoCount = 1 ]; then
     lastChar=$((${#line}-1))
