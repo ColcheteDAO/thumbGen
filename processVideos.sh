@@ -79,9 +79,9 @@ while IFS= read -r line; do
       --header "Content-Type: application/json" \
       --data "$(echo $updateVideoJSON)"
       
-      playlistReq=curl "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=$list1&videoId=$videoId" \
+      playlistReq=$(curl "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=$list1&videoId=$videoId" \
         --header "Authorization: Bearer $ACCESS_TOKEN" \
-        --header "Accept: application/json"
+        --header "Accept: application/json")
       playlistItemsCount=$(echo $playlistReq | jq -r '.items | length')
       echo playlistReq
       echo playlistItemsCount
@@ -104,9 +104,9 @@ while IFS= read -r line; do
         --header "Content-Type: application/json" \
         --data "$(echo $updatePlaylistJSON)"
       fi
-      playlistReq=curl "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=$list2&videoId=$videoId" \
+      playlistReq=$(curl "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=$list2&videoId=$videoId" \
         --header "Authorization: Bearer $ACCESS_TOKEN" \
-        --header "Accept: application/json"
+        --header "Accept: application/json")
       playlistItemsCount=$(echo $playlistReq | jq -r '.items | length')
       if [ $playlistItemsCount = 0 ]; then
         updatePlaylistJSON=$(printf '{
