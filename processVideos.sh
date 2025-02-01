@@ -78,7 +78,7 @@ while IFS= read -r line; do
       --header "Authorization: Bearer $ACCESS_TOKEN" \
       --header "Accept: application/json" \
       --header "Content-Type: application/json" \
-      --data '"'$(echo $updateVideoJSON)'"'
+      --data "$(echo $updateVideoJSON)"
       updatePlaylistJSON=$(printf '{
                                   "snippet":
                                   {
@@ -95,7 +95,7 @@ while IFS= read -r line; do
       --header "Authorization: Bearer $ACCESS_TOKEN" \
       --header "Accept: application/json" \
       --header "Content-Type: application/json" \
-      --data '"'$(echo $updatePlaylistJSON)'"'
+      --data "$(echo $updatePlaylistJSON)"
       updatePlaylistJSON=$(printf '{
                                   "snippet":
                                   {
@@ -112,7 +112,7 @@ while IFS= read -r line; do
       --header "Authorization: Bearer $ACCESS_TOKEN" \
       --header "Accept: application/json" \
       --header "Content-Type: application/json" \
-      --data '"'$(echo $updatePlaylistJSON)'"'
+      --data "$(echo $updatePlaylistJSON)"
     fi
   fi
 done < videos.md
