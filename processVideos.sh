@@ -72,6 +72,7 @@ while IFS= read -r line; do
                                     "tags":[%s]
                                   }
                                 }' "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")
+      echo $updateVideoJSON
       curl --request PUT \
       'https://youtube.googleapis.com/youtube/v3/videos?part=snippet' \
       --header "Authorization: Bearer $ACCESS_TOKEN" \
