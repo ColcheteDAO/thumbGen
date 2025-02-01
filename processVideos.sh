@@ -83,8 +83,6 @@ while IFS= read -r line; do
         --header "Authorization: Bearer $ACCESS_TOKEN" \
         --header "Accept: application/json")
       playlistItemsCount=$(echo $playlistReq | jq -r '.items | length')
-      echo playlistReq
-      echo playlistItemsCount
       if [ $playlistItemsCount = 0 ]; then
         updatePlaylistJSON=$(printf '{
                                     "snippet":
