@@ -72,47 +72,59 @@ while IFS= read -r line; do
                                     "tags":[%s]
                                   }
                                 }' "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")
-     echo $updateVideoJSON 
       curl --request PUT \
       'https://youtube.googleapis.com/youtube/v3/videos?part=snippet' \
       --header "Authorization: Bearer $ACCESS_TOKEN" \
       --header "Accept: application/json" \
       --header "Content-Type: application/json" \
       --data "$(echo $updateVideoJSON)"
-      updatePlaylistJSON=$(printf '{
-                                  "snippet":
-                                  {
-                                    "playlistId":"%s",
-                                    "resourceId":
+      
+      playlistReq=curl "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=$list1&videoId=$videoId" \
+        --header "Authorization: Bearer $ACCESS_TOKEN" \
+        --header "Accept: application/json"
+      playlistItemsCount=$(echo $playlistReq | jq -r '.items | length')
+      if [ $playlistItemsCount = 0 ]; then
+        updatePlaylistJSON=$(printf '{
+                                    "snippet":
                                     {
-                                      "kind":"youtube#video",
-                                      "videoId":"%s"
+                                      "playlistId":"%s",
+                                      "resourceId":
+                                      {
+                                        "kind":"youtube#video",
+                                        "videoId":"%s"
+                                      }
                                     }
-                                  }
-                                }' "$list1" "$videoId")
-      curl --request POST \
-      "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet" \
-      --header "Authorization: Bearer $ACCESS_TOKEN" \
-      --header "Accept: application/json" \
-      --header "Content-Type: application/json" \
-      --data "$(echo $updatePlaylistJSON)"
-      updatePlaylistJSON=$(printf '{
-                                  "snippet":
-                                  {
-                                    "playlistId":"%s",
-                                    "resourceId":
+                                  }' "$list1" "$videoId")
+        curl --request POST \
+        "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet" \
+        --header "Authorization: Bearer $ACCESS_TOKEN" \
+        --header "Accept: application/json" \
+        --header "Content-Type: application/json" \
+        --data "$(echo $updatePlaylistJSON)"
+      fi
+      playlistReq=curl "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=$list2&videoId=$videoId" \
+        --header "Authorization: Bearer $ACCESS_TOKEN" \
+        --header "Accept: application/json"
+      playlistItemsCount=$(echo $playlistReq | jq -r '.items | length')
+      if [ $playlistItemsCount = 0 ]; then
+        updatePlaylistJSON=$(printf '{
+                                    "snippet":
                                     {
-                                      "kind":"youtube#video",
-                                      "videoId":"%s"
+                                      "playlistId":"%s",
+                                      "resourceId":
+                                      {
+                                        "kind":"youtube#video",
+                                        "videoId":"%s"
+                                      }
                                     }
-                                  }
-                                }' "$list2" "$videoId")
-      curl --request POST \
-      "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet" \
-      --header "Authorization: Bearer $ACCESS_TOKEN" \
-      --header "Accept: application/json" \
-      --header "Content-Type: application/json" \
-      --data "$(echo $updatePlaylistJSON)"
+                                  }' "$list2" "$videoId")
+        curl --request POST \
+        "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet" \
+        --header "Authorization: Bearer $ACCESS_TOKEN" \
+        --header "Accept: application/json" \
+        --header "Content-Type: application/json" \
+        --data "$(echo $updatePlaylistJSON)"
+      fi
     fi
   fi
 done < videos.md
