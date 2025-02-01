@@ -71,7 +71,7 @@ while IFS= read -r line; do
                                     "defaultAudioLanguage":"%s",
                                     "tags":[%s]
                                   }
-                                }' "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags" | jq -c .)
+                                }' "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")
      echo $updateVideoJSON 
       curl --request PUT \
       'https://youtube.googleapis.com/youtube/v3/videos?part=snippet' \
@@ -89,7 +89,7 @@ while IFS= read -r line; do
                                       "videoId":"%s"
                                     }
                                   }
-                                }' "$list1" "$videoId" | jq -c .)
+                                }' "$list1" "$videoId")
       curl --request POST \
       "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet" \
       --header "Authorization: Bearer $ACCESS_TOKEN" \
@@ -106,7 +106,7 @@ while IFS= read -r line; do
                                       "videoId":"%s"
                                     }
                                   }
-                                }' "$list2" "$videoId" | jq -c .)
+                                }' "$list2" "$videoId")
       curl --request POST \
       "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet" \
       --header "Authorization: Bearer $ACCESS_TOKEN" \
