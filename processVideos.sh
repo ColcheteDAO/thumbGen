@@ -78,18 +78,40 @@ while IFS= read -r line; do
       --header "Accept: application/json" \
       --header "Content-Type: application/json" \
       --data $updateVideoJSON
+      updatePlaylistJSON=$(printf '{
+                                  "snippet":
+                                  {
+                                    "playlistId":"%s",
+                                    "resourceId":
+                                    {
+                                      "kind":"youtube#video",
+                                      "videoId":"%s"
+                                    }
+                                  }
+                                }' "$list1" "$videoId")
       curl --request POST \
       "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet" \
       --header "Authorization: Bearer $ACCESS_TOKEN" \
       --header "Accept: application/json" \
       --header "Content-Type: application/json" \
-      --data '{"snippet":{"playlistId":"'"$list1"'","resourceId":{"kind":"youtube#video","videoId":"'$videoId'"}}}'
+      --data $updatePlaylistJSON
+      updatePlaylistJSON=$(printf '{
+                                  "snippet":
+                                  {
+                                    "playlistId":"%s",
+                                    "resourceId":
+                                    {
+                                      "kind":"youtube#video",
+                                      "videoId":"%s"
+                                    }
+                                  }
+                                }' "$list2" "$videoId")
       curl --request POST \
       "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet" \
       --header "Authorization: Bearer $ACCESS_TOKEN" \
       --header "Accept: application/json" \
       --header "Content-Type: application/json" \
-      --data '{"snippet":{"playlistId":"'"$list2"'","resourceId":{"kind":"youtube#video","videoId":"'$videoId'"}}}'
+      --data $updateVideoJSON
     fi
   fi
 done < videos.md
