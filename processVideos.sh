@@ -72,13 +72,13 @@ while IFS= read -r line; do
                                     "tags":[%s]
                                   }
                                 }' "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")
-      echo $updateVideoJSON
+      echo $updateVideoJSON | jq -c .
       curl --request PUT \
       'https://youtube.googleapis.com/youtube/v3/videos?part=snippet' \
       --header "Authorization: Bearer $ACCESS_TOKEN" \
       --header "Accept: application/json" \
       --header "Content-Type: application/json" \
-      --data '"'$(echo $updateVideoJSON)'"'
+      --data '"'$(echo $updateVideoJSON | jq -c .)'"'
       updatePlaylistJSON=$(printf '{
                                   "snippet":
                                   {
@@ -95,7 +95,7 @@ while IFS= read -r line; do
       --header "Authorization: Bearer $ACCESS_TOKEN" \
       --header "Accept: application/json" \
       --header "Content-Type: application/json" \
-      --data '"'$(echo $updatePlaylistJSON)'"'
+      --data '"'$(echo $updatePlaylistJSON | jq -c .)'"'
       updatePlaylistJSON=$(printf '{
                                   "snippet":
                                   {
@@ -112,7 +112,7 @@ while IFS= read -r line; do
       --header "Authorization: Bearer $ACCESS_TOKEN" \
       --header "Accept: application/json" \
       --header "Content-Type: application/json" \
-      --data '"'$(echo $updateVideoJSON)'"'
+      --data '"'$(echo $updateVideoJSON | jq -c .)'"'
     fi
   fi
 done < videos.md
