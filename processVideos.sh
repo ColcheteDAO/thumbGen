@@ -71,14 +71,13 @@ while IFS= read -r line; do
                                     "defaultAudioLanguage":"%s",
                                     "tags":[%s]
                                   }
-                                }' "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")
-      echo $updateVideoJSON | jq -c .
+                                }' "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags" | jq -c .)
       curl --request PUT \
       'https://youtube.googleapis.com/youtube/v3/videos?part=snippet' \
       --header "Authorization: Bearer $ACCESS_TOKEN" \
       --header "Accept: application/json" \
       --header "Content-Type: application/json" \
-      --data $(echo $updateVideoJSON | jq -c .)
+      --data $(echo $updateVideoJSON)
       updatePlaylistJSON=$(printf '{
                                   "snippet":
                                   {
@@ -89,13 +88,13 @@ while IFS= read -r line; do
                                       "videoId":"%s"
                                     }
                                   }
-                                }' "$list1" "$videoId")
+                                }' "$list1" "$videoId" | jq -c .)
       curl --request POST \
       "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet" \
       --header "Authorization: Bearer $ACCESS_TOKEN" \
       --header "Accept: application/json" \
       --header "Content-Type: application/json" \
-      --data $(echo $updatePlaylistJSON | jq -c .)
+      --data $(echo $updatePlaylistJSON)
       updatePlaylistJSON=$(printf '{
                                   "snippet":
                                   {
@@ -106,13 +105,13 @@ while IFS= read -r line; do
                                       "videoId":"%s"
                                     }
                                   }
-                                }' "$list2" "$videoId")
+                                }' "$list2" "$videoId" | jq -c .)
       curl --request POST \
       "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet" \
       --header "Authorization: Bearer $ACCESS_TOKEN" \
       --header "Accept: application/json" \
       --header "Content-Type: application/json" \
-      --data $(echo $updateVideoJSON | jq -c .)
+      --data $(echo $updateVideoJSON)
     fi
   fi
 done < videos.md
