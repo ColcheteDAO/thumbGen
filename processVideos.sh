@@ -9,12 +9,14 @@ list1=''
 list2=''
 declare -A playlists
 startUpdateIndex=0
+tags=''
 ACCESS_TOKEN=$(curl  --location --request POST "https://oauth2.googleapis.com/token?client_secret=$1&grant_type=refresh_token&refresh_token=$2&client_id=$3" | jq .access_token | tr -d '"')
 while IFS= read -r line; do
   headingCounter=$(echo $line | grep -o '#' | wc -l)
   videoCount=$(echo $line | grep -o '\[video\]' | wc -l)
   playlistCount=$(echo $line | grep -o '\[playlist\]' | wc -l)
   startUpdateIndexCount=$(echo $line | grep -o '\*\*index\*\*: ' | wc -l)
+  tagsCount=$(echo $line | grep -o '\*\*tags\*\*: ' | wc -l)
   if [ $headingCounter = 1 ]; then
     lastChar=$((${#line}+2))
     folder=$(echo "$line" | cut -c 3-$lastChar)
@@ -44,6 +46,9 @@ while IFS= read -r line; do
   elif [ $startUpdateIndexCount = 1 ]; then
     lastChar=$((${#line}-2))
     startUpdateIndex=$(echo "$line" | cut -c 11-$lastChar)
+  elif [ $tagsCount = 1 ]; then
+    lastChar=$((${#line}-2))
+    tags=$(echo "$line" | cut -c 10-$lastChar)
   elif [ $videoCount = 1 ]; then
     lastChar=$((${#line}-1))
     videoId=$(echo "$line" | cut -c 26-$lastChar)
@@ -59,7 +64,6 @@ while IFS= read -r line; do
       --header "Authorization: Bearer $ACCESS_TOKEN" \
       --header "Content-Type: image/jpeg" \
       --data-binary "@$path"
-      tags='"github actions","Magick"'
       updateVideoJSON=$(printf '{
                                   "id":"%s",
                                   "snippet":
