@@ -13,6 +13,31 @@ tags=''
 urlBaseAPI='https://youtube.googleapis.com'
 urlBaseAuth='https://oauth2.googleapis.com'
 ACCESS_TOKEN=$(curl  --location --request POST "$urlBaseAuth/token?client_secret=$1&grant_type=refresh_token&refresh_token=$2&client_id=$3" | jq .access_token | tr -d '"')
+addToPlaylist(){
+  playlistReq=$(curl "$urlBaseAPI/youtube/v3/playlistItems?part=snippet&playlistId=$1&videoId=$2" \
+    --header "Authorization: Bearer $ACCESS_TOKEN" \
+    --header "Accept: application/json")
+  playlistItemsCount=$(echo $playlistReq | jq -r '.items | length')
+  if [ $3 = 0 ]; then
+    updatePlaylistJSON=$(printf '{
+                                "snippet":
+                                {
+                                  "playlistId":"%s",
+                                  "resourceId":
+                                  {
+                                    "kind":"youtube#video",
+                                    "videoId":"%s"
+                                  }
+                                }
+                              }' "$1" "$2")
+    curl --request POST \
+    "$urlBaseAPI/youtube/v3/playlistItems?part=snippet" \
+    --header "Authorization: Bearer $ACCESS_TOKEN" \
+    --header "Accept: application/json" \
+    --header "Content-Type: application/json" \
+    --data "$(echo $updatePlaylistJSON)"
+  fi
+}
 while IFS= read -r line; do
   headingCounter=$(echo $line | grep -o '#' | wc -l)
   videoCount=$(echo $line | grep -o '\[video\]' | wc -l)
@@ -85,52 +110,8 @@ while IFS= read -r line; do
       --header "Content-Type: application/json" \
       --data "$(echo $updateVideoJSON)"
       
-      playlistReq=$(curl "$urlBaseAPI/youtube/v3/playlistItems?part=snippet&playlistId=$list1&videoId=$videoId" \
-        --header "Authorization: Bearer $ACCESS_TOKEN" \
-        --header "Accept: application/json")
-      playlistItemsCount=$(echo $playlistReq | jq -r '.items | length')
-      if [ $playlistItemsCount = 0 ]; then
-        updatePlaylistJSON=$(printf '{
-                                    "snippet":
-                                    {
-                                      "playlistId":"%s",
-                                      "resourceId":
-                                      {
-                                        "kind":"youtube#video",
-                                        "videoId":"%s"
-                                      }
-                                    }
-                                  }' "$list1" "$videoId")
-        curl --request POST \
-        "$urlBaseAPI/youtube/v3/playlistItems?part=snippet" \
-        --header "Authorization: Bearer $ACCESS_TOKEN" \
-        --header "Accept: application/json" \
-        --header "Content-Type: application/json" \
-        --data "$(echo $updatePlaylistJSON)"
-      fi
-      playlistReq=$(curl "$urlBaseAPI/youtube/v3/playlistItems?part=snippet&playlistId=$list2&videoId=$videoId" \
-        --header "Authorization: Bearer $ACCESS_TOKEN" \
-        --header "Accept: application/json")
-      playlistItemsCount=$(echo $playlistReq | jq -r '.items | length')
-      if [ $playlistItemsCount = 0 ]; then
-        updatePlaylistJSON=$(printf '{
-                                    "snippet":
-                                    {
-                                      "playlistId":"%s",
-                                      "resourceId":
-                                      {
-                                        "kind":"youtube#video",
-                                        "videoId":"%s"
-                                      }
-                                    }
-                                  }' "$list2" "$videoId")
-        curl --request POST \
-        "$urlBaseAPI/youtube/v3/playlistItems?part=snippet" \
-        --header "Authorization: Bearer $ACCESS_TOKEN" \
-        --header "Accept: application/json" \
-        --header "Content-Type: application/json" \
-        --data "$(echo $updatePlaylistJSON)"
-      fi
+      addToPlaylist $list1 $videoId $playlistItemsCount
+      addToPlaylist $list2 $videoId $playlistItemsCount
     fi
   fi
 done < videos.md
