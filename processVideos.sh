@@ -50,7 +50,7 @@ sendResquestWithPayload(){
     --header "Authorization: Bearer $ACCESS_TOKEN" \
     --header "Accept: application/json" \
     --header "Content-Type: application/json" \
-    --data "$(echo $2)"
+    --data "$(echo $3)"
 }
 
 addToPlaylist(){
