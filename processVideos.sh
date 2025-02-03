@@ -46,8 +46,7 @@ updateVideoPayload(){
 
 sendResquestWithPayload(){
   curl --request $1 \
-     $2 \ 
-    --header "Authorization: Bearer $ACCESS_TOKEN" \
+    $2 --header "Authorization: Bearer $ACCESS_TOKEN" \
     --header "Accept: application/json" \
     --header "Content-Type: application/json" \
     --data "$(echo $3)"
