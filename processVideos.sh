@@ -28,6 +28,22 @@ mountPlaylistPayload(){
   echo $updatePlaylistJSON
 }
 
+updateVideoPayload(){
+  updateVideoJSON=$(printf '{
+                            "id":"%s",
+                            "snippet":
+                            {
+                              "description":"%s",
+                              "title":"%s",
+                              "categoryId":"%s",
+                              "defaultLanguage":"%s",
+                              "defaultAudioLanguage":"%s",
+                              "tags":[%s]
+                            }
+                          }' "$1" "$2" "$3" "$4" "$5" "$6" "$7")
+  echo $updateVideoJSON
+}
+
 sendResquestWithPayload(){
   curl --request $1 \
      $2 \ 
@@ -100,25 +116,7 @@ while IFS= read -r line; do
       --header "Authorization: Bearer $ACCESS_TOKEN" \
       --header "Content-Type: image/jpeg" \
       --data-binary "@$path"
-      updateVideoJSON=$(printf '{
-                                  "id":"%s",
-                                  "snippet":
-                                  {
-                                    "description":"%s",
-                                    "title":"%s",
-                                    "categoryId":"%s",
-                                    "defaultLanguage":"%s",
-                                    "defaultAudioLanguage":"%s",
-                                    "tags":[%s]
-                                  }
-                                }' "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")
-      curl --request PUT \
-      "$urlBaseAPI/youtube/v3/videos?part=snippet" \
-      --header "Authorization: Bearer $ACCESS_TOKEN" \
-      --header "Accept: application/json" \
-      --header "Content-Type: application/json" \
-      --data "$(echo $updateVideoJSON)"
-      
+      sendResquestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" $(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")
       addToPlaylist "POST" $list1 $videoId $playlistItemsCount $(mountPlaylistPayload $1 $2)
       addToPlaylist "POST" $list2 $videoId $playlistItemsCount $(mountPlaylistPayload $1 $2)
     fi
