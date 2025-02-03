@@ -29,17 +29,17 @@ mountPlaylistPayload(){
 }
 
 addToPlaylist(){
-  playlistReq=$(curl "$urlBaseAPI/youtube/v3/playlistItems?part=snippet&playlistId=$1&videoId=$2" \
+  playlistReq=$(curl "$urlBaseAPI/youtube/v3/playlistItems?part=snippet&playlistId=$2&videoId=$3" \
     --header "Authorization: Bearer $ACCESS_TOKEN" \
     --header "Accept: application/json")
   playlistItemsCount=$(echo $playlistReq | jq -r '.items | length')
-  if [ $3 = 0 ]; then
-    curl --request POST \
+  if [ $4 = 0 ]; then
+    curl --request $1 \
     "$urlBaseAPI/youtube/v3/playlistItems?part=snippet" \
     --header "Authorization: Bearer $ACCESS_TOKEN" \
     --header "Accept: application/json" \
     --header "Content-Type: application/json" \
-    --data "$(echo $4)"
+    --data "$(echo $5)"
   fi
 }
 while IFS= read -r line; do
@@ -114,8 +114,8 @@ while IFS= read -r line; do
       --header "Content-Type: application/json" \
       --data "$(echo $updateVideoJSON)"
       
-      addToPlaylist $list1 $videoId $playlistItemsCount $(mountPlaylistPayload $1 $2)
-      addToPlaylist $list2 $videoId $playlistItemsCount $(mountPlaylistPayload $1 $2)
+      addToPlaylist "POST" $list1 $videoId $playlistItemsCount $(mountPlaylistPayload $1 $2)
+      addToPlaylist "POST" $list2 $videoId $playlistItemsCount $(mountPlaylistPayload $1 $2)
     fi
   fi
 done < videos.md
