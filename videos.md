@@ -2,7 +2,7 @@
 Repo:\nhttps://github.com/ColcheteDAO/thumbGen  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe7pICM1fiO6AXKY-uGzLqB3)  
-**index**: 43  
+**index**: 0  
 **tags**: "github actions","Image Magick","Magick","bash"  
 ## Configuração inicial #1
 [video](https://youtu.be/yXydAGckYZ8)
@@ -56,13 +56,13 @@ Repo:\nhttps://github.com/ColcheteDAO/thumbGen
 [video](https://youtu.be/IwfeL6ljr88)
 ## Como debugar o projeto #26
 [video](https://youtu.be/qr5LTIogHxQ)
-## Checar descrição antes de atualizar capa #27
+## Checar descrição ao atualizar capa #27
 [video](https://youtu.be/uQsDlfDhkxc)
 ## Atualizar descrição menor que 10 #28
 [video](https://youtu.be/E_Z0duxle14)
 ## Atualizar descrição valor padrão #29
 [video](https://youtu.be/a_iD5rQcTnc)
-## Atualizar descrição valor personalizado #30
+## Atualizar descrição personalizada #30
 [video](https://youtu.be/LiyeRXpzdAs)
 ## Adicionar video a playlist #31
 [video](https://youtu.be/gEJ7hOMHunU)
@@ -78,7 +78,7 @@ Repo:\nhttps://github.com/ColcheteDAO/thumbGen
 [video](https://youtu.be/MMBxidR3Rbs)
 ## Validar se descrição está preenchida #37
 [video](https://youtu.be/iiIstinfTx8)
-## Permitir definir indice de atualização #38
+## Permitir definir indice atualização #38
 [video](https://youtu.be/b-LHHscaUuk)
 ## Correção do indice de atualização #39
 [video](https://youtu.be/ZjGQ90CYcp8)
@@ -90,5 +90,9 @@ Repo:\nhttps://github.com/ColcheteDAO/thumbGen
 [video](https://youtu.be/iMzS2QkZiuM)
 ## Adicionar tags a vídeo #43
 [video](https://youtu.be/aCBtjBCGMQk)
+## Salvar url base #44
+[video](https://youtu.be/d92hplLjauw)
+## Adicionar a playlist via função #45
+[video](https://youtu.be/B8FuGMuk5T8)
 # leetCode
 ## code do leet #1
