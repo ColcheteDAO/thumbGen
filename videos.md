@@ -70,5 +70,25 @@ Repo:\nhttps://github.com/ColcheteDAO/thumbGen
 [video](https://youtu.be/vhvDjh6oAh8)
 ## Definir idioma vídeo #33
 [video](https://youtu.be/B0oYwuh3idE)
+## Definir idioma do áudio #34
+[video](https://youtu.be/RB3qLcvnV0Q)
+## Forçar rodar para todos os vídeos #35
+[video](https://youtu.be/lfNaIHw1R8Y)
+## Adicionar tags #36
+[video](https://youtu.be/MMBxidR3Rbs)
+## Validar se descrição está preenchida #37
+[video](https://youtu.be/iiIstinfTx8)
+## Permitir definir indice de atualização #38
+[video](https://youtu.be/b-LHHscaUuk)
+## Correção do indice de atualização #39
+[video](https://youtu.be/ZjGQ90CYcp8)
+## Formatação de JSON #40
+[video](https://youtu.be/GgXWacpE2EE)
+## Formatar JSON thumbGen #41
+[video](https://youtu.be/jMgNmLli-Go)
+## Adicionar novos videos a playlist #42
+[video](https://youtu.be/iMzS2QkZiuM)
+## Adicionar tags a vídeo #43
+[video](https://youtu.be/aCBtjBCGMQk)
 # leetCode
 ## code do leet #1
