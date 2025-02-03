@@ -34,7 +34,7 @@ addToPlaylist(){
     --header "Accept: application/json")
   playlistItemsCount=$(echo $playlistReq | jq -r '.items | length')
   if [ $3 = 0 ]; then
-    updatePlaylistJSON=$(mountPlaylistPayload() $1 $2)
+    updatePlaylistJSON=$(mountPlaylistPayload $1 $2)
     curl --request POST \
     "$urlBaseAPI/youtube/v3/playlistItems?part=snippet" \
     --header "Authorization: Bearer $ACCESS_TOKEN" \
