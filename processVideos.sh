@@ -13,13 +13,8 @@ tags=''
 urlBaseAPI='https://youtube.googleapis.com'
 urlBaseAuth='https://oauth2.googleapis.com'
 ACCESS_TOKEN=$(curl  --location --request POST "$urlBaseAuth/token?client_secret=$1&grant_type=refresh_token&refresh_token=$2&client_id=$3" | jq .access_token | tr -d '"')
-addToPlaylist(){
-  playlistReq=$(curl "$urlBaseAPI/youtube/v3/playlistItems?part=snippet&playlistId=$1&videoId=$2" \
-    --header "Authorization: Bearer $ACCESS_TOKEN" \
-    --header "Accept: application/json")
-  playlistItemsCount=$(echo $playlistReq | jq -r '.items | length')
-  if [ $3 = 0 ]; then
-    updatePlaylistJSON=$(printf '{
+mountPlaylistPayload(){
+  updatePlaylistJSON=$(printf '{
                                 "snippet":
                                 {
                                   "playlistId":"%s",
@@ -30,6 +25,16 @@ addToPlaylist(){
                                   }
                                 }
                               }' "$1" "$2")
+  echo $updatePlaylistJSON
+}
+
+addToPlaylist(){
+  playlistReq=$(curl "$urlBaseAPI/youtube/v3/playlistItems?part=snippet&playlistId=$1&videoId=$2" \
+    --header "Authorization: Bearer $ACCESS_TOKEN" \
+    --header "Accept: application/json")
+  playlistItemsCount=$(echo $playlistReq | jq -r '.items | length')
+  if [ $3 = 0 ]; then
+    updatePlaylistJSON=$(mountPlaylistPayload() $1 $2)
     curl --request POST \
     "$urlBaseAPI/youtube/v3/playlistItems?part=snippet" \
     --header "Authorization: Bearer $ACCESS_TOKEN" \
