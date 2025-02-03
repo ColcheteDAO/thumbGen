@@ -28,20 +28,25 @@ mountPlaylistPayload(){
   echo $updatePlaylistJSON
 }
 
+sendResquestWithPayload(){
+  curl --request $1 \
+     $2 \ 
+    --header "Authorization: Bearer $ACCESS_TOKEN" \
+    --header "Accept: application/json" \
+    --header "Content-Type: application/json" \
+    --data "$(echo $2)"
+}
+
 addToPlaylist(){
   playlistReq=$(curl "$urlBaseAPI/youtube/v3/playlistItems?part=snippet&playlistId=$2&videoId=$3" \
     --header "Authorization: Bearer $ACCESS_TOKEN" \
     --header "Accept: application/json")
   playlistItemsCount=$(echo $playlistReq | jq -r '.items | length')
   if [ $4 = 0 ]; then
-    curl --request $1 \
-    "$urlBaseAPI/youtube/v3/playlistItems?part=snippet" \
-    --header "Authorization: Bearer $ACCESS_TOKEN" \
-    --header "Accept: application/json" \
-    --header "Content-Type: application/json" \
-    --data "$(echo $5)"
+    sendResquestWithPayload $1 "$urlBaseAPI/youtube/v3/playlistItems?part=snippet" $5   
   fi
 }
+
 while IFS= read -r line; do
   headingCounter=$(echo $line | grep -o '#' | wc -l)
   videoCount=$(echo $line | grep -o '\[video\]' | wc -l)
