@@ -34,13 +34,12 @@ addToPlaylist(){
     --header "Accept: application/json")
   playlistItemsCount=$(echo $playlistReq | jq -r '.items | length')
   if [ $3 = 0 ]; then
-    updatePlaylistJSON=$(mountPlaylistPayload $1 $2)
     curl --request POST \
     "$urlBaseAPI/youtube/v3/playlistItems?part=snippet" \
     --header "Authorization: Bearer $ACCESS_TOKEN" \
     --header "Accept: application/json" \
     --header "Content-Type: application/json" \
-    --data "$(echo $updatePlaylistJSON)"
+    --data "$(echo $4)"
   fi
 }
 while IFS= read -r line; do
@@ -115,8 +114,8 @@ while IFS= read -r line; do
       --header "Content-Type: application/json" \
       --data "$(echo $updateVideoJSON)"
       
-      addToPlaylist $list1 $videoId $playlistItemsCount
-      addToPlaylist $list2 $videoId $playlistItemsCount
+      addToPlaylist $list1 $videoId $playlistItemsCount $(mountPlaylistPayload $1 $2)
+      addToPlaylist $list2 $videoId $playlistItemsCount $(mountPlaylistPayload $1 $2)
     fi
   fi
 done < videos.md
