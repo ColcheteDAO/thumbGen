@@ -60,7 +60,10 @@ addToPlaylist(){
     --header "Authorization: Bearer $ACCESS_TOKEN" \
     --header "Accept: application/json")
   playlistItemsCount=$(echo $playlistReq | jq -r '.items | length')
-  if [ $4 = 0 ]; then
+  echo ">>>>>>>>>>>>>>>>>>>"
+  echo $4
+  echo ">>>>>>>>>>>>>>>>>>>"
+  if [ $playlistItemsCount = 0 ]; then
     sendResquestWithPayload $1 "$urlBaseAPI/youtube/v3/playlistItems?part=snippet" "$5"   
   fi
 }
