@@ -61,7 +61,7 @@ addToPlaylist(){
     --header "Accept: application/json")
   playlistItemsCount=$(echo $playlistReq | jq -r '.items | length')
   if [ $4 = 0 ]; then
-    sendResquestWithPayload $1 "$urlBaseAPI/youtube/v3/playlistItems?part=snippet" $5   
+    sendResquestWithPayload $1 "$urlBaseAPI/youtube/v3/playlistItems?part=snippet" "$5"   
   fi
 }
 
