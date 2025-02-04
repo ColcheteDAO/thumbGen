@@ -52,13 +52,22 @@ sendResquestWithPayload(){
     --data "$(echo $3)"
 }
 
-addToPlaylist(){
-  playlistPayload=$(mountPlaylistPayload $list1 $videoId)
-  playlistReq=$(curl "$urlBaseAPI/youtube/v3/playlistItems?part=snippet&playlistId=$2&videoId=$3" \
-    --header "Authorization: Bearer $ACCESS_TOKEN" \
-    --header "Accept: application/json")
+sendGetRequest(){
+  req=$(curl "$1" \
+    --header "Authorization: Bearer $ACCESS_TOKEN")
+  echo $req
+}
+
+getPlaylistItemCount(){
+  playlistReq=$(sendGetRequest "$urlBaseAPI/youtube/v3/playlistItems?part=snippet&playlistId=$1&videoId=$2")
   playlistItemsCount=$(echo $playlistReq | jq -r '.items | length')
+  echo playlistItemsCount
+}
+
+addToPlaylist(){
+  playlistItemsCount=$(getPlaylistItemCount $2 $3)
   if [ $playlistItemsCount = 0 ]; then
+    playlistPayload=$(mountPlaylistPayload $list1 $videoId)
     sendResquestWithPayload $1 "$urlBaseAPI/youtube/v3/playlistItems?part=snippet" "$playlistPayload"   
   fi
 }
