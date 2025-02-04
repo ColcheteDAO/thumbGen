@@ -118,9 +118,9 @@ while IFS= read -r line; do
       # --header "Authorization: Bearer $ACCESS_TOKEN" \
       # --header "Content-Type: image/jpeg" \
       # --data-binary "@$path"
-      sendResquestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" $(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")
-      addToPlaylist "POST" $list1 $videoId $playlistItemsCount $(mountPlaylistPayload $1 $2)
-      addToPlaylist "POST" $list2 $videoId $playlistItemsCount $(mountPlaylistPayload $1 $2)
+      sendResquestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
+      addToPlaylist "POST" $list1 $videoId $playlistItemsCount "$(mountPlaylistPayload $1 $2)"
+      addToPlaylist "POST" $list2 $videoId $playlistItemsCount "$(mountPlaylistPayload $1 $2)"
     fi
   fi
 done < videos.md
