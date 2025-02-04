@@ -45,9 +45,6 @@ updateVideoPayload(){
 }
 
 sendResquestWithPayload(){
-  echo "======================"
-  echo $3
-  echo "======================"
   curl --request $1 \
     $2 --header "Authorization: Bearer $ACCESS_TOKEN" \
     --header "Accept: application/json" \
@@ -94,10 +91,10 @@ while IFS= read -r line; do
     index=$((${index}+1))
     lastChar=$((${#line}+2))
     title=$(echo "$line" | cut -c 4-$lastChar)
-    # bash genThumb.sh "$title" "$folder" 
-    # mkdir -p "out/$folder"
-    # path="out/$folder/$folder$index.png"
-    # mv compose_under.png $path
+    bash genThumb.sh "$title" "$folder" 
+    mkdir -p "out/$folder"
+    path="out/$folder/$folder$index.png"
+    mv compose_under.png $path
   elif [ $startUpdateIndexCount = 1 ]; then
     lastChar=$((${#line}-2))
     startUpdateIndex=$(echo "$line" | cut -c 11-$lastChar)
@@ -115,10 +112,10 @@ while IFS= read -r line; do
     echo $titleVideo
     descriptionLen=$(echo $listReq | jq .items[0].snippet.description | wc -m)
     if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [ $index -ge $startUpdateIndex ]; then
-      # curl --request POST -v "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" \
-      # --header "Authorization: Bearer $ACCESS_TOKEN" \
-      # --header "Content-Type: image/jpeg" \
-      # --data-binary "@$path"
+      curl --request POST -v "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" \
+      --header "Authorization: Bearer $ACCESS_TOKEN" \
+      --header "Content-Type: image/jpeg" \
+      --data-binary "@$path"
       sendResquestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
       addToPlaylist "POST" $list1 $videoId
       addToPlaylist "POST" $list2 $videoId
