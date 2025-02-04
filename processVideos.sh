@@ -56,15 +56,13 @@ sendResquestWithPayload(){
 }
 
 addToPlaylist(){
+  playlistPayload=$(mountPlaylistPayload $list1 $videoId)
   playlistReq=$(curl "$urlBaseAPI/youtube/v3/playlistItems?part=snippet&playlistId=$2&videoId=$3" \
     --header "Authorization: Bearer $ACCESS_TOKEN" \
     --header "Accept: application/json")
   playlistItemsCount=$(echo $playlistReq | jq -r '.items | length')
-  echo ">>>>>>>>>>>>>>>>>>>"
-  echo $4
-  echo ">>>>>>>>>>>>>>>>>>>"
   if [ $playlistItemsCount = 0 ]; then
-    sendResquestWithPayload $1 "$urlBaseAPI/youtube/v3/playlistItems?part=snippet" "$5"   
+    sendResquestWithPayload $1 "$urlBaseAPI/youtube/v3/playlistItems?part=snippet" "$playlistPayload"   
   fi
 }
 
@@ -122,8 +120,8 @@ while IFS= read -r line; do
       # --header "Content-Type: image/jpeg" \
       # --data-binary "@$path"
       sendResquestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
-      addToPlaylist "POST" $list1 $videoId $playlistItemsCount "$(mountPlaylistPayload $list1 $videoId)"
-      addToPlaylist "POST" $list2 $videoId $playlistItemsCount "$(mountPlaylistPayload $list2 $videoId)"
+      addToPlaylist "POST" $list1 $videoId
+      addToPlaylist "POST" $list2 $videoId
     fi
   fi
 done < videos.md
