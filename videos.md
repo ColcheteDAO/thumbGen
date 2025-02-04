@@ -2,7 +2,7 @@
 Repo:\nhttps://github.com/ColcheteDAO/thumbGen  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe7pICM1fiO6AXKY-uGzLqB3)  
-**index**: 0  
+**index**: 46  
 **tags**: "github actions","Image Magick","Magick","bash"  
 ## Configuração inicial #1
 [video](https://youtu.be/yXydAGckYZ8)
@@ -94,5 +94,13 @@ Repo:\nhttps://github.com/ColcheteDAO/thumbGen
 [video](https://youtu.be/d92hplLjauw)
 ## Adicionar a playlist via função #45
 [video](https://youtu.be/B8FuGMuk5T8)
+## Payload da playlist via função #46
+[video](https://youtu.be/Sq293G1sIfM)
+## Requisições genéricas #47
+[video](https://youtu.be/2OJlbYpCmJw)
+## Resolver bugs de payload #48
+[video](https://youtu.be/DOz6PoIyziY)
+## Simplificar adição a playlist #49
+[video](https://youtu.be/XpPnXOfeP2o)
 # leetCode
 ## code do leet #1
