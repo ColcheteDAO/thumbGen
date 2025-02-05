@@ -72,6 +72,13 @@ addToPlaylist(){
   fi
 }
 
+fillSnippetVideo(){
+  listReq=$(sendGetRequest "$urlBaseAPI/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=$1")
+  categoryId=$(echo $listReq | jq -r .items[0].snippet.categoryId)
+  titleVideo=$(echo $listReq | jq -r .items[0].snippet.title)
+  descriptionLen=$(echo $listReq | jq .items[0].snippet.description | wc -m)
+}
+
 while IFS= read -r line; do
   headingCounter=$(echo $line | grep -o '#' | wc -l)
   videoCount=$(echo $line | grep -o '\[video\]' | wc -l)
@@ -113,13 +120,7 @@ while IFS= read -r line; do
   elif [ $videoCount = 1 ]; then
     lastChar=$((${#line}-1))
     videoId=$(echo "$line" | cut -c 26-$lastChar)
-    listReq=$(curl "$urlBaseAPI/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=$videoId" \
-    --header "Authorization: Bearer $ACCESS_TOKEN" \
-    --header "Accept: application/json")
-    categoryId=$(echo $listReq | jq -r .items[0].snippet.categoryId)
-    titleVideo=$(echo $listReq | jq -r .items[0].snippet.title)
-    echo $titleVideo
-    descriptionLen=$(echo $listReq | jq .items[0].snippet.description | wc -m)
+    fillSnippetVideo $videoId  
     if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [ $index -ge $startUpdateIndex ]; then
       curl --request POST -v "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" \
       --header "Authorization: Bearer $ACCESS_TOKEN" \
