@@ -10,6 +10,7 @@ list2=''
 declare -A playlists
 startUpdateIndex=0
 tags=''
+genThumb='Y'
 urlBaseAPI='https://youtube.googleapis.com'
 urlBaseAuth='https://oauth2.googleapis.com'
 ACCESS_TOKEN=$(curl  --location --request POST "$urlBaseAuth/token?client_secret=$1&grant_type=refresh_token&refresh_token=$2&client_id=$3" | jq .access_token | tr -d '"')
@@ -93,6 +94,7 @@ while IFS= read -r line; do
   playlistCount=$(echo $line | grep -o '\[playlist\]' | wc -l)
   startUpdateIndexCount=$(echo $line | grep -o '\*\*index\*\*: ' | wc -l)
   tagsCount=$(echo $line | grep -o '\*\*tags\*\*: ' | wc -l)
+  genThumbCount=$(echo $line | grep -o '\*\*genThumb\*\*: ' | wc -l)
   if [ $headingCounter = 1 ]; then
     lastChar=$((${#line}+2))
     folder=$(echo "$line" | cut -c 3-$lastChar)
@@ -115,22 +117,29 @@ while IFS= read -r line; do
     index=$((${index}+1))
     lastChar=$((${#line}+2))
     title=$(echo "$line" | cut -c 4-$lastChar)
-    bash genThumb.sh "$title" "$folder" 
-    mkdir -p "out/$folder"
-    path="out/$folder/$folder$index.png"
-    mv compose_under.png $path
+    if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
+      bash genThumb.sh "$title" "$folder" 
+      mkdir -p "out/$folder"
+      path="out/$folder/$folder$index.png"
+      mv compose_under.png $path
+    fi
   elif [ $startUpdateIndexCount = 1 ]; then
     lastChar=$((${#line}-2))
     startUpdateIndex=$(echo "$line" | cut -c 11-$lastChar)
   elif [ $tagsCount = 1 ]; then
     lastChar=$((${#line}-2))
     tags=$(echo "$line" | cut -c 10-$lastChar)
+  elif [ $genThumbCount = 1 ]; then
+    lastChar=$((${#line}-2))
+    genThumb=$(echo "$line" | cut -c 14-$lastChar)
   elif [ $videoCount = 1 ]; then
     lastChar=$((${#line}-1))
     videoId=$(echo "$line" | cut -c 26-$lastChar)
     fillSnippetVideo $videoId  
     if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [ $index -ge $startUpdateIndex ]; then
-      sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path"
+      if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
+        sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path"
+      fi
       sendResquestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
       addToPlaylist "POST" $list1 $videoId
       addToPlaylist "POST" $list2 $videoId
