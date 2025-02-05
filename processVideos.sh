@@ -58,6 +58,14 @@ sendGetRequest(){
   echo $req
 }
 
+sendDataBinaryRequest(){
+  req=$(curl --request $1 -v "$2" \
+  --header "Authorization: Bearer $ACCESS_TOKEN" \
+  --header "$3" \
+  --data-binary "$4")
+  echo $req
+}
+
 getPlaylistItemCount(){
   playlistReq=$(sendGetRequest "$urlBaseAPI/youtube/v3/playlistItems?part=snippet&playlistId=$1&videoId=$2")
   playlistItemsCount=$(echo $playlistReq | jq -r '.items | length')
@@ -122,10 +130,7 @@ while IFS= read -r line; do
     videoId=$(echo "$line" | cut -c 26-$lastChar)
     fillSnippetVideo $videoId  
     if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [ $index -ge $startUpdateIndex ]; then
-      curl --request POST -v "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" \
-      --header "Authorization: Bearer $ACCESS_TOKEN" \
-      --header "Content-Type: image/jpeg" \
-      --data-binary "@$path"
+      sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path"
       sendResquestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
       addToPlaylist "POST" $list1 $videoId
       addToPlaylist "POST" $list2 $videoId
