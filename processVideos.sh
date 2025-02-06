@@ -92,12 +92,12 @@ checkPatternOcurrence(){
 }
 
 while IFS= read -r line; do
-  headingCounter=$(checkPatternOcurrence $line '#')
-  videoCount=$(checkPatternOcurrence $line '\[video\]')
-  playlistCount=$(checkPatternOcurrence $line '\[playlist\]')
-  startUpdateIndexCount=$(checkPatternOcurrence $line '\*\*index\*\*: ')
-  tagsCount=$(checkPatternOcurrence $line '\*\*tags\*\*: ')
-  genThumbCount=$(checkPatternOcurrence $line '\*\*genThumb\*\*: ')
+  headingCounter=$(checkPatternOcurrence "$line" '#') 
+  videoCount=$(checkPatternOcurrence "$line" '\[video\]')
+  playlistCount=$(checkPatternOcurrence "$line" '\[playlist\]')
+  startUpdateIndexCount=$(checkPatternOcurrence "$line" '\*\*index\*\*: ')
+  tagsCount=$(checkPatternOcurrence "$line" '\*\*tags\*\*: ')
+  genThumbCount=$(checkPatternOcurrence "$line" '\*\*genThumb\*\*: ')
   echo "====================="
   echo $headingCounter
   echo $videoCount
