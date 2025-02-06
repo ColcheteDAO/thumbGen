@@ -88,14 +88,14 @@ fillSnippetVideo(){
   descriptionLen=$(echo $listReq | jq .items[0].snippet.description | wc -m)
 }
 checkPatternOcurrence(){
-  echo $1 | grep -o "$2" | wc -l
+  echo $1 | grep -o $2 | wc -l
 }
 
 while IFS= read -r line; do
   headingCounter=$(checkPatternOcurrence $line '#')
   videoCount=$(checkPatternOcurrence $line '\[video\]')
   playlistCount=$(checkPatternOcurrence $line '\[playlist\]')
-  startUpdateIndexCount=$(checkPatternOcurrence '\*\*index\*\*: ')
+  startUpdateIndexCount=$(checkPatternOcurrence $line '\*\*index\*\*: ')
   tagsCount=$(checkPatternOcurrence $line '\*\*tags\*\*: ')
   genThumbCount=$(checkPatternOcurrence $line '\*\*genThumb\*\*: ')
   echo "====================="
