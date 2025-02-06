@@ -92,13 +92,7 @@ checkPatternOcurrence(){
 }
 
 while IFS= read -r line; do
-  headingCounter=$(checkPatternOcurrence "$line" '#') 
-  videoCount=$(checkPatternOcurrence "$line" '\[video\]')
-  playlistCount=$(checkPatternOcurrence "$line" '\[playlist\]')
-  startUpdateIndexCount=$(checkPatternOcurrence "$line" '\*\*index\*\*: ')
-  tagsCount=$(checkPatternOcurrence "$line" '\*\*tags\*\*: ')
-  genThumbCount=$(checkPatternOcurrence "$line" '\*\*genThumb\*\*: ')
-  if [ $headingCounter = 1 ]; then
+  if [ $(checkPatternOcurrence "$line" '#') = 1 ]; then
     lastChar=$((${#line}+2))
     folder=$(echo "$line" | cut -c 3-$lastChar)
     index=0
@@ -107,7 +101,7 @@ while IFS= read -r line; do
   elif $fillDescription ; then
     fillDescription=false
     description=$(echo $line)
-  elif [ $playlistCount = 1 ]; then
+  elif [ $(checkPatternOcurrence "$line" '\[playlist\]') = 1 ]; then
     lastChar=$((${#line}-3))
     playlistId=$(echo "$line" | cut -c 51-$lastChar)
     if [ $playlistIndex = 0 ]; then
@@ -116,7 +110,7 @@ while IFS= read -r line; do
       list2=$(echo $playlistId) 
     fi
     playlistIndex=$(($playlistIndex + 1))
-  elif [ $headingCounter = 3 ]; then
+  elif [ $(checkPatternOcurrence "$line" '#') = 3 ]; then
     index=$((${index}+1))
     lastChar=$((${#line}+2))
     title=$(echo "$line" | cut -c 4-$lastChar)
@@ -126,16 +120,16 @@ while IFS= read -r line; do
       path="out/$folder/$folder$index.png"
       mv compose_under.png $path
     fi
-  elif [ $startUpdateIndexCount = 1 ]; then
+  elif [ $(checkPatternOcurrence "$line" '\*\*index\*\*: ') = 1 ]; then
     lastChar=$((${#line}-2))
     startUpdateIndex=$(echo "$line" | cut -c 11-$lastChar)
-  elif [ $tagsCount = 1 ]; then
+  elif [ $(checkPatternOcurrence "$line" '\*\*tags\*\*: ') = 1 ]; then
     lastChar=$((${#line}-2))
     tags=$(echo "$line" | cut -c 10-$lastChar)
-  elif [ $genThumbCount = 1 ]; then
+  elif [ $(checkPatternOcurrence "$line" '\*\*genThumb\*\*: ') = 1 ]; then
     lastChar=$((${#line}-2))
     genThumb=$(echo "$line" | cut -c 14-$lastChar)
-  elif [ $videoCount = 1 ]; then
+  elif [ $(checkPatternOcurrence "$line" '\[video\]') = 1 ]; then
     lastChar=$((${#line}-1))
     videoId=$(echo "$line" | cut -c 26-$lastChar)
     fillSnippetVideo $videoId  
