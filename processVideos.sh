@@ -87,14 +87,17 @@ fillSnippetVideo(){
   titleVideo=$(echo $listReq | jq -r .items[0].snippet.title)
   descriptionLen=$(echo $listReq | jq .items[0].snippet.description | wc -m)
 }
+checkPatternOcurrence(){
+  echo $1 | grep -o "$2" | wc -l
+}
 
 while IFS= read -r line; do
-  headingCounter=$(echo $line | grep -o '#' | wc -l)
-  videoCount=$(echo $line | grep -o '\[video\]' | wc -l)
-  playlistCount=$(echo $line | grep -o '\[playlist\]' | wc -l)
-  startUpdateIndexCount=$(echo $line | grep -o '\*\*index\*\*: ' | wc -l)
-  tagsCount=$(echo $line | grep -o '\*\*tags\*\*: ' | wc -l)
-  genThumbCount=$(echo $line | grep -o '\*\*genThumb\*\*: ' | wc -l)
+  headingCounter=$(checkPatternOcurrence $line '#')
+  videoCount=$(checkPatternOcurrence $line '\[video\]')
+  playlistCount=$(checkPatternOcurrence $line '\[playlist\]')
+  startUpdateIndexCount=$(checkPatternOcurrence '\*\*index\*\*: ')
+  tagsCount=$(checkPatternOcurrence $line '\*\*tags\*\*: ')
+  genThumbCount=$(checkPatternOcurrence $line '\*\*genThumb\*\*: ')
   if [ $headingCounter = 1 ]; then
     lastChar=$((${#line}+2))
     folder=$(echo "$line" | cut -c 3-$lastChar)
