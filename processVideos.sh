@@ -98,6 +98,14 @@ while IFS= read -r line; do
   startUpdateIndexCount=$(checkPatternOcurrence '\*\*index\*\*: ')
   tagsCount=$(checkPatternOcurrence $line '\*\*tags\*\*: ')
   genThumbCount=$(checkPatternOcurrence $line '\*\*genThumb\*\*: ')
+  echo "====================="
+  echo $headingCounter
+  echo $videoCount
+  echo $playlistCount
+  echo $startUpdateIndexCount
+  echo $tagsCount
+  echo $genThumbCount
+  echo "====================="
   if [ $headingCounter = 1 ]; then
     lastChar=$((${#line}+2))
     folder=$(echo "$line" | cut -c 3-$lastChar)
