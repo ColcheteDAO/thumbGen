@@ -127,20 +127,12 @@ while IFS= read -r line; do
     videoId=$(echo "$line" | cut -c 26-$((${#line}-1)))
     fillSnippetVideo $videoId  
     if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [ $index -ge $startUpdateIndex ]; then
-      echo "=======================" 
-      echo $description
-      echo $descriptionLen
-      echo $4
-      echo $index -ge $startUpdateIndex
-      echo $index       
-      echo $startUpdateIndex
-      echo "=======================" 
-      # if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
-      #   sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path"
-      # fi
-      # sendResquestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
-      # addToPlaylist "POST" $list1 $videoId
-      # addToPlaylist "POST" $list2 $videoId
+      if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
+        sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path"
+      fi
+      sendResquestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
+      addToPlaylist "POST" $list1 $videoId
+      addToPlaylist "POST" $list2 $videoId
     fi
   fi
 done < videos.md
