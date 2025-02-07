@@ -93,8 +93,7 @@ checkPatternOcurrence(){
 
 while IFS= read -r line; do
   if [ $(checkPatternOcurrence "$line" '#') = 1 ]; then
-    lastChar=$((${#line}+2))
-    folder=$(echo "$line" | cut -c 3-$lastChar)
+    folder=$(echo "$line" | cut -c 3-$((${#line}+2)))
     index=0
     fillDescription=true
     playlistIndex=0
@@ -102,8 +101,7 @@ while IFS= read -r line; do
     fillDescription=false
     description=$(echo $line)
   elif [ $(checkPatternOcurrence "$line" '\[playlist\]') = 1 ]; then
-    lastChar=$((${#line}-3))
-    playlistId=$(echo "$line" | cut -c 51-$lastChar)
+    playlistId=$(echo "$line" | cut -c 51-$((${#line}-3)))
     if [ $playlistIndex = 0 ]; then
       list1=$(echo $playlistId) 
     else
@@ -112,8 +110,7 @@ while IFS= read -r line; do
     playlistIndex=$(($playlistIndex + 1))
   elif [ $(checkPatternOcurrence "$line" '#') = 3 ]; then
     index=$((${index}+1))
-    lastChar=$((${#line}+2))
-    title=$(echo "$line" | cut -c 4-$lastChar)
+    title=$(echo "$line" | cut -c 4-$((${#line}+2)))
     if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
       bash genThumb.sh "$title" "$folder" 
       mkdir -p "out/$folder"
@@ -121,17 +118,13 @@ while IFS= read -r line; do
       mv compose_under.png $path
     fi
   elif [ $(checkPatternOcurrence "$line" '\*\*index\*\*: ') = 1 ]; then
-    lastChar=$((${#line}-2))
-    startUpdateIndex=$(echo "$line" | cut -c 11-$lastChar)
+    startUpdateIndex=$(echo "$line" | cut -c 11-$((${#line}-2)))
   elif [ $(checkPatternOcurrence "$line" '\*\*tags\*\*: ') = 1 ]; then
-    lastChar=$((${#line}-2))
-    tags=$(echo "$line" | cut -c 10-$lastChar)
+    tags=$(echo "$line" | cut -c 10-$((${#line}-2)))
   elif [ $(checkPatternOcurrence "$line" '\*\*genThumb\*\*: ') = 1 ]; then
-    lastChar=$((${#line}-2))
-    genThumb=$(echo "$line" | cut -c 14-$lastChar)
+    genThumb=$(echo "$line" | cut -c 14-$((${#line}-2)))
   elif [ $(checkPatternOcurrence "$line" '\[video\]') = 1 ]; then
-    lastChar=$((${#line}-1))
-    videoId=$(echo "$line" | cut -c 26-$lastChar)
+    videoId=$(echo "$line" | cut -c 26-$((${#line}-1)))
     fillSnippetVideo $videoId  
     if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [ $index -ge $startUpdateIndex ]; then
       if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
