@@ -103,5 +103,13 @@ Repo:\nhttps://github.com/ColcheteDAO/thumbGen
 [video](https://youtu.be/DOz6PoIyziY)
 ## Simplificar adição a playlist #49
 [video](https://youtu.be/XpPnXOfeP2o)
+## Salvar dados do vídeo #50
+[video](https://youtu.be/Xdf5Z7PF3bY)
+## Requisição genérica de upload #51 
+[video](https://youtu.be/O8J_vFEMU5o)
+## Definir se sobe a capa #52
+[video](https://youtu.be/1ayYVnF7tJM)
+## Contar padrões via função #53
+[video](https://youtu.be/IzYtzM_1Wic)
 # leetCode
 ## code do leet #1
