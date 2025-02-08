@@ -91,9 +91,14 @@ checkPatternOcurrence(){
   echo $1 | grep -o $2 | wc -l
 }
 
+mountVideosMeta(){
+  sendGetRequest "https://youtube.googleapis.com/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$1&type=video"
+}
+
 while IFS= read -r line; do
   if [ $(checkPatternOcurrence "$line" '#') = 1 ]; then
     folder=$(echo "$line" | cut -c 3-$((${#line}+2)))
+    mountVideosMeta $folder
     index=0
     fillDescription=true
     playlistIndex=0
