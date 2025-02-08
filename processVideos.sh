@@ -93,7 +93,6 @@ checkPatternOcurrence(){
 
 mountVideosMeta(){
   videosSearch=$(sendGetRequest "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$1&type=video")
-  echo "$videosSearch" | jq '.items' | while read -r videoSearchItem; do echo "do something with $(echo $videoSearchItem | jq '.title')"; done
   while read videoSearchItem
   do
     name=$(echo "$videoSearchItem" | jq -r .title)
