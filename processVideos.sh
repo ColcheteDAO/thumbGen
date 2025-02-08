@@ -92,7 +92,8 @@ checkPatternOcurrence(){
 }
 
 mountVideosMeta(){
-  sendGetRequest "https://youtube.googleapis.com/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$1&type=video"
+  videosSearch=$(sendGetRequest "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$1&type=video")
+  echo "$videosSearch" | jq '.[].items' | while read -r repo; do echo "do something with $id"; done
 }
 
 while IFS= read -r line; do
