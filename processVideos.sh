@@ -96,7 +96,7 @@ mountVideosMeta(){
   while read videoSearchItem
   do
     videoTitleRaw=$(echo "$videoSearchItem" | jq -c '.snippet.title')
-    echo "## $videoTitleRaw"
+    echo "## ${videoTitleRaw/thumbGen /"#"}"
     echo "$videoSearchItem" | jq -c '.snippet.description'
   done < <(echo "$videosSearch" | jq -c '.items[]')
 
