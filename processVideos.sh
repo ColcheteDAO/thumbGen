@@ -97,7 +97,8 @@ mountVideosMeta(){
   do
     videoTitleRaw=$(echo "$videoSearchItem" | jq -r '.snippet.title')
     echo "## ${videoTitleRaw/thumbGen /"#"}"
-    echo "$videoSearchItem" | jq -r '.snippet.description'
+    videoIdAPI=$(echo "$videoSearchItem" | jq -r '.id.videoId')
+    echo "[video](https://youtu.be/)"
   done < <(echo "$videosSearch" | jq -c '.items[]')
 
 }
