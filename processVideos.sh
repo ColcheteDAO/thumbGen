@@ -95,7 +95,8 @@ mountVideosMeta(){
   videosSearch=$(sendGetRequest "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$1&type=video")
   while read videoSearchItem
   do
-    echo "$videoSearchItem" | jq -c '.snippet.title'
+    videoTitleRaw=$(echo "$videoSearchItem" | jq -c '.snippet.title')
+    echo "## $videoTitleRaw"
     echo "$videoSearchItem" | jq -c '.snippet.description'
   done < <(echo "$videosSearch" | jq -c '.items[]')
 
