@@ -106,10 +106,13 @@ mountVideosMeta(){
 while IFS= read -r line; do
   if [ $(checkPatternOcurrence "$line" '#') = 1 ]; then
     folder=$(echo "$line" | cut -c 3-$((${#line}+2)))
-    mountVideosMeta $folder
     index=0
     fillDescription=true
     playlistIndex=0
+    mkdir -p "out/titles"
+    touch "out/titles/$folder.md"
+    mountVideosMeta $folder >> "out/titles/$folder.md"
+    cat "out/titles/$folder.md"
   elif $fillDescription ; then
     fillDescription=false
     description=$(echo $line)
@@ -126,8 +129,8 @@ while IFS= read -r line; do
     title=$(echo "$line" | cut -c 4-$((${#line}+2)))
     if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
       bash genThumb.sh "$title" "$folder" 
-      mkdir -p "out/$folder"
-      path="out/$folder/$folder$index.png"
+      mkdir -p "out/thumbs/$folder"
+      path="out/thumbs/$folder/$folder$index.png"
       mv compose_under.png $path
     fi
   elif [ $(checkPatternOcurrence "$line" '\*\*index\*\*: ') = 1 ]; then
