@@ -95,7 +95,7 @@ mountVideosMeta(){
   videosSearch=$(sendGetRequest "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$1&type=video")
   while read videoSearchItem
   do
-    lastIndex=$((${#line}-0))
+    lastIndex=${#line}
     folderStrLen=${#folder}
     videoTitleRaw=$(echo "$videoSearchItem" | jq -r '.snippet.title')
     titleIndexRaw=$(echo "$videoTitleRaw"| grep -o -b $folder )
