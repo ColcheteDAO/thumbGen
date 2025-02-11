@@ -93,6 +93,9 @@ checkPatternOcurrence(){
 
 mountVideosMeta(){
   videosSearch=$(sendGetRequest "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$1&type=video")
+  declare -a titlesMakdown
+  declare -a videosMakdown
+  finalIndex=0
   while read videoSearchItem
   do
     lastIndex=${#line}
@@ -102,13 +105,18 @@ mountVideosMeta(){
     titleIndexRaw=$(echo "$videoTitleRaw"| grep -o -b $folder )
     titleIndexRawLen=${#titleIndexRaw}
     titleIndex=$(echo $titleIndexRaw | cut -c 1-$(expr $titleIndexRawLen - $folderStrLen - 1))
-    echo "aaaa"
-      seriesNumber=$(echo $videoTitleRaw | cut -c $(expr $titleIndex + $folderStrLen + 2)-$videoTitleRawLen)
-      echo $seriesNumber
-    echo "aaaa" 
-    echo "## ${videoTitleRaw/$folder /"#"}"
+    seriesNumber=$(echo $videoTitleRaw | cut -c $(expr $titleIndex + $folderStrLen + 2)-$videoTitleRawLen)
+    titlesMakdown[seriesNumber]=$(echo "## ${videoTitleRaw/$folder /"#"}")
     videoIdAPI=$(echo "$videoSearchItem" | jq -r '.id.videoId')
-    echo "[video](https://youtu.be/$videoIdAPI)"
+    videosMakdown[seriesNumber]=$(echo "[video](https://youtu.be/$videoIdAPI)")
+    if [ $finalIndex -lt seriesNumber ]; then
+      finalIndex=$seriesNumber
+    fi
+    for (( c=1; c<$finalIndex; c++ ))
+    do 
+      echo titlesMakdown[c]
+      echo videosMakdown[c]
+    done
   done < <(echo "$videosSearch" | jq -c '.items[]')
 
 }
