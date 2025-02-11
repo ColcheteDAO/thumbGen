@@ -101,11 +101,7 @@ mountVideosMeta(){
     titleIndexRaw=$(echo "$videoTitleRaw"| grep -o -b $folder )
     titleIndexRawLen=${#titleIndexRaw}
     titleIndex=$(echo $titleIndexRaw | cut -c 1-$(expr $titleIndexRawLen - $folderStrLen - 1))
-    echo "len"
-    echo $titleIndex
-    echo $lastIndex
-    echo "len"
-    echo $line | cut -c $titleIndex-$lastIndex
+    echo $titleIndexRaw | cut -c $titleIndex-$titleIndexRawLen
     echo "## ${videoTitleRaw/$folder /"#"}"
     videoIdAPI=$(echo "$videoSearchItem" | jq -r '.id.videoId')
     echo "[video](https://youtu.be/$videoIdAPI)"
