@@ -112,13 +112,12 @@ mountVideosMeta(){
     if [ $finalIndex -lt $seriesNumber ]; then
       finalIndex=$seriesNumber
     fi
-    for (( c=1; c<$finalIndex; c++ ))
-    do 
-      echo ${titlesMakdown[c]}
-      echo ${videosMakdown[c]}
-    done
   done < <(echo "$videosSearch" | jq -c '.items[]')
-
+  for (( c=1; c<$finalIndex; c++ ))
+  do 
+    echo ${titlesMakdown[c]}
+    echo ${videosMakdown[c]}
+  done
 }
 
 while IFS= read -r line; do
