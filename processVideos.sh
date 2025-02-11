@@ -114,8 +114,8 @@ mountVideosMeta(){
     fi
     for (( c=1; c<$finalIndex; c++ ))
     do 
-      echo titlesMakdown[c]
-      echo videosMakdown[c]
+      echo ${titlesMakdown[c]}
+      echo ${videosMakdown[c]}
     done
   done < <(echo "$videosSearch" | jq -c '.items[]')
 
