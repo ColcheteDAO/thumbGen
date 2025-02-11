@@ -96,10 +96,10 @@ mountVideosMeta(){
   while read videoSearchItem
   do
     lastIndex=$((${#line}-0))
-    folderStrLen=$(${#folder})
+    folderStrLen=${#folder}
     videoTitleRaw=$(echo "$videoSearchItem" | jq -r '.snippet.title')
     titleIndexRaw=$(echo "$videoTitleRaw"| grep -o -b $folder )
-    titleIndexRawLen=$(${#titleIndexRaw})
+    titleIndexRawLen=${#titleIndexRaw}
     echo "len"
     echo $titleIndexRawLen
     echo $folderStrLen
