@@ -104,7 +104,7 @@ mountVideosMeta(){
     echo $titleIndexRawLen
     echo $folderStrLen
     echo "len"
-    titleIndex=$(echo $titleIndexRaw | cut -c 1-$((${titleIndexRawLen}-${folderStrLen}))))
+    titleIndex=$(echo $titleIndexRaw | cut -c 1-$((${titleIndexRawLen}-${folderStrLen})))
     echo "titleIndex"
     echo $titleIndex
     echo "titleIndex"
