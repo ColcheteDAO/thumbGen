@@ -96,7 +96,10 @@ mountVideosMeta(){
   while read videoSearchItem
   do
     videoTitleRaw=$(echo "$videoSearchItem" | jq -r '.snippet.title')
-    echo "## ${videoTitleRaw/thumbGen /"#"}"
+    titleIndex=$(echo "$videoTitleRaw"| grep -o -b $folder)
+    lastIndex=$((${#line}-0)))
+    echo videoTitleRaw | cut -c $titleIndex-$lastIndex
+    echo "## ${videoTitleRaw/$folder /"#"}"
     videoIdAPI=$(echo "$videoSearchItem" | jq -r '.id.videoId')
     echo "[video](https://youtu.be/$videoIdAPI)"
   done < <(echo "$videosSearch" | jq -c '.items[]')
