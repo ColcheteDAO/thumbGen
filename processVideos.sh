@@ -103,7 +103,7 @@ mountVideosMeta(){
     titleIndexRawLen=${#titleIndexRaw}
     titleIndex=$(echo $titleIndexRaw | cut -c 1-$(expr $titleIndexRawLen - $folderStrLen - 1))
     echo "aaaa"
-      seriesNumber=$(echo $videoTitleRaw | cut -c $(expr $titleIndex + $folderStrLen))-$videoTitleRawLen)
+      seriesNumber=$(echo $videoTitleRaw | cut -c $(expr $titleIndex + $folderStrLen)-$videoTitleRawLen)
       echo $seriesNumber
     echo "aaaa" 
     echo "## ${videoTitleRaw/$folder /"#"}"
