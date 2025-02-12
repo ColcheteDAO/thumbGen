@@ -92,7 +92,7 @@ checkPatternOcurrence(){
 }
 
 mountVideosMeta(){
-  videosSearch=$(sendGetRequest "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$1&type=video")
+  videosSearch=$(sendGetRequest "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$1&type=video&pageToken=$2")
   declare -a titlesMakdown
   declare -a videosMakdown
   finalIndex=0
@@ -118,6 +118,11 @@ mountVideosMeta(){
     echo ${titlesMakdown[c]}
     echo ${videosMakdown[c]}
   done
+  nextPageToken=$(echo "$videosSearch" | jq -r '.nextPageToken')
+  nextPageTokenLen=$( $nextPageToken | wc -l)
+  if [ $nextPageTokenLen -ge 10 ]; then
+   mountVideosMeta() $1 $nextPageToken 
+  fi
 }
 
 while IFS= read -r line; do
