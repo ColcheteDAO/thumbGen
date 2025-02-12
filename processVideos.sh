@@ -150,6 +150,9 @@ while IFS= read -r line; do
       path="out/thumbs/$folder/$folder$index.png"
       mv compose_under.png $path
     fi
+  elif [ $(checkPatternOcurrence "$line" '\*\*artifact\*\*: ') = 1 ]; then
+    artifactToDownload=$(echo "$line" | cut -c 14-$((${#line}-2)))
+    wget $artifactToDownload
   elif [ $(checkPatternOcurrence "$line" '\*\*index\*\*: ') = 1 ]; then
     startUpdateIndex=$(echo "$line" | cut -c 11-$((${#line}-2)))
   elif [ $(checkPatternOcurrence "$line" '\*\*tags\*\*: ') = 1 ]; then
