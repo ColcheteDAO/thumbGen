@@ -151,7 +151,7 @@ while IFS= read -r line; do
       mv compose_under.png $path
     fi
   elif [ $(checkPatternOcurrence "$line" '\[artifact\]') = 1 ]; then
-    artifactToDownload=$(echo "$line" | cut -c 14-$((${#line}-2)))
+    artifactToDownload=$(echo "$line" | cut -c 12-$((${#line}-3)))
     echo "===================="
     echo $artifactToDownload
     wget $artifactToDownload
