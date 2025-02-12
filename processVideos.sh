@@ -109,10 +109,6 @@ mountVideosMeta(){
     titlesMakdown[seriesNumber]=$(echo "## ${videoTitleRaw/$folder /"#"}")
     videoIdAPI=$(echo "$videoSearchItem" | jq -r '.id.videoId')
     videosMakdown[seriesNumber]=$(echo "[video](https://youtu.be/$videoIdAPI)")
-    echo "====unary==="
-    echo  $finalIndex
-    echo  $seriesNumber
-    echo "====unary==="
     if [ $finalIndex -lt $seriesNumber ]; then
       finalIndex=$seriesNumber
     fi
@@ -156,10 +152,7 @@ while IFS= read -r line; do
     fi
   elif [ $(checkPatternOcurrence "$line" '\[artifact\]') = 1 ]; then
     artifactToDownload=$(echo "$line" | cut -c 12-$((${#line}-3)))
-    echo "===================="
-    echo $artifactToDownload
     wget $artifactToDownload
-    echo "===================="
   elif [ $(checkPatternOcurrence "$line" '\*\*index\*\*: ') = 1 ]; then
     startUpdateIndex=$(echo "$line" | cut -c 11-$((${#line}-2)))
   elif [ $(checkPatternOcurrence "$line" '\*\*tags\*\*: ') = 1 ]; then
