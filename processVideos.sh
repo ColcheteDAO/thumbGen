@@ -152,7 +152,10 @@ while IFS= read -r line; do
     fi
   elif [ $(checkPatternOcurrence "$line" '\*\*artifact\*\*: ') = 1 ]; then
     artifactToDownload=$(echo "$line" | cut -c 14-$((${#line}-2)))
+    echo "===================="
+    echo $artifactToDownload
     wget $artifactToDownload
+    echo "===================="
   elif [ $(checkPatternOcurrence "$line" '\*\*index\*\*: ') = 1 ]; then
     startUpdateIndex=$(echo "$line" | cut -c 11-$((${#line}-2)))
   elif [ $(checkPatternOcurrence "$line" '\*\*tags\*\*: ') = 1 ]; then
