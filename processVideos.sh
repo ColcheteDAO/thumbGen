@@ -150,7 +150,7 @@ while IFS= read -r line; do
       path="out/thumbs/$folder/$folder$index.png"
       mv compose_under.png $path
     fi
-  elif [ $(checkPatternOcurrence "$line" '\*\*artifact\*\*: ') = 1 ]; then
+  elif [ $(checkPatternOcurrence "$line" '\[artifact\]') = 1 ]; then
     artifactToDownload=$(echo "$line" | cut -c 14-$((${#line}-2)))
     echo "===================="
     echo $artifactToDownload
