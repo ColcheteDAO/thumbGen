@@ -98,6 +98,7 @@ mountVideosMeta(){
   saveVideosMeta(){
     echo "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$1&type=video&pageToken=$2"
     videosSearch=$(sendGetRequest "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$1&type=video&pageToken=$2")
+    
     while read videoSearchItem
     do
       lastIndex=${#line}
@@ -111,25 +112,22 @@ mountVideosMeta(){
       titlesMakdown[${seriesNumber#0}]=$(echo "## ${videoTitleRaw/$folder /"#"}")
       videoIdAPI=$(echo "$videoSearchItem" | jq -r '.id.videoId')
       videosMakdown[${seriesNumber#0}]=$(echo "[video](https://youtu.be/$videoIdAPI)")
-      if [[ $finalIndex -lt ${seriesNumber#0} ]]; then
-        finalIndex=${seriesNumber#0}
+      if [[ $finalIndex -lt $seriesNumber ]]; then
+        finalIndex=$seriesNumber
       fi
     done < <(echo "$videosSearch" | jq -c '.items[]')
     nextPageToken=$(echo "$videosSearch" | jq -r '.nextPageToken')
     nextPageTokenLen=$(echo $nextPageToken | wc -m)
-    echo "aaaaaa"
-    echo $finalIndex
-    echo "aaaaaa"
     if [[ $nextPageTokenLen -ge 10 ]]; then
-     saveVideosMeta $1 $nextPageToken
-    else
-      for (( c=1; c<$finalIndex; c++ ))
-      do 
-        echo ${titlesMakdown[c]}
-        echo ${videosMakdown[c]}
-      done
+     mountVideosMeta $1 $nextPageToken 
     fi
   }
+  mountVideosMeta $1
+  for (( c=1; c<$finalIndex; c++ ))
+  do 
+    echo ${titlesMakdown[c]}
+    echo ${videosMakdown[c]}
+  done
 }
 
 while IFS= read -r line; do
