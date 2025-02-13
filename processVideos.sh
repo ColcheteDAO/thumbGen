@@ -120,10 +120,12 @@ mountVideosMeta(){
     echo ${videosMakdown[c]}
   done
   nextPageToken=$(echo "$videosSearch" | jq -r '.nextPageToken')
+  nextPageTokenLen=$(echo $nextPageToken | wc -l)
   echo "nextPageToken"
   echo $nextPageToken
+  echo $nextPageTokenLen
+  echo $nextPageTokenLen -ge 10
   echo "nextPageToken"
-  nextPageTokenLen=$(echo $nextPageToken | wc -l)
   if [[ $nextPageTokenLen -ge 10 ]]; then
    mountVideosMeta $1 $nextPageToken 
   fi
