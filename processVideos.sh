@@ -94,10 +94,10 @@ checkPatternOcurrence(){
 mountVideosMeta(){
   declare -a titlesMakdown
   declare -a videosMakdown
+  finalIndex=0
   saveVideosMeta(){
     echo "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$1&type=video&pageToken=$2"
     videosSearch=$(sendGetRequest "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$1&type=video&pageToken=$2")
-    finalIndex=0
     while read videoSearchItem
     do
       lastIndex=${#line}
