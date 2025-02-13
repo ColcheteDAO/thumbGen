@@ -123,8 +123,8 @@ mountVideosMeta(){
   }
   echo "==================="
   echo $finalIndex
-  echo $titlesMakdown[1]
-  echo $videosMakdown[1]
+  echo ${titlesMakdown[1]}
+  echo ${videosMakdown[1]}
   echo "==================="
   for (( c=1; c<$finalIndex; c++ ))
   do 
