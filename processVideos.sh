@@ -92,28 +92,30 @@ checkPatternOcurrence(){
 }
 
 mountVideosMeta(){
-  echo "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$1&type=video&pageToken=$2"
-  videosSearch=$(sendGetRequest "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$1&type=video&pageToken=$2")
   declare -a titlesMakdown
   declare -a videosMakdown
-  finalIndex=0
-  while read videoSearchItem
-  do
-    lastIndex=${#line}
-    folderStrLen=${#folder}
-    videoTitleRaw=$(echo "$videoSearchItem" | jq -r '.snippet.title')
-    videoTitleRawLen=${videoTitleRawLen}
-    titleIndexRaw=$(echo "$videoTitleRaw"| grep -o -b $folder )
-    titleIndexRawLen=${#titleIndexRaw}
-    titleIndex=$(echo $titleIndexRaw | cut -c 1-$(expr $titleIndexRawLen - $folderStrLen - 1))
-    seriesNumber=$(echo $videoTitleRaw | cut -c $(expr $titleIndex + $folderStrLen + 2)-$videoTitleRawLen)
-    titlesMakdown[${seriesNumber#0}]=$(echo "## ${videoTitleRaw/$folder /"#"}")
-    videoIdAPI=$(echo "$videoSearchItem" | jq -r '.id.videoId')
-    videosMakdown[${seriesNumber#0}]=$(echo "[video](https://youtu.be/$videoIdAPI)")
-    if [[ $finalIndex -lt $seriesNumber ]]; then
-      finalIndex=$seriesNumber
-    fi
-  done < <(echo "$videosSearch" | jq -c '.items[]')
+  saveVideosMeta(){
+    echo "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$1&type=video&pageToken=$2"
+    videosSearch=$(sendGetRequest "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$1&type=video&pageToken=$2")
+    finalIndex=0
+    while read videoSearchItem
+    do
+      lastIndex=${#line}
+      folderStrLen=${#folder}
+      videoTitleRaw=$(echo "$videoSearchItem" | jq -r '.snippet.title')
+      videoTitleRawLen=${videoTitleRawLen}
+      titleIndexRaw=$(echo "$videoTitleRaw"| grep -o -b $folder )
+      titleIndexRawLen=${#titleIndexRaw}
+      titleIndex=$(echo $titleIndexRaw | cut -c 1-$(expr $titleIndexRawLen - $folderStrLen - 1))
+      seriesNumber=$(echo $videoTitleRaw | cut -c $(expr $titleIndex + $folderStrLen + 2)-$videoTitleRawLen)
+      titlesMakdown[${seriesNumber#0}]=$(echo "## ${videoTitleRaw/$folder /"#"}")
+      videoIdAPI=$(echo "$videoSearchItem" | jq -r '.id.videoId')
+      videosMakdown[${seriesNumber#0}]=$(echo "[video](https://youtu.be/$videoIdAPI)")
+      if [[ $finalIndex -lt $seriesNumber ]]; then
+        finalIndex=$seriesNumber
+      fi
+    done < <(echo "$videosSearch" | jq -c '.items[]')
+  }
   for (( c=1; c<$finalIndex; c++ ))
   do 
     echo ${titlesMakdown[c]}
@@ -121,11 +123,6 @@ mountVideosMeta(){
   done
   nextPageToken=$(echo "$videosSearch" | jq -r '.nextPageToken')
   nextPageTokenLen=$(echo $nextPageToken | wc -m)
-  echo "nextPageToken"
-  echo $nextPageToken
-  echo $nextPageTokenLen
-  echo $nextPageTokenLen -ge 10
-  echo "nextPageToken"
   if [[ $nextPageTokenLen -ge 10 ]]; then
    mountVideosMeta $1 $nextPageToken 
   fi
