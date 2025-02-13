@@ -115,17 +115,17 @@ mountVideosMeta(){
         finalIndex=$seriesNumber
       fi
     done < <(echo "$videosSearch" | jq -c '.items[]')
+    nextPageToken=$(echo "$videosSearch" | jq -r '.nextPageToken')
+    nextPageTokenLen=$(echo $nextPageToken | wc -m)
+    if [[ $nextPageTokenLen -ge 10 ]]; then
+     saveVideosMeta $1 $nextPageToken 
+    fi
   }
   for (( c=1; c<$finalIndex; c++ ))
   do 
     echo ${titlesMakdown[c]}
     echo ${videosMakdown[c]}
   done
-  nextPageToken=$(echo "$videosSearch" | jq -r '.nextPageToken')
-  nextPageTokenLen=$(echo $nextPageToken | wc -m)
-  if [[ $nextPageTokenLen -ge 10 ]]; then
-   mountVideosMeta $1 $nextPageToken 
-  fi
 }
 
 while IFS= read -r line; do
