@@ -112,7 +112,7 @@ mountVideosMeta(){
       videoIdAPI=$(echo "$videoSearchItem" | jq -r '.id.videoId')
       videosMakdown[${seriesNumber#0}]=$(echo "[video](https://youtu.be/$videoIdAPI)")
       if [[ $finalIndex -lt $seriesNumber ]]; then
-        finalIndex=$seriesNumber
+        finalIndex=${seriesNumber#0}
       fi
     done < <(echo "$videosSearch" | jq -c '.items[]')
     nextPageToken=$(echo "$videosSearch" | jq -r '.nextPageToken')
@@ -121,6 +121,11 @@ mountVideosMeta(){
      saveVideosMeta $1 $nextPageToken 
     fi
   }
+  echo "==================="
+  echo $finalIndex
+  echo $titlesMakdown[1]
+  echo $videosMakdown[1]
+  echo "==================="
   for (( c=1; c<$finalIndex; c++ ))
   do 
     echo ${titlesMakdown[c]}
