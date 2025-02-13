@@ -114,5 +114,5 @@ Repo:\nhttps://github.com/ColcheteDAO/thumbGen
 [video](https://youtu.be/1ayYVnF7tJM)
 ## Contar padrões via função #53
 [video](https://youtu.be/IzYtzM_1Wic)
-# leetCode
+# LeetCode
 ## code do leet #1
