@@ -142,11 +142,11 @@ Repo:\nhttps://github.com/ColcheteDAO/thumbGen
 [video](https://youtu.be/EWY9e6nGMK4)
 ## Remover zeros à esquerda #67
 [video](https://youtu.be/Pg7d37-3uAk)
-# LeetCode
+# leetCode
 repo:\nhttps://github.com/juancolchete/leetCode  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6rDgVtlz5XbIMdpPvAZiSm)  
-**index**: 1  
+**index**: 20  
 **tags**: "LeetCode","LetCode","Typescript","TS","AD"  
 **genThumb**: Y  
 ## Two Sum #01
