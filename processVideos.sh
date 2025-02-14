@@ -153,6 +153,9 @@ while IFS= read -r line; do
     index=$((${index}+1))
     title=$(echo "$line" | cut -c 4-$((${#line}+2)))
     if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
+      echo "FOLDER"
+      echo $folder
+      echo "FOLDER"
       bash genThumb.sh "$title" "$folder" 
       mkdir -p "out/thumbs/$folder"
       path="out/thumbs/$folder/$folder$index.png"
