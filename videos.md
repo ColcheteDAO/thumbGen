@@ -8,23 +8,23 @@ Repo:\nhttps://github.com/ColcheteDAO/thumbGen
 **index**: 53  
 **tags**: "github actions","Image Magick","Magick","bash"  
 **genThumb**: Y  
-## Configuração inicial #1
+## Configuração inicial do projeto #01
 [video](https://youtu.be/yXydAGckYZ8)
-## Exibição da imagem #2
+## Exibição da imagem #02
 [video](https://youtu.be/N3A_3ZpBoUk)
-## Mudando para o MAGICK #3
+## Visão geral sobre pintura mudança para Magick #03
 [video](https://youtu.be/z7klT0u5PVo)
-## Texto acima da imagem #4
+## Como colocar texto acima da imagem #04
 [video](https://youtu.be/nbz6dXII1kA)
-## Colar duas imagens Magick #5
+## Colar duas imagens com Magick #05
 [video](https://youtu.be/JXVzqeUJfCo)
-## Adicionar imagem sudeste #6
+## Adicionar imagem no sudeste Magick #06
 [video](https://youtu.be/bDp3D245_rE)
-## Adicionar imagem sudoeste #7
+## Adicionar imagem no sudoeste Magick #07
 [video](https://youtu.be/m2MWKI_4nAI)
-## Posicionar texto e definir cor de fundo #8
+## Posicionar texto e definir cor de fundo #08
 [video](https://youtu.be/3bq0gjHVS-M)
-## Título dinâmico #9
+## Título dinâmico #09
 [video](https://youtu.be/t_b712TV1i4)
 ## Ler títulos de um arquivo markdown #10
 [video](https://youtu.be/MOMkvc8R_3s)
@@ -48,7 +48,7 @@ Repo:\nhttps://github.com/ColcheteDAO/thumbGen
 [video](https://youtu.be/EvWKwaFhY_Q)
 ## Como usar composite com convert #20
 [video](https://youtu.be/f3-LZSBlw9w)
-## Como gerar artefatos github actions #21
+## De magick para convert #21
 [video](https://youtu.be/fWuKATcXDF0)
 ## Salvar e exibir id do vídeo #22
 [video](https://youtu.be/uOY-Rnr_828)
@@ -56,23 +56,23 @@ Repo:\nhttps://github.com/ColcheteDAO/thumbGen
 [video](https://youtu.be/Ve1kDzCMNmE)
 ## Atualizar thumbnail Github Actions #24
 [video](https://youtu.be/-9NOZatdQe0)
-## Atualizar refresh token youtube #25
+## Refresh token YouTube Github Actions #25
 [video](https://youtu.be/IwfeL6ljr88)
 ## Como debugar o projeto #26
 [video](https://youtu.be/qr5LTIogHxQ)
 ## Checar descrição ao atualizar capa #27
 [video](https://youtu.be/uQsDlfDhkxc)
-## Atualizar descrição menor que 10 #28
+## Atualizar apenas se descrição menor que 10 #28
 [video](https://youtu.be/E_Z0duxle14)
-## Atualizar descrição valor padrão #29
+## Atualizar descrição com valor padrão #29
 [video](https://youtu.be/a_iD5rQcTnc)
-## Atualizar descrição personalizada #30
+## Atualizar descrição com valor personalizado #30
 [video](https://youtu.be/LiyeRXpzdAs)
 ## Adicionar video a playlist #31
 [video](https://youtu.be/gEJ7hOMHunU)
-## Bug em playlist automáticas #32
+## Resolver bug ao adicionar em playlists automáticas #32
 [video](https://youtu.be/vhvDjh6oAh8)
-## Definir idioma vídeo #33
+## Definir idioma do vídeo #33
 [video](https://youtu.be/B0oYwuh3idE)
 ## Definir idioma do áudio #34
 [video](https://youtu.be/RB3qLcvnV0Q)
@@ -82,13 +82,13 @@ Repo:\nhttps://github.com/ColcheteDAO/thumbGen
 [video](https://youtu.be/MMBxidR3Rbs)
 ## Validar se descrição está preenchida #37
 [video](https://youtu.be/iiIstinfTx8)
-## Permitir definir indice atualização #38
+## Permitir definir indice de atualização #38
 [video](https://youtu.be/b-LHHscaUuk)
-## Correção do indice de atualização #39
+## Correção do indice atualização #39
 [video](https://youtu.be/ZjGQ90CYcp8)
 ## Formatação de JSON #40
 [video](https://youtu.be/GgXWacpE2EE)
-## Formatar JSON thumbGen #41
+## Formatar JSON #41
 [video](https://youtu.be/jMgNmLli-Go)
 ## Adicionar novos videos a playlist #42
 [video](https://youtu.be/iMzS2QkZiuM)
@@ -108,11 +108,84 @@ Repo:\nhttps://github.com/ColcheteDAO/thumbGen
 [video](https://youtu.be/XpPnXOfeP2o)
 ## Salvar dados do vídeo #50
 [video](https://youtu.be/Xdf5Z7PF3bY)
-## Requisição genérica de upload #51 
+## Requisição genérica de upload #51
 [video](https://youtu.be/O8J_vFEMU5o)
 ## Definir se sobe a capa #52
 [video](https://youtu.be/1ayYVnF7tJM)
 ## Contar padrões via função #53
 [video](https://youtu.be/IzYtzM_1Wic)
+## Contar padrões na condicional #54
+[video](https://youtu.be/jPQwF9vRwVI)
+## Simplificar tratamento de linha #55
+[video](https://youtu.be/o-hKQelDziU)
+## Depuração da edição #56
+[video](https://youtu.be/0m4WSYQSlmY)
+## Listar ultimos vídeos #57
+[video](https://youtu.be/EUc2DknNlU8)
+## Exibir título dos vídeos #58
+[video](https://youtu.be/r4FjyoGAaJU)
+## Exibir título em markdown #59
+[video](https://youtu.be/BhzkLajo53E)
+## Exibir link do video em markdown #60
+[video](https://youtu.be/8sAWmYpgNFQ)
+## Salvar títulos em arquivo markdown #61
+[video](https://youtu.be/bbtaBsazmug)
+## Salvar arquivo markdown como artefato #62
+[video](https://youtu.be/iUA-JnrYDg0)
+## Obter índice do vídeo #63
+[video](https://youtu.be/Wy0qhdc4lNs)
+## Exibir títulos e links #64
+[video](https://youtu.be/5r1Dicx9D5U)
+## Usar imagens via link #65
+[video](https://youtu.be/e7W34C3o-gQ)
+## Paginação #66
+[video](https://youtu.be/EWY9e6nGMK4)
+## Remover zeros à esquerda #67
+[video](https://youtu.be/Pg7d37-3uAk)
 # LeetCode
-## code do leet #1
+repo:\nhttps://github.com/juancolchete/leetCode  
+[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
+[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6rDgVtlz5XbIMdpPvAZiSm)  
+**index**: 1  
+**tags**: "LeetCode","LetCode","Typescript","TS","AD"  
+**genThumb**: Y  
+## Two Sum #01
+[video](https://youtu.be/-eZp4ACdFgc)
+## Palindrome number #02
+[video](https://youtu.be/iBhfvzJPTeg)
+## Roman to integer #03
+[video](https://youtu.be/6SIxbOPah-k)
+## Longest common prefix #04
+[video](https://youtu.be/bYHGuGBeXsQ)
+## Valid parentheses #05
+[video](https://youtu.be/IqnqiaOrOJE)
+## Merge two sorted lists #06
+[video](https://youtu.be/IygmqstYkvY)
+## Remove duplicates from sorted array #07
+[video](https://youtu.be/ZtrCkhu39kw)
+## Remove element #08
+[video](https://youtu.be/Wtxm9UNmrkg)
+## Find Index of First Occurrence #09
+[video](https://youtu.be/zgY_3kPMBMQ)
+## Search Insert Position #10
+[video](https://youtu.be/dR91Sg_JSng)
+## Length of Last Word #11
+[video](https://youtu.be/4k8C3swIcLk)
+## Plus One #12
+[video](https://youtu.be/HVIKBe_A_eM)
+## Add Binary #13
+[video](https://youtu.be/bcUPjzoBJE4)
+## SQRTx #14
+[video](https://youtu.be/zk_nv_o_cTg)
+## Climbing Stairs #15
+[video](https://youtu.be/FRj5Vcz8TAs)
+## Remove Duplicates from Sorted List #16
+[video](https://youtu.be/R8lZkWutt9c)
+## Merge Sorted Array #17
+[video](https://youtu.be/7ZRkO_5GkEE)
+## Binary Tree Inorder Transversal #18
+[video](https://youtu.be/JuR3JYYU3JY)
+## Same Tree #19
+[video](https://youtu.be/hqM8bhNwvBw)
+## Symmetric Tree #20
+[video](https://youtu.be/tQY775H5FG8)
