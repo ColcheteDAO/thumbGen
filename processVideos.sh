@@ -75,6 +75,12 @@ getPlaylistItemCount(){
 
 addToPlaylist(){
   playlistItemsCount=$(getPlaylistItemCount $2 $3)
+  echo "DEBUG================="
+  echo $playlistItemsCount
+  echo $1
+  echo $2
+  echo $3
+  echo "DEBUG================="
   if [ $playlistItemsCount = 0 ]; then
     playlistPayload=$(mountPlaylistPayload $list1 $videoId)
     sendResquestWithPayload $1 "$urlBaseAPI/youtube/v3/playlistItems?part=snippet" "$playlistPayload"   
@@ -153,9 +159,6 @@ while IFS= read -r line; do
     index=$((${index}+1))
     title=$(echo "$line" | cut -c 4-$((${#line}+2)))
     if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
-      echo "FOLDER"
-      echo $folder
-      echo "FOLDER"
       bash genThumb.sh "$title" "$folder" 
       mkdir -p "out/thumbs/$folder"
       path="out/thumbs/$folder/$folder$index.png"
