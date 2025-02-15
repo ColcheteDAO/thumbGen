@@ -121,7 +121,7 @@ mountVideosMeta(){
     fi
   }
   saveVideosMeta $1
-  for (( c=1; c<$finalIndex; c++ ))
+  for (( c=1; c<=$finalIndex; c++ ))
   do 
     echo ${titlesMakdown[c]}
     echo ${videosMakdown[c]}
