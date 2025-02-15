@@ -1,4 +1,4 @@
-[artifact](https://raw.githubusercontent.com/juancolchete/artifacts/refs/heads/main/leetCode.png)  
+[artifact](https://raw.githubusercontent.com/juancolchete/artifacts/refs/heads/main/LeetCode.png)  
 [artifact](https://raw.githubusercontent.com/juancolchete/artifacts/refs/heads/main/man.png)  
 [artifact](https://raw.githubusercontent.com/juancolchete/artifacts/refs/heads/main/thumbGen.png)  
 # thumbGen
@@ -142,7 +142,7 @@ Repo:\nhttps://github.com/ColcheteDAO/thumbGen
 [video](https://youtu.be/EWY9e6nGMK4)
 ## Remover zeros à esquerda #67
 [video](https://youtu.be/Pg7d37-3uAk)
-# leetCode
+# LeetCode
 repo:\nhttps://github.com/juancolchete/leetCode  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6rDgVtlz5XbIMdpPvAZiSm)  
