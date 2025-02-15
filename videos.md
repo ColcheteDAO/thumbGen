@@ -8,6 +8,7 @@ Repo:\nhttps://github.com/ColcheteDAO/thumbGen
 **index**: 67  
 **tags**: "github actions","Image Magick","Magick","bash"  
 **genThumb**: Y  
+
 ## Configuração inicial do projeto #01
 [video](https://youtu.be/yXydAGckYZ8)
 ## Exibição da imagem #02
@@ -142,11 +143,18 @@ Repo:\nhttps://github.com/ColcheteDAO/thumbGen
 [video](https://youtu.be/EWY9e6nGMK4)
 ## Remover zeros à esquerda #67
 [video](https://youtu.be/Pg7d37-3uAk)
+## Exibir todos vídeos markdown #68
+[video](https://youtu.be/pXZPZD6srH4)
+## Usar markdown do artefato #69
+[video](https://youtu.be/634ZYRivpNk)
+## Depurar imagem errada na geração #70
+[video](https://youtu.be/tACoPsskSqk)
+
 # LeetCode
 repo:\nhttps://github.com/juancolchete/leetCode  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6rDgVtlz5XbIMdpPvAZiSm)  
-**index**: 1  
+**index**: 15  
 **tags**: "LeetCode","LetCode","Typescript","TS","AD"  
 **genThumb**: Y  
 ## Two Sum #01
@@ -189,3 +197,5 @@ repo:\nhttps://github.com/juancolchete/leetCode
 [video](https://youtu.be/hqM8bhNwvBw)
 ## Symmetric Tree #20
 [video](https://youtu.be/tQY775H5FG8)
+## Maximum Depth of Binary Tree #21
+[video](https://youtu.be/vMuvbk9-lx0)
