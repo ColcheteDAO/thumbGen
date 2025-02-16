@@ -150,15 +150,7 @@ while IFS= read -r line; do
       list2=$(echo $playlistId) 
     fi
     playlistIndex=$(($playlistIndex + 1))
-  elif [ $(checkPatternOcurrence "$line" '#') = 3 ]; then
-    index=$((${index}+1))
-    title=$(echo "$line" | cut -c 4-$((${#line}+2)))
-    if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
-      bash genThumb.sh "$title" "$folder" 
-      mkdir -p "out/thumbs/$folder"
-      path="out/thumbs/$folder/$folder$index.png"
-      mv compose_under.png $path
-    fi
+  
   elif [ $(checkPatternOcurrence "$line" '\[artifact\]') = 1 ]; then
     artifactToDownload=$(echo "$line" | cut -c 12-$((${#line}-3)))
     wget $artifactToDownload
@@ -168,16 +160,29 @@ while IFS= read -r line; do
     tags=$(echo "$line" | cut -c 10-$((${#line}-2)))
   elif [ $(checkPatternOcurrence "$line" '\*\*genThumb\*\*: ') = 1 ]; then
     genThumb=$(echo "$line" | cut -c 14-$((${#line}-2)))
-  elif [ $(checkPatternOcurrence "$line" '\[video\]') = 1 ]; then
-    videoId=$(echo "$line" | cut -c 26-$((${#line}-1)))
-    fillSnippetVideo $videoId  
-    if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [ $index -ge $startUpdateIndex ]; then
-      if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
-        sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path"
+  elif [ $(checkPatternOcurrence "$line" '\*\*end\*\*: ') = 1 ]; then
+    while IFS= read -r lineTitle; do
+      if [ $(checkPatternOcurrence "$lineTitle" '#') = 3 ]; then
+        index=$((${index}+1))
+        title=$(echo "$lineTitle" | cut -c 4-$((${#lineTitle}+2)))
+        if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
+          bash genThumb.sh "$title" "$folder" 
+          mkdir -p "out/thumbs/$folder"
+          path="out/thumbs/$folder/$folder$index.png"
+          mv compose_under.png $path
+        elif [ $(checkPatternOcurrence "$lineTitle" '\[video\]') = 1 ]; then
+          videoId=$(echo "$lineTitle" | cut -c 26-$((${#lineTitle}-1)))
+          fillSnippetVideo $videoId  
+          if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [ $index -ge $startUpdateIndex ]; then
+            if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
+              sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path"
+            fi
+            sendResquestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
+            addToPlaylist "POST" $list1 $videoId
+            addToPlaylist "POST" $list2 $videoId
+            fi
+        fi
       fi
-      sendResquestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
-      addToPlaylist "POST" $list1 $videoId
-      addToPlaylist "POST" $list2 $videoId
-    fi
+    done < "title/$folder.md"
   fi
 done < videos.md
