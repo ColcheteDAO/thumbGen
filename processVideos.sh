@@ -183,6 +183,6 @@ while IFS= read -r line; do
             fi
         fi
       fi
-    done < "title/$folder.md"
+    done < "titles/$folder.md"
   fi
 done < videos.md
