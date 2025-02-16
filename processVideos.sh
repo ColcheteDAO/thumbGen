@@ -137,7 +137,8 @@ while IFS= read -r line; do
     mkdir -p "out/titles"
     touch "out/titles/$folder.md"
     mountVideosMeta $folder >> "out/titles/$folder.md"
-    cp "out/titles/$folder.md" "$folder.md" 
+    mkdir -p "titles"
+    cp "out/titles/$folder.md" "titles/$folder.md" 
   elif $fillDescription ; then
     fillDescription=false
     description=$(echo $line)
