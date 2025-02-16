@@ -22,3 +22,12 @@ jobs:
         with:
          name: titles
          path: out/titles
+      - name: Upload to git
+        id: uploadGit
+        run: |
+          git config --global user.name "user mane"
+          git config --global user.email "user email"
+          git add . 
+          git commit -m "chore: add title ${{github.event.head_commit.message}}"
+          git push
+
