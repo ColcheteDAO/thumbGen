@@ -55,6 +55,8 @@ sendResquestWithPayload(){
 }
 
 handleRequestErrors(){
+  echo "======================="
+  echo $(checkPatternOcurrence "$1" '"error":')
   if [ $(checkPatternOcurrence "$1" '"error":') = 1 ]; then
     echo "======================="
     echo "EXITTTT"
