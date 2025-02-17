@@ -106,7 +106,7 @@ mountVideosMeta(){
   finalIndex=0
   saveVideosMeta(){
     videosSearch=$(sendGetRequest "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$1&type=video&pageToken=$2")
-    if [ $videosSearch = "error" ]; then
+    if [[ "$videosSearch" == "error" ]]; then
       echo $videosSearch
     else
       while read videoSearchItem
@@ -134,7 +134,7 @@ mountVideosMeta(){
     fi
   }
   saveData=$(saveVideosMeta $1)
-  if [ $videosSearch = "error" ]; then
+  if [[ "$videosSearch" == "error" ]]; then
     echo $videosSearch
   else
     for (( c=1; c<=$finalIndex; c++ ))
@@ -154,7 +154,7 @@ while IFS= read -r line; do
     mkdir -p "out/titles"
     touch "out/titles/$folder.md"
     videosMetaData=$(mountVideosMeta $folder)
-    if [ $videosMetaData = "error" ]; then
+    if [[ "$videosMetaData" == "error" ]]; then
       exit 1
     else
       mountVideosMeta $folder >> "out/titles/$folder.md"
