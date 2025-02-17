@@ -47,7 +47,7 @@ updateVideoPayload(){
 
 handleRequestErrors(){
   if [ $(checkPatternOcurrence "$1" '"error":') = 1 ]; then
-    exit 1
+    die()
   fi
 }
 
