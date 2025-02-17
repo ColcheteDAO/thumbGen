@@ -46,10 +46,7 @@ updateVideoPayload(){
 }
 
 handleRequestErrors(){
-  echo $(checkPatternOcurrence "$1" '"error":') >> out.txt
-  echo "$1" >> out.txt
   if [ $(checkPatternOcurrence "$1" '"error":') = 1 ]; then
-    echo "error" >> out.txt 
     echo "error" 
   else
     echo "$1"
@@ -157,7 +154,9 @@ while IFS= read -r line; do
     folder=$(echo "$line" | cut -c 3-$((${#line}+2)))
     videosMetaData=$(mountVideosMeta $folder)
     if [[ "$videosMetaData" == "error" ]]; then
+      echo "=================================="
       echo "forced stop due quota error"
+      echo "=================================="
       exit 1
     else
       index=0
