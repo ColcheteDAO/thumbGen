@@ -106,35 +106,43 @@ mountVideosMeta(){
   finalIndex=0
   saveVideosMeta(){
     videosSearch=$(sendGetRequest "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$1&type=video&pageToken=$2")
-    while read videoSearchItem
-    do
-      lastIndex=${#line}
-      folderStrLen=${#folder}
-      videoTitleRaw=$(echo "$videoSearchItem" | jq -r '.snippet.title')
-      videoTitleRawLen=${videoTitleRawLen}
-      titleIndexRaw=$(echo "$videoTitleRaw"| grep -o -b $folder )
-      titleIndexRawLen=${#titleIndexRaw}
-      titleIndex=$(echo $titleIndexRaw | cut -c 1-$(expr $titleIndexRawLen - $folderStrLen - 1))
-      seriesNumber=$(echo $videoTitleRaw | cut -c $(expr $titleIndex + $folderStrLen + 2)-$videoTitleRawLen)
-      titlesMakdown[${seriesNumber#0}]=$(echo "## ${videoTitleRaw/$folder /"#"}")
-      videoIdAPI=$(echo "$videoSearchItem" | jq -r '.id.videoId')
-      videosMakdown[${seriesNumber#0}]=$(echo "[video](https://youtu.be/$videoIdAPI)")
-      if [[ $finalIndex -lt ${seriesNumber#0} ]]; then
-        finalIndex=${seriesNumber#0}
+    if [ $videosSearch = "error" ]; then
+      echo $videosSearch
+    else
+      while read videoSearchItem
+      do
+        lastIndex=${#line}
+        folderStrLen=${#folder}
+        videoTitleRaw=$(echo "$videoSearchItem" | jq -r '.snippet.title')
+        videoTitleRawLen=${videoTitleRawLen}
+        titleIndexRaw=$(echo "$videoTitleRaw"| grep -o -b $folder )
+        titleIndexRawLen=${#titleIndexRaw}
+        titleIndex=$(echo $titleIndexRaw | cut -c 1-$(expr $titleIndexRawLen - $folderStrLen - 1))
+        seriesNumber=$(echo $videoTitleRaw | cut -c $(expr $titleIndex + $folderStrLen + 2)-$videoTitleRawLen)
+        titlesMakdown[${seriesNumber#0}]=$(echo "## ${videoTitleRaw/$folder /"#"}")
+        videoIdAPI=$(echo "$videoSearchItem" | jq -r '.id.videoId')
+        videosMakdown[${seriesNumber#0}]=$(echo "[video](https://youtu.be/$videoIdAPI)")
+        if [[ $finalIndex -lt ${seriesNumber#0} ]]; then
+          finalIndex=${seriesNumber#0}
+        fi
+      done < <(echo "$videosSearch" | jq -c '.items[]')
+      nextPageToken=$(echo "$videosSearch" | jq -r '.nextPageToken')
+      nextPageTokenLen=$(echo $nextPageToken | wc -m)
+      if [[ $nextPageTokenLen -ge 10 ]]; then
+       saveVideosMeta $1 $nextPageToken 
       fi
-    done < <(echo "$videosSearch" | jq -c '.items[]')
-    nextPageToken=$(echo "$videosSearch" | jq -r '.nextPageToken')
-    nextPageTokenLen=$(echo $nextPageToken | wc -m)
-    if [[ $nextPageTokenLen -ge 10 ]]; then
-     saveVideosMeta $1 $nextPageToken 
     fi
   }
-  saveVideosMeta $1
-  for (( c=1; c<=$finalIndex; c++ ))
-  do 
-    echo ${titlesMakdown[c]}
-    echo ${videosMakdown[c]}
-  done
+  saveData=$(saveVideosMeta $1)
+  if [ $videosSearch = "error" ]; then
+    echo $videosSearch
+  else
+    for (( c=1; c<=$finalIndex; c++ ))
+    do 
+      echo ${titlesMakdown[c]}
+      echo ${videosMakdown[c]}
+    done
+  fi
 }
 
 while IFS= read -r line; do
@@ -145,10 +153,14 @@ while IFS= read -r line; do
     playlistIndex=0
     mkdir -p "out/titles"
     touch "out/titles/$folder.md"
-    mountVideosMeta $folder
-    # mountVideosMeta $folder >> "out/titles/$folder.md"
-    # mkdir -p "titles"
-    # cp "out/titles/$folder.md" "titles/$folder.md" 
+    videosMetaData=$(mountVideosMeta $folder)
+    if [ $videosMetaData = "error" ]; then
+      exit 1
+    else
+      mountVideosMeta $folder >> "out/titles/$folder.md"
+      mkdir -p "titles"
+      cp "out/titles/$folder.md" "titles/$folder.md" 
+    fi
   # elif $fillDescription ; then
   #   fillDescription=false
   #   description=$(echo $line)
