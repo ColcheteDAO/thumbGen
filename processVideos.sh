@@ -46,6 +46,8 @@ updateVideoPayload(){
 }
 
 handleRequestErrors(){
+  echo $(checkPatternOcurrence "$1" '"error":') >> out.txt
+  echo "$1" >> out.txt
   if [ $(checkPatternOcurrence "$1" '"error":') = 1 ]; then
     echo "error" 
   else
