@@ -45,15 +45,6 @@ updateVideoPayload(){
   echo $updateVideoJSON
 }
 
-sendResquestWithPayload(){
-  req=$(curl --request $1 \
-    $2 --header "Authorization: Bearer $ACCESS_TOKEN" \
-    --header "Accept: application/json" \
-    --header "Content-Type: application/json" \
-    --data "$(echo $3)")
-  handleRequestErrors $req
-}
-
 handleRequestErrors(){
   echo "======================="
   echo $1 >> out.txt
@@ -66,10 +57,19 @@ handleRequestErrors(){
   fi
 }
 
+sendResquestWithPayload(){
+  req=$(curl --request $1 \
+    $2 --header "Authorization: Bearer $ACCESS_TOKEN" \
+    --header "Accept: application/json" \
+    --header "Content-Type: application/json" \
+    --data "$(echo $3)")
+  handleRequestErrors "$req"
+}
+
 sendGetRequest(){
   req=$(curl "$1" \
     --header "Authorization: Bearer $ACCESS_TOKEN")
-  handleRequestErrors $req
+  handleRequestErrors "$req"
   echo $req
 }
 
@@ -78,7 +78,7 @@ sendDataBinaryRequest(){
   --header "Authorization: Bearer $ACCESS_TOKEN" \
   --header "$3" \
   --data-binary "$4")
-  handleRequestErrors $req
+  handleRequestErrors "$req"
   echo $req
 }
 
