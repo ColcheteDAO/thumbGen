@@ -61,7 +61,7 @@ handleRequestErrors(){
     echo "======================="
     echo "EXITTTT"
     echo "======================="
-    exit 1
+    set -e
   fi
 }
 
@@ -83,6 +83,9 @@ sendDataBinaryRequest(){
 
 getPlaylistItemCount(){
   playlistReq=$(sendGetRequest "$urlBaseAPI/youtube/v3/playlistItems?part=snippet&playlistId=$1&videoId=$2")
+  echo "[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]" 
+  echo $playlistReq 
+  echo "[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]" 
   playlistItemsCount=$(echo $playlistReq | jq -r '.items | length')
   echo $playlistItemsCount
 }
@@ -97,6 +100,9 @@ addToPlaylist(){
 
 fillSnippetVideo(){
   listReq=$(sendGetRequest "$urlBaseAPI/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=$1")
+  echo "[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]" 
+  echo $listReq 
+  echo "[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]"
   categoryId=$(echo $listReq | jq -r .items[0].snippet.categoryId)
   titleVideo=$(echo $listReq | jq -r .items[0].snippet.title)
   descriptionLen=$(echo $listReq | jq .items[0].snippet.description | wc -m)
