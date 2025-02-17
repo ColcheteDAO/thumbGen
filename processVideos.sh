@@ -48,7 +48,7 @@ updateVideoPayload(){
 handleRequestErrors(){
   echo "======================="
   echo $1 >> out.txt
-  echo $(checkPatternOcurrence "$1" '"error":')
+  echo $(checkPatternOcurrence "$1" '"error":') >> out.txt
   if [ $(checkPatternOcurrence "$1" '"error":') = 1 ]; then
     echo "======================="
     echo "EXITTTT"
