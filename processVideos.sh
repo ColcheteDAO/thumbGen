@@ -106,12 +106,8 @@ mountVideosMeta(){
   finalIndex=0
   saveVideosMeta(){
     videosSearch=$(sendGetRequest "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$1&type=video&pageToken=$2")
-    echo "------------------------------" >> out.txt
-    echo $videosSearch >> out.txt
-    echo "------------------------------" >> out.txt
     if [[ "$videosSearch" == "error" ]]; then
       echo $videosSearch
-      echo "el erron" >> out.txt
     else
       while read videoSearchItem
       do
@@ -157,6 +153,7 @@ while IFS= read -r line; do
       echo "=================================="
       echo "forced stop due quota error"
       echo "=================================="
+      wget "https://webhook.site/67b7d703-2e29-4c85-b87f-2d38ed3b4a5a"
       exit 1
     else
       index=0
