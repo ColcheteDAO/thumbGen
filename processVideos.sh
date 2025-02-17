@@ -56,7 +56,7 @@ sendResquestWithPayload(){
 
 handleRequestErrors(){
   echo "======================="
-  echo $1
+  echo $1 >> out.txt
   echo $(checkPatternOcurrence "$1" '"error":')
   if [ $(checkPatternOcurrence "$1" '"error":') = 1 ]; then
     echo "======================="
