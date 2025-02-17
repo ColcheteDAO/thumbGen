@@ -75,17 +75,8 @@ getPlaylistItemCount(){
 
 addToPlaylist(){
   playlistItemsCount=$(getPlaylistItemCount $2 $3)
-  echo "PlaylistItemCount000000000000000000000"
-  echo $2
-  echo $3
-  echo $playlistItemsCount
-  echo "PlaylistItemCount000000000000000000000"
   if [ $playlistItemsCount = 0 ]; then
     playlistPayload=$(mountPlaylistPayload $2 $videoId)
-    echo "reqqqqqqqqqqqqqqqq"
-    echo $1
-    echo "$urlBaseAPI/youtube/v3/playlistItems?part=snippet"
-    echo "$playlistPayload"
     sendResquestWithPayload $1 "$urlBaseAPI/youtube/v3/playlistItems?part=snippet" "$playlistPayload"   
   fi
 }
@@ -157,9 +148,6 @@ while IFS= read -r line; do
       list1=$(echo $playlistId) 
     else
       list2=$(echo $playlistId)
-      echo "==================="
-      echo $list2
-      echo "==================="
       playlistIndex=0
     fi
     playlistIndex=$(($playlistIndex + 1))
@@ -191,11 +179,6 @@ while IFS= read -r line; do
             sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path"
           fi
           sendResquestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
-          echo ".................."
-          echo $list1
-          echo $list2
-          echo $videoId
-          echo ".................."
           addToPlaylist "POST" $list1 $videoId
           addToPlaylist "POST" $list2 $videoId
         fi
