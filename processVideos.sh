@@ -56,6 +56,7 @@ sendResquestWithPayload(){
 
 handleRequestErrors(){
   echo "======================="
+  echo $1
   echo $(checkPatternOcurrence "$1" '"error":')
   if [ $(checkPatternOcurrence "$1" '"error":') = 1 ]; then
     echo "======================="
@@ -159,7 +160,7 @@ while IFS= read -r line; do
     playlistIndex=0
     mkdir -p "out/titles"
     touch "out/titles/$folder.md"
-    # mountVideosMeta $folder >> "out/titles/$folder.md"
+    mountVideosMeta $folder >> "out/titles/$folder.md"
     # mkdir -p "titles"
     # cp "out/titles/$folder.md" "titles/$folder.md" 
   # elif $fillDescription ; then
