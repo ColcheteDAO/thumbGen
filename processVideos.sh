@@ -161,7 +161,7 @@ while IFS= read -r line; do
       echo "forced stop due quota error"
       exit 1
     else
-      videosMetaData >> "out/titles/$folder.md"
+      echo $videosMetaData >> "out/titles/$folder.md"
       mkdir -p "titles"
       cp "out/titles/$folder.md" "titles/$folder.md" 
     fi
