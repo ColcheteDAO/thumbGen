@@ -114,6 +114,7 @@ mountVideosMeta(){
     echo "------------------------------" >> out.txt
     if [[ "$videosSearch" == "error" ]]; then
       echo $videosSearch
+      echo "el erron" >> out.txt
     else
       while read videoSearchItem
       do
