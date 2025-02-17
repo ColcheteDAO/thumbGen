@@ -155,6 +155,7 @@ while IFS= read -r line; do
     touch "out/titles/$folder.md"
     videosMetaData=$(mountVideosMeta $folder)
     if [[ "$videosMetaData" == "error" ]]; then
+      echo "forced stop due quota error"
       exit 1
     else
       mountVideosMeta $folder >> "out/titles/$folder.md"
