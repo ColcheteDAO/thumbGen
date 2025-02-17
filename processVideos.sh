@@ -156,7 +156,9 @@ while IFS= read -r line; do
     playlistIndex=0
     mkdir -p "out/titles"
     touch "out/titles/$folder.md"
+    echo "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
     echo $(mountVideosMeta $folder)
+    echo "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
   #   videosMetaData=$(mountVideosMeta $folder)
   #   if [[ "$videosMetaData" == "error" ]]; then
   #     echo "forced stop due quota error"
