@@ -59,13 +59,13 @@ sendResquestWithPayload(){
     --header "Accept: application/json" \
     --header "Content-Type: application/json" \
     --data "$(echo $3)")
-  handleRequestErrors "$req"
+  echo $(handleRequestErrors "$req")
 }
 
 sendGetRequest(){
   req=$(curl "$1" \
     --header "Authorization: Bearer $ACCESS_TOKEN")
-  handleRequestErrors "$req"
+  echo $(handleRequestErrors "$req")
 }
 
 sendDataBinaryRequest(){
@@ -73,7 +73,7 @@ sendDataBinaryRequest(){
   --header "Authorization: Bearer $ACCESS_TOKEN" \
   --header "$3" \
   --data-binary "$4")
-  handleRequestErrors "$req"
+  echo $(handleRequestErrors "$req")
 }
 
 getPlaylistItemCount(){
@@ -106,7 +106,9 @@ mountVideosMeta(){
   finalIndex=0
   saveVideosMeta(){
     videosSearch=$(sendGetRequest "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$1&type=video&pageToken=$2")
+    echo "------------------------------"
     echo $videosSearch
+    echo "------------------------------"
     if [[ "$videosSearch" == "error" ]]; then
       echo $videosSearch
     else
