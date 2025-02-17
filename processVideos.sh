@@ -51,11 +51,19 @@ sendResquestWithPayload(){
     --header "Accept: application/json" \
     --header "Content-Type: application/json" \
     --data "$(echo $3)"
+  handleRequestErrors $req
+}
+
+handleRequestErrors(){
+  if [ $(checkPatternOcurrence "$1" '"error":') = 1 ]; then
+    exit 1
+  end
 }
 
 sendGetRequest(){
   req=$(curl "$1" \
     --header "Authorization: Bearer $ACCESS_TOKEN")
+  handleRequestErrors $req
   echo $req
 }
 
@@ -64,6 +72,7 @@ sendDataBinaryRequest(){
   --header "Authorization: Bearer $ACCESS_TOKEN" \
   --header "$3" \
   --data-binary "$4")
+  handleRequestErrors $req
   echo $req
 }
 
