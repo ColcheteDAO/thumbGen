@@ -155,16 +155,16 @@ mountVideosMeta(){
 while IFS= read -r line; do
   if [ $(checkPatternOcurrence "$line" '#') = 1 ]; then
     folder=$(echo "$line" | cut -c 3-$((${#line}+2)))
-    index=0
-    fillDescription=true
-    playlistIndex=0
-    mkdir -p "out/titles"
-    touch "out/titles/$folder.md"
     videosMetaData=$(mountVideosMeta $folder)
     if [[ "$videosMetaData" == "error" ]]; then
       echo "forced stop due quota error"
       exit 1
     else
+      index=0
+      fillDescription=true
+      playlistIndex=0
+      mkdir -p "out/titles"
+      touch "out/titles/$folder.md"
       echo $videosMetaData >> "out/titles/$folder.md"
       mkdir -p "titles"
       cp "out/titles/$folder.md" "titles/$folder.md" 
