@@ -57,7 +57,7 @@ sendResquestWithPayload(){
 handleRequestErrors(){
   if [ $(checkPatternOcurrence "$1" '"error":') = 1 ]; then
     exit 1
-  end
+  fi
 }
 
 sendGetRequest(){
