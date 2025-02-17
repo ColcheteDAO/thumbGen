@@ -53,7 +53,7 @@ handleRequestErrors(){
     echo "======================="
     echo "EXITTTT"
     echo "======================="
-    set -e
+    exit 1
   fi
 }
 
