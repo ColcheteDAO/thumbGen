@@ -109,9 +109,9 @@ mountVideosMeta(){
   finalIndex=0
   saveVideosMeta(){
     videosSearch=$(sendGetRequest "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$1&type=video&pageToken=$2")
-    echo "------------------------------"
-    echo $videosSearch
-    echo "------------------------------"
+    echo "------------------------------" >> out.txt
+    echo $videosSearch >> out.txt
+    echo "------------------------------" >> out.txt
     if [[ "$videosSearch" == "error" ]]; then
       echo $videosSearch
     else
