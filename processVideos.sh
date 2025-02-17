@@ -47,8 +47,9 @@ updateVideoPayload(){
 
 handleRequestErrors(){
   if [ $(checkPatternOcurrence "$1" '"error":') = 1 ]; then
-     return 1 2>/dev/null
-     exit 1
+    echo "error" 
+  else
+    echo "$1"
   fi
 }
 
@@ -58,14 +59,13 @@ sendResquestWithPayload(){
     --header "Accept: application/json" \
     --header "Content-Type: application/json" \
     --data "$(echo $3)")
-      echo $(handleRequestErrors "$req")
+  handleRequestErrors "$req"
 }
 
 sendGetRequest(){
   req=$(curl "$1" \
     --header "Authorization: Bearer $ACCESS_TOKEN")
-      echo $(handleRequestErrors "$req")
-  echo $req
+  handleRequestErrors "$req"
 }
 
 sendDataBinaryRequest(){
@@ -73,8 +73,7 @@ sendDataBinaryRequest(){
   --header "Authorization: Bearer $ACCESS_TOKEN" \
   --header "$3" \
   --data-binary "$4")
-    echo $(handleRequestErrors "$req")
-  echo $req
+  handleRequestErrors "$req"
 }
 
 getPlaylistItemCount(){
