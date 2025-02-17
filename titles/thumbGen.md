@@ -142,3 +142,7 @@
 [video](https://youtu.be/f_Ymy8wAdW0)
 ## Depuração das playlists #72
 [video](https://youtu.be/CGpvzmOTucs)
+## Separar títulos em arquivos markdown #73
+[video](https://youtu.be/raqBFu2AXFU)
+## Processar títulos de arquivos markdown #74
+[video](https://youtu.be/X-5IX5Fjioo)
