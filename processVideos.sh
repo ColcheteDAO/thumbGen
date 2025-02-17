@@ -147,10 +147,13 @@ while IFS= read -r line; do
     if [ $playlistIndex = 0 ]; then
       list1=$(echo $playlistId) 
     else
-      list2=$(echo $playlistId) 
+      list2=$(echo $playlistId)
+      echo "==================="
+      echo $list2
+      echo "==================="
+      playlistIndex=0
     fi
     playlistIndex=$(($playlistIndex + 1))
-  
   elif [ $(checkPatternOcurrence "$line" '\[artifact\]') = 1 ]; then
     artifactToDownload=$(echo "$line" | cut -c 12-$((${#line}-3)))
     wget $artifactToDownload
@@ -179,6 +182,11 @@ while IFS= read -r line; do
             sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path"
           fi
           sendResquestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
+          echo ".................."
+          echo $list1
+          echo $list2
+          echo $videoId
+          echo ".................."
           addToPlaylist "POST" $list1 $videoId
           addToPlaylist "POST" $list2 $videoId
         fi
