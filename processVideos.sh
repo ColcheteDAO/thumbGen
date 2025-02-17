@@ -81,7 +81,7 @@ addToPlaylist(){
   echo $playlistItemsCount
   echo "PlaylistItemCount000000000000000000000"
   if [ $playlistItemsCount = 0 ]; then
-    playlistPayload=$(mountPlaylistPayload $list1 $videoId)
+    playlistPayload=$(mountPlaylistPayload $2 $videoId)
     echo "reqqqqqqqqqqqqqqqq"
     echo $1
     echo "$urlBaseAPI/youtube/v3/playlistItems?part=snippet"
