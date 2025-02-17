@@ -10,7 +10,7 @@ list2=''
 declare -A playlists
 startUpdateIndex=0
 tags=''
-genThumb='Y'
+genThumb='N'
 urlBaseAPI='https://youtube.googleapis.com'
 urlBaseAuth='https://oauth2.googleapis.com'
 ACCESS_TOKEN=$(curl  --location --request POST "$urlBaseAuth/token?client_secret=$1&grant_type=refresh_token&refresh_token=$2&client_id=$3" | jq .access_token | tr -d '"')
@@ -75,8 +75,17 @@ getPlaylistItemCount(){
 
 addToPlaylist(){
   playlistItemsCount=$(getPlaylistItemCount $2 $3)
+  echo "PlaylistItemCount000000000000000000000"
+  echo $2
+  echo $3
+  echo $playlistItemsCount
+  echo "PlaylistItemCount000000000000000000000"
   if [ $playlistItemsCount = 0 ]; then
     playlistPayload=$(mountPlaylistPayload $list1 $videoId)
+    echo "reqqqqqqqqqqqqqqqq"
+    echo $1
+    echo "$urlBaseAPI/youtube/v3/playlistItems?part=snippet"
+    echo "$playlistPayload"
     sendResquestWithPayload $1 "$urlBaseAPI/youtube/v3/playlistItems?part=snippet" "$playlistPayload"   
   fi
 }
