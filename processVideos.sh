@@ -59,13 +59,13 @@ sendResquestWithPayload(){
     --header "Accept: application/json" \
     --header "Content-Type: application/json" \
     --data "$(echo $3)")
-  echo $(handleRequestErrors "$req")
+  echo "$(handleRequestErrors "$req")"
 }
 
 sendGetRequest(){
   req=$(curl "$1" \
     --header "Authorization: Bearer $ACCESS_TOKEN")
-  echo $(handleRequestErrors "$req")
+  echo "$(handleRequestErrors "$req")"
 }
 
 sendDataBinaryRequest(){
@@ -73,7 +73,7 @@ sendDataBinaryRequest(){
   --header "Authorization: Bearer $ACCESS_TOKEN" \
   --header "$3" \
   --data-binary "$4")
-  echo $(handleRequestErrors "$req")
+  echo "$(handleRequestErrors "$req")"
 }
 
 getPlaylistItemCount(){
