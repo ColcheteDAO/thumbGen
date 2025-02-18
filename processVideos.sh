@@ -115,10 +115,6 @@ mountVideosMeta(){
         lastIndex=${#line}
         folderStrLen=${#folder}
         videoTitleRaw=$(echo "$videoSearchItem" | jq -r '.snippet.title')
-        # echo "BEEEFFFFFFFtitlesssssssssssssss"
-        # echo $videoSearchItem
-        # echo $videoTitleRaw
-        # echo "titlesssssssssssssss"
         videoTitleRawLen=${videoTitleRawLen}
         titleIndexRaw=$(echo "$videoTitleRaw"| grep -o -b $folder )
         titleIndexRawLen=${#titleIndexRaw}
@@ -127,6 +123,10 @@ mountVideosMeta(){
         titlesMakdown[${seriesNumber#0}]=$(echo "## ${videoTitleRaw/$folder /"#"}")
         videoIdAPI=$(echo "$videoSearchItem" | jq -r '.id.videoId')
         videosMakdown[${seriesNumber#0}]=$(echo "[video](https://youtu.be/$videoIdAPI)")
+        echo "BEEEFFFFFFFtitlesssssssssssssss"
+        echo $finalIndex
+        echo ${seriesNumber#0}
+        echo "titlesssssssssssssss"
         if [[ $finalIndex -lt ${seriesNumber#0} ]]; then
           finalIndex=${seriesNumber#0}
         fi
