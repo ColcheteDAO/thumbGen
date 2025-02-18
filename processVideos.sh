@@ -107,19 +107,18 @@ mountVideosMeta(){
   saveVideosMeta(){
     videosSearch=$(sendGetRequest "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$1&type=video&pageToken=$2")
     if [[ "$videosSearch" == "error" ]]; then
-      echo "=============="
       echo $videosSearch
     else
-      echo "........................."
+      # echo "........................."
       while read videoSearchItem
       do
         lastIndex=${#line}
         folderStrLen=${#folder}
         videoTitleRaw=$(echo "$videoSearchItem" | jq -r '.snippet.title')
-        echo "BEEEFFFFFFFtitlesssssssssssssss"
-        echo $videoSearchItem
-        echo $videoTitleRaw
-        echo "titlesssssssssssssss"
+        # echo "BEEEFFFFFFFtitlesssssssssssssss"
+        # echo $videoSearchItem
+        # echo $videoTitleRaw
+        # echo "titlesssssssssssssss"
         videoTitleRawLen=${videoTitleRawLen}
         titleIndexRaw=$(echo "$videoTitleRaw"| grep -o -b $folder )
         titleIndexRawLen=${#titleIndexRaw}
@@ -139,11 +138,11 @@ mountVideosMeta(){
       fi
     fi
   }
-  echo "BEFFFFsaveeeedatttaaaaaaaaa"
+  # echo "BEFFFFsaveeeedatttaaaaaaaaa"
   saveData=$(saveVideosMeta $1)
-  echo $saveData
-  echo $finalIndex
-  echo "saveeeedatttaaaaaaaaa"
+  # echo $saveData
+  # echo $finalIndex
+  # echo "saveeeedatttaaaaaaaaa"
   if [[ "$saveData" == "error" ]]; then
     echo $saveData
   else
