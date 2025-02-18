@@ -107,8 +107,10 @@ mountVideosMeta(){
   saveVideosMeta(){
     videosSearch=$(sendGetRequest "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$1&type=video&pageToken=$2")
     if [[ "$videosSearch" == "error" ]]; then
+      echo "=============="
       echo $videosSearch
     else
+      echo "........................."
       while read videoSearchItem
       do
         lastIndex=${#line}
