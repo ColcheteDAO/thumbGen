@@ -144,7 +144,7 @@ mountVideosMeta(){
   echo "BEFFFFsaveeeedatttaaaaaaaaa"
   saveVideosMeta $1
   # saveData=$(saveVideosMeta $1)
-  echo $saveData
+  # echo $saveData
   echo $finalIndex
   echo "saveeeedatttaaaaaaaaa"
   if [[ "$saveData" == "error" ]]; then
