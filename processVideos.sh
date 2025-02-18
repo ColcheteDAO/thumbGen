@@ -136,8 +136,8 @@ mountVideosMeta(){
     fi
   }
   saveData=$(saveVideosMeta $1)
-  if [[ "$videosSearch" == "error" ]]; then
-    echo $videosSearch
+  if [[ "$saveData" == "error" ]]; then
+    echo $saveData
   else
     for (( c=1; c<=$finalIndex; c++ ))
     do 
@@ -150,7 +150,9 @@ mountVideosMeta(){
 while IFS= read -r line; do
   if [ $(checkPatternOcurrence "$line" '#') = 1 ]; then
     folder=$(echo "$line" | cut -c 3-$((${#line}+2)))
+    echo "BEFFFmetaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
     videosMetaData=$(mountVideosMeta $folder)
+    echo "metaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
     if [[ "$videosMetaData" == "error" ]]; then
       echo "=================================="
       echo "forced stop due quota error"
