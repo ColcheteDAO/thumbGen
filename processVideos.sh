@@ -151,7 +151,7 @@ while IFS= read -r line; do
   if [ $(checkPatternOcurrence "$line" '#') = 1 ]; then
     folder=$(echo "$line" | cut -c 3-$((${#line}+2)))
     videosMetaData=$(mountVideosMeta $folder)
-    if [[ $(checkPatternOcurrence "$1" 'error') = 1 ]]; then
+    if [[ $(checkPatternOcurrence "$videosMetaData" 'error') = 1 ]]; then
       echo "==================="
       echo $videosMetaData
       echo "==================="
