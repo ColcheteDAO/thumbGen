@@ -154,7 +154,7 @@ while IFS= read -r line; do
     echo "====2=============="
     echo $videosMetaData
     echo "====2=============="
-    if [[ $(checkPatternOcurrence "$videosMetaData" 'error') = 1 ]]; then
+    if [[ $(checkPatternOcurrence "$videosMetaData" 'error') -ge 1 ]]; then
       echo "==================="
       echo $videosMetaData
       echo "==================="
