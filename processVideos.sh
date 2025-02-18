@@ -159,7 +159,7 @@ while IFS= read -r line; do
       playlistIndex=0
       mkdir -p "out/titles"
       touch "out/titles/$folder.md"
-      echo $videosMetaData >> "out/titles/$folder.md"
+      echo "$videosMetaData" >> "out/titles/$folder.md"
       mkdir -p "titles"
       cp "out/titles/$folder.md" "titles/$folder.md" 
     fi
