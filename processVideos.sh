@@ -121,9 +121,9 @@ mountVideosMeta(){
         titleIndexRawLen=${#titleIndexRaw}
         titleIndex=$(echo $titleIndexRaw | cut -c 1-$(expr $titleIndexRawLen - $folderStrLen - 1))
         seriesNumber=$(echo $videoTitleRaw | cut -c $(expr $titleIndex + $folderStrLen + 2)-$videoTitleRawLen)
-        titlesMakdown[${seriesNumber#0}]=$(echo "## ${videoTitleRaw/$folder /"#"}")
+        titlesMakdown[${seriesNumber#0}]=$(echo "## ${videoTitleRaw/$folder /"#"}\n")
         videoIdAPI=$(echo "$videoSearchItem" | jq -r '.id.videoId')
-        videosMakdown[${seriesNumber#0}]=$(echo "[video](https://youtu.be/$videoIdAPI)")
+        videosMakdown[${seriesNumber#0}]=$(echo "[video](https://youtu.be/$videoIdAPI)\n")
         if [[ $finalIndex -lt ${seriesNumber#0} ]]; then
           finalIndex=${seriesNumber#0}
         fi
