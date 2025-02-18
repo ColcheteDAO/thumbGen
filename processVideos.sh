@@ -116,6 +116,10 @@ mountVideosMeta(){
         lastIndex=${#line}
         folderStrLen=${#folder}
         videoTitleRaw=$(echo "$videoSearchItem" | jq -r '.snippet.title')
+        echo "BEEEFFFFFFFtitlesssssssssssssss"
+        echo $videoSearchItem
+        echo $videoTitleRaw
+        echo "titlesssssssssssssss"
         videoTitleRawLen=${videoTitleRawLen}
         titleIndexRaw=$(echo "$videoTitleRaw"| grep -o -b $folder )
         titleIndexRawLen=${#titleIndexRaw}
