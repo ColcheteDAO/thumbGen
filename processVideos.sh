@@ -104,23 +104,17 @@ mountVideosMeta(){
   declare -a titlesMakdown
   declare -a videosMakdown
   finalIndex=0
+  errorMSG=""
   saveVideosMeta(){
     videosSearch=$(sendGetRequest "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$1&type=video&pageToken=$2")
     if [[ "$videosSearch" == "error" ]]; then
-      # echo "ERRRRORRRRRRRRRRR"
+      errorMSG=$videosSearch
       echo $videosSearch
     else
-      # echo "BEFFF VIDEOSERRRRRR" 
-      # echo $videosSearch
-      # echo "VIDEOSERRRRRR" 
       while read videoSearchItem
       do
         lastIndex=${#line}
         folderStrLen=${#folder}
-        # echo "BEEEFFFFFFFtitlesssssssssssssss"
-        # echo $folderStrLen
-        # echo $folder
-        # echo "titlesssssssssssssss"
         videoTitleRaw=$(echo "$videoSearchItem" | jq -r '.snippet.title')
         videoTitleRawLen=${videoTitleRawLen}
         titleIndexRaw=$(echo "$videoTitleRaw"| grep -o -b $folder )
@@ -141,13 +135,8 @@ mountVideosMeta(){
       fi
     fi
   }
-  echo "BEFFFFsaveeeedatttaaaaaaaaa"
   saveVideosMeta $1
-  # saveData=$(saveVideosMeta $1)
-  # echo $saveData
-  echo $finalIndex
-  echo "saveeeedatttaaaaaaaaa"
-  if [[ "$saveData" == "error" ]]; then
+  if [[ "$errorMSG" == "error" ]]; then
     echo $saveData
   else
     for (( c=1; c<=$finalIndex; c++ ))
@@ -161,15 +150,8 @@ mountVideosMeta(){
 while IFS= read -r line; do
   if [ $(checkPatternOcurrence "$line" '#') = 1 ]; then
     folder=$(echo "$line" | cut -c 3-$((${#line}+2)))
-    echo "BEFFFmetaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
     videosMetaData=$(mountVideosMeta $folder)
-    echo $videosMetaData
-    echo "metaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
     if [[ "$videosMetaData" == "error" ]]; then
-      echo "=================================="
-      echo "forced stop due quota error"
-      echo "=================================="
-      wget "https://webhook.site/67b7d703-2e29-4c85-b87f-2d38ed3b4a5a"
       exit 1
     else
       index=0
