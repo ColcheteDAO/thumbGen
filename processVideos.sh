@@ -11,6 +11,8 @@ declare -A playlists
 startUpdateIndex=0
 tags=''
 genThumb='N'
+declare -a errors
+errors[0]="Quota Exceeded"
 urlBaseAPI='https://youtube.googleapis.com'
 urlBaseAuth='https://oauth2.googleapis.com'
 ACCESS_TOKEN=$(curl  --location --request POST "$urlBaseAuth/token?client_secret=$1&grant_type=refresh_token&refresh_token=$2&client_id=$3" | jq .access_token | tr -d '"')
@@ -109,7 +111,7 @@ mountVideosMeta(){
     videosSearch=$(sendGetRequest "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$1&type=video&pageToken=$2")
     if [[ "$videosSearch" == "error" ]]; then
       errorMSG=$videosSearch
-      echo $videosSearch
+      echo "$videosSearch $0 ${errors[0]}"
     else
       while read videoSearchItem
       do
