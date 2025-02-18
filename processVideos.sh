@@ -137,7 +137,7 @@ mountVideosMeta(){
   }
   saveVideosMeta $1
   if [[ "$errorMSG" == "error" ]]; then
-    echo $saveData
+    echo $errorMSG
   else
     for (( c=1; c<=$finalIndex; c++ ))
     do 
