@@ -152,6 +152,7 @@ while IFS= read -r line; do
     folder=$(echo "$line" | cut -c 3-$((${#line}+2)))
     echo "BEFFFmetaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
     videosMetaData=$(mountVideosMeta $folder)
+    echo $videosMetaData
     echo "metaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
     if [[ "$videosMetaData" == "error" ]]; then
       echo "=================================="
