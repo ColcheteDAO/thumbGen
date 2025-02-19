@@ -5,7 +5,7 @@
 Repo:\nhttps://github.com/ColcheteDAO/thumbGen  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe7pICM1fiO6AXKY-uGzLqB3)  
-**index**: 37  
+**index**: 32  
 **tags**: "github actions","Image Magick","Magick","bash"  
 **genThumb**: Y  
 **end**
