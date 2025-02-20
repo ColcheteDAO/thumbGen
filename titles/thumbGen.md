@@ -60,7 +60,7 @@
 [video](https://youtu.be/LiyeRXpzdAs)
 ## Adicionar video a playlist #31
 [video](https://youtu.be/gEJ7hOMHunU)
-## Resolver bug ao adicionar em playlists automáticas #32
+## Bug adicionar playlists automáticas #32
 [video](https://youtu.be/vhvDjh6oAh8)
 ## Definir idioma do vídeo #33
 [video](https://youtu.be/B0oYwuh3idE)
@@ -70,8 +70,8 @@
 [video](https://youtu.be/lfNaIHw1R8Y)
 ## Adicionar tags #36
 [video](https://youtu.be/MMBxidR3Rbs)
-
-
+## Validar descrição está preenchida #37
+[video](https://youtu.be/iiIstinfTx8)
 ## Permitir definir indice de atualização #38
 [video](https://youtu.be/b-LHHscaUuk)
 ## Correção do indice atualização #39
@@ -120,7 +120,7 @@
 [video](https://youtu.be/8sAWmYpgNFQ)
 ## Salvar títulos em arquivo markdown #61
 [video](https://youtu.be/bbtaBsazmug)
-## Salvar arquivo markdown como artefato #62
+## Salvar markdown como artefato #62
 [video](https://youtu.be/iUA-JnrYDg0)
 ## Obter índice do vídeo #63
 [video](https://youtu.be/Wy0qhdc4lNs)
@@ -142,9 +142,9 @@
 [video](https://youtu.be/f_Ymy8wAdW0)
 ## Depuração das playlists #72
 [video](https://youtu.be/CGpvzmOTucs)
-## Separar títulos em arquivos markdown #73
+## Separar títulos em markdown #73
 [video](https://youtu.be/raqBFu2AXFU)
-## Processar títulos de arquivos markdown #74
+## Processar títulos de markdown #74
 [video](https://youtu.be/X-5IX5Fjioo)
 ## Adicionar videos à playlist #75
 [video](https://youtu.be/CiqIOUeZfx4)
@@ -154,3 +154,5 @@
 [video](https://youtu.be/LkJ0h7Ztigw)
 ## Melhoria no tratamento de erros #78
 [video](https://youtu.be/Od3Tj3Sz9C0)
+## Adicionar à playlist debug #79
+[video](https://youtu.be/A7F3lYpIeZc)
