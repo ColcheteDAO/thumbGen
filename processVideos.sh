@@ -80,8 +80,14 @@ sendDataBinaryRequest(){
 
 getPlaylistItemCount(){
   playlistReq=$(sendGetRequest "$urlBaseAPI/youtube/v3/playlistItems?part=snippet&playlistId=$1&videoId=$2")
-  playlistItemsCount=$(echo $playlistReq | jq -r '.items | length')
-  echo $playlistItemsCount
+  funName="getPlaylistItemCount"
+  if [[ "$videosSearch" == "error" ]]; then
+    echo "$videosSearch $funName ${errors[0]}"
+    exit 1
+  else
+    playlistItemsCount=$(echo $playlistReq | jq -r '.items | length')
+    echo $playlistItemsCount
+  fi
 }
 
 addToPlaylist(){
