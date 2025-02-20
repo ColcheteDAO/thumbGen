@@ -17,3 +17,11 @@ repo:\nhttps://github.com/juancolchete/leetCode
 **tags**: "LeetCode","LetCode","Typescript","TS","AD"  
 **genThumb**: Y  
 **end**
+# tux
+repo:\nhttps://github.com/juancolchete/tux  
+[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
+[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe56nItnsIPsP_4m9o94sfjz)  
+**index**: 1  
+**tags**: "Open Source","Linux","Arch Linux","Tux","FOSS"  
+**genThumb**: Y  
+**end**
