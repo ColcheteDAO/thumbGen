@@ -12,6 +12,7 @@ startUpdateIndex=0
 tags=''
 genThumb='N'
 declare -a errors
+declare -a sameHash
 errors[0]="Quota Exceeded"
 urlBaseAPI='https://youtube.googleapis.com'
 urlBaseAuth='https://oauth2.googleapis.com'
@@ -205,14 +206,29 @@ while IFS= read -r line; do
           mkdir -p "hashes/thumbs/$folder"
           path="out/thumbs/$folder/$folder$index.png"
           mv compose_under.png $path
-          sha256sum "out/thumbs/$folder/$folder$index.png" > "hashes/thumbs/$folder/$folder$index.txt" 
+          hashFilePath="hashes/thumbs/$folder/$folder$index.txt"
+          thumbHash=$(sha256sum "out/thumbs/$folder/$folder$index.png")
+          if [ -f $hashFilePath ]; then
+            savedThumbHash=$(cat $hashFilePath)
+            if [[ "$thumbHash" == "$savedThumbHash" ]]; then
+              sameHash[$index]=true
+            else
+              sameHash[$index]=false
+            fi
+          fi
+          echo $thumbHash > $hashFilePath 
         fi
       elif [ $(checkPatternOcurrence "$lineTitle" '\[video\]') = 1 ]; then
         videoId=$(echo "$lineTitle" | cut -c 26-$((${#lineTitle}-1)))
         fillSnippetVideo $videoId  
         if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [ $index -ge $startUpdateIndex ]; then
           if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
-            sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path"
+            if [ ${sameHash[$index]} = false ]; then
+              echo "==============.................."
+              echo "UPDATED THE THUMB"
+              echo "==============.................."
+              sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path"
+            fi
           fi
           sendResquestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
           addToPlaylist "POST" $list1 $videoId
