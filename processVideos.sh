@@ -202,8 +202,10 @@ while IFS= read -r line; do
         if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
           bash genThumb.sh "$title" "$folder" 
           mkdir -p "out/thumbs/$folder"
+          mkdir -p "hashes/thumbs/$folder"
           path="out/thumbs/$folder/$folder$index.png"
           mv compose_under.png $path
+          sha256sum "out/thumbs/$folder/$folder$index.png" > "hashes/thumbs/$folder/$folder$index.txt" 
         fi
       elif [ $(checkPatternOcurrence "$lineTitle" '\[video\]') = 1 ]; then
         videoId=$(echo "$lineTitle" | cut -c 26-$((${#lineTitle}-1)))
