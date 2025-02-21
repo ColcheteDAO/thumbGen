@@ -1,1 +1,1 @@
-f4a29625b020c9f1014e8894082d1dfcf2ff5d820d0d0cd57e5b32833b2c76e4  out/thumbs/LeetCode/LeetCode21.png
+fcaa3cdb75401060c447190b9924e59a385286ff3dbe238e2721a77f9a5b5fc6 out/thumbs/LeetCode/LeetCode21.png

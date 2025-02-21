@@ -1,1 +1,1 @@
-c0ea098809e4b8a57fcfc65b4087f791320d5cec55473cb4bd2aafe3920f96bb  out/thumbs/tux/tux1.png
+bc6e08abd75e4edcd9dbc22198d01992a7cba3547047a869758001fb83562309 out/thumbs/tux/tux1.png

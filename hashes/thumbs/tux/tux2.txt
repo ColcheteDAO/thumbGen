@@ -1,1 +1,1 @@
-7cff497724ad60f8b2684bb390ab2a878d6f564e6d503758d2c3169faed97d0d  out/thumbs/tux/tux2.png
+569f12c0a22dc15661482ce8192ccb8c4ecbd04ddb439ca0309f10a1dae466f1 out/thumbs/tux/tux2.png

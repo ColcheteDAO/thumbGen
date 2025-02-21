@@ -1,1 +1,1 @@
-277198df7a640913a6a8ccbc3e04d7f9b4cb06a7d352b60de4af598c177fed7e  out/thumbs/tux/tux7.png
+158b04b782f09c66db630da9a29c71d20c0f141dde256bc3f90dea11ac1b68c7 out/thumbs/tux/tux7.png

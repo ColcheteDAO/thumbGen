@@ -1,1 +1,1 @@
-58ab649b6720237ff2b615e441561e91f4b7f7f39d0d8960268ff024a106d37b  out/thumbs/LeetCode/LeetCode20.png
+2ec4ef6013a495b55cac25085d0dc3ebe93775454174d917db0ce0dd0684124d out/thumbs/LeetCode/LeetCode20.png
