@@ -74,7 +74,7 @@
 [video](https://youtu.be/iiIstinfTx8)
 ## Permitir definir indice de atualização #38
 [video](https://youtu.be/b-LHHscaUuk)
-## Correção do indice atualização #39
+## Correção indice atualização #39
 [video](https://youtu.be/ZjGQ90CYcp8)
 ## Formatação de JSON #40
 [video](https://youtu.be/GgXWacpE2EE)
@@ -98,7 +98,7 @@
 [video](https://youtu.be/XpPnXOfeP2o)
 ## Salvar dados do vídeo #50
 [video](https://youtu.be/Xdf5Z7PF3bY)
-## Requisição genérica de upload #51
+## Requisição genérica upload #51
 [video](https://youtu.be/O8J_vFEMU5o)
 ## Definir se sobe a capa #52
 [video](https://youtu.be/1ayYVnF7tJM)
@@ -156,3 +156,7 @@
 [video](https://youtu.be/Od3Tj3Sz9C0)
 ## Adicionar à playlist debug #79
 [video](https://youtu.be/A7F3lYpIeZc)
+## Adicionar série de videos #80
+[video](https://youtu.be/IChy3vVRerE)
+## Resolver erro jq playlist #81
+[video](https://youtu.be/m12l4LERNB4)
