@@ -12,7 +12,7 @@ startUpdateIndex=0
 tags=''
 genThumb='N'
 declare -a errors
-declare -a sameHash
+declare -a needUpdateThumb
 errors[0]="Quota Exceeded"
 urlBaseAPI='https://youtube.googleapis.com'
 urlBaseAuth='https://oauth2.googleapis.com'
@@ -207,11 +207,10 @@ while IFS= read -r line; do
           diffCount=$(compare -metric ae -fuzz XX% "out/thumbs/$folder/$folder$index.png" compose_under.png null: 2>&1) 
           mv compose_under.png $path
           if [ -f $hashFilePath ]; then
-            savedThumbHash=$(cat $hashFilePath)
             if [ "$diffCount" = 0 ]; then
-              sameHash[$index]=true
+              needUpdateThumb[$index]=false
             else
-              sameHash[$index]=false
+              needUpdateThumb[$index]=true
             fi
           fi
           echo $thumbHash > $hashFilePath 
@@ -221,7 +220,7 @@ while IFS= read -r line; do
         fillSnippetVideo $videoId  
         if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [ $index -ge $startUpdateIndex ]; then
           if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
-            if [ ${sameHash[$index]} = false ]; then
+            if [ ${needUpdateThumb[$index]} = true ]; then
               echo "==============.................."
               echo "UPDATED THE THUMB"
               echo "==============.................."
