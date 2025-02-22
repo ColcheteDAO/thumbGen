@@ -206,14 +206,11 @@ while IFS= read -r line; do
           path="out/thumbs/$folder/$folder$index.png"
           diffCount=$(compare -metric ae -fuzz XX% "out/thumbs/$folder/$folder$index.png" compose_under.png null: 2>&1) 
           mv compose_under.png $path
-          if [ -f $hashFilePath ]; then
             if [ "$diffCount" = 0 ]; then
               needUpdateThumb[$index]=false
             else
               needUpdateThumb[$index]=true
             fi
-          fi
-          echo $thumbHash > $hashFilePath 
         fi
       elif [ $(checkPatternOcurrence "$lineTitle" '\[video\]') = 1 ]; then
         videoId=$(echo "$lineTitle" | cut -c 26-$((${#lineTitle}-1)))
