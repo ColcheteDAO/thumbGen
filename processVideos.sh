@@ -203,14 +203,12 @@ while IFS= read -r line; do
         if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
           bash genThumb.sh "$title" "$folder" 
           mkdir -p "out/thumbs/$folder"
-          mkdir -p "hashes/thumbs/$folder"
           path="out/thumbs/$folder/$folder$index.png"
+          diffCount=$(compare -metric ae -fuzz XX% "out/thumbs/$folder/$folder$index.png" compose_under.png null: 2>&1) 
           mv compose_under.png $path
-          hashFilePath="hashes/thumbs/$folder/$folder$index.txt"
-          thumbHash=$(sha256sum "out/thumbs/$folder/$folder$index.png")
           if [ -f $hashFilePath ]; then
             savedThumbHash=$(cat $hashFilePath)
-            if [[ "$thumbHash" == "$savedThumbHash" ]]; then
+            if [ "$diffCount" = 0 ]; then
               sameHash[$index]=true
             else
               sameHash[$index]=false

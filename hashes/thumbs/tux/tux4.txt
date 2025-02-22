@@ -1,1 +1,0 @@
-3b55697bafbd7caa9312770332d31ce3da3f6e071cb5ccbbbc55d2d27550185f out/thumbs/tux/tux4.png

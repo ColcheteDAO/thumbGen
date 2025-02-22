@@ -1,1 +1,0 @@
-867b613b1b48540190cbcf8f466d0754e706b013577b04a838bde839c5b2b545 out/thumbs/LeetCode/LeetCode12.png

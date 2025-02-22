@@ -1,1 +1,0 @@
-ed387f9d0ca4d8032e5108c6c8d6143c46794278b6f16141393dee8316ac62ed out/thumbs/LeetCode/LeetCode19.png

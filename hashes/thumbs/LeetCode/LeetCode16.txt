@@ -1,1 +1,0 @@
-c2688bd56204be07afde4a7517356795ea1172fb77f36152d2b2f85f72cb9d47 out/thumbs/LeetCode/LeetCode16.png
