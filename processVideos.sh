@@ -204,7 +204,10 @@ while IFS= read -r line; do
           bash genThumb.sh "$title" "$folder" 
           mkdir -p "out/thumbs/$folder"
           path="out/thumbs/$folder/$folder$index.png"
-          diffCount=$(compare -metric ae -fuzz XX% "out/thumbs/$folder/$folder$index.png" compose_under.png null: 2>&1) 
+          diffCount=0
+          if [ -f "out/thumbs/$folder/$folder$index.png" ]; then
+             diffCount=$(compare -metric ae -fuzz XX% "out/thumbs/$folder/$folder$index.png" compose_under.png null: 2>&1) 
+          fi
           mv compose_under.png $path
             echo "DEBUG THUMB========================"
             echo $diffCount
