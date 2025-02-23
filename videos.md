@@ -14,7 +14,7 @@ Repo:\nhttps://github.com/ColcheteDAO/thumbGen
 repo:\nhttps://github.com/juancolchete/leetCode  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6rDgVtlz5XbIMdpPvAZiSm)  
-**index**: 1  
+**index**: 21  
 **tags**: "LeetCode","LetCode","Typescript","TS","AD"  
 **genThumb**: Y  
 **end**
