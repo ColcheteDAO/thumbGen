@@ -209,9 +209,7 @@ while IFS= read -r line; do
              diffCount=$(compare -metric ae -fuzz XX% "out/thumbs/$folder/$folder$index.png" compose_under.png null: 2>&1) 
           fi
           echo "DEBUG THUMB========================"
-          ls "out/thumbs/$folder"
-          ls "out/thumbs"
-          ls "out"
+          ls -l "out/thumbs/$folder/$folder$index.png"
           echo $diffCount
           echo "DEBUG THUMB========================"
           mv compose_under.png $path
