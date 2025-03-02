@@ -26,7 +26,7 @@ repo:\nhttps://github.com/juancolchete/tux
 **tags**: "Open Source","Linux","Arch Linux","Tux","FOSS"  
 **genThumb**: Y  
 **end**
-# [Tutoriais]
+# %5BTutoriais%5D
 repo:\nhttps://github.com/juancolchete/tutorials  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe5fIETshPhrUtKBojVar2Gs)  
