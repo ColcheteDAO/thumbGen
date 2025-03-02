@@ -26,3 +26,19 @@ repo:\nhttps://github.com/juancolchete/tux
 **tags**: "Open Source","Linux","Arch Linux","Tux","FOSS"  
 **genThumb**: Y  
 **end**
+# [Tutoriais]
+repo:\nhttps://github.com/juancolchete/tutorials  
+[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
+[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe5fIETshPhrUtKBojVar2Gs)  
+**index**: 1  
+**tags**: "Open Source","Linux","Arch Linux","Tutorials","Demo"  
+**genThumb**: Y  
+**end**
+# Da Lua eu VIM
+repo:\nhttps://github.com/juancolchete/tutorials  
+[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
+[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe5cA8y2BVpGKxZIbqCEZoYP)  
+**index**: 1  
+**tags**: "NVIM","LunarVIM","NeoVIM","VIM","bash"  
+**genThumb**: Y  
+**end**
