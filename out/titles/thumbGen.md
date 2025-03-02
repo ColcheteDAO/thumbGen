@@ -8,9 +8,9 @@
 [video](https://youtu.be/nbz6dXII1kA)
 ## Colar duas imagens com Magick #05
 [video](https://youtu.be/JXVzqeUJfCo)
-## Adicionar imagem no sudeste Magick #06
+## Colar imagem no sudeste Magick #06
 [video](https://youtu.be/bDp3D245_rE)
-## Adicionar imagem no sudoeste Magick #07
+## Colar imagem no sudoeste Magick #07
 [video](https://youtu.be/m2MWKI_4nAI)
 ## Posicionar texto e definir cor de fundo #08
 [video](https://youtu.be/3bq0gjHVS-M)
@@ -168,3 +168,5 @@
 [video](https://youtu.be/iMFn_SEFVww)
 ## Debug atualização imagem #85
 [video](https://youtu.be/YSnSsDWg0ZE)
+## Debug índice e pasta #86
+[video](https://youtu.be/p363hj7mnhU)
