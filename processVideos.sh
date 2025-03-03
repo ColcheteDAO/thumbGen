@@ -126,17 +126,18 @@ mountVideosMeta(){
         lastIndex=${#line}
         folderStrLen=${#folder}
         videoTitleRaw=$(echo "$videoSearchItem" | jq -r '.snippet.title')
-        videoTitleRawLen=${#videoTitleRawLen}
+        # videoTitleRawLen=${#videoTitleRawLen}
         titleIndexRaw=$(echo "$videoTitleRaw"| grep -o -b $folder )
         titleIndexRawLen=${#titleIndexRaw}
         titleIndex=$(echo $titleIndexRaw | cut -c 1-$(expr $titleIndexRawLen - $folderStrLen - 1))
-        seriesNumber=$(echo $videoTitleRaw | cut -c $(expr $titleIndex + $folderStrLen + 2)-$videoTitleRawLen)
+        # seriesNumber=$(echo $videoTitleRaw | cut -c $(expr $titleIndex + $folderStrLen + 2)-$videoTitleRawLen)
+        seriesNumber=$(echo $videoTitleRaw | cut -c $(expr $titleIndex + $folderStrLen + 2))
         echo "DEBUG INDEXES"
         echo  "Last index" $folder
         echo  "Last index" $lastIndex
         echo  "folderStrLen" $folderStrLen
         echo  "videoTitleRaw" $videoTitleRaw
-        echo  "videoTitleRawLen" $videoTitleRawLen
+        # echo  "videoTitleRawLen" $videoTitleRawLen
         echo  "titleIndexRaw" $titleIndexRaw
         echo  "titleIndexRawLen" $titleIndexRawLen
         echo  "titleIndex" $titleIndex
