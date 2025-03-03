@@ -116,7 +116,8 @@ mountVideosMeta(){
   finalIndex=0
   errorMSG=""
   saveVideosMeta(){
-    videosSearch=$(sendGetRequest "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$1&type=video&pageToken=$2")
+    videoSeriesQuery=$(echo -n "$1" | jq -sRr @uri)
+    videosSearch=$(sendGetRequest "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$videoSeriesQuery&type=video&pageToken=$2")
     if [[ "$videosSearch" == "error" ]]; then
       errorMSG=$videosSearch
       echo "$videosSearch $funName ${errors[0]}"
@@ -126,23 +127,10 @@ mountVideosMeta(){
         lastIndex=${#line}
         folderStrLen=${#folder}
         videoTitleRaw=$(echo "$videoSearchItem" | jq -r '.snippet.title')
-        # videoTitleRawLen=${#videoTitleRawLen}
         titleIndexRaw=$(echo "$videoTitleRaw"| grep -o -b $folder )
         titleIndexRawLen=${#titleIndexRaw}
         titleIndex=$(echo $titleIndexRaw | cut -c 1-$(expr $titleIndexRawLen - $folderStrLen - 1))
-        # seriesNumber=$(echo $videoTitleRaw | cut -c $(expr $titleIndex + $folderStrLen + 2)-$videoTitleRawLen)
         seriesNumber=$(echo $videoTitleRaw | cut -c $(expr $titleIndex + $folderStrLen + 2))
-        echo "DEBUG INDEXES"
-        echo  "Last index" $folder
-        echo  "Last index" $lastIndex
-        echo  "folderStrLen" $folderStrLen
-        echo  "videoTitleRaw" $videoTitleRaw
-        # echo  "videoTitleRawLen" $videoTitleRawLen
-        echo  "titleIndexRaw" $titleIndexRaw
-        echo  "titleIndexRawLen" $titleIndexRawLen
-        echo  "titleIndex" $titleIndex
-        echo  "seriesNumber" $seriesNumber
-        echo "DEBUG INDEXES"
         titlesMakdown[${seriesNumber#0}]=$(echo "## ${videoTitleRaw/$folder /"#"}")
         videoIdAPI=$(echo "$videoSearchItem" | jq -r '.id.videoId')
         videosMakdown[${seriesNumber#0}]=$(echo "[video](https://youtu.be/$videoIdAPI)")
