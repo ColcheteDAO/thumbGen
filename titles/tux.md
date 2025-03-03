@@ -3,7 +3,6 @@ Last index tux
 Last index 5
 folderStrLen 3
 videoTitleRaw Sessões no TMUX tux 10
-videoTitleRawLen
 titleIndexRaw 18:tux
 titleIndexRawLen 6
 titleIndex 18
@@ -14,18 +13,16 @@ Last index tux
 Last index 5
 folderStrLen 3
 videoTitleRaw icu breaks libicui18 electron30 tux 10
-videoTitleRawLen
 titleIndexRaw 32:tux
 titleIndexRawLen 6
 titleIndex 32
-seriesNumber 10
+seriesNumber 1
 DEBUG INDEXES
 DEBUG INDEXES
 Last index tux
 Last index 5
 folderStrLen 3
 videoTitleRaw Janela maximizada no Alacritty tux 9
-videoTitleRawLen
 titleIndexRaw 31:tux
 titleIndexRawLen 6
 titleIndex 31
@@ -36,7 +33,6 @@ Last index tux
 Last index 5
 folderStrLen 3
 videoTitleRaw Como utilizar wget no linux tux 8
-videoTitleRawLen
 titleIndexRaw 28:tux
 titleIndexRawLen 6
 titleIndex 28
@@ -47,7 +43,6 @@ Last index tux
 Last index 5
 folderStrLen 3
 videoTitleRaw Como utilizar o find no linux tux 7
-videoTitleRawLen
 titleIndexRaw 30:tux
 titleIndexRawLen 6
 titleIndex 30
@@ -58,7 +53,6 @@ Last index tux
 Last index 5
 folderStrLen 3
 videoTitleRaw Como utilizar o bashrc no linux tux 6
-videoTitleRawLen
 titleIndexRaw 33:tux
 titleIndexRawLen 6
 titleIndex 33
@@ -69,7 +63,6 @@ Last index tux
 Last index 5
 folderStrLen 3
 videoTitleRaw Renomear arquivos e diretórios no linux tux 5
-videoTitleRawLen
 titleIndexRaw 41:tux
 titleIndexRawLen 6
 titleIndex 41
@@ -80,7 +73,6 @@ Last index tux
 Last index 5
 folderStrLen 3
 videoTitleRaw Listar arquivos no linux tux 4
-videoTitleRawLen
 titleIndexRaw 25:tux
 titleIndexRawLen 6
 titleIndex 25
@@ -91,7 +83,6 @@ Last index tux
 Last index 5
 folderStrLen 3
 videoTitleRaw Criar crons no linux tux 3
-videoTitleRawLen
 titleIndexRaw 21:tux
 titleIndexRawLen 6
 titleIndex 21
@@ -102,7 +93,6 @@ Last index tux
 Last index 5
 folderStrLen 3
 videoTitleRaw Criar arquivos no linux tux 2
-videoTitleRawLen
 titleIndexRaw 24:tux
 titleIndexRawLen 6
 titleIndex 24
@@ -113,7 +103,6 @@ Last index tux
 Last index 5
 folderStrLen 3
 videoTitleRaw Como deletar histórico do terminal no linux tux 1
-videoTitleRawLen
 titleIndexRaw 45:tux
 titleIndexRawLen 6
 titleIndex 45
@@ -137,5 +126,3 @@ DEBUG INDEXES
 [video](https://youtu.be/vAwDOTIJVNc)
 ## Janela maximizada no Alacritty #9
 [video](https://youtu.be/Sces_msOmEg)
-## icu breaks libicui18 electron30 #10
-[video](https://youtu.be/VRG71B9ST68)

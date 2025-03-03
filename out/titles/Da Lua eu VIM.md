@@ -3,9 +3,8 @@ Last index Da Lua eu VIM
 Last index 15
 folderStrLen 13
 videoTitleRaw Valida√ß√£o c√≥digo solidity Da Lua eu VIM 30 Lunar Vim LVIM
-videoTitleRawLen
 titleIndexRaw
 titleIndexRawLen 0
 titleIndex
-seriesNumber ≥digo solidity Da Lua eu VIM 30 Lunar Vim LVIM
+seriesNumber ≥
 DEBUG INDEXES
