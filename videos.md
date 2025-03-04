@@ -3,7 +3,7 @@
 [artifact](https://raw.githubusercontent.com/juancolchete/artifacts/refs/heads/main/thumbGen.png)  
 [artifact](https://raw.githubusercontent.com/juancolchete/artifacts/refs/heads/main/tux.png)  
 [artifact](https://raw.githubusercontent.com/juancolchete/artifacts/refs/heads/main/[Tutoriais].png)  
-[artifact](https://raw.githubusercontent.com/juancolchete/artifacts/refs/heads/main/Da lua eu VIM.png)  
+[artifact](https://raw.githubusercontent.com/juancolchete/artifacts/refs/heads/main/Da%20lua%20eu%20VIM.png)  
 # [Tutoriais]
 repo:\nhttps://github.com/juancolchete/tutorials  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
