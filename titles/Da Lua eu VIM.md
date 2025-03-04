@@ -6,5 +6,5 @@ videoTitleRaw Valida√ß√£o c√≥digo solidity Da Lua eu VIM 30 Lunar Vim LVIM
 titleIndexRaw
 titleIndexRawLen 0
 titleIndex
-seriesNumber ≥
+seriesNumber ≥digo solidity Da Lua eu VIM 30 Lunar Vim LVI
 DEBUG INDEXES

@@ -16,7 +16,7 @@ videoTitleRaw icu breaks libicui18 electron30 tux 10
 titleIndexRaw 32:tux
 titleIndexRawLen 6
 titleIndex 32
-seriesNumber 1
+seriesNumber 10
 DEBUG INDEXES
 DEBUG INDEXES
 Last index tux
@@ -126,3 +126,5 @@ DEBUG INDEXES
 [video](https://youtu.be/vAwDOTIJVNc)
 ## Janela maximizada no Alacritty #9
 [video](https://youtu.be/Sces_msOmEg)
+## icu breaks libicui18 electron30 #10
+[video](https://youtu.be/VRG71B9ST68)
