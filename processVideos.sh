@@ -142,6 +142,8 @@ mountVideosMeta(){
         echo  "titleIndexRawLen" $titleIndexRawLen
         echo  "titleIndex" $titleIndex
         echo  "seriesNumber" $seriesNumber
+        echo "Query" "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$videoSeriesQuery&type=video&pageToken=$2"
+        echo $videosSearch
         echo "DEBUG INDEXES"
         titlesMakdown[${seriesNumber#0}]=$(echo "## ${videoTitleRaw/$folder /"#"}")
         videoIdAPI=$(echo "$videoSearchItem" | jq -r '.id.videoId')
