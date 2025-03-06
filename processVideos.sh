@@ -160,8 +160,9 @@ mountVideosMeta(){
 while IFS= read -r line; do
   if [ $(checkPatternOcurrence "$line" '#') = 1 ]; then
     folder=$(echo "$line" | cut -c 3-$((${#line}+2)))
+    ls
     encodedFolder=$(echo $folder | sed "s| |%20|g")
-    mv encodedFolder folder
+    mv $encodedFolder $folder
     ls
     index=0
     videosMetaData=$(mountVideosMeta "$folder")
@@ -217,6 +218,8 @@ while IFS= read -r line; do
              diffCount=$(compare -metric ae -fuzz XX% "out/thumbs/$folder/$folder$index.png" compose_under.png null: 2>&1) 
           fi
           mv compose_under.png $path
+          ls "out/thumbs/"
+          ls  "out/thumbs/Da Lua eu VIM"
           echo "DEBUG THUMB========================"
           ls -l "out/thumbs/$folder/$folder$index.png"
           echo $diffCount
