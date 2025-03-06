@@ -146,11 +146,11 @@ mountVideosMeta(){
       nextPageToken=$(echo "$videosSearch" | jq -r '.nextPageToken')
       nextPageTokenLen=$(echo $nextPageToken | wc -m)
       if [[ $nextPageTokenLen -ge 10 ]]; then
-       saveVideosMeta $1 $nextPageToken 
+       saveVideosMeta "$1" $nextPageToken 
       fi
     fi
   }
-  saveVideosMeta $1
+  saveVideosMeta "$1"
   if [[ "$errorMSG" != "error" ]]; then
     for (( c=1; c<=$finalIndex; c++ ))
     do 
