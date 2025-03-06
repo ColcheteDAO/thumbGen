@@ -49,7 +49,6 @@ updateVideoPayload(){
 }
 
 handleRequestErrors(){
-  echo "$1"
   if [ $(checkPatternOcurrence "$1" '"error":') = 1 ]; then
     echo "error" 
   else
@@ -118,9 +117,7 @@ mountVideosMeta(){
   errorMSG=""
   saveVideosMeta(){
     videoSeriesQuery=$(echo -n "$1" | jq -sRr @uri)
-    echo "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$videoSeriesQuery&type=video&pageToken=$2"
     videosSearch=$(sendGetRequest "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$videoSeriesQuery&type=video&pageToken=$2")
-    echo $videosSearch
     if [[ "$videosSearch" == "error" ]]; then
       errorMSG=$videosSearch
       echo "$videosSearch $funName ${errors[0]}"
