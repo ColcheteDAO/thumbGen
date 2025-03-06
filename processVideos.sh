@@ -162,6 +162,7 @@ while IFS= read -r line; do
     folder=$(echo "$line" | cut -c 3-$((${#line}+2)))
     index=0
     videosMetaData=$(mountVideosMeta "$folder")
+    echo $videosMetaData
     if [[ $(checkPatternOcurrence "$videosMetaData" 'error') -ge 1 ]]; then
       echo "==================="
       echo $videosMetaData
