@@ -160,10 +160,6 @@ mountVideosMeta(){
 while IFS= read -r line; do
   if [ $(checkPatternOcurrence "$line" '#') = 1 ]; then
     folder=$(echo "$line" | cut -c 3-$((${#line}+2)))
-    ls
-    encodedFolder=$(echo $folder | sed "s| |%20|g")
-    mv "$encodedFolder" "$folder"
-    ls
     index=0
     videosMetaData=$(mountVideosMeta "$folder")
     if [[ $(checkPatternOcurrence "$videosMetaData" '##') -lt 1 ]] && [[ $(checkPatternOcurrence "$videosMetaData" 'error') -ge 1 ]]; then
