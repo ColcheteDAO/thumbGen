@@ -204,7 +204,10 @@ while IFS= read -r line; do
         title=$(echo "$lineTitle" | cut -c 4-$((${#lineTitle}+2)))
         if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
           bash genThumb.sh "$title" "$folder" 
+          echo "Folder to create"
+          echo "out/thumbs/$folder"
           mkdir -p "out/thumbs/$folder"
+          echo "Folder to create"
           path="out/thumbs/$folder/$folder$index.png"
           diffCount=1
           if [ -f "out/thumbs/$folder/$folder$index.png" ]; then
