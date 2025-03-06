@@ -162,7 +162,7 @@ while IFS= read -r line; do
     folder=$(echo "$line" | cut -c 3-$((${#line}+2)))
     ls
     encodedFolder=$(echo $folder | sed "s| |%20|g")
-    mv $encodedFolder $folder
+    mv "$encodedFolder" "$folder"
     ls
     index=0
     videosMetaData=$(mountVideosMeta "$folder")
