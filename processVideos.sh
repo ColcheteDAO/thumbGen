@@ -247,4 +247,4 @@ while IFS= read -r line; do
     rm -rf "$folder"*
   fi
 done < videos.md
-rm titles
+rm -rf titles
