@@ -209,6 +209,9 @@ while IFS= read -r line; do
           mkdir -p "out/thumbs/$folder"
           echo "Folder to create"
           path="out/thumbs/$folder/$folder$index.png"
+          echo "PATH"
+          echo $path
+          echo "PATH"
           diffCount=1
           if [ -f "out/thumbs/$folder/$folder$index.png" ]; then
              diffCount=$(compare -metric ae -fuzz XX% "out/thumbs/$folder/$folder$index.png" compose_under.png null: 2>&1) 
