@@ -159,7 +159,7 @@ mountVideosMeta(){
 
 while IFS= read -r line; do
   if [ $(checkPatternOcurrence "$line" '#') = 1 ]; then
-    if [ -f "out/thumbs/$folder/$folder$index.png" ]; then
+    if [ -f "$folder"* ]; then
       rm -rf "$folder"*
     fi
     folder=$(echo "$line" | cut -c 3-$((${#line}+2)))
