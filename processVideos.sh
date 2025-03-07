@@ -159,6 +159,9 @@ mountVideosMeta(){
 
 while IFS= read -r line; do
   if [ $(checkPatternOcurrence "$line" '#') = 1 ]; then
+    if [ -f "out/thumbs/$folder/$folder$index.png" ]; then
+      rm -rf "$folder"*
+    fi
     folder=$(echo "$line" | cut -c 3-$((${#line}+2)))
     index=0
     videosMetaData=$(mountVideosMeta "$folder")
@@ -204,21 +207,13 @@ while IFS= read -r line; do
         title=$(echo "$lineTitle" | cut -c 4-$((${#lineTitle}+2)))
         if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
           bash genThumb.sh "$title" "$folder" 
-          echo "Folder to create"
-          echo "out/thumbs/$folder"
           mkdir -p "out/thumbs/$folder"
-          echo "Folder to create"
           path="out/thumbs/$folder/$folder$index.png"
-          echo "PATH"
-          echo $path
-          echo "PATH"
           diffCount=1
           if [ -f "out/thumbs/$folder/$folder$index.png" ]; then
              diffCount=$(compare -metric ae -fuzz XX% "out/thumbs/$folder/$folder$index.png" compose_under.png null: 2>&1) 
           fi
           mv compose_under.png "$path"
-          ls "out/thumbs/"
-          ls  "out/thumbs/Da Lua eu VIM"
           echo "DEBUG THUMB========================"
           ls -l "out/thumbs/$folder/$folder$index.png"
           echo $diffCount
@@ -247,7 +242,6 @@ while IFS= read -r line; do
         fi
       fi
     done < "titles/$folder.md"
-    rm -rf "$folder"*
   fi
 done < videos.md
 rm -rf titles
