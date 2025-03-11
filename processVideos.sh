@@ -240,7 +240,7 @@ while IFS= read -r line; do
       fi
     done < "titles/$folder.md"
   fi
-  if [[ ! -z "$folder" ]] && [ -f "$folder"* ]; then
+  if [[ ! -z "$folder" ]] && [[ -f "$folder"* ]]; then
     echo "HEEEEEEEEEEEEEEEEEEEEERE"
     echo "$folder"
     rm -rf "$folder"*
