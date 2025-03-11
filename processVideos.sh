@@ -242,7 +242,8 @@ while IFS= read -r line; do
   fi
   echo "@@@<S-Del>@@@@@@@@E"
   echo "$folder"
-  echo find "$folder"*
+  echo "---------------"
+  find "$folder"*
   echo "@@@<S-Del>@@@@@@@@E"
   if [[ ! -z "$folder" ]] && [[ -f "$folder"* ]]; then
     echo "HEEEEEEEEEEEEEEEEEEEEERE"
