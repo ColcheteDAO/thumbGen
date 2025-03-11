@@ -240,6 +240,10 @@ while IFS= read -r line; do
       fi
     done < "titles/$folder.md"
   fi
+  echo "@@@<S-Del>@@@@@@@@E"
+  echo "$folder"
+  echo find "$folder"*
+  echo "@@@<S-Del>@@@@@@@@E"
   if [[ ! -z "$folder" ]] && [[ -f "$folder"* ]]; then
     echo "HEEEEEEEEEEEEEEEEEEEEERE"
     echo "$folder"
