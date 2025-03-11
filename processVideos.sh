@@ -245,11 +245,11 @@ while IFS= read -r line; do
   echo "---------------"
   find "$folder"*
   echo "@@@<S-Del>@@@@@@@@E"
-  if [[ ! -z "$folder" ]] && [[ $(find "$folder"* | grep -q "$folder") ]]; then
-    echo "HEEEEEEEEEEEEEEEEEEEEERE"
-    echo "$folder"
-    rm -rf "$folder"*
-    echo "HEEEEEEEEEEEEEEEEEEEEERE"
-  fi
 done < videos.md
+if [[ ! -z "$folder" ]]; then
+  echo "HEEEEEEEEEEEEEEEEEEEEERE"
+  echo "$folder"
+  rm -rf "$folder"*
+  echo "HEEEEEEEEEEEEEEEEEEEEERE"
+fi
 rm -rf titles
