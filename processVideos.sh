@@ -241,7 +241,10 @@ while IFS= read -r line; do
     done < "titles/$folder.md"
   fi
   if [[ ! -z "$folder" ]] && [ -f "$folder"* ]; then
+    echo "HEEEEEEEEEEEEEEEEEEEEERE"
+    echo "$folder"
     rm -rf "$folder"*
+    echo "HEEEEEEEEEEEEEEEEEEEEERE"
   fi
 done < videos.md
 rm -rf titles
