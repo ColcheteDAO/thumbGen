@@ -159,9 +159,6 @@ mountVideosMeta(){
 
 while IFS= read -r line; do
   if [ $(checkPatternOcurrence "$line" '#') = 1 ]; then
-    if [ -f "$folder"* ]; then
-      rm -rf "$folder"*
-    fi
     folder=$(echo "$line" | cut -c 3-$((${#line}+2)))
     index=0
     videosMetaData=$(mountVideosMeta "$folder")
@@ -242,6 +239,9 @@ while IFS= read -r line; do
         fi
       fi
     done < "titles/$folder.md"
+  fi
+  if [[ ! -z "$folder" ]] && [ -f "$folder"* ]; then
+    rm -rf "$folder"*
   fi
 done < videos.md
 rm -rf titles
