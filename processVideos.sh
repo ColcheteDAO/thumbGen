@@ -243,11 +243,8 @@ while IFS= read -r line; do
     done < "titles/$folder.md"
   fi
 done < videos.md
-for (( f=0; f<=${#folders[@]} ; f++ ))
+for (( f=0; f<${#folders[@]} ; f++ ))
 do 
-  # rm -rf "${folders[$f]}"*
-  echo "aaa"
-  echo "${folders[$f]}"*
-  echo "aaa"
+  rm -rf "${folders[$f]}"*
 done
 rm -rf titles
