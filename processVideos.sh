@@ -11,7 +11,7 @@ declare -A playlists
 startUpdateIndex=0
 tags=''
 genThumb='N'
-folders=()
+folders=("man" "image" "outfile" "text")
 declare -a errors
 declare -a needUpdateThumb
 errors[0]="Quota Exceeded"
