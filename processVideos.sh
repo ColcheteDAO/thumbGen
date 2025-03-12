@@ -11,6 +11,7 @@ declare -A playlists
 startUpdateIndex=0
 tags=''
 genThumb='N'
+folders=()
 declare -a errors
 declare -a needUpdateThumb
 errors[0]="Quota Exceeded"
@@ -160,6 +161,7 @@ mountVideosMeta(){
 while IFS= read -r line; do
   if [ $(checkPatternOcurrence "$line" '#') = 1 ]; then
     folder=$(echo "$line" | cut -c 3-$((${#line}+2)))
+    folders+=("$folder")
     index=0
     videosMetaData=$(mountVideosMeta "$folder")
     if [[ $(checkPatternOcurrence "$videosMetaData" '##') -lt 1 ]] && [[ $(checkPatternOcurrence "$videosMetaData" 'error') -ge 1 ]]; then
@@ -241,15 +243,8 @@ while IFS= read -r line; do
     done < "titles/$folder.md"
   fi
 done < videos.md
-echo "@@@<S-Del>@@@@@@@@E"
-echo "$folder"
-echo "---------------"
-find "$folder"*
-echo "@@@<S-Del>@@@@@@@@E"
-if [[ ! -z "$folder" ]]; then
-  echo "HEEEEEEEEEEEEEEEEEEEEERE"
-  echo "$folder"
-  rm -rf "$folder"*
-  echo "HEEEEEEEEEEEEEEEEEEEEERE"
-fi
+for (( f=0; f<=${#folders[@]} ; f++ ))
+do 
+  rm -rf "${folders[$f]}"*
+done
 rm -rf titles
