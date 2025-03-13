@@ -8,7 +8,7 @@
 Repo:\nhttps://github.com/ColcheteDAO/thumbGen  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe7pICM1fiO6AXKY-uGzLqB3)  
-**index**: 79  
+**index**: 87  
 **tags**: "github actions","Image Magick","Magick","bash"  
 **genThumb**: Y  
 **end**
@@ -24,7 +24,7 @@ repo:\nhttps://github.com/juancolchete/leetCode
 repo:\nhttps://github.com/juancolchete/tux  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe56nItnsIPsP_4m9o94sfjz)  
-**index**: 8  
+**index**: 10  
 **tags**: "Open Source","Linux","Arch Linux","Tux","FOSS"  
 **genThumb**: Y  
 **end**
@@ -32,7 +32,7 @@ repo:\nhttps://github.com/juancolchete/tux
 repo:\nhttps://github.com/juancolchete/tutorials  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe5fIETshPhrUtKBojVar2Gs)  
-**index**: 1  
+**index**: 26  
 **tags**: "Open Source","Linux","Arch Linux","Tutorials","Demo"  
 **genThumb**: Y  
 **end**
@@ -40,7 +40,7 @@ repo:\nhttps://github.com/juancolchete/tutorials
 repo:\nhttps://github.com/juancolchete/tutorials  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe5cA8y2BVpGKxZIbqCEZoYP)  
-**index**: 1  
+**index**: 30  
 **tags**: "NVIM","LunarVIM","NeoVIM","VIM","bash"  
 **genThumb**: Y  
 **end**
