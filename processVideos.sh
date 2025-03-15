@@ -14,6 +14,7 @@ genThumb='N'
 folders=("man" "image" "outfile" "text")
 declare -a errors
 declare -a needUpdateThumb
+declare -A customTitle
 errors[0]="Quota Exceeded"
 urlBaseAPI='https://youtube.googleapis.com'
 urlBaseAuth='https://oauth2.googleapis.com'
@@ -164,6 +165,8 @@ while IFS= read -r line; do
     folders+=("$folder")
     index=0
     videosMetaData=$(mountVideosMeta "$folder")
+    mkdir -p "out/titles/custom"
+    touch "out/titles/custom/$folder.md"
     if [[ $(checkPatternOcurrence "$videosMetaData" '##') -lt 1 ]] && [[ $(checkPatternOcurrence "$videosMetaData" 'error') -ge 1 ]]; then
       echo "==================="
       echo $videosMetaData
