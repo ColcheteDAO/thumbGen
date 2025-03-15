@@ -116,7 +116,7 @@ mountCustomTitles(){
   while IFS= read -r lineTitle; do
     indexCustomTitles=$((${indexCustomTitles}+1))
     customTitles["$1$indexCustomTitles"] = $lineTitle
-  done < "titles/$1.md"
+  done < "out/titles/custom/$1.md"
 }
 
 mountVideosMeta(){
@@ -217,7 +217,7 @@ while IFS= read -r line; do
         title=$(echo "$lineTitle" | cut -c 4-$((${#lineTitle}+2)))
         if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
           if [ ${#customTitles["$folder$index"]} -gt 10 ]; then
-            bash genThumb.sh "${customTitles["$folder$index"]" "$folder" 
+            bash genThumb.sh "${customTitles[$folder$index]" "$folder" 
           else
             bash genThumb.sh "$title" "$folder" 
           fi
