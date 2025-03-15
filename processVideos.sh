@@ -172,6 +172,7 @@ while IFS= read -r line; do
     folder=$(echo "$line" | cut -c 3-$((${#line}+2)))
     folders+=("$folder")
     index=0
+    mountCustomTitles "$folder"
     videosMetaData=$(mountVideosMeta "$folder")
     mkdir -p "out/titles/custom"
     touch "out/titles/custom/$folder.md"
@@ -216,8 +217,8 @@ while IFS= read -r line; do
         index=$((${index}+1))
         title=$(echo "$lineTitle" | cut -c 4-$((${#lineTitle}+2)))
         if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
-          if [ "${#customTitles[$folder$index]}" -gt 10 ]; then
-            bash genThumb.sh "${customTitles[$folder$index]" "$folder" 
+          if [ ${#customTitles[$folder$index]} -gt 10 ]; then
+            bash genThumb.sh "${customTitles[$folder$index]}" "$folder" 
           else
             bash genThumb.sh "$title" "$folder" 
           fi
