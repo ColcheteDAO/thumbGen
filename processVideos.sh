@@ -14,7 +14,7 @@ genThumb='N'
 folders=("man" "image" "outfile" "text")
 declare -a errors
 declare -a needUpdateThumb
-declare -A customTitle
+declare -A customTitles
 errors[0]="Quota Exceeded"
 urlBaseAPI='https://youtube.googleapis.com'
 urlBaseAuth='https://oauth2.googleapis.com'
@@ -109,6 +109,14 @@ fillSnippetVideo(){
 }
 checkPatternOcurrence(){
   echo $1 | grep -o $2 | wc -l
+}
+
+mountCustomTitles(){
+  indexCustomTitles=0
+  while IFS= read -r lineTitle; do
+    indexCustomTitles=$((${indexCustomTitles}+1))
+    customTitles["$1$indexCustomTitles"] = $lineTitle
+  done < "titles/$1.md"
 }
 
 mountVideosMeta(){
@@ -208,7 +216,11 @@ while IFS= read -r line; do
         index=$((${index}+1))
         title=$(echo "$lineTitle" | cut -c 4-$((${#lineTitle}+2)))
         if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
-          bash genThumb.sh "$title" "$folder" 
+          if [ ${#customTitles["$folder$index"]} -gt 10 ]; then
+            bash genThumb.sh "${customTitles["$folder$index"]" "$folder" 
+          else
+            bash genThumb.sh "$title" "$folder" 
+          fi
           mkdir -p "out/thumbs/$folder"
           path="out/thumbs/$folder/$folder$index.png"
           diffCount=1
