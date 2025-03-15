@@ -216,7 +216,7 @@ while IFS= read -r line; do
         index=$((${index}+1))
         title=$(echo "$lineTitle" | cut -c 4-$((${#lineTitle}+2)))
         if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
-          if [ ${#customTitles["$folder$index"]} -gt 10 ]; then
+          if [ ${#customTitles[$folder$index]} -gt 10 ]; then
             bash genThumb.sh "${customTitles[$folder$index]" "$folder" 
           else
             bash genThumb.sh "$title" "$folder" 
