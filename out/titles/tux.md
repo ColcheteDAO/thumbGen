@@ -16,5 +16,5 @@
 [video](https://youtu.be/vAwDOTIJVNc)
 ## Janela maximizada no Alacritty #9
 [video](https://youtu.be/Sces_msOmEg)
-## icu breaks libicui18 electron30 #10
+## Como resolver icu breaks libicui18 electron30 #10
 [video](https://youtu.be/VRG71B9ST68)
