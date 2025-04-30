@@ -12,4 +12,19 @@ repo:\nhttps://github.com/juancolchete/tux
 **tags**: "Open Source","Linux","Arch Linux","Tux","FOSS"  
 **genThumb**: Y  
 **end**
-
+# thumbGen
+Repo:\nhttps://github.com/ColcheteDAO/thumbGen  
+[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
+[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe7pICM1fiO6AXKY-uGzLqB3)  
+**index**: 79  
+**tags**: "github actions","Image Magick","Magick","bash"  
+**genThumb**: Y  
+**end**
+# %5BTutoriais%5D
+repo:\nhttps://github.com/juancolchete/tutorials  
+[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
+[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe5fIETshPhrUtKBojVar2Gs)  
+**index**: 1  
+**tags**: "Open Source","Linux","Arch Linux","Tutorials","Demo"  
+**genThumb**: Y  
+**end**
