@@ -119,7 +119,7 @@ mountCustomTitles(){
     echo "==========CUSTOM=========="
     echo $indexCustomTitles 
     echo $1 
-    echo "$customTitles[$1$indexCustomTitles]" 
+    echo "$customTitles" 
     echo "$lineTitle" 
     echo "==========================="
   done < "out/titles/custom/$1.md"
