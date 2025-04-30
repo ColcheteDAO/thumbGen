@@ -119,7 +119,7 @@ mountCustomTitles(){
     echo "==========CUSTOM=========="
     echo $indexCustomTitles 
     echo $1 
-    echo "${customTitles[$1$indexCustomTitles]}" 
+    echo "$customTitles[$1$indexCustomTitles]" 
     echo "==========================="
   done < "out/titles/custom/$1.md"
 }
@@ -224,7 +224,7 @@ while IFS= read -r line; do
         if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
           echo "=========Title Info=============="
           echo "${#customTitles[$folder$index]}" 
-          echo "${customTitles[$folder$index]}" 
+          echo "$customTitles[$folder$index]" 
           echo "$folder$index" 
           echo "=========Title Info=============="
           if [ ${#customTitles[$folder$index]} -gt 10 ]; then
