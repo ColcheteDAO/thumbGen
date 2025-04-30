@@ -114,8 +114,8 @@ checkPatternOcurrence(){
 mountCustomTitles(){
   indexCustomTitles=0
   while IFS= read -r lineTitle; do
-    indexCustomTitles=$((${indexCustomTitles}+1))
     customTitles["$1$indexCustomTitles"] = $lineTitle
+    indexCustomTitles=$((${indexCustomTitles}+1))
     echo "==========CUSTOM=========="
     echo $indexCustomTitles 
     echo $1 
