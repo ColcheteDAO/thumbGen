@@ -170,3 +170,7 @@
 [video](https://youtu.be/YSnSsDWg0ZE)
 ## Debug índice e pasta #86
 [video](https://youtu.be/p363hj7mnhU)
+
+
+## Colchete no título #88
+[video](https://youtu.be/dKXiifO6nTg)
