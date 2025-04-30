@@ -116,6 +116,11 @@ mountCustomTitles(){
   while IFS= read -r lineTitle; do
     indexCustomTitles=$((${indexCustomTitles}+1))
     customTitles["$1$indexCustomTitles"] = $lineTitle
+    echo "==========CUSTOM=========="
+    echo $indexCustomTitles 
+    echo $1 
+    echo ${customTitles["$1$indexCustomTitles"]} 
+    echo "==========================="
   done < "out/titles/custom/$1.md"
 }
 
