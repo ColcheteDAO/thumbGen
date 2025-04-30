@@ -116,12 +116,6 @@ mountCustomTitles(){
   while IFS= read -r lineTitle; do
     customTitles["$1$indexCustomTitles"]=$lineTitle
     indexCustomTitles=$((${indexCustomTitles}+1))
-    echo "==========CUSTOM=========="
-    echo $indexCustomTitles 
-    echo $1 
-    echo "$customTitles" 
-    echo "$lineTitle" 
-    echo "==========================="
   done < "out/titles/custom/$1.md"
 }
 
@@ -223,11 +217,6 @@ while IFS= read -r line; do
         index=$((${index}+1))
         title=$(echo "$lineTitle" | cut -c 4-$((${#lineTitle}+2)))
         if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
-          echo "=========Title Info=============="
-          echo "${#customTitles[$folder$index]}" 
-          echo "$customTitles[$folder$index]" 
-          echo "$folder$index" 
-          echo "=========Title Info=============="
           if [ ${#customTitles[$folder$index]} -gt 10 ]; then
             bash genThumb.sh "${customTitles[$folder$index]}" "$folder" 
           else
