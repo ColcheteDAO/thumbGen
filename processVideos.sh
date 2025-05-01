@@ -264,4 +264,4 @@ do
   rm -rf "${folders[$f]}"*
 done
 rm -rf titles
-rm *.png
+rm *.png*
