@@ -228,10 +228,6 @@ while IFS= read -r line; do
           if [ -f "out/thumbs/$folder/$folder$index.png" ]; then
              diffCount=$(compare -metric ae -fuzz XX% "out/thumbs/$folder/$folder$index.png" compose_under.png null: 2>&1) 
           fi
-          echo "DEBUG THUMB========================"
-          ls -l "out/thumbs/$folder/$folder$index.png"
-          echo $diffCount
-          echo "DEBUG THUMB========================"
           if [ "$diffCount" = 0 ]; then
             needUpdateThumb[$index]=false
           else
