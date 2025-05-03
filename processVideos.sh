@@ -59,7 +59,7 @@ handleRequestErrors(){
 }
 
 sendResquestWithPayload(){
-  req=$(curl --request $1 \
+  req=$(curl -s --request $1 \
     $2 --header "Authorization: Bearer $ACCESS_TOKEN" \
     --header "Accept: application/json" \
     --header "Content-Type: application/json" \
@@ -68,13 +68,13 @@ sendResquestWithPayload(){
 }
 
 sendGetRequest(){
-  req=$(curl "$1" \
+  req=$(curl -s "$1" \
     --header "Authorization: Bearer $ACCESS_TOKEN")
   echo "$(handleRequestErrors "$req")"
 }
 
 sendDataBinaryRequest(){
-  req=$(curl --request $1 -v "$2" \
+  req=$(curl -s --request $1 -v "$2" \
   --header "Authorization: Bearer $ACCESS_TOKEN" \
   --header "$3" \
   --data-binary "$4")
