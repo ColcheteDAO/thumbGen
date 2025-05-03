@@ -20,7 +20,7 @@ Repo:\nhttps://github.com/ColcheteDAO/thumbGen
 **tags**: "github actions","Image Magick","Magick","bash"  
 **genThumb**: Y  
 **end**
-# %5BTutoriais%5D
+# [Tutoriais]
 repo:\nhttps://github.com/juancolchete/tutorials  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe5fIETshPhrUtKBojVar2Gs)  
