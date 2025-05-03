@@ -176,3 +176,7 @@
 [video](https://youtu.be/dKXiifO6nTg)
 ## Subistituir colchete no título #89
 [video](https://youtu.be/S4Pb1qL_Vg8)
+## Configurar metadados #90
+[video](https://youtu.be/8SNPYZNhd8g)
+## Debug titulo tutoriais #91
+[video](https://youtu.be/kyQCSPe_vKs)
