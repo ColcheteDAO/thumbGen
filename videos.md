@@ -8,7 +8,7 @@
 # Mastering Bitcoin
 Aprenda mais sobre o universo do bitcoin e masterize seus conhecimentos.    
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
-[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe56nItnsIPsP_4m9o94sfjz)  
+[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe47urkaJ4rEwis4O9JKDHa2)  
 **index**: 1  
 **tags**: "Bitcoin","BTC","Internet Money","Mastering Bitcoin",Open Source","Linux","Arch Linux","Tux","FOSS"  
 **genThumb**: Y  
