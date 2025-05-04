@@ -224,7 +224,7 @@ while IFS= read -r line; do
           fi
           mkdir -p "out/thumbs/$folder"
           path="out/thumbs/$folder/$folder$index.png"
-          diffCount=1
+          diffCount=0
           if [ -f "out/thumbs/$folder/$folder$index.png" ]; then
              diffCount=$(compare -metric ae -fuzz XX% "out/thumbs/$folder/$folder$index.png" compose_under.png null: 2>&1) 
           fi
