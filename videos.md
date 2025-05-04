@@ -4,6 +4,15 @@
 [artifact](https://raw.githubusercontent.com/juancolchete/artifacts/refs/heads/main/tux.png)  
 [artifact](https://raw.githubusercontent.com/juancolchete/artifacts/refs/heads/main/[Tutoriais].png)  
 [artifact](https://raw.githubusercontent.com/juancolchete/artifacts/refs/heads/main/Da%20Lua%20eu%20VIM.png)  
+[artifact](https://raw.githubusercontent.com/juancolchete/artifacts/refs/heads/main/Mastering%20Bitcoin.png)  
+# Mastering Bitcoin
+Aprenda mais sobre o universo do bitcoin e masterize seus conhecimentos.    
+[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
+[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe56nItnsIPsP_4m9o94sfjz)  
+**index**: 1  
+**tags**: "Bitcoin","BTC","Internet Money","Mastering Bitcoin",Open Source","Linux","Arch Linux","Tux","FOSS"  
+**genThumb**: Y  
+**end**
 # tux
 repo:\nhttps://github.com/juancolchete/tux  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
