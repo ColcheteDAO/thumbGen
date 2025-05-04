@@ -35,5 +35,4 @@ jobs:
               set -e
               git commit -m "chore: add title ${{github.event.head_commit.message}}"
               git push
-          else
-
+          fi
