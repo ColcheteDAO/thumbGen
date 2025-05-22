@@ -180,3 +180,17 @@
 [video](https://youtu.be/8SNPYZNhd8g)
 ## Debug titulo tutoriais #91
 [video](https://youtu.be/kyQCSPe_vKs)
+## Encode tutoriais #92
+[video](https://youtu.be/n2KUeKtxo7M)
+## Resolver bug aspas duplas #93
+[video](https://youtu.be/Rg_Md-Ort2Y)
+## Limpar imagens remanecentes #94
+[video](https://youtu.be/9RG5l6gi_cA)
+## Debug limpeza das imagens #95
+[video](https://youtu.be/fBYkCWPV0r4)
+## Finalização limpeza das imagens #96
+[video](https://youtu.be/d-r3zKynNW8)
+## Limpeza integrada com git #97
+[video](https://youtu.be/kNuKsLeSHKs)
+## Títulos customizados #98
+[video](https://youtu.be/Suef3_ZRAB4)
