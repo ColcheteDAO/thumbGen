@@ -206,6 +206,9 @@ while IFS= read -r line; do
     artifactToDownload=$(echo "$line" | cut -c 12-$((${#line}-3)))
     wget $artifactToDownload
     wget $artifactToDownload -o out/$(echo $artifactToDownload | sed 's/.*\///' | sed 's/...$//')
+    echo ".............................."
+    ls
+    echo ".............................."
   elif [ $(checkPatternOcurrence "$line" '\*\*index\*\*: ') = 1 ]; then
     startUpdateIndex=$(echo "$line" | cut -c 11-$((${#line}-2)))
   elif [ $(checkPatternOcurrence "$line" '\*\*tags\*\*: ') = 1 ]; then
