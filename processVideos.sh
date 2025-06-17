@@ -274,3 +274,4 @@ do
 done
 rm -rf titles
 rm *.png*
+rm out/*.
