@@ -241,6 +241,9 @@ while IFS= read -r line; do
             mv compose_under.png "$path"
             needUpdateThumb[$index]=true
           fi
+          echo "asdfasdfasdfasf"
+          echo "$diffCount"
+          echo "asdfasdfasdfasf"
         fi
       elif [ $(checkPatternOcurrence "$lineTitle" '\[video\]') = 1 ]; then
         videoId=$(echo "$lineTitle" | cut -c 26-$((${#lineTitle}-1)))
