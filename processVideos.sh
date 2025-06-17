@@ -223,6 +223,9 @@ while IFS= read -r line; do
           else
             bash genThumb.sh "$title" "$folder" 
           fi
+          echo "=========================="
+          echo "out/thumbs/$folder"
+          echo "=========================="
           mkdir -p "out/thumbs/$folder"
           path="out/thumbs/$folder/$folder$index.png"
           diffCount=0
