@@ -1,15 +1,15 @@
---2025-06-17 13:39:53--  https://raw.githubusercontent.com/juancolchete/artifacts/refs/heads/main/man.png
-Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.109.133, 185.199.111.133, 185.199.110.133, ...
-Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.109.133|:443... connected.
+--2025-06-17 13:52:08--  https://raw.githubusercontent.com/juancolchete/artifacts/refs/heads/main/man.png
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.110.133, 185.199.111.133, 185.199.108.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.110.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 216221 (211K) [image/png]
 Saving to: ‘man.png.1’
 
-     0K .......... .......... .......... .......... .......... 23% 7.33M 0s
-    50K .......... .......... .......... .......... .......... 47% 13.7M 0s
-   100K .......... .......... .......... .......... .......... 71% 84.1M 0s
-   150K .......... .......... .......... .......... .......... 94% 93.3M 0s
-   200K .......... .                                          100%  451M=0.01s
+     0K .......... .......... .......... .......... .......... 23% 35.0M 0s
+    50K .......... .......... .......... .......... .......... 47%  155M 0s
+   100K .......... .......... .......... .......... .......... 71% 39.5M 0s
+   150K .......... .......... .......... .......... .......... 94%  315M 0s
+   200K .......... .                                          100%  498M=0.003s
 
-2025-06-17 13:39:53 (18.2 MB/s) - ‘man.png.1’ saved [216221/216221]
+2025-06-17 13:52:08 (66.1 MB/s) - ‘man.png.1’ saved [216221/216221]
 
