@@ -111,7 +111,9 @@ fillSnippetVideo(){
   echo "herererer3"
   titleVideo=$(echo $listReq | jq -r .items[0].snippet.title)
   echo "herererer3"
+  echo "herererer4"
   descriptionLen=$(echo $listReq | jq .items[0].snippet.description | wc -m)
+  echo "herererer4"
 }
 checkPatternOcurrence(){
   echo $1 | grep -o $2 | wc -l
