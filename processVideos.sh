@@ -102,7 +102,9 @@ addToPlaylist(){
 }
 
 fillSnippetVideo(){
+  echo "herererer"
   listReq=$(sendGetRequest "$urlBaseAPI/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=$1")
+  echo "herererer"
   categoryId=$(echo $listReq | jq -r .items[0].snippet.categoryId)
   titleVideo=$(echo $listReq | jq -r .items[0].snippet.title)
   descriptionLen=$(echo $listReq | jq .items[0].snippet.description | wc -m)
