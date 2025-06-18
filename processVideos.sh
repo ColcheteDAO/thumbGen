@@ -270,6 +270,7 @@ while IFS= read -r line; do
             fi
           fi
           echo "Request payload"
+          echo "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
           sendResquestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
           echo "Request payload"
           addToPlaylist "POST" $list1 $videoId
