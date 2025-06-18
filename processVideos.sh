@@ -89,6 +89,9 @@ getPlaylistItemCount(){
     echo "$videosSearch $funName ${errors[0]}"
     exit 1
   else
+    echo "playlistReq"
+    echo "$playlistReq"
+    echo "playlistReq"
     playlistItemsCount=$(echo $playlistReq | jq -r '.items | length')
     echo $playlistItemsCount
   fi
