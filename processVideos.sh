@@ -111,6 +111,8 @@ fillSnippetVideo(){
   echo "herererer2"
   echo "herererer3"
   titleVideo=$(echo $listReq | jq -r .items[0].snippet.title)
+  echo "$listReq"
+  echo "$titleVideo"
   echo "herererer3"
   echo "herererer4"
   descriptionLen=$(echo $listReq | jq .items[0].snippet.description | wc -m)
