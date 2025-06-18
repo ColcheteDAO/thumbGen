@@ -210,3 +210,5 @@
 [video](https://youtu.be/JmmS0LMdJFg)
 ## ThumbGen 106
 [video](https://youtu.be/XewFoqdCnPQ)
+## Resolver CI não cria imagens #107
+[video](https://youtu.be/OjUfC5KogS4)
