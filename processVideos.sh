@@ -268,7 +268,9 @@ while IFS= read -r line; do
               sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path"
             fi
           fi
+          echo "Request payload"
           sendResquestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
+          echo "Request payload"
           addToPlaylist "POST" $list1 $videoId
           addToPlaylist "POST" $list2 $videoId
         fi
