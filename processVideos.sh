@@ -105,7 +105,6 @@ fillSnippetVideo(){
   listReq=$(sendGetRequest "$urlBaseAPI/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=$1")
   categoryId=$(echo $listReq | jq -r .items[0].snippet.categoryId)
   titleVideo=$(echo $listReq | jq -r .items[0].snippet.title)
-  titleVideo=$(echo "$titleVideo" | sed 1d)
   descriptionLen=$(echo $listReq | jq .items[0].snippet.description | wc -m)
 }
 checkPatternOcurrence(){
