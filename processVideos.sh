@@ -51,7 +51,6 @@ updateVideoPayload(){
 }
 
 handleRequestErrors(){
-  echo "$1"
   if [ $(checkPatternOcurrence "$1" '"error":') = 1 ]; then
     echo "error" 
   else
@@ -89,9 +88,6 @@ getPlaylistItemCount(){
     echo "$videosSearch $funName ${errors[0]}"
     exit 1
   else
-    echo "playlistReq"
-    echo "$playlistReq"
-    echo "playlistReq"
     playlistItemsCount=$(echo $playlistReq | jq -r '.items | length')
     echo $playlistItemsCount
   fi
@@ -99,9 +95,6 @@ getPlaylistItemCount(){
 
 addToPlaylist(){
   playlistItemsCount=$(getPlaylistItemCount $2 $3)
-  echo "playlistItemsCount"
-  echo "$playlistItemsCount"
-  echo "playlistItemsCount"
   if [ $playlistItemsCount = 0 ]; then
     playlistPayload=$(mountPlaylistPayload $2 $videoId)
     sendResquestWithPayload $1 "$urlBaseAPI/youtube/v3/playlistItems?part=snippet" "$playlistPayload"   
@@ -109,21 +102,11 @@ addToPlaylist(){
 }
 
 fillSnippetVideo(){
-  echo "herererer"
   listReq=$(sendGetRequest "$urlBaseAPI/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=$1")
-  echo "herererer"
-  echo "herererer2"
   categoryId=$(echo $listReq | jq -r .items[0].snippet.categoryId)
-  echo "herererer2"
-  echo "herererer3"
   titleVideo=$(echo $listReq | jq -r .items[0].snippet.title)
   titleVideo=$(echo "$titleVideo" | sed 1d)
-  echo "$listReq"
-  echo "$titleVideo"
-  echo "herererer3"
-  echo "herererer4"
   descriptionLen=$(echo $listReq | jq .items[0].snippet.description | wc -m)
-  echo "herererer4"
 }
 checkPatternOcurrence(){
   echo $1 | grep -o $2 | wc -l
@@ -262,9 +245,6 @@ while IFS= read -r line; do
             mv compose_under.png "$path"
             needUpdateThumb[$index]=true
           fi
-          echo "asdfasdfasdfasf"
-          echo "$diffCount"
-          echo "asdfasdfasdfasf"
         fi
       elif [ $(checkPatternOcurrence "$lineTitle" '\[video\]') = 1 ]; then
         videoId=$(echo "$lineTitle" | cut -c 26-$((${#lineTitle}-1)))
@@ -278,11 +258,8 @@ while IFS= read -r line; do
               sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path"
             fi
           fi
-          echo "Request payload"
-          echo "$titleVideo"
           echo "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
           sendResquestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
-          echo "Request payload"
           addToPlaylist "POST" $list1 $videoId
           addToPlaylist "POST" $list2 $videoId
         fi
