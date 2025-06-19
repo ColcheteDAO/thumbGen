@@ -235,12 +235,12 @@ while IFS= read -r line; do
           diffCount=0
           if [ -f "out/thumbs/$folder/$folder$index.png" ]; then
             diffCount=$(compare -metric ae -fuzz XX% "out/thumbs/$folder/$folder$index.png" compose_under.png null: 2>&1) 
-          else
-            mv compose_under.png "$path"
-            needUpdateThumb[$index]=true
-          fi
-          if [ "$diffCount" = 0 ]; then
-            needUpdateThumb[$index]=false
+            if [ "$diffCount" = 0 ]; then
+              needUpdateThumb[$index]=false
+            else
+              mv compose_under.png "$path"
+              needUpdateThumb[$index]=true
+            fi
           else
             mv compose_under.png "$path"
             needUpdateThumb[$index]=true
