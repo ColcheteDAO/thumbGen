@@ -10,7 +10,7 @@
 repo:\nhttps://github.com/juancolchete/BlockchainBuilder
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6ghIVaU181H2OWpm_1_dEB)  
-**index**: 14  
+**index**: 1  
 **tags**: "frontier","substrate","EVM","blockchain","lvim","lunarvim","code","código","rust","cargo","solidity","remix","blockscout","colchete","tech","programação","ColcheteDAO","[]"  
 **genThumb**: Y  
 **end**
