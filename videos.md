@@ -14,3 +14,35 @@ repo:\nhttps://github.com/juancolchete/BlockchainBuilder
 **tags**: "frontier","substrate","EVM","blockchain","lvim","lunarvim","code","código","rust","cargo","solidity","remix","blockscout","colchete","tech","programação","ColcheteDAO","[]"  
 **genThumb**: Y  
 **end**
+# Mastering Bitcoin
+Aprenda mais sobre o universo do bitcoin e masterize seus conhecimentos.    
+[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
+[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe47urkaJ4rEwis4O9JKDHa2)  
+**index**: 1  
+**tags**: "Bitcoin","BTC","Internet Money","Mastering Bitcoin",Open Source","Linux","Arch Linux","Tux","FOSS","ColcheteDAO","[]"  
+**genThumb**: Y  
+**end**
+# tux
+repo:\nhttps://github.com/juancolchete/tux  
+[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
+[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe56nItnsIPsP_4m9o94sfjz)  
+**index**: 10  
+**tags**: "Open Source","Linux","Arch Linux","Tux","FOSS","ColcheteDAO","[]"  
+**genThumb**: Y  
+**end**
+# thumbGen
+Repo:\nhttps://github.com/ColcheteDAO/thumbGen  
+[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
+[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe7pICM1fiO6AXKY-uGzLqB3)  
+**index**: 85  
+**tags**: "github actions","Image Magick","Magick","bash","ColcheteDAO","[]"  
+**genThumb**: Y  
+**end**
+# [Tutoriais]
+repo:\nhttps://github.com/juancolchete/tutorials  
+[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
+[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe5fIETshPhrUtKBojVar2Gs)  
+**index**: 26  
+**tags**: "Open Source","Linux","Arch Linux","Tutorials","Demo","ColcheteDAO","[]"  
+**genThumb**: Y  
+**end**
