@@ -212,3 +212,7 @@
 [video](https://youtu.be/XewFoqdCnPQ)
 ## Resolver CI não cria imagens #107
 [video](https://youtu.be/OjUfC5KogS4)
+## Remover titulo duplicado #108
+[video](https://youtu.be/eLNNQdYbsWc)
+## Resolver erros de tags e títulos personalizados #109
+[video](https://youtu.be/9fwFFqBfyRk)
