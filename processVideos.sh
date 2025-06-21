@@ -146,7 +146,7 @@ mountVideosMeta(){
         titleIndexRaw=$(echo "$videoTitleRaw"| grep -o -b ''"$escapedFolder"'' )
         titleIndexRawLen=${#titleIndexRaw}
         titleIndex=$(echo $titleIndexRaw | cut -c 1-$(expr $titleIndexRawLen - $folderStrLen - 1))
-        seriesNumber=$(echo $videoTitleRaw | cut -c $(expr $titleIndex + $folderStrLen + 2)-$(expr $videoTitleRawLen + 2))
+        seriesNumber=${videoTitleRaw##* }
         echo "===SERIES NUMBER===" 
         echo "$seriesNumber" 
         echo "${seriesNumber#0}" 
