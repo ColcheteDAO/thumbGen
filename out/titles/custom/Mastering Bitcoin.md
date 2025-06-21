@@ -1,7 +1,7 @@
 Problema das moedas digitais #1
 
 
-
+Taxa de transação é necessária? #4
 Taxa de inflação do BTC #5
 Gasto duplo como o BTC resolve #6
 
