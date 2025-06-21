@@ -128,10 +128,6 @@ mountVideosMeta(){
   saveVideosMeta(){
     videoSeriesQuery=$(echo -n "$1" | jq -sRr @uri)
     videosSearch=$(sendGetRequest "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$videoSeriesQuery&type=video&pageToken=$2")
-    echo "===VIDEOSEARCH==="
-    echo "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$videoSeriesQuery&type=video&pageToken=$2"
-    echo $videosSearch
-    echo "===VIDEOSEARCH==="
     if [[ "$videosSearch" == "error" ]]; then
       errorMSG=$videosSearch
       echo "$videosSearch $funName ${errors[0]}"
@@ -147,10 +143,6 @@ mountVideosMeta(){
         titleIndexRawLen=${#titleIndexRaw}
         titleIndex=$(echo $titleIndexRaw | cut -c 1-$(expr $titleIndexRawLen - $folderStrLen - 1))
         seriesNumber=${videoTitleRaw##* }
-        echo "===SERIES NUMBER===" 
-        echo "$seriesNumber" 
-        echo "${seriesNumber#0}" 
-        echo "===SERIES NUMBER===" 
         titlesMakdown[${seriesNumber#0}]=$(echo "## ${videoTitleRaw/$folder /"#"}")
         videoIdAPI=$(echo "$videoSearchItem" | jq -r '.id.videoId')
         videosMakdown[${seriesNumber#0}]=$(echo "[video](https://youtu.be/$videoIdAPI)")
