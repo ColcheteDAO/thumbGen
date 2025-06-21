@@ -6,3 +6,6 @@ Taxa de inflação do BTC #5
 Gasto duplo como o BTC resolve #6
 
 Cadeias de assinaturas digitais #8
+
+Rede bitcoin hierárquica? #10
+Bitcoin Core implementação principal #11
