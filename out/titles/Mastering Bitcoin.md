@@ -4,35 +4,46 @@ https://youtube.googleapis.com/youtube/v3/search?part=snippet&forMine=true&maxRe
 ===VIDEOSEARCH===
 ===SERIES NUMBER===
 1
+1
 ===SERIES NUMBER===
 ===SERIES NUMBER===
+1
 1
 ===SERIES NUMBER===
 ===SERIES NUMBER===
 9
+9
 ===SERIES NUMBER===
 ===SERIES NUMBER===
+
 
 ===SERIES NUMBER===
 ===SERIES NUMBER===
 7
+7
 ===SERIES NUMBER===
 ===SERIES NUMBER===
+6
 6
 ===SERIES NUMBER===
 ===SERIES NUMBER===
 
+
 ===SERIES NUMBER===
 ===SERIES NUMBER===
+5
 5
 ===SERIES NUMBER===
 ===SERIES NUMBER===
 
+
 ===SERIES NUMBER===
 ===SERIES NUMBER===
 2
+2
 ===SERIES NUMBER===
 ===SERIES NUMBER===
+1
 1
 ===SERIES NUMBER===
 ## Como bitcoin resolve o problema das moedas digitais #1
