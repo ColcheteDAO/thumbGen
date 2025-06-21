@@ -148,6 +148,7 @@ mountVideosMeta(){
         titleIndex=$(echo $titleIndexRaw | cut -c 1-$(expr $titleIndexRawLen - $folderStrLen - 1))
         seriesNumber=$(echo $videoTitleRaw | cut -c $(expr $titleIndex + $folderStrLen + 2)-$(expr $videoTitleRawLen + 2))
         echo "===SERIES NUMBER===" 
+        echo "$seriesNumber" 
         echo "${seriesNumber#0}" 
         echo "===SERIES NUMBER===" 
         titlesMakdown[${seriesNumber#0}]=$(echo "## ${videoTitleRaw/$folder /"#"}")
