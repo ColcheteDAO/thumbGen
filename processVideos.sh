@@ -51,7 +51,6 @@ updateVideoPayload(){
 }
 
 handleRequestErrors(){
-  echo "$1"
   if [ $(checkPatternOcurrence "$1" '"error":') = 1 ]; then
     echo "error" 
   else
