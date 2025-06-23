@@ -46,3 +46,11 @@ repo:\nhttps://github.com/juancolchete/tutorials
 **tags**: "Open Source","Linux","Arch Linux","Tutorials","Demo","ColcheteDAO","[]"  
 **genThumb**: Y  
 **end**
+# Open Source
+repo:\nhttps://github.com/juancolchete/tutorials  
+[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6TSdQx-aZyiMo9N1V6xwFT)  
+[playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe5fIETshPhrUtKBojVar2Gs)  
+**index**: 1  
+**tags**: "Open Source","Linux","Github Actions","BTCMAP","OSM","Open Street Map","ColcheteDAO","[]"  
+**genThumb**: Y  
+**end**
