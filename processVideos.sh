@@ -165,10 +165,10 @@ while IFS= read -r line; do
     folder=$(echo "$line" | cut -c 3-$((${#line}+2)))
     folders+=("$folder")
     index=0
-    mountCustomTitles "$folder"
-    videosMetaData=$(mountVideosMeta "$folder")
     mkdir -p "out/titles/custom"
     touch "out/titles/custom/$folder.md"
+    mountCustomTitles "$folder"
+    videosMetaData=$(mountVideosMeta "$folder")
     if [[ $(checkPatternOcurrence "$videosMetaData" '##') -lt 1 ]] && [[ $(checkPatternOcurrence "$videosMetaData" 'error') -ge 1 ]]; then
       echo "==================="
       echo $videosMetaData
