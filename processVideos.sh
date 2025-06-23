@@ -134,14 +134,7 @@ mountVideosMeta(){
     else
       while read videoSearchItem
       do
-        lastIndex=${#line}
-        folderStrLen=${#folder}
         videoTitleRaw=$(echo "$videoSearchItem" | jq -r '.snippet.title')
-        videoTitleRawLen=${#videoTitleRaw}
-        escapedFolder=$(echo $folder | sed "s|\[|\\\\[|" | sed "s|\]|\\\\]|")
-        titleIndexRaw=$(echo "$videoTitleRaw"| grep -o -b ''"$escapedFolder"'' )
-        titleIndexRawLen=${#titleIndexRaw}
-        titleIndex=$(echo $titleIndexRaw | cut -c 1-$(expr $titleIndexRawLen - $folderStrLen - 1))
         seriesNumber=${videoTitleRaw##* }
         titlesMakdown[${seriesNumber#0}]=$(echo "## ${videoTitleRaw/$folder /"#"}")
         videoIdAPI=$(echo "$videoSearchItem" | jq -r '.id.videoId')
