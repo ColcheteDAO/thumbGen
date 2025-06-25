@@ -166,7 +166,8 @@ mountVideosMeta(){
 }
 
 while IFS= read -r line; do
-  if [ $(checkPatternOcurrence "$line" '#') = 1 ]; then
+  # if [ $(checkPatternOcurrence "$line" '#') = 1 ]; then
+  if [ $(checkPatternOcurrence "$line" 'Open Source' ) = 1 ]; then
     folder=$(echo "$line" | cut -c 3-$((${#line}+2)))
     folders+=("$folder")
     index=0
