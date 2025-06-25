@@ -11,6 +11,7 @@ declare -A playlists
 startUpdateIndex=0
 tags=''
 genThumb='N'
+run='N'
 folders=("man" "image" "outfile" "text")
 declare -a errors
 declare -a needUpdateThumb
@@ -208,56 +209,60 @@ while IFS= read -r line; do
     tags=$(echo "$line" | cut -c 10-$((${#line}+1)))
   elif [ $(checkPatternOcurrence "$line" '\*\*genThumb\*\*: ') = 1 ]; then
     genThumb=$(echo "$line" | cut -c 14-$((${#line}-2)))
+  elif [ $(checkPatternOcurrence "$line" '\*\*run\*\*: ') = 1 ]; then
+    run=$(echo "$line" | cut -c 9-$((${#line}-2)))
   elif [ $(checkPatternOcurrence "$line" '\*\*end\*\*') = 1 ]; then
-    while IFS= read -r lineTitle; do
-      if [ $(checkPatternOcurrence "$lineTitle" '#') = 3 ]; then
-        index=$((${index}+1))
-        title=$(echo "$lineTitle" | cut -c 4-$((${#lineTitle}+2)))
-        if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
-          if [ ${#customTitles[$folder$index]} -gt 10 ]; then
-            bash genThumb.sh "${customTitles[$folder$index]}" "$folder" 
-          else
-            bash genThumb.sh "$title" "$folder" 
-          fi
-          mkdir -p "out/thumbs/$folder"
-          path="out/thumbs/$folder/$folder$index.png"
-          echo "=========================="
-          echo "out/thumbs/$folder"
-          echo "$path"
-          echo "=========================="
-          diffCount=0
-          if [ -f "out/thumbs/$folder/$folder$index.png" ]; then
-            diffCount=$(compare -metric ae -fuzz XX% "out/thumbs/$folder/$folder$index.png" compose_under.png null: 2>&1) 
-            if [ "$diffCount" = 0 ]; then
-              needUpdateThumb[$index]=false
+    if [ $run = "Y" ]; then
+      while IFS= read -r lineTitle; do
+        if [ $(checkPatternOcurrence "$lineTitle" '#') = 3 ]; then
+          index=$((${index}+1))
+          title=$(echo "$lineTitle" | cut -c 4-$((${#lineTitle}+2)))
+          if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
+            if [ ${#customTitles[$folder$index]} -gt 10 ]; then
+              bash genThumb.sh "${customTitles[$folder$index]}" "$folder" 
+            else
+              bash genThumb.sh "$title" "$folder" 
+            fi
+            mkdir -p "out/thumbs/$folder"
+            path="out/thumbs/$folder/$folder$index.png"
+            echo "=========================="
+            echo "out/thumbs/$folder"
+            echo "$path"
+            echo "=========================="
+            diffCount=0
+            if [ -f "out/thumbs/$folder/$folder$index.png" ]; then
+              diffCount=$(compare -metric ae -fuzz XX% "out/thumbs/$folder/$folder$index.png" compose_under.png null: 2>&1) 
+              if [ "$diffCount" = 0 ]; then
+                needUpdateThumb[$index]=false
+              else
+                mv compose_under.png "$path"
+                needUpdateThumb[$index]=true
+              fi
             else
               mv compose_under.png "$path"
               needUpdateThumb[$index]=true
             fi
-          else
-            mv compose_under.png "$path"
-            needUpdateThumb[$index]=true
           fi
-        fi
-      elif [ $(checkPatternOcurrence "$lineTitle" '\[video\]') = 1 ]; then
-        videoId=$(echo "$lineTitle" | cut -c 26-$((${#lineTitle}-1)))
-        fillSnippetVideo $videoId  
-        if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [ $index -ge $startUpdateIndex ]; then
-          if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
-            if [ "${needUpdateThumb[$index]}" = true ]; then
-              echo "==============.................."
-              echo "UPDATED THE THUMB"
-              echo "==============.................."
-              sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path"
+        elif [ $(checkPatternOcurrence "$lineTitle" '\[video\]') = 1 ]; then
+          videoId=$(echo "$lineTitle" | cut -c 26-$((${#lineTitle}-1)))
+          fillSnippetVideo $videoId  
+          if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [ $index -ge $startUpdateIndex ]; then
+            if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
+              if [ "${needUpdateThumb[$index]}" = true ]; then
+                echo "==============.................."
+                echo "UPDATED THE THUMB"
+                echo "==============.................."
+                sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path"
+              fi
             fi
+            echo "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
+            sendResquestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
+            addToPlaylist "POST" $list1 $videoId
+            addToPlaylist "POST" $list2 $videoId
           fi
-          echo "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
-          sendResquestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
-          addToPlaylist "POST" $list1 $videoId
-          addToPlaylist "POST" $list2 $videoId
         fi
-      fi
-    done < "titles/$folder.md"
+      done < "titles/$folder.md"
+    fi
   fi
 done < videos.md
 for (( f=0; f<${#folders[@]} ; f++ ))

@@ -13,6 +13,7 @@ repo:\nhttps://github.com/juancolchete/BlockchainBuilder
 **index**: 15  
 **tags**: "frontier","substrate","EVM","blockchain","lvim","lunarvim","code","código","rust","cargo","solidity","remix","blockscout","colchete","tech","programação","ColcheteDAO","[]"  
 **genThumb**: Y  
+**run**: N  
 **end**
 # Mastering Bitcoin
 Aprenda mais sobre o universo do bitcoin e masterize seus conhecimentos.    
@@ -21,6 +22,7 @@ Aprenda mais sobre o universo do bitcoin e masterize seus conhecimentos.
 **index**: 11  
 **tags**: "Bitcoin","BTC","Internet Money","Mastering Bitcoin","Open Source","Linux","Arch Linux","Tux","FOSS","ColcheteDAO","[]"  
 **genThumb**: Y  
+**run**: N  
 **end**
 # tux
 repo:\nhttps://github.com/juancolchete/tux  
@@ -29,6 +31,7 @@ repo:\nhttps://github.com/juancolchete/tux
 **index**: 1  
 **tags**: "Open Source","Linux","Arch Linux","Tux","FOSS","ColcheteDAO","[]"  
 **genThumb**: Y  
+**run**: N  
 **end**
 # thumbGen
 Repo:\nhttps://github.com/ColcheteDAO/thumbGen  
@@ -37,6 +40,7 @@ Repo:\nhttps://github.com/ColcheteDAO/thumbGen
 **index**: 90  
 **tags**: "github actions","Image Magick","Magick","bash","ColcheteDAO","[]"  
 **genThumb**: Y  
+**run**: N  
 **end**
 # [Tutoriais]
 repo:\nhttps://github.com/juancolchete/tutorials  
@@ -45,12 +49,14 @@ repo:\nhttps://github.com/juancolchete/tutorials
 **index**: 27  
 **tags**: "Open Source","Linux","Arch Linux","Tutorials","Demo","ColcheteDAO","[]"  
 **genThumb**: Y  
+**run**: N  
 **end**
 # Open Source
-repo:\nhttps://github.com/juancolchete/tutorials  
+repo:\nhttps://github.com/juancolchete/actionPlayground  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6TSdQx-aZyiMo9N1V6xwFT)  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe5fIETshPhrUtKBojVar2Gs)  
 **index**: 1  
 **tags**: "Open Source","Linux","Github Actions","BTCMAP","OSM","Open Street Map","ColcheteDAO","[]"  
 **genThumb**: Y  
+**run**: N  
 **end**
