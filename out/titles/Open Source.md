@@ -1,1 +1,364 @@
-
+SSNSNSNSNSNSNSNSNSNSNSNN
+32
+## Como Adicionar comunidade no BTC MAP #32
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+31
+## Como adicionar comércio com OSM Field Filler #31
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+30
+## Como adicionar comércio no Open Street Map OSM #30
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+11
+## Bitcoin Core implementação de referência Mastering Bitcoin 11
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+10
+## Porque a estrutura de rede não é hierárquica Mastering Bitcoin 10
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+9
+## O que são entradas e saidas Mastering Bitcoin 9
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+8
+## Transações são cadeias de assinaturas digitais Mastering Bitcoin 8
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+7
+## Prova de trabalho agulha no palheiro Mastering Bitcoin 7
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+6
+## O que é gasto duplo e como o bitcoin resolve Mastering Bitcoin 6
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+29
+## Bug report template github actions #29
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+28
+## Features request template github actions #28
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+27
+## New features template github actions #27
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+26
+## Criar issues github actions #26
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+25
+## Issue template new features github actions #25
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+3
+## Transações reversíveis Mastering Bitcoin 3
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+5
+## O que determina a taxa de inflação do Bitcoin Mastering Bitcoin 5
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+4
+## Porque a taxa de transação é necessária? Mastering Bitcoin 4
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+2
+## O que é UTXO ? Mastering Bitcoin 2
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+1
+## Como bitcoin resolve o problema das moedas digitais Mastering Bitcoin 1
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+27
+## Obter preço crypto terminal [Tutoriais] 27
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+26
+## Previsão do tempo via curl [Tutoriais] 26
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+11
+## Sessões no TMUX tux 11
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+10
+## Como resolver icu breaks libicui18 electron30 tux 10
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+9
+## Janela maximizada no Alacritty tux 9
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+8
+## Como utilizar wget no linux tux 8
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+23
+## Como rodar  github actions no seu servidor #23
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+24
+## Como chamar outros workflows  github actions #24
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+24
+## Como não passar vergonha usando Markdown [Tutoriais] 24
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+25
+## Saindo do básico no Markdown [Tutoriais] 25
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+23
+## Commits verificados no github e assinatura de commit no git [Tutoriais] 23
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+22
+## Inicializar repo git [Tutoriais] 22
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+21
+## Como definir e exibir o hostname no linux [Tutoriais] 21
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+20
+## Como testar as suas requisições [Tutoriais] 20
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+7
+## Como utilizar o find no linux tux 7
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+6
+## Como utilizar o bashrc no linux tux 6
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+19
+## Como mudar mensagem de boas vindas do FISH [Tutoriais] 19
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+18
+## Como sair do VIM [Tutoriais] 18
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+17
+## Como configurar um ambiente de desenvolvimento solana no NixOs [Tutoriais] 17
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+5
+## Renomear arquivos e diretórios no linux tux 5
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+4
+## Listar arquivos no linux tux 4
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+3
+## Criar crons no linux tux 3
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+2
+## Criar arquivos no linux tux 2
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+16
+## Como rodar um node IPFS e publicar no IPNS [Tutoriais] 16
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+22
+## Condicionais github actions #22
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+21
+## Maiúsculas e minúsculas upper lower github actions #21
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+20
+## Como exibir nome do repositório github actions #20
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+15
+## Como rodar o WordPress no docker [Tutoriais] 15
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+1
+## Como deletar histórico do terminal no linux tux 1
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+19
+## Como receber arquivos via requisição express curl #19
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+17
+## Como buildar imagem Express para o docker hub com github actions #17
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+18
+## Como buildar imagem NodeJS para o docker hub com github actions #18
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+16
+## Como buildar imagem NestJs para o docker hub com github actions #16
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+15
+## Como buildar imagem nextjs para o docker hub com github actions #15
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+14
+## Ler propriedades de JSON do repositório github actions #14
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+13
+## Ler arquivos do repositório github actions #13
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+12
+## Executar workflows externos ou reutilizaveis github actions #12
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+14
+## Como ler interface de um contrato Solidity ABI [Tutoriais] 14
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+11
+## Schedule agendar ações github actions #11
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+10
+## Salvar resultado de requisição github actions #10
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+9
+## Tratar dados JSON com JQ  github actions #9
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+8
+## Requisições HTTP com curl #8
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+7
+## Variáveis e segredos de organização github actions #7
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+6
+## Variáveis e segredos de ambiente github actions #6
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+12
+## Como resolver o erro ao clonar repositórios via SSH Github Desktop [Tutoriais] 12
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+13
+## Como resolver link quebrado no Libreoffice [Tutoriais] 13
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+5
+## Segredos de repositório github actions #5
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+11
+## Como configurar a metamask em qualque rede EVM [Tutoriais] 11
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+4
+## Variáveis de repositório github actions #4
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+3
+## Ações sob demanda workflow dipatch no github actions #3
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+2
+## Parametrização de requisção http github actions #2
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+1
+## Depurar erro de requisições vazias #1
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+10
+## Como permitir rodar modulo NPM no terminal Gerador de NFTs 10
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+9
+## Configurar template da Immutable Gerador de NFTs 9
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+8
+## Documentação Gerador de NFTs 8
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+10
+## Como salvar ABIs de forma personalizada Soleasy #guia definitivo 1  10
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+7
+## Primeiro template Gerador de NFTs 7
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+6
+## Criar metadados Gerador de NFTs 6
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+10
+## Como adicionar atalhos shortcut desktop icon no Linux Arch Ubuntu [Tutoriais] 10
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+09
+## Como tornar o tmux o shell padrão [Tutoriais] 09
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+08
+## Como adicionar chave ssh ao github [Tutoriais] 08
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+07
+## Como instalar o LunarVIM no Arch Linux Nerd Fonts Wakatime [Tutoriais] 07
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+06
+## Como instalar o tmux no Arch Linux [Tutoriais] 06
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+05
+## Criar diretório Gerador de NFTs 05
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+04
+## Como fazer um pendrive bootável com Ubuntu Server [Tutoriais] 04
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+05
+## Como configurar Rust Desk Server e Client [Tutoriais] 05
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+04
+## Criar template de Gerador de NFTs 04
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+03
+## Como publicar no NPM Gerador de NFTs 03
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+02
+## Rodar projeto em CLI Gerador de NFTs 02
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+01
+## Configuração do projeto Gerador de NFTs 01
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+03
+## Como fazer um pendrive bootável com Arch Linux [Tutoriais] 03
+SSNSNSNSNSNSNSNSNSNSNSNN
+SSNSNSNSNSNSNSNSNSNSNSNN
+#05
+## Guilherme Werner Colchete Cast #05
+SSNSNSNSNSNSNSNSNSNSNSNN
