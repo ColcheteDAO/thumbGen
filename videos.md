@@ -20,7 +20,7 @@ Aprenda mais sobre o universo do bitcoin e masterize seus conhecimentos.
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe47urkaJ4rEwis4O9JKDHa2)  
 **index**: 11  
-**tags**: "Bitcoin","BTC","Internet Money","Mastering Bitcoin","Open Source","Linux","Arch Linux","Tux","FOSS","ColcheteDAO","[]"  
+**tags**: "Bitcoin","BTC","Internet Money","Mastering Bitcoin","Linux","Arch Linux","Tux","FOSS","ColcheteDAO","[]"  
 **genThumb**: Y  
 **run**: N  
 **end**
@@ -29,7 +29,7 @@ repo:\nhttps://github.com/juancolchete/tux
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe56nItnsIPsP_4m9o94sfjz)  
 **index**: 1  
-**tags**: "Open Source","Linux","Arch Linux","Tux","FOSS","ColcheteDAO","[]"  
+**tags**: "Linux","Arch Linux","Tux","FOSS","ColcheteDAO","[]"  
 **genThumb**: Y  
 **run**: N  
 **end**
@@ -47,9 +47,9 @@ repo:\nhttps://github.com/juancolchete/tutorials
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe5fIETshPhrUtKBojVar2Gs)  
 **index**: 27  
-**tags**: "Open Source","Linux","Arch Linux","Tutorials","Demo","ColcheteDAO","[]"  
+**tags**: "Linux","Arch Linux","Tutorials","Demo","ColcheteDAO","[]"  
 **genThumb**: Y  
-**run**: N  
+**run**: Y  
 **end**
 # Open Source
 repo:\nhttps://github.com/juancolchete/actionPlayground  
@@ -58,5 +58,5 @@ repo:\nhttps://github.com/juancolchete/actionPlayground
 **index**: 1  
 **tags**: "Open Source","Linux","Github Actions","BTCMAP","OSM","Open Street Map","ColcheteDAO","[]"  
 **genThumb**: Y  
-**run**: Y  
+**run**: N  
 **end**
