@@ -178,9 +178,9 @@
 [video](https://youtu.be/S4Pb1qL_Vg8)
 ## Configurar metadados #90
 [video](https://youtu.be/8SNPYZNhd8g)
-## Debug titulo tutoriais #91
+## Debug titulo tutorials #91
 [video](https://youtu.be/kyQCSPe_vKs)
-## Encode tutoriais #92
+## Encode tutorials #92
 [video](https://youtu.be/n2KUeKtxo7M)
 ## Resolver bug aspas duplas #93
 [video](https://youtu.be/Rg_Md-Ort2Y)
@@ -218,3 +218,7 @@
 [video](https://youtu.be/9fwFFqBfyRk)
 ## Atualização e analise #110
 [video](https://youtu.be/4vPfDQrao_Y)
+## Bug no número do título #111
+[video](https://youtu.be/jl5hs-E28Tc)
+## Refatorar montagem título #112
+[video](https://youtu.be/zY-vbUKSsJQ)

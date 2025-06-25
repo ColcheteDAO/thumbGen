@@ -18,5 +18,5 @@
 [video](https://youtu.be/Sces_msOmEg)
 ## Como resolver icu breaks libicui18 electron30 #10
 [video](https://youtu.be/VRG71B9ST68)
-## Bitcoin Core implementação de referência Mastering Bitcoin 11
-[video](https://youtu.be/P7Z4iXNiw8Q)
+## Sessões no TMUX #11
+[video](https://youtu.be/vSjdphe7iK0)
