@@ -58,5 +58,5 @@ repo:\nhttps://github.com/juancolchete/actionPlayground
 **index**: 1  
 **tags**: "Open Source","Linux","Github Actions","BTCMAP","OSM","Open Street Map","ColcheteDAO","[]"  
 **genThumb**: Y  
-**run**: N  
+**run**: Y  
 **end**
