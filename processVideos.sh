@@ -136,6 +136,7 @@ mountVideosMeta(){
       while read videoSearchItem
       do
         videoTitleRaw=$(echo "$videoSearchItem" | jq -r '.snippet.title')
+        videoTitleRaw=echo "${videoTitleRaw//#}"
         seriesNumber=${videoTitleRaw##* }
         titlesMakdown[${seriesNumber#0}]=$(echo "## ${videoTitleRaw/$folder /"#"}")
         videoIdAPI=$(echo "$videoSearchItem" | jq -r '.id.videoId')
