@@ -129,9 +129,6 @@ mountVideosMeta(){
   saveVideosMeta(){
     videoSeriesQuery=$(echo -n "$1" | jq -sRr @uri)
     videosSearch=$(sendGetRequest "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$videoSeriesQuery&type=video&pageToken=$2")
-    echo "serac"
-    echo "$videosSearch"
-    echo "serac"
     if [[ "$videosSearch" == "error" ]]; then
       errorMSG=$videosSearch
       echo "$videosSearch $funName ${errors[0]}"
@@ -139,8 +136,6 @@ mountVideosMeta(){
       while read videoSearchItem
       do
         videoTitleRaw=$(echo "$videoSearchItem" | jq -r '.snippet.title')
-        echo "**"
-        echo "$videoTitleRaw"
         seriesNumber=${videoTitleRaw##* }
         seriesNumber=${seriesNumber#0}
         titlesMakdown[$seriesNumber]=$(echo "## ${videoTitleRaw/$folder /"#"}")
