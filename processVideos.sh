@@ -141,10 +141,10 @@ mountVideosMeta(){
         seriesNumber=${videoTitleRaw##* }
         echo "$seriesNumber"
         echo "${seriesNumber#0}"
-        titlesMakdown[${seriesNumber#0}]=$(echo "## ${videoTitleRaw/$folder /"#"}")
+        # titlesMakdown[${seriesNumber#0}]=$(echo "## ${videoTitleRaw/$folder /"#"}")
         echo "**"
         videoIdAPI=$(echo "$videoSearchItem" | jq -r '.id.videoId')
-        videosMakdown[${seriesNumber#0}]=$(echo "[video](https://youtu.be/$videoIdAPI)")
+        # videosMakdown[${seriesNumber#0}]=$(echo "[video](https://youtu.be/$videoIdAPI)")
         if [[ $finalIndex -lt ${seriesNumber#0} ]]; then
           finalIndex=${seriesNumber#0}
         fi
