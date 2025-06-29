@@ -1,8 +1,8 @@
 serac
 {
   "kind": "youtube#searchListResponse",
-  "etag": "8OUD-GCb-zzmeLHhPW62lmGlREE",
-  "nextPageToken": "KDIyUAFsZOH73gdNA33jcMxJ05I8O7_Cs7p9-n6L0Kj8PJaxgr2HroPgacwEKGMq7NsxQIGAd5Po8dL5jhGi2YCRE_sM_Ro5tbRiqZvL8QUId4KJ",
+  "etag": "eoRcMnWFevNNRgKU8PY6QRHsjfw",
+  "nextPageToken": "KDIyUAFsZOH7erAHplFBCnUyGmEZXF17_RSbLtiKvkNv2KaXQsi8peA3UkP28SsRiBSdGxVxat8GRhH9d-Xp0Fgk66I6DC6T5Z_qPp373ioIMtYY",
   "pageInfo": {
     "totalResults": 113,
     "resultsPerPage": 50
@@ -10,7 +10,7 @@ serac
   "items": [
     {
       "kind": "youtube#searchResult",
-      "etag": "FBfRqQtjWnm4T2eK0qBZj8saSD0",
+      "etag": "p95zJvvgh2dlfesPpPDu2xKq_PI",
       "id": {
         "kind": "youtube#video",
         "videoId": "6RBT1B8gVZU"
@@ -22,27 +22,27 @@ serac
         "description": "",
         "thumbnails": {
           "default": {
-            "url": "https://i9.ytimg.com/vi/6RBT1B8gVZU/default.jpg?sqp=CMC2hsMG&rs=AOn4CLALg3Jo4vd69R0zf-BxflVasA6vmw",
+            "url": "https://i9.ytimg.com/vi/6RBT1B8gVZU/default.jpg?sqp=COy4hsMG&rs=AOn4CLDpddCxhQ5n7Mn7_w6KZxf5VyU9dA",
             "width": 120,
             "height": 90
           },
           "medium": {
-            "url": "https://i9.ytimg.com/vi/6RBT1B8gVZU/mqdefault.jpg?sqp=CMC2hsMG&rs=AOn4CLCWJgQbLD24DXTG_9801LDAsKOdwg",
+            "url": "https://i9.ytimg.com/vi/6RBT1B8gVZU/mqdefault.jpg?sqp=COy4hsMG&rs=AOn4CLCePENXzItTVdn9zmz_7a7dGtPrRQ",
             "width": 320,
             "height": 180
           },
           "high": {
-            "url": "https://i9.ytimg.com/vi/6RBT1B8gVZU/hqdefault.jpg?sqp=CMC2hsMG&rs=AOn4CLAn4761cB0r53rsIfMg0qKW-5Nung",
+            "url": "https://i9.ytimg.com/vi/6RBT1B8gVZU/hqdefault.jpg?sqp=COy4hsMG&rs=AOn4CLDNEYq0NRY2dis8dTLqKc3fsYSv7Q",
             "width": 480,
             "height": 360
           },
           "standard": {
-            "url": "https://i9.ytimg.com/vi/6RBT1B8gVZU/sddefault.jpg?sqp=CMC2hsMG&rs=AOn4CLBS97N5_V5eEHn2yNmy_u3Jza5nnQ",
+            "url": "https://i9.ytimg.com/vi/6RBT1B8gVZU/sddefault.jpg?sqp=COy4hsMG&rs=AOn4CLDRiI-ZOLG1kBlMIWGy7Yn_SgUx4w",
             "width": 640,
             "height": 480
           },
           "maxres": {
-            "url": "https://i9.ytimg.com/vi/6RBT1B8gVZU/maxresdefault.jpg?sqp=CMC2hsMG&rs=AOn4CLAaNjdgl7M29wyIc2iqQzC9lZFb5Q",
+            "url": "https://i9.ytimg.com/vi/6RBT1B8gVZU/maxresdefault.jpg?sqp=COy4hsMG&rs=AOn4CLCzT0Wlx27BrFEUh7PZ_rAs0X64UQ",
             "width": 1280,
             "height": 720
           }
@@ -2215,257 +2215,307 @@ serac
 Permitir decidir se vai rodar thumbGen 113
 113
 113
+## Permitir decidir se vai rodar #113
 **
 **
 Refatorar montagem título thumbGen 112
 112
 112
+## Refatorar montagem título #112
 **
 **
 Bug no número do título thumbGen 111
 111
 111
+## Bug no número do título #111
 **
 **
 Atualização e analise thumbGen 110
 110
 110
+## Atualização e analise #110
 **
 **
 Resolver erros de tags e títulos personalizados thumbGen 109
 109
 109
+## Resolver erros de tags e títulos personalizados #109
 **
 **
 Remover titulo duplicado thumbGen 108
 108
 108
+## Remover titulo duplicado #108
 **
 **
 Resolver CI não cria imagens thumbGen 107
 107
 107
+## Resolver CI não cria imagens #107
 **
 **
 ThumbGen 106
 106
 106
+## ThumbGen 106
 **
 **
 ThumbGen 104
 104
 104
+## ThumbGen 104
 **
 **
 ThumbGen 105
 105
 105
+## ThumbGen 105
 **
 **
 Encode tutorials thumbGen 92
 92
 92
+## Encode tutorials #92
 **
 **
 Resolver bug aspas duplas thumbGen 93
 93
 93
+## Resolver bug aspas duplas #93
 **
 **
 Limpar imagens remanecentes thumbGen 94
 94
 94
+## Limpar imagens remanecentes #94
 **
 **
 Debug limpeza das imagens thumbGen 95
 95
 95
+## Debug limpeza das imagens #95
 **
 **
 Finalização limpeza das imagens thumbGen 96
 96
 96
+## Finalização limpeza das imagens #96
 **
 **
 Limpeza integrada com git thumbGen 97
 97
 97
+## Limpeza integrada com git #97
 **
 **
 Títulos customizados thumbGen 98
 98
 98
+## Títulos customizados #98
 **
 **
 ThumbGen 99
 99
 99
+## ThumbGen 99
 **
 **
 ThumbGen 100
 100
 100
+## ThumbGen 100
 **
 **
 ThumbGen 101
 101
 101
+## ThumbGen 101
 **
 **
 ThumbGen 102
 102
 102
+## ThumbGen 102
 **
 **
 ThumbGen 103
 103
 103
+## ThumbGen 103
 **
 **
 Debug titulo tutorials thumbGen 91
 91
 91
+## Debug titulo tutorials #91
 **
 **
 Configurar metadados thumbGen 90
 90
 90
+## Configurar metadados #90
 **
 **
 Subistituir colchete no título thumbGen 89
 89
 89
+## Subistituir colchete no título #89
 **
 **
 Colchete no título thumbGen 88
 88
 88
+## Colchete no título #88
 **
 **
 Substituir metadados thumbGen 87
 87
 87
+## Substituir metadados #87
 **
 **
 Debug índice e pasta thumbGen 86
 86
 86
+## Debug índice e pasta #86
 **
 **
 Debug atualização imagem thumbGen 85
 85
 85
+## Debug atualização imagem #85
 **
 **
 Comparar imagens salvas thumbGen 84
 84
 84
+## Comparar imagens salvas #84
 **
 **
 Salvar hash das thumbs thumbGen 82
 82
 82
+## Salvar hash das thumbs #82
 **
 **
 Comparar hashes salvos thumbGen 83
 83
 83
+## Comparar hashes salvos #83
 **
 **
 Adicionar série de videos thumbGen 80
 80
 80
+## Adicionar série de videos #80
 **
 **
 Resolver erro jq playlist thumbGen 81
 81
 81
+## Resolver erro jq playlist #81
 **
 **
 Adicionar à playlist debug thumbGen 79
 79
 79
+## Adicionar à playlist debug #79
 **
 **
 Melhoria no tratamento de erros thumbGen 78
 78
 78
+## Melhoria no tratamento de erros #78
 **
 **
 Depuração no erro de cota thumbGen 77
 77
 77
+## Depuração no erro de cota #77
 **
 **
 Tratamento erro de cota thumbGen 76
 76
 76
+## Tratamento erro de cota #76
 **
 **
 Adicionar videos à playlist thumbGen 75
 75
 75
+## Adicionar videos à playlist #75
 **
 **
 Separar títulos em markdown thumbGen 73
 73
 73
+## Separar títulos em markdown #73
 **
 **
 Processar títulos de markdown thumbGen 74
 74
 74
+## Processar títulos de markdown #74
 **
 **
 Depuração das playlists thumbGen 72
 72
 72
+## Depuração das playlists #72
 **
 **
 Erro na atualização das capas thumbGen 71
 71
 71
+## Erro na atualização das capas #71
 **
 **
 Usar markdown do artefato thumbGen 69
 69
 69
+## Usar markdown do artefato #69
 **
 **
 Depurar imagem errada na geração thumbGen 70
 70
 70
+## Depurar imagem errada na geração #70
 **
 **
 Exibir todos vídeos markdown thumbGen 68
 68
 68
+## Exibir todos vídeos markdown #68
 **
 **
 Remover zeros à esquerda thumbGen 67
 67
 67
+## Remover zeros à esquerda #67
 **
 **
 Usar imagens via link thumbGen 65
 65
 65
+## Usar imagens via link #65
 **
 **
 Paginação thumbGen 66
 66
 66
+## Paginação #66
 **
 **
 Exibir títulos e links thumbGen 64
 64
 64
+## Exibir títulos e links #64
 **
 serac
 {
   "kind": "youtube#searchListResponse",
-  "etag": "G93W232IXMVTX5-u49pymdEQRiU",
-  "nextPageToken": "KGQyUAFsZOH7TLT849WPMdonswqZu53fI4qdPFKsOux2q1fG3mQlEQW0-C5jkk3sZ2G-mDwwWXMrPw4f4CmWepPnQKWU4hPGJd8VlM9H8JTedgr-",
+  "etag": "_CKyd8sQXlR2xj3bZ0YgwJpM2d0",
+  "nextPageToken": "KGQyUQFsZOH7S4K5AsLpn-fitTP-aTw3SlIBTqk16FVrs0yH3fZ4N4LhkBwBMQ_7ZEHNLjeAlZZD1cChCO4hq_Wo9UgvN17HAWMCc5PfL1cBiqCL0w",
   "pageInfo": {
     "totalResults": 113,
     "resultsPerPage": 50
@@ -4678,251 +4728,301 @@ serac
 Obter índice do vídeo thumbGen 63
 63
 63
+## Obter índice do vídeo #63
 **
 **
 Salvar títulos em arquivo markdown thumbGen 61
 61
 61
+## Salvar títulos em arquivo markdown #61
 **
 **
 Salvar markdown como artefato thumbGen 62
 62
 62
+## Salvar markdown como artefato #62
 **
 **
 Exibir título em markdown thumbGen 59
 59
 59
+## Exibir título em markdown #59
 **
 **
 Exibir link do video em markdown thumbGen 60
 60
 60
+## Exibir link do video em markdown #60
 **
 **
 Listar ultimos vídeos thumbGen 57
 57
 57
+## Listar ultimos vídeos #57
 **
 **
 Exibir título dos vídeos thumbGen 58
 58
 58
+## Exibir título dos vídeos #58
 **
 **
 Depuração da edição thumbGen 56
 56
 56
+## Depuração da edição #56
 **
 **
 Simplificar tratamento de linha thumbGen 55
 55
 55
+## Simplificar tratamento de linha #55
 **
 **
 Contar padrões na condicional thumbGen 54
 54
 54
+## Contar padrões na condicional #54
 **
 **
 Contar padrões via função thumbGen 53
 53
 53
+## Contar padrões via função #53
 **
 **
 Requisição genérica upload thumbGen 51
 51
 51
+## Requisição genérica upload #51
 **
 **
 Salvar dados do vídeo thumbGen 50
 50
 50
+## Salvar dados do vídeo #50
 **
 **
 Definir se sobe a capa thumbGen 52
 52
 52
+## Definir se sobe a capa #52
 **
 **
 Resolver bugs de payload thumbGen 48
 48
 48
+## Resolver bugs de payload #48
 **
 **
 Simplificar adição a playlist thumbGen 49
 49
 49
+## Simplificar adição a playlist #49
 **
 **
 Requisições genéricas thumbGen 47
 47
 47
+## Requisições genéricas #47
 **
 **
 Payload da playlist via função thumbGen 46
 46
 46
+## Payload da playlist via função #46
 **
 **
 Adicionar a playlist via função thumbGen 45
 45
 45
+## Adicionar a playlist via função #45
 **
 **
 Salvar url base thumbGen 44
 44
 44
+## Salvar url base #44
 **
 **
 Adicionar novos videos a playlist thumbGen 42
 42
 42
+## Adicionar novos videos a playlist #42
 **
 **
 Adicionar tags a vídeo thumbGen 43
 43
 43
+## Adicionar tags a vídeo #43
 **
 **
 Formatar JSON thumbGen 41
 41
 41
+## Formatar JSON #41
 **
 **
 Formatação de JSON thumbGen 40
 40
 40
+## Formatação de JSON #40
 **
 **
 Correção indice atualização thumbGen 39
 39
 39
+## Correção indice atualização #39
 **
 **
 Validar descrição está preenchida thumbGen 37
 37
 37
+## Validar descrição está preenchida #37
 **
 **
 Permitir definir indice de atualização thumbGen 38
 38
 38
+## Permitir definir indice de atualização #38
 **
 **
 Definir idioma do áudio thumbGen 34
 34
 34
+## Definir idioma do áudio #34
 **
 **
 Adicionar tags thumbGen 36
 36
 36
+## Adicionar tags #36
 **
 **
 Forçar rodar para todos os vídeos thumbGen 35
 35
 35
+## Forçar rodar para todos os vídeos #35
 **
 **
 Definir idioma do vídeo thumbGen 33
 33
 33
+## Definir idioma do vídeo #33
 **
 **
 Bug adicionar playlists automáticas thumbGen 32
 32
 32
+## Bug adicionar playlists automáticas #32
 **
 **
 Adicionar video a playlist thumbGen 31
 31
 31
+## Adicionar video a playlist #31
 **
 **
 Atualizar descrição com valor personalizado thumbGen 30
 30
 30
+## Atualizar descrição com valor personalizado #30
 **
 **
 Atualizar descrição com valor padrão thumbGen 29
 29
 29
+## Atualizar descrição com valor padrão #29
 **
 **
 Atualizar apenas se descrição menor que 10 thumbGen 28
 28
 28
+## Atualizar apenas se descrição menor que 10 #28
 **
 **
 Checar descrição ao atualizar capa thumbGen 27
 27
 27
+## Checar descrição ao atualizar capa #27
 **
 **
 Como debugar o projeto thumbGen 26
 26
 26
+## Como debugar o projeto #26
 **
 **
 Refresh token YouTube Github Actions thumbGen 25
 25
 25
+## Refresh token YouTube Github Actions #25
 **
 **
 Atualizar thumbnail Github Actions thumbGen 24
 24
 24
+## Atualizar thumbnail Github Actions #24
 **
 **
 Atualizar thumbnail youtube via API thumbGen 23
 23
 23
+## Atualizar thumbnail youtube via API #23
 **
 **
 Salvar e exibir id do vídeo thumbGen 22
 22
 22
+## Salvar e exibir id do vídeo #22
 **
 **
 De magick para convert thumbGen 21
 21
 21
+## De magick para convert #21
 **
 **
 Como usar composite com convert thumbGen 20
 20
 20
+## Como usar composite com convert #20
 **
 **
 Adicionar fonte no linux via bash thumbGen 18
 18
 18
+## Adicionar fonte no linux via bash #18
 **
 **
 Como gerar artefatos github actions thumbGen 19
 19
 19
+## Como gerar artefatos github actions #19
 **
 **
 Finalizar geração das imagens thumbGen 17
 17
 17
+## Finalizar geração das imagens #17
 **
 **
 Como usar compose com convert thumbGen 16
 16
 16
+## Como usar compose com convert #16
 **
 **
 Instalar magick na CI thumbGen 15
 15
 15
+## Instalar magick na CI #15
 **
 **
 Configurar CI básica thumbGen 14
 14
 14
+## Configurar CI básica #14
 **
 serac
 {
@@ -5512,64 +5612,77 @@ serac
 Gerar imagem de capa dinâmica thumbGen 13
 13
 13
+## Gerar imagem de capa dinâmica #13
 **
 **
 Nomear por categoria e índice thumbGen 12
 12
 12
+## Nomear por categoria e índice #12
 **
 **
 Ler títulos de um arquivo markdown thumbGen 10
 10
 10
+## Ler títulos de um arquivo markdown #10
 **
 **
 Separar títulos por categorias thumbGen 11
 11
 11
+## Separar títulos por categorias #11
 **
 **
 Posicionar texto e definir cor de fundo thumbGen 08
 08
 8
+## Posicionar texto e definir cor de fundo #08
 **
 **
 Título dinâmico thumbGen 09
 09
 9
+## Título dinâmico #09
 **
 **
 Colar imagem no sudeste Magick thumbGen 06
 06
 6
+## Colar imagem no sudeste Magick #06
 **
 **
 Colar imagem no sudoeste Magick thumbGen 07
 07
 7
+## Colar imagem no sudoeste Magick #07
 **
 **
 Colar duas imagens com Magick thumbGen 05
 05
 5
+## Colar duas imagens com Magick #05
 **
 **
 Como colocar texto acima da imagem thumbGen 04
 04
 4
+## Como colocar texto acima da imagem #04
 **
 **
 Visão geral sobre pintura mudança para Magick thumbGen 03
 03
 3
+## Visão geral sobre pintura mudança para Magick #03
 **
 **
 Exibição da imagem thumbGen 02
 02
 2
+## Exibição da imagem #02
 **
 **
 Configuração inicial do projeto thumbGen 01
 01
 1
+## Configuração inicial do projeto #01
 **

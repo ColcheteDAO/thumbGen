@@ -498,54 +498,65 @@ serac
 Bitcoin Core implementação de referência Mastering Bitcoin 11
 11
 11
+## Bitcoin Core implementação de referência #11
 **
 **
 Porque a estrutura de rede não é hierárquica Mastering Bitcoin 10
 10
 10
+## Porque a estrutura de rede não é hierárquica #10
 **
 **
 O que são entradas e saidas Mastering Bitcoin 9
 9
 9
+## O que são entradas e saidas #9
 **
 **
 Transações são cadeias de assinaturas digitais Mastering Bitcoin 8
 8
 8
+## Transações são cadeias de assinaturas digitais #8
 **
 **
 Prova de trabalho agulha no palheiro Mastering Bitcoin 7
 7
 7
+## Prova de trabalho agulha no palheiro #7
 **
 **
 O que é gasto duplo e como o bitcoin resolve Mastering Bitcoin 6
 6
 6
+## O que é gasto duplo e como o bitcoin resolve #6
 **
 **
 Transações reversíveis Mastering Bitcoin 3
 3
 3
+## Transações reversíveis #3
 **
 **
 O que determina a taxa de inflação do Bitcoin Mastering Bitcoin 5
 5
 5
+## O que determina a taxa de inflação do Bitcoin #5
 **
 **
 Porque a taxa de transação é necessária? Mastering Bitcoin 4
 4
 4
+## Porque a taxa de transação é necessária? #4
 **
 **
 O que é UTXO ? Mastering Bitcoin 2
 2
 2
+## O que é UTXO ? #2
 **
 **
 Como bitcoin resolve o problema das moedas digitais Mastering Bitcoin 1
 1
 1
+## Como bitcoin resolve o problema das moedas digitais #1
 **

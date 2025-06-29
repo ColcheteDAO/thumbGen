@@ -1202,134 +1202,161 @@ serac
 Obter preço crypto terminal [Tutoriais] 27
 27
 27
+## Obte#preço crypto terminal [Tutoriais] 27
 **
 **
 Previsão do tempo via curl [Tutoriais] 26
 26
 26
+## Previsã#do tempo via curl [Tutoriais] 26
 **
 **
 Como não passar vergonha usando Markdown [Tutoriais] 24
 24
 24
+## Com#não passar vergonha usando Markdown [Tutoriais] 24
 **
 **
 Saindo do básico no Markdown [Tutoriais] 25
 25
 25
+## Saind#do básico no Markdown [Tutoriais] 25
 **
 **
 Commits verificados no github e assinatura de commit no git [Tutoriais] 23
 23
 23
+## Commit#verificados no github e assinatura de commit no git [Tutoriais] 23
 **
 **
 Inicializar repo git [Tutoriais] 22
 22
 22
+## Inicializa#repo git [Tutoriais] 22
 **
 **
 Como definir e exibir o hostname no linux [Tutoriais] 21
 21
 21
+## Com#definir e exibir o hostname no linux [Tutoriais] 21
 **
 **
 Como testar as suas requisições [Tutoriais] 20
 20
 20
+## Com#testar as suas requisições [Tutoriais] 20
 **
 **
 Como mudar mensagem de boas vindas do FISH [Tutoriais] 19
 19
 19
+## Com#mudar mensagem de boas vindas do FISH [Tutoriais] 19
 **
 **
 Como sair do VIM [Tutoriais] 18
 18
 18
+## Com#sair do VIM [Tutoriais] 18
 **
 **
 Como configurar um ambiente de desenvolvimento solana no NixOs [Tutoriais] 17
 17
 17
+## Com#configurar um ambiente de desenvolvimento solana no NixOs [Tutoriais] 17
 **
 **
 Como rodar um node IPFS e publicar no IPNS [Tutoriais] 16
 16
 16
+## Com#rodar um node IPFS e publicar no IPNS [Tutoriais] 16
 **
 **
 Como rodar o WordPress no docker [Tutoriais] 15
 15
 15
+## Com#rodar o WordPress no docker [Tutoriais] 15
 **
 **
 Como ler interface de um contrato Solidity ABI [Tutoriais] 14
 14
 14
+## Com#ler interface de um contrato Solidity ABI [Tutoriais] 14
 **
 **
 Como resolver o erro ao clonar repositórios via SSH Github Desktop [Tutoriais] 12
 12
 12
+## Com#resolver o erro ao clonar repositórios via SSH Github Desktop [Tutoriais] 12
 **
 **
 Como resolver link quebrado no Libreoffice [Tutoriais] 13
 13
 13
+## Com#resolver link quebrado no Libreoffice [Tutoriais] 13
 **
 **
 Como configurar a metamask em qualque rede EVM [Tutoriais] 11
 11
 11
+## Com#configurar a metamask em qualque rede EVM [Tutoriais] 11
 **
 **
 Como adicionar atalhos shortcut desktop icon no Linux Arch Ubuntu [Tutoriais] 10
 10
 10
+## Com#adicionar atalhos shortcut desktop icon no Linux Arch Ubuntu [Tutoriais] 10
 **
 **
 Como tornar o tmux o shell padrão [Tutoriais] 09
 09
 9
+## Com#tornar o tmux o shell padrão [Tutoriais] 09
 **
 **
 Como adicionar chave ssh ao github [Tutoriais] 08
 08
 8
+## Com#adicionar chave ssh ao github [Tutoriais] 08
 **
 **
 Como instalar o LunarVIM no Arch Linux Nerd Fonts Wakatime [Tutoriais] 07
 07
 7
+## Com#instalar o LunarVIM no Arch Linux Nerd Fonts Wakatime [Tutoriais] 07
 **
 **
 Como instalar o tmux no Arch Linux [Tutoriais] 06
 06
 6
+## Com#instalar o tmux no Arch Linux [Tutoriais] 06
 **
 **
 Como fazer um pendrive bootável com Ubuntu Server [Tutoriais] 04
 04
 4
+## Com#fazer um pendrive bootável com Ubuntu Server [Tutoriais] 04
 **
 **
 Como configurar Rust Desk Server e Client [Tutoriais] 05
 05
 5
+## Com#configurar Rust Desk Server e Client [Tutoriais] 05
 **
 **
 Como fazer um pendrive bootável com Arch Linux [Tutoriais] 03
 03
 3
+## Com#fazer um pendrive bootável com Arch Linux [Tutoriais] 03
 **
 **
 Como rodar MYSQL e PHPMyAdmin no docker WSL [Tutoriais] 02
 02
 2
+## Com#rodar MYSQL e PHPMyAdmin no docker WSL [Tutoriais] 02
 **
 **
 Como instalar o obsidian no WSL [Tutoriais] 01
 01
 1
+## Com#instalar o obsidian no WSL [Tutoriais] 01
 **
