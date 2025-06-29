@@ -142,16 +142,13 @@ mountVideosMeta(){
         echo "**"
         echo "$videoTitleRaw"
         seriesNumber=${videoTitleRaw##* }
-        echo "$seriesNumber"
-        echo "${seriesNumber#0}"
-        echo "## ${videoTitleRaw/$folder /"#"}"
-        # titlesMakdown[${seriesNumber#0}]=$(echo "## ${videoTitleRaw/$folder /"#"}")
-        echo "**"
+        seriesNumber=${seriesNumber#0}
+        titlesMakdown[$seriesNumber]=$(echo "## ${videoTitleRaw/$folder /"#"}")
         videoIdAPI=$(echo "$videoSearchItem" | jq -r '.id.videoId')
-        # videosMakdown[${seriesNumber#0}]=$(echo "[video](https://youtu.be/$videoIdAPI)")
-        # if [[ $finalIndex -lt ${seriesNumber#0} ]]; then
-        #   finalIndex=${seriesNumber#0}
-        # fi
+        videosMakdown[$seriesNumber]=$(echo "[video](https://youtu.be/$videoIdAPI)")
+        if [[ $finalIndex -lt $seriesNumber ]]; then
+          finalIndex=$seriesNumber
+        fi
       done < <(echo "$videosSearch" | jq -c '.items[]')
       nextPageToken=$(echo "$videosSearch" | jq -r '.nextPageToken')
       nextPageTokenLen=$(echo $nextPageToken | wc -m)
