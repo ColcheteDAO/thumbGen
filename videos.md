@@ -13,14 +13,14 @@ repo:\nhttps://github.com/juancolchete/BlockchainBuilder
 **index**: 1  
 **tags**: "frontier","substrate","EVM","blockchain","lvim","lunarvim","code","código","rust","cargo","solidity","remix","blockscout","colchete","tech","programação","ColcheteDAO","[]"  
 **genThumb**: Y  
-**run**: Y  
+**run**: N  
 **end**
 # Mastering Bitcoin
 Aprenda mais sobre o universo do bitcoin e masterize seus conhecimentos.    
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe47urkaJ4rEwis4O9JKDHa2)  
 **index**: 1  
-**tags**: "Bitcoin","BTC","Internet Money","Mastering Bitcoin","Linux","Arch Linux","Tux","FOSS","ColcheteDAO","[]"  
+**tags**: "Bitcoin","BTC","Internet Money","Mastering Bitcoin","Linux","Arch Linux","FOSS","ColcheteDAO","[]"  
 **genThumb**: Y  
 **run**: Y  
 **end**
