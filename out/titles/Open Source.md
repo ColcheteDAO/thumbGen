@@ -272,3 +272,14 @@ Configuração do projeto Gerador de NFTs 01
 Guilherme Werner Colchete Cast #05
 #05
 #05
+**
+**
+Hoje é dia de falar sobre open source #opensource #js #rust #typescript
+#typescript
+#typescript
+**
+**
+Open Source #opensource #codigoaberto #mit #gpl3
+#gpl3
+#gpl3
+**
