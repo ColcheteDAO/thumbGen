@@ -10,19 +10,19 @@
 repo:\nhttps://github.com/juancolchete/BlockchainBuilder
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6ghIVaU181H2OWpm_1_dEB)  
-**index**: 15  
+**index**: 1  
 **tags**: "frontier","substrate","EVM","blockchain","lvim","lunarvim","code","código","rust","cargo","solidity","remix","blockscout","colchete","tech","programação","ColcheteDAO","[]"  
 **genThumb**: Y  
-**run**: N  
+**run**: Y  
 **end**
 # Mastering Bitcoin
 Aprenda mais sobre o universo do bitcoin e masterize seus conhecimentos.    
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe47urkaJ4rEwis4O9JKDHa2)  
-**index**: 11  
+**index**: 1  
 **tags**: "Bitcoin","BTC","Internet Money","Mastering Bitcoin","Linux","Arch Linux","Tux","FOSS","ColcheteDAO","[]"  
 **genThumb**: Y  
-**run**: N  
+**run**: Y  
 **end**
 # tux
 repo:\nhttps://github.com/juancolchete/tux  
@@ -49,7 +49,7 @@ repo:\nhttps://github.com/juancolchete/tutorials
 **index**: 1  
 **tags**: "Linux","Arch Linux","Tutorials","Demo","ColcheteDAO","[]"  
 **genThumb**: Y  
-**run**: Y  
+**run**: N  
 **end**
 # Open Source
 repo:\nhttps://github.com/juancolchete/actionPlayground  
