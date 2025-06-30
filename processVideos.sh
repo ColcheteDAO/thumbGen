@@ -154,7 +154,7 @@ mountVideosMeta(){
       fi
     fi
   }
-  saveVideosMeta "$1"
+  # saveVideosMeta "$1"
   if [[ "$errorMSG" != "error" ]]; then
     for (( c=1; c<=$finalIndex; c++ ))
     do 
