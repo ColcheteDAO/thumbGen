@@ -149,9 +149,9 @@ mountVideosMeta(){
       done < <(echo "$videosSearch" | jq -c '.items[]')
       nextPageToken=$(echo "$videosSearch" | jq -r '.nextPageToken')
       nextPageTokenLen=$(echo $nextPageToken | wc -m)
-      if [[ $nextPageTokenLen -ge 10 ]]; then
+      # if [[ $nextPageTokenLen -ge 10 ]]; then
        # saveVideosMeta "$1" $nextPageToken 
-      fi
+      # fi
     fi
   }
   saveVideosMeta "$1"
