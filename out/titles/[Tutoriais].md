@@ -1,3 +1,4 @@
+
 ## Com#instalar o obsidian no WSL [Tutoriais] 01
 [video](https://youtu.be/CF6243DTxow)
 ## Com#rodar MYSQL e PHPMyAdmin no docker WSL [Tutoriais] 02

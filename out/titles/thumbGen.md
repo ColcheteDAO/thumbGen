@@ -1,3 +1,6 @@
+
+
+
 ## Configuração inicial do projeto #01
 [video](https://youtu.be/yXydAGckYZ8)
 ## Exibição da imagem #02

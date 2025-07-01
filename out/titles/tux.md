@@ -1,3 +1,4 @@
+
 ## Como deletar histórico do terminal no linux #1
 [video](https://youtu.be/L-XhNE26hn4)
 ## Criar arquivos no linux #2
