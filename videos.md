@@ -22,7 +22,7 @@ Aprenda mais sobre o universo do bitcoin e masterize seus conhecimentos.
 **index**: 1  
 **tags**: "Bitcoin","BTC","Internet Money","Mastering Bitcoin","Linux","Arch Linux","FOSS","ColcheteDAO","[]"  
 **genThumb**: Y  
-**run**: N  
+**run**: Y  
 **end**
 # tux
 repo:\nhttps://github.com/juancolchete/tux  
@@ -31,7 +31,7 @@ repo:\nhttps://github.com/juancolchete/tux
 **index**: 1  
 **tags**: "Linux","Arch Linux","Tux","FOSS","ColcheteDAO","[]"  
 **genThumb**: Y  
-**run**: Y  
+**run**: N  
 **end**
 # thumbGen
 Repo:\nhttps://github.com/ColcheteDAO/thumbGen  
