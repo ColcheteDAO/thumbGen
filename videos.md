@@ -19,7 +19,7 @@ repo:\nhttps://github.com/juancolchete/BlockchainBuilder
 Aprenda mais sobre o universo do bitcoin e masterize seus conhecimentos.    
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe47urkaJ4rEwis4O9JKDHa2)  
-**index**: 1  
+**index**: 11  
 **tags**: "Bitcoin","BTC","Internet Money","Mastering Bitcoin","Linux","Arch Linux","FOSS","ColcheteDAO","[]"  
 **genThumb**: Y  
 **run**: Y  
@@ -37,7 +37,7 @@ repo:\nhttps://github.com/juancolchete/tux
 Repo:\nhttps://github.com/ColcheteDAO/thumbGen  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe7pICM1fiO6AXKY-uGzLqB3)  
-**index**: 90  
+**index**: 115  
 **tags**: "github actions","Image Magick","Magick","bash","ColcheteDAO","[]"  
 **genThumb**: Y  
 **run**: Y  
