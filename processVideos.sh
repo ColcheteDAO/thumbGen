@@ -11,7 +11,7 @@ declare -A playlists
 startUpdateIndex=0
 tags=''
 genThumb='N'
-run='N'
+run=false
 folders=("man" "image" "outfile" "text")
 declare -a errors
 declare -a needUpdateThumb
@@ -170,6 +170,7 @@ while IFS= read -r line; do
     mkdir -p "config"
     touch "config/$folder.json"
     if [[ $(cat "config/$folder.json" | jq 'has("repo") and has("playlists") and has("index") and has("tags") and has("genThumb") and has("run")' -r) = "true" ]]; then
+      run=$(cat "config/$folder.json" | jq '.run')
       echo "config/$folder.json OK"
     else
       cat base.json > "config/$folder.json"
@@ -217,10 +218,8 @@ while IFS= read -r line; do
     tags=$(echo "$line" | cut -c 10-$((${#line}+1)))
   elif [ $(checkPatternOcurrence "$line" '\*\*genThumb\*\*: ') = 1 ]; then
     genThumb=$(echo "$line" | cut -c 14-$((${#line}-2)))
-  elif [ $(checkPatternOcurrence "$line" '\*\*run\*\*: ') = 1 ]; then
-    run=$(echo "$line" | cut -c 9-$((${#line}-2)))
   elif [ $(checkPatternOcurrence "$line" '\*\*end\*\*') = 1 ]; then
-    if [ $run = "Y" ]; then
+    if [ $run = true ]; then
       while IFS= read -r lineTitle; do
         if [ $(checkPatternOcurrence "$lineTitle" '#') = 3 ]; then
           index=$((${index}+1))
