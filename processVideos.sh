@@ -168,7 +168,7 @@ while IFS= read -r line; do
     folders+=("$folder")
     index=0
     mkdir -p "config"
-    touch -p "config/$folder.json"
+    touch "config/$folder.json"
     if [[ $(echo '{"folder":"documents","file":"joe"}' | jq 'has("repo") and has("playlists") and has("index") and has("tags") and has("genThumb") and has("run")' -r) = "true" ]]; then
       cat base.json > "config/$folder.json"
     fi
