@@ -228,3 +228,9 @@
 [video](https://youtu.be/PCHlccL_5mY)
 ## Debug error line 140 #115
 [video](https://youtu.be/kVsnZmJG6dM)
+## Limpeza da série código aberto #116
+[video](https://youtu.be/euA8rhbKJ_M)
+## Acompanhamento atualização #117
+[video](https://youtu.be/ATEggto4DpY)
+## Ajustes nas thumbs #118
+[video](https://youtu.be/h7D4TRvybCQ)
