@@ -1,10 +1,10 @@
 {
-  "repo": "\nhttps://github.com/juancolchete/BlockchainBuilder",
+  "description": "repo:\nhttps://github.com/juancolchete/BlockchainBuilder",
   "playlists": [
     "https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA"
   ],
   "index": 0,
   "tags": [],
   "genThumb": true,
-  "run": false
+  "run": true
 }
