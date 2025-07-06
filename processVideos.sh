@@ -175,7 +175,7 @@ while IFS= read -r line; do
     else
       cat base.json > "config/$folder.json"
     fi
-    if [ $run = true]; then
+    if [ $run = true ]; then
       mkdir -p "out/titles/custom"
       touch "out/titles/custom/$folder.md"
       mountCustomTitles "$folder"
