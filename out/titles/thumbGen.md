@@ -234,3 +234,5 @@
 [video](https://youtu.be/ATEggto4DpY)
 ## Ajustes nas thumbs #118
 [video](https://youtu.be/h7D4TRvybCQ)
+## Criação do arquivo de configuração #119
+[video](https://youtu.be/32z1ZJDUMgs)
