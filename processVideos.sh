@@ -169,7 +169,7 @@ while IFS= read -r line; do
     index=0
     mkdir -p "config"
     touch "config/$folder.json"
-    if [[ $(echo '{"folder":"documents","file":"joe"}' | jq 'has("repo") and has("playlists") and has("index") and has("tags") and has("genThumb") and has("run")' -r) = "true" ]]; then
+    if [[ $(cat "config/$folder.json" | jq 'has("repo") and has("playlists") and has("index") and has("tags") and has("genThumb") and has("run")' -r) = "true" ]]; then
       cat base.json > "config/$folder.json"
     fi
     mkdir -p "out/titles/custom"
