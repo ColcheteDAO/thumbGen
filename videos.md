@@ -25,7 +25,7 @@ Aprenda mais sobre o universo do bitcoin e masterize seus conhecimentos.
 **run**: N  
 **end**
 # tux
-repo:\nhttps://github.com/juancolchete/tux  
+Repo:\nhttps://github.com/juancolchete/tux  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe56nItnsIPsP_4m9o94sfjz)  
 **index**: 10  

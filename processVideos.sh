@@ -5,7 +5,6 @@ description=''
 playlistAll=''
 paylistIndex=0
 playlistSpecific=''
-fillDescription=false
 list1=''
 list2=''
 declare -A playlists
@@ -173,6 +172,7 @@ while IFS= read -r line; do
     if [[ $(cat "config/$folder.json" | jq 'has("description") and has("playlists") and has("index") and has("tags") and has("genThumb") and has("run")' -r) = "true" ]]; then
       run=$(cat "config/$folder.json" | jq '.run')
       genThumb=$(cat "config/$folder.json" | jq '.genThumb')
+      description=$(cat "config/$folder.json" | jq '.description')
     else
       cat base.json > "config/$folder.json"
     fi
@@ -187,7 +187,6 @@ while IFS= read -r line; do
         echo "==================="
         exit 1
       else
-        fillDescription=true
         playlistIndex=0
         mkdir -p "out/titles"
         touch "out/titles/$folder.md"
@@ -196,9 +195,6 @@ while IFS= read -r line; do
         cp "out/titles/$folder.md" "titles/$folder.md" 
       fi
     fi
-  elif $fillDescription ; then
-    fillDescription=false
-    description=$(echo $line)
   elif [ $(checkPatternOcurrence "$line" '\[playlist\]') = 1 ]; then
     playlistId=$(echo "$line" | cut -c 51-$((${#line}-3)))
     if [ $playlistIndex = 0 ]; then

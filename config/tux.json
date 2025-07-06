@@ -1,10 +1,11 @@
 {
-  "description": "repo:\nhttps://github.com/juancolchete/BlockchainBuilder",
+  "description": "Repo:\nhttps://github.com/juancolchete/tux",
   "playlists": [
-    "https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA"
+    "https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA",
+    "https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe56nItnsIPsP_4m9o94sfjz"
   ],
-  "index": 0,
-  "tags": [],
+  "index": 10,
+  "tags": ["Linux","Arch Linux","Tux","FOSS","ColcheteDAO","[]"],
   "genThumb": true,
-  "run": true
+  "run": false
 }
