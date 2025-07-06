@@ -236,7 +236,7 @@
 [video](https://youtu.be/h7D4TRvybCQ)
 ## Criação do arquivo de configuração #119
 [video](https://youtu.be/32z1ZJDUMgs)
-
-
+## Obter geração de thumb da configuração #120
+[video](https://youtu.be/gjD0v3jb8_Q)
 ## Obter descrição da configuração #121
 [video](https://youtu.be/GMmzJ17Ib6g)
