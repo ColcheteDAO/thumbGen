@@ -175,23 +175,25 @@ while IFS= read -r line; do
     else
       cat base.json > "config/$folder.json"
     fi
-    mkdir -p "out/titles/custom"
-    touch "out/titles/custom/$folder.md"
-    mountCustomTitles "$folder"
-    videosMetaData=$(mountVideosMeta "$folder")
-    if [[ $(checkPatternOcurrence "$videosMetaData" '##') -lt 1 ]] && [[ $(checkPatternOcurrence "$videosMetaData" 'error') -ge 1 ]]; then
-      echo "==================="
-      echo $videosMetaData
-      echo "==================="
-      exit 1
-    else
-      fillDescription=true
-      playlistIndex=0
-      mkdir -p "out/titles"
-      touch "out/titles/$folder.md"
-      echo "$videosMetaData" > "out/titles/$folder.md"
-      mkdir -p "titles"
-      cp "out/titles/$folder.md" "titles/$folder.md" 
+    if [ $run = true]; then
+      mkdir -p "out/titles/custom"
+      touch "out/titles/custom/$folder.md"
+      mountCustomTitles "$folder"
+      videosMetaData=$(mountVideosMeta "$folder")
+      if [[ $(checkPatternOcurrence "$videosMetaData" '##') -lt 1 ]] && [[ $(checkPatternOcurrence "$videosMetaData" 'error') -ge 1 ]]; then
+        echo "==================="
+        echo $videosMetaData
+        echo "==================="
+        exit 1
+      else
+        fillDescription=true
+        playlistIndex=0
+        mkdir -p "out/titles"
+        touch "out/titles/$folder.md"
+        echo "$videosMetaData" > "out/titles/$folder.md"
+        mkdir -p "titles"
+        cp "out/titles/$folder.md" "titles/$folder.md" 
+      fi
     fi
   elif $fillDescription ; then
     fillDescription=false
