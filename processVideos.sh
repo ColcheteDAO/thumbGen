@@ -174,6 +174,7 @@ while IFS= read -r line; do
       genThumb=$(cat "config/$folder.json" | jq '.genThumb')
       description=$(cat "config/$folder.json" | jq '.description' -r)
       tags=$(cat "config/$folder.json" | jq '.tags')
+      index=$(cat "config/$folder.json" | jq '.index')
     else
       cat base.json > "config/$folder.json"
     fi
@@ -209,11 +210,6 @@ while IFS= read -r line; do
     artifactToDownload=$(echo "$line" | cut -c 12-$((${#line}-3)))
     wget $artifactToDownload
     wget $artifactToDownload -o out/$(echo $artifactToDownload | sed 's/.*\///' | sed 's/...$//')
-    echo ".............................."
-    ls
-    echo ".............................."
-  elif [ $(checkPatternOcurrence "$line" '\*\*index\*\*: ') = 1 ]; then
-    startUpdateIndex=$(echo "$line" | cut -c 11-$((${#line}-2)))
   elif [ $(checkPatternOcurrence "$line" '\*\*end\*\*') = 1 ]; then
     if [ $run = true ]; then
       while IFS= read -r lineTitle; do
