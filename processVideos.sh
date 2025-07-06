@@ -45,7 +45,7 @@ updateVideoPayload(){
                               "categoryId":"%s",
                               "defaultLanguage":"%s",
                               "defaultAudioLanguage":"%s",
-                              "tags":[%s]
+                              "tags":%s
                             }
                           }' "$1" "$2" "$3" "$4" "$5" "$6" "$7")
   echo $updateVideoJSON
@@ -173,7 +173,7 @@ while IFS= read -r line; do
       run=$(cat "config/$folder.json" | jq '.run')
       genThumb=$(cat "config/$folder.json" | jq '.genThumb')
       description=$(cat "config/$folder.json" | jq '.description' -r)
-      tags=$(cat "config/$folder.json" | jq '.tags' -r )
+      tags=$(cat "config/$folder.json" | jq '.tags')
     else
       cat base.json > "config/$folder.json"
     fi
