@@ -10,7 +10,7 @@ list2=''
 declare -A playlists
 startUpdateIndex=0
 tags=''
-genThumb='N'
+genThumb=false
 run=false
 folders=("man" "image" "outfile" "text")
 declare -a errors
@@ -171,7 +171,7 @@ while IFS= read -r line; do
     touch "config/$folder.json"
     if [[ $(cat "config/$folder.json" | jq 'has("repo") and has("playlists") and has("index") and has("tags") and has("genThumb") and has("run")' -r) = "true" ]]; then
       run=$(cat "config/$folder.json" | jq '.run')
-      echo "config/$folder.json OK"
+      genThumb=$(cat "config/$folder.json" | jq '.genThumb')
     else
       cat base.json > "config/$folder.json"
     fi
@@ -218,15 +218,13 @@ while IFS= read -r line; do
     startUpdateIndex=$(echo "$line" | cut -c 11-$((${#line}-2)))
   elif [ $(checkPatternOcurrence "$line" '\*\*tags\*\*: ') = 1 ]; then
     tags=$(echo "$line" | cut -c 10-$((${#line}+1)))
-  elif [ $(checkPatternOcurrence "$line" '\*\*genThumb\*\*: ') = 1 ]; then
-    genThumb=$(echo "$line" | cut -c 14-$((${#line}-2)))
   elif [ $(checkPatternOcurrence "$line" '\*\*end\*\*') = 1 ]; then
     if [ $run = true ]; then
       while IFS= read -r lineTitle; do
         if [ $(checkPatternOcurrence "$lineTitle" '#') = 3 ]; then
           index=$((${index}+1))
           title=$(echo "$lineTitle" | cut -c 4-$((${#lineTitle}+2)))
-          if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
+          if [ "$4" = "Y" ] || [ $genThumb = true ]; then
             if [ ${#customTitles[$folder$index]} -gt 10 ]; then
               bash genThumb.sh "${customTitles[$folder$index]}" "$folder" 
             else
@@ -256,7 +254,7 @@ while IFS= read -r line; do
           videoId=$(echo "$lineTitle" | cut -c 26-$((${#lineTitle}-1)))
           fillSnippetVideo $videoId  
           if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [ $index -ge $startUpdateIndex ]; then
-            if [ "$4" = "Y" ] || [ $genThumb = "Y" ]; then
+            if [ "$4" = "Y" ] || [ $genThumb = true ]; then
               if [ "${needUpdateThumb[$index]}" = true ]; then
                 echo "==============.................."
                 echo "UPDATED THE THUMB"
