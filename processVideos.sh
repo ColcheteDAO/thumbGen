@@ -3,6 +3,7 @@ folder=''
 path=''
 description=''
 playlistAll=''
+paylistIndex=0
 playlistSpecific=''
 fillDescription=false
 list1=''
