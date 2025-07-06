@@ -173,6 +173,7 @@ while IFS= read -r line; do
       run=$(cat "config/$folder.json" | jq '.run')
       genThumb=$(cat "config/$folder.json" | jq '.genThumb')
       description=$(cat "config/$folder.json" | jq '.description')
+      tags=$(cat "config/$folder.json" | jq '.tags')
     else
       cat base.json > "config/$folder.json"
     fi
@@ -213,8 +214,6 @@ while IFS= read -r line; do
     echo ".............................."
   elif [ $(checkPatternOcurrence "$line" '\*\*index\*\*: ') = 1 ]; then
     startUpdateIndex=$(echo "$line" | cut -c 11-$((${#line}-2)))
-  elif [ $(checkPatternOcurrence "$line" '\*\*tags\*\*: ') = 1 ]; then
-    tags=$(echo "$line" | cut -c 10-$((${#line}+1)))
   elif [ $(checkPatternOcurrence "$line" '\*\*end\*\*') = 1 ]; then
     if [ $run = true ]; then
       while IFS= read -r lineTitle; do
