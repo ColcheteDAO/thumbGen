@@ -172,8 +172,8 @@ while IFS= read -r line; do
     if [[ $(cat "config/$folder.json" | jq 'has("description") and has("playlists") and has("index") and has("tags") and has("genThumb") and has("run")' -r) = "true" ]]; then
       run=$(cat "config/$folder.json" | jq '.run')
       genThumb=$(cat "config/$folder.json" | jq '.genThumb')
-      description=$(cat "config/$folder.json" | jq '.description')
-      tags=$(cat "config/$folder.json" | jq '.tags')
+      description=$(cat "config/$folder.json" | jq '.description' -r)
+      tags=$(cat "config/$folder.json" | jq '.tags' -r )
     else
       cat base.json > "config/$folder.json"
     fi
