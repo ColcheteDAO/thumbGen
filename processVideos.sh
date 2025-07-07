@@ -244,6 +244,9 @@ while IFS= read -r line; do
             echo "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
             sendResquestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
             for row in $(echo ${playlists} | jq -c '.[]'); do
+              echo "//////////////"
+              echo "$row"
+              echo "//////////////"
               addToPlaylist "POST" $row $videoId
             done
           fi
