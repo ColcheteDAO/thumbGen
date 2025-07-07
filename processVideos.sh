@@ -3,11 +3,7 @@ folder=''
 path=''
 description=''
 playlistAll=''
-playlistIndex=0
-playlistSpecific=''
-list1=''
-list2=''
-declare -A playlists
+playlists='[]'
 startUpdateIndex=0
 tags=''
 genThumb=false
@@ -175,6 +171,7 @@ while IFS= read -r line; do
       description=$(cat "config/$folder.json" | jq '.description' -r)
       tags=$(cat "config/$folder.json" | jq '.tags')
       index=$(cat "config/$folder.json" | jq '.index')
+      playlists=$(cat "config/$folder.json" | jq '.playlists')
     else
       cat base.json > "config/$folder.json"
     fi
@@ -189,7 +186,6 @@ while IFS= read -r line; do
         echo "==================="
         exit 1
       else
-        playlistIndex=0
         mkdir -p "out/titles"
         touch "out/titles/$folder.md"
         echo "$videosMetaData" > "out/titles/$folder.md"
@@ -197,15 +193,6 @@ while IFS= read -r line; do
         cp "out/titles/$folder.md" "titles/$folder.md" 
       fi
     fi
-  elif [ $(checkPatternOcurrence "$line" '\[playlist\]') = 1 ]; then
-    playlistId=$(echo "$line" | cut -c 51-$((${#line}-3)))
-    if [ $playlistIndex = 0 ]; then
-      list1=$(echo $playlistId) 
-    else
-      list2=$(echo $playlistId)
-      playlistIndex=0
-    fi
-    playlistIndex=$(($playlistIndex + 1))
   elif [ $(checkPatternOcurrence "$line" '\[artifact\]') = 1 ]; then
     artifactToDownload=$(echo "$line" | cut -c 12-$((${#line}-3)))
     wget $artifactToDownload
@@ -256,8 +243,9 @@ while IFS= read -r line; do
             fi
             echo "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
             sendResquestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
-            addToPlaylist "POST" $list1 $videoId
-            addToPlaylist "POST" $list2 $videoId
+            for row in $(echo ${playlists} | jq -c '.[]'); do
+              addToPlaylist "POST" $row $videoId
+            done
           fi
         fi
       done < "titles/$folder.md"
