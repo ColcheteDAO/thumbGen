@@ -240,3 +240,7 @@
 [video](https://youtu.be/gjD0v3jb8_Q)
 ## Obter descrição da configuração #121
 [video](https://youtu.be/GMmzJ17Ib6g)
+## Obter tags da configuração #122
+[video](https://youtu.be/80vw_oK1FbU)
+## Obter index da configuração #123
+[video](https://youtu.be/rpjBd3-FTH8)
