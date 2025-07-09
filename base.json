@@ -3,7 +3,7 @@
   "playlists": [
     "https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA"
   ],
-  "index": 0,
+  "startUpdateIndex": 0,
   "tags": [],
   "genThumb": true,
   "run": true

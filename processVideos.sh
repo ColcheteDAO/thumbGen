@@ -165,12 +165,12 @@ while IFS= read -r line; do
     index=0
     mkdir -p "config"
     touch "config/$folder.json"
-    if [[ $(cat "config/$folder.json" | jq 'has("description") and has("playlists") and has("index") and has("tags") and has("genThumb") and has("run")' -r) = "true" ]]; then
+    if [[ $(cat "config/$folder.json" | jq 'has("description") and has("playlists") and has("startUpdateIndex") and has("tags") and has("genThumb") and has("run")' -r) = "true" ]]; then
       run=$(cat "config/$folder.json" | jq '.run')
       genThumb=$(cat "config/$folder.json" | jq '.genThumb')
       description=$(cat "config/$folder.json" | jq '.description' -r)
       tags=$(cat "config/$folder.json" | jq '.tags')
-      index=$(cat "config/$folder.json" | jq '.index')
+      startUpdateIndex=$(cat "config/$folder.json" | jq '.startUpdateIndex')
       playlists=$(cat "config/$folder.json" | jq '.playlists')
     else
       cat base.json > "config/$folder.json"
