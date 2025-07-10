@@ -244,3 +244,11 @@
 [video](https://youtu.be/80vw_oK1FbU)
 ## Obter index da configuração #123
 [video](https://youtu.be/rpjBd3-FTH8)
+## Obter index parte 2 da configuração #124
+[video](https://youtu.be/7B-aOl6Iqn4)
+## Obter playlists da configuração #125
+[video](https://youtu.be/w7jld3uZvf0)
+## Obter playlists parte 2 da configuração #126
+[video](https://youtu.be/pGKeWaXnq_w)
+## Resolver erro de índice #127
+[video](https://youtu.be/jmif1rWt0Wk)
