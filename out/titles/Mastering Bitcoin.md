@@ -20,3 +20,11 @@
 [video](https://youtu.be/5KXJZ-K2YFI)
 ## Bitcoin Core implementação de referência #11
 [video](https://youtu.be/P7Z4iXNiw8Q)
+## O que é OP_RETURN #12
+[video](https://youtu.be/s10Ef0G2zDY)
+## Hot wallet #13
+[video](https://youtu.be/te5s8OCc7ls)
+## Cold wallet #14
+[video](https://youtu.be/b3nnA9ohGFk)
+## Funções de hash #15
+[video](https://youtu.be/eKxg_t7Wl5A)
