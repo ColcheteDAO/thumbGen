@@ -128,14 +128,14 @@ mountVideosMeta(){
     echo "Video search"
     echo $videosSearchRaw
     echo "Video search"
-    videosSearch=$(echo $videosSearchRaw | jq -c '.items[] | select( .snippet.title | contains("'"$1"'"))')
-    echo "Video search"
-    echo $videosSearch
-    echo "Video search"
-    if [[ "$videosSearch" == "error" ]]; then
-      errorMSG=$videosSearch
-      echo "$videosSearch $funName ${errors[0]}"
+    if [[ "$videosSearchRaw" == "error" ]]; then
+      errorMSG=$videosSearchRaw
+      echo "$videosSearchRaw $funName ${errors[0]}"
     else
+      videosSearch=$(echo $videosSearchRaw | jq -c '.items[] | select( .snippet.title | contains("'"$1"'"))')
+      echo "Video search"
+      echo $videosSearch
+      echo "Video search"
       while read videoSearchItem
       do
         videoTitleRaw=$(echo "$videoSearchItem" | jq -r '.snippet.title')
