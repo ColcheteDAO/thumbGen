@@ -124,7 +124,11 @@ mountVideosMeta(){
   errorMSG=""
   saveVideosMeta(){
     videoSeriesQuery=$(echo -n "$1" | jq -sRr @uri)
-    videosSearch=$(sendGetRequest "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$videoSeriesQuery&type=video&pageToken=$2" | jq -c '.items[] | select( .snippet.title | contains("'"$1"'"))')
+    videosSearchRaw=$(sendGetRequest "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$videoSeriesQuery&type=video&pageToken=$2")
+    echo "Video search"
+    echo $videosSearchRaw
+    echo "Video search"
+    videosSearch=$(echo videosSearchRaw | jq -c '.items[] | select( .snippet.title | contains("'"$1"'"))')
     echo "Video search"
     echo $videosSearch
     echo "Video search"
