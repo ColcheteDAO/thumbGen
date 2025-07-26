@@ -154,8 +154,8 @@
 
 
 
-## Adicionar à playlist debug #79
-[video](https://youtu.be/A7F3lYpIeZc)
+
+
 ## Adicionar série de videos #80
 [video](https://youtu.be/IChy3vVRerE)
 ## Resolver erro jq playlist #81
@@ -254,3 +254,5 @@
 [video](https://youtu.be/jmif1rWt0Wk)
 ## Como subir no github apenas se tiver mudanças #128
 [video](https://youtu.be/3xj9eF_bgyU)
+## Filtrar query pelo título #129
+[video](https://youtu.be/D1nLXLgsxjs)
