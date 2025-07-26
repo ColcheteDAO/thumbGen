@@ -9,3 +9,8 @@ Cadeias de assinaturas digitais #8
 
 Rede bitcoin hierárquica? #10
 Bitcoin Core implementação principal #11
+
+
+
+
+Dois blocos minerados mesmo tempo #16
