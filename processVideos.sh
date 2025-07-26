@@ -128,7 +128,7 @@ mountVideosMeta(){
     echo "Video search"
     echo $videosSearchRaw
     echo "Video search"
-    videosSearch=$(echo videosSearchRaw | jq -c '.items[] | select( .snippet.title | contains("'"$1"'"))')
+    videosSearch=$(echo $videosSearchRaw | jq -c '.items[] | select( .snippet.title | contains("'"$1"'"))')
     echo "Video search"
     echo $videosSearch
     echo "Video search"
