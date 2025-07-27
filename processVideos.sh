@@ -129,6 +129,7 @@ mountVideosMeta(){
     echo $videosSearchRaw
     echo "Video search"
     if [[ "$videosSearchRaw" == "error" ]]; then
+      echo "ERRRROROROROROORO"
       errorMSG=$videosSearchRaw
       echo "$videosSearchRaw $funName ${errors[0]}"
     else
