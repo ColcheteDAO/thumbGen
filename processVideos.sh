@@ -48,11 +48,12 @@ updateVideoPayload(){
 }
 
 handleRequestErrors(){
-  if [ $(checkPatternOcurrence "$1" '"error":') = 1 ]; then
-    echo "error" 
-  else
-    echo "$1"
-  fi
+  # if [ $(checkPatternOcurrence "$1" '"error":') = 1 ]; then
+  #   echo "error" 
+  # else
+  #   echo "$1"
+  # fi
+  echo "$1"
 }
 
 sendResquestWithPayload(){
