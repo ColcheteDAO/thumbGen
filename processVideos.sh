@@ -48,12 +48,11 @@ updateVideoPayload(){
 }
 
 handleRequestErrors(){
-  # if [ $(checkPatternOcurrence "$1" '"error":') = 1 ]; then
-  #   echo "error" 
-  # else
-  #   echo "$1"
-  # fi
-  echo "$1"
+  if [ $(checkPatternOcurrence "$1" '"error":') = 1 ]; then
+    echo "error" 
+  else
+    echo "$1"
+  fi
 }
 
 sendResquestWithPayload(){
@@ -126,18 +125,11 @@ mountVideosMeta(){
   saveVideosMeta(){
     videoSeriesQuery=$(echo -n "$1" | jq -sRr @uri)
     videosSearchRaw=$(sendGetRequest "$urlBaseAPI/youtube/v3/search?part=snippet&forMine=true&maxResults=50&order=date&q=$videoSeriesQuery&type=video&pageToken=$2")
-    echo "Video search"
-    echo $videosSearchRaw
-    echo "Video search"
     if [[ "$videosSearchRaw" == "error" ]]; then
-      echo "ERRRROROROROROORO"
       errorMSG=$videosSearchRaw
       echo "$videosSearchRaw $funName ${errors[0]}"
     else
-      echo "Try Video search"
       videosSearch=$(echo $videosSearchRaw | jq -c '.items[] | select( .snippet.title | contains("'"$1"'"))')
-      echo $videosSearch
-      echo "Video search"
       while read videoSearchItem
       do
         videoTitleRaw=$(echo "$videoSearchItem" | jq -r '.snippet.title')
@@ -150,7 +142,7 @@ mountVideosMeta(){
           finalIndex=$seriesNumber
         fi
       done < <(echo "$videosSearch")
-      nextPageToken=$(echo "$videosSearch" | jq -r '.nextPageToken')
+      nextPageToken=$(echo "$videosSearchRaw" | jq -r '.nextPageToken')
       nextPageTokenLen=$(echo $nextPageToken | wc -m)
       if [[ $nextPageTokenLen -ge 10 ]]; then
        saveVideosMeta "$1" $nextPageToken 
