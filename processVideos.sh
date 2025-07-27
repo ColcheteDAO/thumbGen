@@ -132,8 +132,8 @@ mountVideosMeta(){
       errorMSG=$videosSearchRaw
       echo "$videosSearchRaw $funName ${errors[0]}"
     else
+      echo "Try Video search"
       videosSearch=$(echo $videosSearchRaw | jq -c '.items[] | select( .snippet.title | contains("'"$1"'"))')
-      echo "Video search"
       echo $videosSearch
       echo "Video search"
       while read videoSearchItem
