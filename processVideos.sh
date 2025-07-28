@@ -237,7 +237,7 @@ while IFS= read -r line; do
             if [ "$4" = "Y" ] || [ $genThumb = true ]; then
               if [ "${needUpdateThumb[$index]}" = true ]; then
                 echo "==============.................."
-                echo "UPDATED THE THUMB"
+                echo "UPDATED THE THUMB $videoId"
                 echo "==============.................."
                 sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path"
               fi
