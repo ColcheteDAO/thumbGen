@@ -258,3 +258,5 @@
 [video](https://youtu.be/D1nLXLgsxjs)
 ## Debug títulos personalizados #130
 [video](https://youtu.be/kWBDkBgAIFE)
+## Debug títulos personalizados 2 #131
+[video](https://youtu.be/98JCk5kHmRA)
