@@ -260,3 +260,5 @@
 [video](https://youtu.be/kWBDkBgAIFE)
 ## Debug títulos personalizados 2 #131
 [video](https://youtu.be/98JCk5kHmRA)
+## Descobri o bug dos títulos personalizados #132
+[video](https://youtu.be/o3YR6JMM-2k)
