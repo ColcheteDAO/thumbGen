@@ -1,11 +1,11 @@
 
 
-Mudança para Image Magic #3
+Mudança para Image Magic #03
 
 
 
 
-
+Posicionar texto e definir fundo #08
 
 
 
@@ -25,7 +25,7 @@ Mudança para Image Magic #3
 Refresh token pelo github actions #25
 
 
-
+Atualizar sem descrição #28
 Descrição valor padrão #29
 Descrição valor personalizado #30
 
@@ -126,3 +126,7 @@ Playlists da configuração #125
 Playlists da configuração 2 #126
 
 Subir apenas se tiver mudanças #128
+
+
+
+Bug dos títulos personalizados #132
