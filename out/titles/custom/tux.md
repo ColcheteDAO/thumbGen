@@ -1,8 +1,8 @@
+Deletar histórico terminal #1
 
 
 
-
-
+Renomear arquivos e diretórios #5
 
 
 
