@@ -262,3 +262,7 @@
 [video](https://youtu.be/98JCk5kHmRA)
 ## Descobri o bug dos títulos personalizados #132
 [video](https://youtu.be/o3YR6JMM-2k)
+## Títulos personalizados dessa série #133
+[video](https://youtu.be/O-X22K1olJA)
+## Títulos personalizados no geral #134
+[video](https://youtu.be/WC1AjdV-VP8)

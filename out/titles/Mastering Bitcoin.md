@@ -32,3 +32,5 @@
 [video](https://youtu.be/GZUXvWlPcOs)
 ## RBF Replace By Fee #17
 [video](https://youtu.be/PNxQI3iag1s)
+## Entradas e saídas UTXO #18
+[video](https://youtu.be/Oh3vlr0brFc)
