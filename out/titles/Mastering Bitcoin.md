@@ -28,3 +28,7 @@
 [video](https://youtu.be/b3nnA9ohGFk)
 ## Funções de hash #15
 [video](https://youtu.be/eKxg_t7Wl5A)
+## O que acontece se dois blocos forem minerados ao mesmo tempo #16
+[video](https://youtu.be/GZUXvWlPcOs)
+## RBF Replace By Fee #17
+[video](https://youtu.be/PNxQI3iag1s)
