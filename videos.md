@@ -60,3 +60,5 @@ repo:\nhttps://github.com/juancolchete/actionPlayground
 **genThumb**: Y  
 **run**: N  
 **end**
+# Da Lua eu VIM
+**end**
