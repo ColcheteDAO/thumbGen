@@ -64,3 +64,9 @@
 [video](https://youtu.be/aZpZ_JZcFqE)
 ## Como criar um app de QR codes #33
 [video](https://youtu.be/TbdZ_ZtoULc)
+## Apresentação e melhoria OSM Field Filler UAIBIT #34
+[video](https://youtu.be/9hhmxQZuQoA)
+## Erro 429 ao carregar CBTC OSM Field Filler UAIBIT #35
+[video](https://youtu.be/NG3TMjb5ps8)
+## Erros no V0.dev OSM Field Filler UAIBIT #36
+[video](https://youtu.be/c9VId1pFEVk)
