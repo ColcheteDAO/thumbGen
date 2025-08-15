@@ -1,6 +1,6 @@
 
 Parametrização de requisção http #2
-Ações sob demanda workflow dipatch #3
+Ações ondemand workflow dipatch #3
 Variáveis de repositório #4
 Segredos de repositório #5
 Variáveis e segredos de ambiente #6
@@ -25,8 +25,8 @@ Chamar outros workflows #24
 Issue template new fetures #25
 
 
-
-
+Features request template #28
+New features request template #29
 Adicionar comécio no OSM #30
 Adicionar comécio OSM Field Filler #31
 Adicionar comunidade BTC Map #32
