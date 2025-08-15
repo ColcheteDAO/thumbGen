@@ -52,3 +52,5 @@
 [video](https://youtu.be/UyQarrE0NQE)
 ## Obte#preço crypto terminal [Tutoriais] 27
 [video](https://youtu.be/N2FyAqXU0kw)
+## Assisti#Star Wars pelo terminal [Tutoriais] 28
+[video](https://youtu.be/puceSHvtkXE)
