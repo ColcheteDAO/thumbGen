@@ -106,7 +106,7 @@ Descrição valor personalizado #30
 
 
 
-Resolver tags e títulos personalizados #109
+Tags e títulos personalizados #109
 
 
 

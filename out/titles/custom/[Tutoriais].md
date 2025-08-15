@@ -23,3 +23,6 @@ Definir e exbir hostname #21
 Commits verificados e assinaturas #23
 Não passe vergonha no Markdown #24
 Sair do básico no Markdown #25
+Previsão do tempo via curl #26
+Obter preço via terminal #27
+Assistir Star Wars pelo terminal #28
