@@ -15,11 +15,11 @@ Ler interface de um contrato Solidity #14
 Rodar Wordpress no docker #15
 Rodar node IPFS e publicar IPNS #16
 Configurar ambiente solana NIXOS #17
-
+Como sair do VIM #18
 Mudar mensagem boas vindas FISH #19
 Testar suas requisições #20
 Definir e exbir hostname #21
-
+Inicializar repo git #22
 Commits verificados e assinaturas #23
 Não passe vergonha no Markdown #24
 Sair do básico no Markdown #25
