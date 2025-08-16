@@ -24,8 +24,8 @@ Github actions no seu servidor #23
 Chamar outros workflows #24
 Issue template new fetures #25
 
-Features request template #27
-New features request template #28
+New features request template #27
+Features request template #28
 
 Adicionar comécio no OSM #30
 Adicionar comécio OSM Field Filler #31
