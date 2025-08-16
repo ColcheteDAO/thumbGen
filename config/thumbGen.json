@@ -4,8 +4,8 @@
     "PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA",
     "PLbWtSW17vSe7pICM1fiO6AXKY-uGzLqB3"
   ],
-  "startUpdateIndex": 132,
+  "startUpdateIndex": 135,
   "tags": ["github actions","Image Magick","Magick","bash","ColcheteDAO","[]"],
   "genThumb": true,
-  "run": false
+  "run": true
 }

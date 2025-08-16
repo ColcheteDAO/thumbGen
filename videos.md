@@ -5,7 +5,7 @@
 [artifact](https://raw.githubusercontent.com/juancolchete/artifacts/refs/heads/main/[Tutoriais].png)  
 [artifact](https://raw.githubusercontent.com/juancolchete/artifacts/refs/heads/main/Da%20Lua%20eu%20VIM.png)  
 [artifact](https://raw.githubusercontent.com/juancolchete/artifacts/refs/heads/main/Mastering%20Bitcoin.png)  
-[artifact](https://raw.githubusercontent.com/juancolchete/artifacts/refs/heads/main/Blockchain%20Builder.png) 
+[artifact](https://raw.githubusercontent.com/juancolchete/artifacts/refs/heads/main/Blockchain%20Builder.png)  
 [artifact](https://raw.githubusercontent.com/juancolchete/artifacts/refs/heads/main/Open%20Source.png)  
 # Blockchain Builder
 repo:\nhttps://github.com/juancolchete/BlockchainBuilder
