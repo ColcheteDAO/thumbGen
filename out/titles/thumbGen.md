@@ -272,3 +272,5 @@
 [video](https://youtu.be/Eitb3K_VzcI)
 ## Títulos personalizados refinamento #137
 [video](https://youtu.be/j29l5x9Vlec)
+## Adaptação Tutoriais #138
+[video](https://youtu.be/VGtrmK2KzT0)
