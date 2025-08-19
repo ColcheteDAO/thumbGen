@@ -274,3 +274,5 @@
 [video](https://youtu.be/j29l5x9Vlec)
 ## Adaptação Tutoriais #138
 [video](https://youtu.be/VGtrmK2KzT0)
+## Adição de uma nova playlist #139
+[video](https://youtu.be/ktOjI8VT8Q4)
