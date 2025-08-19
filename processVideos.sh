@@ -236,7 +236,7 @@ while IFS= read -r line; do
           fillSnippetVideo $videoId  
           if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [ $index -ge $startUpdateIndex ]; then
             if [ "$4" = "Y" ] || [ $genThumb = true ]; then
-              if [ "${needUpdateThumb[$index]}" = true ] || [ $forceGenThumb = true]; then
+              if [ "${needUpdateThumb[$index]}" = true ] || [ $forceGenThumb = true ]; then
                 echo "==============.................."
                 echo "UPDATED THE THUMB $videoId"
                 echo "==============.................."
