@@ -7,6 +7,6 @@
   "startUpdateIndex": 1,
   "tags": ["Linux","Arch Linux","Tux","FOSS","ColcheteDAO","[]"],
   "genThumb": true,
-  "forceGenThumb": true,
+  "forceGenThumb": false,
   "run": true
 }
