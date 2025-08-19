@@ -7,5 +7,6 @@
   "startUpdateIndex": 1,
   "tags": ["Bitcoin","BTC","Internet Money","Mastering Bitcoin","Linux","Arch Linux","FOSS","ColcheteDAO","[]"],
   "genThumb": true,
+  "forceGenThumb": false,
   "run": false
 }

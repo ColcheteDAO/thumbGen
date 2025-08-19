@@ -7,5 +7,6 @@
   "startUpdateIndex": 1,
   "tags": ["AD","LeetCode","LetCode","TS","Typescript"],
   "genThumb": true,
-  "run": true
+  "forceGenThumb": false,
+  "run": false
 }

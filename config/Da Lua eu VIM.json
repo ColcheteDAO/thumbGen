@@ -7,5 +7,6 @@
   "startUpdateIndex": 1,
   "tags": ["LunarVIM","NVIM","NeoVIM","VIM","bash"],
   "genThumb": true,
+  "forceGenThumb": false,
   "run": false
 }

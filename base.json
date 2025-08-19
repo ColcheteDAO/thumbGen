@@ -6,5 +6,6 @@
   "startUpdateIndex": 0,
   "tags": [],
   "genThumb": true,
+  "forceGenThumb": false,
   "run": true
 }

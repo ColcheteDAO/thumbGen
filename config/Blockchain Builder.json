@@ -7,5 +7,6 @@
   "startUpdateIndex": 15,
   "tags": ["frontier","substrate","EVM","blockchain","lvim","lunarvim","code","código","rust","cargo","solidity","remix","blockscout","colchete","tech","programação","ColcheteDAO","[]"],
   "genThumb": true,
+  "forceGenThumb": false,
   "run": false
 }

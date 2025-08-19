@@ -166,9 +166,10 @@ while IFS= read -r line; do
     index=0
     mkdir -p "config"
     touch "config/$folder.json"
-    if [[ $(cat "config/$folder.json" | jq 'has("description") and has("playlists") and has("startUpdateIndex") and has("tags") and has("genThumb") and has("run")' -r) = "true" ]]; then
+    if [[ $(cat "config/$folder.json" | jq 'has("description") and has("playlists") and has("startUpdateIndex") and has("tags") and has("genThumb") and has("forceGenThumb") and has("run")' -r) = "true" ]]; then
       run=$(cat "config/$folder.json" | jq '.run')
       genThumb=$(cat "config/$folder.json" | jq '.genThumb')
+      forceGenThumb=$(cat "config/$folder.json" | jq '.forceGenThumb')
       description=$(cat "config/$folder.json" | jq '.description' -r)
       tags=$(cat "config/$folder.json" | jq '.tags')
       startUpdateIndex=$(cat "config/$folder.json" | jq '.startUpdateIndex')
@@ -235,7 +236,7 @@ while IFS= read -r line; do
           fillSnippetVideo $videoId  
           if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [ $index -ge $startUpdateIndex ]; then
             if [ "$4" = "Y" ] || [ $genThumb = true ]; then
-              if [ "${needUpdateThumb[$index]}" = true ]; then
+              if [ "${needUpdateThumb[$index]}" = true ] || [ $forceGenThumb = true]; then
                 echo "==============.................."
                 echo "UPDATED THE THUMB $videoId"
                 echo "==============.................."

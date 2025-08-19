@@ -7,5 +7,6 @@
   "startUpdateIndex": 137,
   "tags": ["github actions","Image Magick","Magick","bash","ColcheteDAO","[]"],
   "genThumb": true,
+  "forceGenThumb": false,
   "run": false
 }
