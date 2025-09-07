@@ -276,3 +276,5 @@
 [video](https://youtu.be/VGtrmK2KzT0)
 ## Adição de uma nova playlist #139
 [video](https://youtu.be/ktOjI8VT8Q4)
+## Forçar atualização da thumb #140
+[video](https://youtu.be/raKVvNRyWqE)
