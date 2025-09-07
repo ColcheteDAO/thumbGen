@@ -122,10 +122,7 @@ mountVideoCustomProps(){
   for i in $(seq 0 "$videoSeriesAmount");
   do
     isCustomProps=$(jq '.['$i'].custom // false' "out/custom/$1.json")
-    echo "asdfasdfad"
-    echo "$isCustomProps"
-    echo "asdfasdfasdfasd"
-    [[ $isCustomProps -eq false ]] && {
+    [[ $isCustomProps == false ]] && {
       echo "$(jq '.['$i'] = '"$defaultCustomVideoProp"'' "out/custom/$1.json")" > "out/custom/$1.json" 
     }
   done
