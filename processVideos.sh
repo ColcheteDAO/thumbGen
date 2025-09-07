@@ -15,7 +15,7 @@ declare -A customTitles
 errors[0]="Quota Exceeded"
 urlBaseAPI='https://youtube.googleapis.com'
 urlBaseAuth='https://oauth2.googleapis.com'
-ACCESS_TOKEN=$(curl  --location --request POST "$urlBaseAuth/token?client_secret=$1&grant_type=refresh_token&refresh_token=$2&client_id=$3" | jq .access_token | tr -d '"')
+ACCESS_TOKEN=$(curl -s --location --request POST "$urlBaseAuth/token?client_secret=$1&grant_type=refresh_token&refresh_token=$2&client_id=$3" | jq .access_token | tr -d '"')
 mountPlaylistPayload(){
   updatePlaylistJSON=$(printf '{
                                 "snippet":
@@ -197,8 +197,8 @@ while IFS= read -r line; do
     fi
   elif [ $(checkPatternOcurrence "$line" '\[artifact\]') = 1 ]; then
     artifactToDownload=$(echo "$line" | cut -c 12-$((${#line}-3)))
-    wget $artifactToDownload
-    wget $artifactToDownload -o out/$(echo $artifactToDownload | sed 's/.*\///' | sed 's/...$//')
+    wget -q $artifactToDownload
+    wget -q $artifactToDownload -o out/$(echo $artifactToDownload | sed 's/.*\///' | sed 's/...$//')
   elif [ $(checkPatternOcurrence "$line" '\*\*end\*\*') = 1 ]; then
     if [ $run = true ]; then
       while IFS= read -r lineTitle; do
