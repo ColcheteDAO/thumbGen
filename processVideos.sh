@@ -250,12 +250,6 @@ while IFS= read -r line; do
             fi
           fi
         elif [ $(checkPatternOcurrence "$lineTitle" '\[video\]') = 1 ]; then
-          description=$(jq '.['${index}-1'].description' "out/custom/$folder.json")
-          tags=$(jq '.['${index}-1'].tags' "out/custom/$folder.json")
-          echo "=============="
-          echo "$description"
-          echo "$tags"
-          echo "=============="
           videoId=$(echo "$lineTitle" | cut -c 26-$((${#lineTitle}-1)))
           fillSnippetVideo $videoId  
           if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [ $index -ge $startUpdateIndex ]; then
@@ -267,6 +261,8 @@ while IFS= read -r line; do
                 sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path"
               fi
             fi
+            description=$(jq '.['${index}-1'].description' "out/custom/$folder.json")
+            tags=$(jq '.['${index}-1'].tags' "out/custom/$folder.json")
             echo "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
             sendResquestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
             for row in $(echo ${playlists} | jq -c '.[]' -r); do
