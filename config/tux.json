@@ -4,9 +4,9 @@
     "PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA",
     "PLbWtSW17vSe56nItnsIPsP_4m9o94sfjz"
   ],
-  "startUpdateIndex": 1,
+  "startUpdateIndex": 10,
   "tags": ["Linux","Arch Linux","Tux","FOSS","ColcheteDAO","[]"],
   "genThumb": true,
   "forceGenThumb": false,
-  "run": true
+  "run": false
 }

@@ -116,6 +116,14 @@ mountCustomTitles(){
   done < "out/titles/custom/$1.md"
 }
 
+mountVideoCustomProps(){
+  videoSeriesAmount=echo "$(expr $(wc -l < "out/titles/custom/$1.md") / 2)"
+  for i in $(seq 0 $videoSeriesAmount);
+  do
+    jq '.['$i'] = "{}"' "out/custom/$1.json" > "out/custom/$1.json" 
+  done
+}
+
 mountVideosMeta(){
   funName="mountVideosMeta"
   declare -a titlesMakdown
@@ -179,8 +187,14 @@ while IFS= read -r line; do
     fi
     if [ $run = true ]; then
       mkdir -p "out/titles/custom"
+      mkdir -p "out/custom"
       touch "out/titles/custom/$folder.md"
+      touch "out/custom/$folder.json"
+      [[ $(jq -e . <<< "out/custom/$folder.json" >/dev/null 2>&1; echo $?) -ne 0 && $(cat "out/custom/$folder.json" | jq 'length') -eq 0 ]] && {
+        echo "[]" > "out/custom/$folder.json"
+      }
       mountCustomTitles "$folder"
+      mountVideoCustomProps "$folder"
       videosMetaData=$(mountVideosMeta "$folder")
       if [[ $(checkPatternOcurrence "$videosMetaData" '##') -lt 1 ]] && [[ $(checkPatternOcurrence "$videosMetaData" 'error') -ge 1 ]]; then
         echo "==================="
