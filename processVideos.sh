@@ -36,7 +36,7 @@ updateVideoPayload(){
                             "id":"%s",
                             "snippet":
                             {
-                              "description":"%s",
+                              "description":%s,
                               "title":"%s",
                               "categoryId":"%s",
                               "defaultLanguage":"%s",
