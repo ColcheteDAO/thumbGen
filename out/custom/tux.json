@@ -1,6 +1,6 @@
 [
   {
-    "description": "Repo:\nhttps://github.com/juancolchete/tux",
+    "description": "Repo:\nhttps://github.com/juancolchete/tux 1",
     "tags": [
       "Linux",
       "Arch Linux",
@@ -9,7 +9,7 @@
       "ColcheteDAO",
       "[]"
     ],
-    "custom": false
+    "custom": true
   },
   {
     "description": "Repo:\nhttps://github.com/juancolchete/tux",

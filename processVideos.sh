@@ -121,7 +121,10 @@ mountVideoCustomProps(){
   defaultCustomVideoProp={"description":$(cat "config/$folder.json" | jq '.description'),"tags":$(cat "config/$folder.json" | jq '.tags'),"custom":false}
   for i in $(seq 0 "$videoSeriesAmount");
   do
-    echo "$(jq '.['$i'] = '"$defaultCustomVideoProp"'' "out/custom/$1.json")" > "out/custom/$1.json" 
+    isCustomProps=$(jq '.['$i'].custom // false' "out/custom/$1.json")
+    [[ $isCustomProps -eq 'false' ]] && {
+      echo "$(jq '.['$i'] = '"$defaultCustomVideoProp"'' "out/custom/$1.json")" > "out/custom/$1.json" 
+    }
   done
 }
 
