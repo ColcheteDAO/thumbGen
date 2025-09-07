@@ -8,5 +8,5 @@
   "tags": ["Linux","Arch Linux","Tux","FOSS","ColcheteDAO","[]"],
   "genThumb": true,
   "forceGenThumb": false,
-  "run": false
+  "run": true
 }
