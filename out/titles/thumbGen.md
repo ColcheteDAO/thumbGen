@@ -278,3 +278,5 @@
 [video](https://youtu.be/ktOjI8VT8Q4)
 ## Forçar atualização da thumb #140
 [video](https://youtu.be/raKVvNRyWqE)
+## Requisições silenciosas #141
+[video](https://youtu.be/CR5Aa2qPRLM)
