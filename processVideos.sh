@@ -250,6 +250,12 @@ while IFS= read -r line; do
             fi
           fi
         elif [ $(checkPatternOcurrence "$lineTitle" '\[video\]') = 1 ]; then
+          description=$(jq '.['${index}-1'].description' "out/custom/$folder.json")
+          tags=$(jq '.['${index}-1'].tags' "out/custom/$folder.json")
+          echo "=============="
+          echo "$description"
+          echo "$tags"
+          echo "=============="
           videoId=$(echo "$lineTitle" | cut -c 26-$((${#lineTitle}-1)))
           fillSnippetVideo $videoId  
           if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [ $index -ge $startUpdateIndex ]; then
