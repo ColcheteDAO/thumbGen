@@ -120,7 +120,7 @@ mountVideoCustomProps(){
   videoSeriesAmount=$(echo "$(expr $(wc -l < "out/titles/$1.md") / 2)")
   for i in $(seq 0 "$videoSeriesAmount");
   do
-    jq '.['$i'] = "{}"' "out/custom/$1.json" > "out/custom/$1.json" 
+    echo "$(jq '.['$i'] = "{}"' "out/custom/$1.json")" > "out/custom/$1.json" 
   done
 }
 
