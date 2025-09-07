@@ -118,9 +118,10 @@ mountCustomTitles(){
 
 mountVideoCustomProps(){
   videoSeriesAmount=$(echo "$(expr $(wc -l < "out/titles/$1.md") / 2)")
+  defaultCustomVideoProp={"description":$(cat "config/$folder.json" | jq '.description'),"tags":$(cat "config/$folder.json" | jq '.tags'),"custom":false}
   for i in $(seq 0 "$videoSeriesAmount");
   do
-    echo "$(jq '.['$i'] = "{}"' "out/custom/$1.json")" > "out/custom/$1.json" 
+    echo "$(jq '.['$i'] = '"$defaultCustomVideoProp"'' "out/custom/$1.json")" > "out/custom/$1.json" 
   done
 }
 
