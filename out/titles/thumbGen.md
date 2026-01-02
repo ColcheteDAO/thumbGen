@@ -280,3 +280,9 @@
 [video](https://youtu.be/raKVvNRyWqE)
 ## Requisições silenciosas #141
 [video](https://youtu.be/CR5Aa2qPRLM)
+## Requisições silenciosas #142
+[video](https://youtu.be/h1J3VclI5hA)
+## Descrição e tags personalizadas #143
+[video](https://youtu.be/q8NmjxNeQlw)
+## Fechando duas issues #144
+[video](https://youtu.be/kZCbKxIW6Pk)
