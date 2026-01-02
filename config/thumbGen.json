@@ -8,5 +8,5 @@
   "tags": ["github actions","Image Magick","Magick","bash","ColcheteDAO","[]"],
   "genThumb": true,
   "forceGenThumb": false,
-  "run": true
+  "run": false
 }
