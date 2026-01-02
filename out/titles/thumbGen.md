@@ -286,3 +286,5 @@
 [video](https://youtu.be/q8NmjxNeQlw)
 ## Fechando duas issues #144
 [video](https://youtu.be/kZCbKxIW6Pk)
+## Teste de funcionamento #145
+[video](https://youtu.be/PcJLKmDM8_8)
