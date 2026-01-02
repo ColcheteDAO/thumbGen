@@ -286,3 +286,9 @@
 [video](https://youtu.be/q8NmjxNeQlw)
 ## Fechando duas issues #144
 [video](https://youtu.be/kZCbKxIW6Pk)
+## Reteste #145
+[video](https://youtu.be/cXG6UuqM4AY)
+## Adicionar serie nova #146
+[video](https://youtu.be/24uE_KPLMgM)
+## Resolver erro de artefato #147
+[video](https://youtu.be/h4gw_fQWXrg)
