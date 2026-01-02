@@ -7,6 +7,7 @@
 [artifact](https://raw.githubusercontent.com/juancolchete/artifacts/refs/heads/main/Mastering%20Bitcoin.png)  
 [artifact](https://raw.githubusercontent.com/juancolchete/artifacts/refs/heads/main/Blockchain%20Builder.png)  
 [artifact](https://raw.githubusercontent.com/juancolchete/artifacts/refs/heads/main/Open%20Source.png)  
+[artifact](https://raw.githubusercontent.com/juancolchete/artifacts/main/Power%20Colchete.png)
 # Blockchain Builder
 repo:\nhttps://github.com/juancolchete/BlockchainBuilder
 [playlist](https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA)  
@@ -64,4 +65,6 @@ repo:\nhttps://github.com/juancolchete/actionPlayground
 # Da Lua eu VIM
 **end**
 # LeetCode
+**end**
+# Power Colchete
 **end**
