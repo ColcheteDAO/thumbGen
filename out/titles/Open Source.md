@@ -92,3 +92,29 @@
 [video](https://youtu.be/a0kjMnJ0bKE)
 ## Configuração inicial NIXOS #47
 [video](https://youtu.be/dJQlkoWOnUg)
+## Primeiro contato com UAIBIT data #48
+[video](https://youtu.be/bvoWCC22vZw)
+## Configuração do flake nix UAIBIT data #49
+[video](https://youtu.be/VrlBxID-a2g)
+## Permitir caracteres especiais no UAIBIT data #50
+[video](https://youtu.be/2e4ba5r9YKg)
+## Adicionar comunidades no BTCMAP usando UAIBIT data #51
+[video](https://youtu.be/Su0hHXU2DTY)
+## Correção URL alias UAIBIT data #52
+[video](https://youtu.be/VY8grewWk0o)
+## Fechar issue de crição de comunidade BTCMAP UAIBIT data #53
+[video](https://youtu.be/vPcDYR8c70U)
+## Preparar dados de comunidade BTCMAP UAIBIT data #54
+[video](https://youtu.be/352fL7GndVk)
+## Deinir meta de commits de forma dinâmica no reminder actions #55
+[video](https://youtu.be/RokdowCVL80)
+## Usuário de forma dinâmica reminder actions #56
+[video](https://youtu.be/QyUY_dS4Z4E)
+## Criar arquivo informações de commit reminder actions #57
+[video](https://youtu.be/IHcmdDBSGZk)
+## Salvar arquivo no git reminder actions #58
+[video](https://youtu.be/0PfLznJBwAk)
+## Salvar no git reminder actions #59
+[video](https://youtu.be/HuoRFIST_dY)
+## Resolver erros de lógica reminder actions #60
+[video](https://youtu.be/5u40IPbfnCs)
