@@ -10,7 +10,7 @@ Tratar dados JSON com jq #9
 Salvar resutado de requisição #10
 Schedule no github actions #11
 Executar worflows externos #12
-Ler arquivosrepo github actions #13
+Ler arquivos repo github actions #13
 Ler JSON do repo no github actions #14
 NextJS docker hub github actions #15
 NestJS docker hub github actions #16
@@ -34,3 +34,27 @@ Adicionar comunidade BTC Map #32
 Apresentação do OSM Field Filler #34
 Erro 429 OSM Field Filler #35
 Erros v0.dev OSM Field Filler #36
+
+
+
+Quantidade de merchants BTC MAP #40
+
+
+
+
+
+
+
+
+
+Caracteres especiais UAIBIT data #50
+Criar comunidades no BTCMAP #51
+
+Fechar issue comunidade BTCMAP #53
+Preparar dados comunidade BTCMAP #54
+Definir meta de commits #55
+Usuário de forma dinâmica #56
+Arquivo informações de commit #57
+Salvar arquivo no git #58
+
+Resolver erros de lógica #60
