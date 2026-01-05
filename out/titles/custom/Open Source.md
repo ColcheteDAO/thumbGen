@@ -46,15 +46,44 @@ Quantidade de merchants BTC MAP #40
 
 
 
-
+Configuração flake nix #49
 Caracteres especiais UAIBIT data #50
 Criar comunidades no BTCMAP #51
 
 Fechar issue comunidade BTCMAP #53
-Preparar dados comunidade BTCMAP #54
+Dados comunidade BTCMAP #54
 Definir meta de commits #55
 Usuário de forma dinâmica #56
 Arquivo informações de commit #57
 Salvar arquivo no git #58
 
 Resolver erros de lógica #60
+
+
+
+
+
+
+
+
+Adicionar propriedade Continente #69
+
+
+
+
+Adicionar id e Org #74
+Novo modelo de comunidade #75
+
+
+
+
+
+
+
+
+
+Link da communidade #85
+Organização markdown #86
+Contador de população e senso #87
+
+Troco no Ian Coleman #89
