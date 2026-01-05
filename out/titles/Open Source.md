@@ -106,7 +106,7 @@
 [video](https://youtu.be/vPcDYR8c70U)
 ## Preparar dados de comunidade BTCMAP UAIBIT data #54
 [video](https://youtu.be/352fL7GndVk)
-## Deinir meta de commits de forma dinâmica no reminder actions #55
+## Definir meta de commits de forma dinâmica no reminder actions #55
 [video](https://youtu.be/RokdowCVL80)
 ## Usuário de forma dinâmica reminder actions #56
 [video](https://youtu.be/QyUY_dS4Z4E)
@@ -118,3 +118,63 @@
 [video](https://youtu.be/HuoRFIST_dY)
 ## Resolver erros de lógica reminder actions #60
 [video](https://youtu.be/5u40IPbfnCs)
+## North Jersey Bitcoin BTCMAP #61
+[video](https://youtu.be/jYEzVNYNeaI)
+## Obter dados de issue no GITEA #62
+[video](https://youtu.be/HIZXvilKqks)
+## Obter corpo de issue no GITEA #63
+[video](https://youtu.be/_gVc6TJkbdA)
+## Montar JSON body da issue GITEA #64
+[video](https://youtu.be/AyEzg95zQXQ)
+## Salvar contatos como array GITEA #65
+[video](https://youtu.be/oP4yAgBxFDo)
+## Análise para obter OSM ID GITEA #66
+[video](https://youtu.be/ijvBxNYLWz8)
+## Obter nome da comunidade GITEA #67
+[video](https://youtu.be/jX6NiKHfYWA)
+## Preencher tipo de área GITEA #68
+[video](https://youtu.be/YCD0Yn8Vi0E)
+## Adicionar propriedade Continente GITEA #69
+[video](https://youtu.be/ciudH100miI)
+## Obter ícone GITEA #70
+[video](https://youtu.be/h-T2inZmB90)
+## Obter endereço lightning GITEA #71
+[video](https://youtu.be/7DADPKsB1Oc)
+## Obter contatos GITEA #72
+[video](https://youtu.be/A_Mq1XgHRaA)
+## Obter descrição GITEA #73
+[video](https://youtu.be/-mz4z1O34QE)
+## Adicionar propriedades identificador do Open Street Map e Organização GITEA #74
+[video](https://youtu.be/q8aBlvuIdis)
+## Adicionar novo modelo de geração de comunidade UAIBIT data #75
+[video](https://youtu.be/Sqp0dTCfjW4)
+## Adicionar mapa UAIBIT data #76
+[video](https://youtu.be/HQszJqsSilw)
+## Adicionar tipo de área UAIBIT data #77
+[video](https://youtu.be/GsGxJ_Y1baU)
+## Adicionar continente UAIBIT data #78
+[video](https://youtu.be/2KT2MigMmp4)
+## Adicionar ícone UAIBIT data #79
+[video](https://youtu.be/Avo8K01stEI)
+## Obter dados da issue no GITEA #80
+[video](https://youtu.be/DmatRPdF4Ug)
+## Adicionar url alias UAIBIT data #81
+[video](https://youtu.be/BLS-dfHFVSM)
+## Adicionar contatos UAIBIT data #82
+[video](https://youtu.be/iIaduPaDYog)
+## Adicionar descrição UAIBIT data #83
+[video](https://youtu.be/axgs146ShSg)
+## Adicionar organização UAIBIT data #84
+[video](https://youtu.be/TILNq0tRgAg)
+## Adicionar link da communidade UAIBIT data #85
+[video](https://youtu.be/e_nrNhJ6BKs)
+## Adicionar organização markdown UAIBIT data #86
+[video](https://youtu.be/sjbLCK1hexM)
+## Adicionar contador de população e data de senso UAIBIT data #87
+[video](https://youtu.be/BZzRyWNCI2E)
+## Contato inicial Ian Coleman #88
+[video](https://youtu.be/UWizOCk4Crc)
+## Como funciona o troco no Ian Coleman #89
+[video](https://youtu.be/28Dp-7yd70I)
+## Entropia no Ian Coleman #90
+[video](https://youtu.be/UVkuaDmcsFI)
