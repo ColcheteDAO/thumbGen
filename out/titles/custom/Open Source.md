@@ -88,7 +88,7 @@ Contador de população e senso #87
 
 Troco no Ian Coleman #89
 
-
+Obter palavras em inglês #91
 
 
 
