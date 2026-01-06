@@ -87,3 +87,15 @@ Organização markdown #86
 Contador de população e senso #87
 
 Troco no Ian Coleman #89
+
+
+
+
+
+
+
+
+
+
+Consertar contador #100
+Exibir endereço com recompensa #101
