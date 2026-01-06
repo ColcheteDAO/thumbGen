@@ -175,6 +175,30 @@
 ## Contato inicial Ian Coleman #88
 [video](https://youtu.be/UWizOCk4Crc)
 ## Como funciona o troco no Ian Coleman #89
-[video](https://youtu.be/28Dp-7yd70I)
+[video](https://youtu.be/B_wx7yV4jLk)
 ## Entropia no Ian Coleman #90
 [video](https://youtu.be/UVkuaDmcsFI)
+## Obter palavras em inglês Ian Coleman #91
+[video](https://youtu.be/eM8N50abpow)
+## Tabela truncada Ian Coleman #92
+[video](https://youtu.be/tMrRKktwFPk)
+## Exibir palavras e índices Ian Coleman #93
+[video](https://youtu.be/yHKsmDaP54g)
+## Exibir binário da palavra Ian Coleman #94
+[video](https://youtu.be/LKTKnJQxiNU)
+## Exibir hexadecimal da palavra Ian Coleman #95
+[video](https://youtu.be/dWcVjYusy4k)
+## Exibir octal da palavra Ian Coleman #96
+[video](https://youtu.be/I5NTqXJwGDI)
+## Exibir 1248 da palavra Ian Coleman #97
+[video](https://youtu.be/UOT3iIGFL38)
+## Facilitar leitura do código Ian Coleman #98
+[video](https://youtu.be/ZvDKXdaIap4)
+## Base do site Colchete turns 24 #99
+[video](https://youtu.be/9fBr_rfNvF8)
+## Consertar contador Colchete turns 24 #100
+[video](https://youtu.be/lnz-ZZg9rtU)
+## Exibir endereço com recompensa Colchete turns 24 #101
+[video](https://youtu.be/eP2W4t51dRI)
+## Eu amo dicas Colchete turns 24 #102
+[video](https://youtu.be/GoLKNp1HR6M)
