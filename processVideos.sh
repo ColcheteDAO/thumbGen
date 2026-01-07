@@ -222,7 +222,6 @@ while IFS= read -r line; do
     if [ $run = true ]; then
       while IFS= read -r lineTitle; do
         customUpdateIndex=$(cat "config/$folder.json" | jq ".customUpdateIndexes[$customIndex]")
-        echo "$customUpdateIndex $index $customIndex"
         if [ $(checkPatternOcurrence "$lineTitle" '#') = 3 ]; then
           index=$((${index}+1))
         fi
