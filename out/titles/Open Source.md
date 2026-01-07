@@ -202,3 +202,21 @@
 [video](https://youtu.be/eP2W4t51dRI)
 ## Eu amo dicas Colchete turns 24 #102
 [video](https://youtu.be/GoLKNp1HR6M)
+## Melhorar exibição 1248 Ian Coleman #103
+[video](https://youtu.be/_4T6CLtvaN8)
+## Dando uma pintada no 1248 Ian Coleman #104
+[video](https://youtu.be/TKz_4nz79o0)
+## Binário índices de palavras Ian Coleman #105
+[video](https://youtu.be/YQe6YZp9cIU)
+## Exibir na entropia 1248 completo Ian Coleman #106
+[video](https://youtu.be/DXw9hQQResc)
+## Fork índice começando em 1 Ian Coleman #107
+[video](https://youtu.be/SyTWwl4_y1A)
+## Aplicar mudanças do bip39 no índice + 1 Ian Coleman #108
+[video](https://youtu.be/D3cqa9sOyA8)
+## Estudo BIP85 com parte 1 #109
+[video](https://youtu.be/96L7z-QMQYk)
+## Estudo BIP85 com parte 2 #110
+[video](https://youtu.be/57WiuN1Pq8w)
+## Estudo do BIP85 #111
+[video](https://youtu.be/XcFrPNUVYwQ)
