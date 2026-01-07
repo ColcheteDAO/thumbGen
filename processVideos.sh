@@ -221,11 +221,11 @@ while IFS= read -r line; do
   elif [ $(checkPatternOcurrence "$line" '\*\*end\*\*') = 1 ]; then
     if [ $run = true ]; then
       while IFS= read -r lineTitle; do
-        if [ $(checkPatternOcurrence "$lineTitle" '#') = 3 ]; then
-          index=$((${index}+1))
-          customUpdateIndex=$(cat "config/$folder.json" | jq ".customUpdateIndexes[$customIndex]")
-          echo "$customUpdateIndex $index $customIndex"
-          if [[ $(cat "config/$folder.json" | jq '.customUpdateIndexes | length') -gt 0 ]] || [[$(cat "config/$folder.json" | jq '.customUpdateIndexes | length') -eq 0 ]] && [[ "$index" == "$customUpdateIndex" ]]; then
+        customUpdateIndex=$(cat "config/$folder.json" | jq ".customUpdateIndexes[$customIndex]")
+        echo "$customUpdateIndex $index $customIndex"
+        if [[ $(cat "config/$folder.json" | jq '.customUpdateIndexes | length') -gt 0 ]] || [[$(cat "config/$folder.json" | jq '.customUpdateIndexes | length') -eq 0 ]] && [[ "$index" == "$customUpdateIndex" ]]; then
+          if [ $(checkPatternOcurrence "$lineTitle" '#') = 3 ]; then
+            index=$((${index}+1))
             customIndex=$((${customIndex}+1))
             title=$(echo "$lineTitle" | cut -c 4-$((${#lineTitle}+2)))
             if [ "$4" = "Y" ] || [ $genThumb = true ]; then
