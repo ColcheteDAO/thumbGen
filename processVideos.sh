@@ -228,7 +228,6 @@ while IFS= read -r line; do
         fi
         if [[ $(cat "config/$folder.json" | jq '.customUpdateIndexes | length') -gt 0 ]] || [[$(cat "config/$folder.json" | jq '.customUpdateIndexes | length') -eq 0 ]] && [[ "$index" == "$customUpdateIndex" ]]; then
           if [ $(checkPatternOcurrence "$lineTitle" '#') = 3 ]; then
-            customIndex=$((${customIndex}+1))
             title=$(echo "$lineTitle" | cut -c 4-$((${#lineTitle}+2)))
             if [ "$4" = "Y" ] || [ $genThumb = true ]; then
               if [ ${#customTitles[$folder$index]} -gt 10 ]; then
@@ -257,6 +256,7 @@ while IFS= read -r line; do
               fi
             fi
           elif [ $(checkPatternOcurrence "$lineTitle" '\[video\]') = 1 ]; then
+            customIndex=$((${customIndex}+1))
             videoId=$(echo "$lineTitle" | cut -c 26-$((${#lineTitle}-1)))
             fillSnippetVideo $videoId  
             if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [ $index -ge $startUpdateIndex ]; then
