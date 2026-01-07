@@ -189,7 +189,7 @@ while IFS= read -r line; do
     else
       cat base.json > "config/$folder.json"
     fi
-    if [ $run = true ]; then
+    if [[ $run = true && $(cat "config/$folder.json" | jq '.customUpdateIndexes | length') -eq 0 ]]; then
       mkdir -p "out/titles/custom"
       mkdir -p "out/custom"
       touch "out/titles/custom/$folder.md"
@@ -221,7 +221,9 @@ while IFS= read -r line; do
     if [ $run = true ]; then
       while IFS= read -r lineTitle; do
         if [ $(checkPatternOcurrence "$lineTitle" '#') = 3 ]; then
-          index=$((${index}+1))
+          if [[ $(cat "config/$folder.json" | jq '.customUpdateIndexes | length') -eq 0 ]]; then
+            index=$((${index}+1))
+          fi
           title=$(echo "$lineTitle" | cut -c 4-$((${#lineTitle}+2)))
           if [ "$4" = "Y" ] || [ $genThumb = true ]; then
             if [ ${#customTitles[$folder$index]} -gt 10 ]; then
