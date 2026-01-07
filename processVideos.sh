@@ -222,37 +222,36 @@ while IFS= read -r line; do
     if [ $run = true ]; then
       while IFS= read -r lineTitle; do
         if [ $(checkPatternOcurrence "$lineTitle" '#') = 3 ]; then
-          if [[ $(cat "config/$folder.json" | jq '.customUpdateIndexes | length') -eq 0 ]]; then
-            index=$((${index}+1))
-          else
-            index=$(cat "config/$folder.json" | jq ".customUpdateIndexes[$customIndex]")
+          index=$((${index}+1))
+          customUpdateIndex=$(cat "config/$folder.json" | jq ".customUpdateIndexes[$customIndex]")
+          if [[ $(cat "config/$folder.json" | jq '.customUpdateIndexes | length') -gt 0 || $(cat "config/$folder.json" | jq '.customUpdateIndexes | length') -eq 0 && index -eq customUpdateIndex ]]; then
             customIndex=$((${customIndex}+1))
-          fi
-          title=$(echo "$lineTitle" | cut -c 4-$((${#lineTitle}+2)))
-          if [ "$4" = "Y" ] || [ $genThumb = true ]; then
-            if [ ${#customTitles[$folder$index]} -gt 10 ]; then
-              bash genThumb.sh "${customTitles[$folder$index]}" "$folder" 
-            else
-              bash genThumb.sh "$title" "$folder" 
-            fi
-            mkdir -p "out/thumbs/$folder"
-            path="out/thumbs/$folder/$folder$index.png"
-            echo "=========================="
-            echo "out/thumbs/$folder"
-            echo "$path"
-            echo "=========================="
-            diffCount=0
-            if [ -f "out/thumbs/$folder/$folder$index.png" ]; then
-              diffCount=$(compare -metric ae -fuzz XX% "out/thumbs/$folder/$folder$index.png" compose_under.png null: 2>&1) 
-              if [ "$diffCount" = 0 ]; then
-                needUpdateThumb[$index]=false
+            title=$(echo "$lineTitle" | cut -c 4-$((${#lineTitle}+2)))
+            if [ "$4" = "Y" ] || [ $genThumb = true ]; then
+              if [ ${#customTitles[$folder$index]} -gt 10 ]; then
+                bash genThumb.sh "${customTitles[$folder$index]}" "$folder" 
+              else
+                bash genThumb.sh "$title" "$folder" 
+              fi
+              mkdir -p "out/thumbs/$folder"
+              path="out/thumbs/$folder/$folder$index.png"
+              echo "=========================="
+              echo "out/thumbs/$folder"
+              echo "$path"
+              echo "=========================="
+              diffCount=0
+              if [ -f "out/thumbs/$folder/$folder$index.png" ]; then
+                diffCount=$(compare -metric ae -fuzz XX% "out/thumbs/$folder/$folder$index.png" compose_under.png null: 2>&1) 
+                if [ "$diffCount" = 0 ]; then
+                  needUpdateThumb[$index]=false
+                else
+                  mv compose_under.png "$path"
+                  needUpdateThumb[$index]=true
+                fi
               else
                 mv compose_under.png "$path"
                 needUpdateThumb[$index]=true
               fi
-            else
-              mv compose_under.png "$path"
-              needUpdateThumb[$index]=true
             fi
           fi
         elif [ $(checkPatternOcurrence "$lineTitle" '\[video\]') = 1 ]; then
