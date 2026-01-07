@@ -5,6 +5,7 @@
     "PLbWtSW17vSe6rDgVtlz5XbIMdpPvAZiSm"
   ],
   "startUpdateIndex": 1,
+  "customUpdateIndexes":[],
   "tags": ["AD","LeetCode","LetCode","TS","Typescript"],
   "genThumb": true,
   "forceGenThumb": false,

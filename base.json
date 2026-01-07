@@ -4,6 +4,7 @@
     "https://youtu.be/watch?v=playlist&list=PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA"
   ],
   "startUpdateIndex": 0,
+  "customUpdateIndexes":[],
   "tags": [],
   "genThumb": true,
   "forceGenThumb": false,
