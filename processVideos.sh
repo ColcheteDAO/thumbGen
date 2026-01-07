@@ -224,7 +224,7 @@ while IFS= read -r line; do
         if [ $(checkPatternOcurrence "$lineTitle" '#') = 3 ]; then
           index=$((${index}+1))
           customUpdateIndex=$(cat "config/$folder.json" | jq ".customUpdateIndexes[$customIndex]")
-          if [[ $(cat "config/$folder.json" | jq '.customUpdateIndexes | length') -gt 0 || $(cat "config/$folder.json" | jq '.customUpdateIndexes | length') -eq 0 && $index -eq $customUpdateIndex ]]; then
+          if [[ $(cat "config/$folder.json" | jq '.customUpdateIndexes | length') -gt 0 ]] || [[$(cat "config/$folder.json" | jq '.customUpdateIndexes | length') -eq 0 ]] && [[ "$index" == "$customUpdateIndex" ]]; then
             customIndex=$((${customIndex}+1))
             title=$(echo "$lineTitle" | cut -c 4-$((${#lineTitle}+2)))
             if [ "$4" = "Y" ] || [ $genThumb = true ]; then
