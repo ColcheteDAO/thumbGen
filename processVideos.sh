@@ -1,4 +1,5 @@
 index=0
+customIndex=0
 folder=''
 path=''
 description=''
@@ -223,6 +224,9 @@ while IFS= read -r line; do
         if [ $(checkPatternOcurrence "$lineTitle" '#') = 3 ]; then
           if [[ $(cat "config/$folder.json" | jq '.customUpdateIndexes | length') -eq 0 ]]; then
             index=$((${index}+1))
+          else
+            index=$(cat "config/$folder.json" | jq ".customUpdateIndexes[$customIndex]")
+            customIndex=$((${customIndex}+1))
           fi
           title=$(echo "$lineTitle" | cut -c 4-$((${#lineTitle}+2)))
           if [ "$4" = "Y" ] || [ $genThumb = true ]; then
