@@ -90,12 +90,19 @@ Troco no Ian Coleman #89
 
 Obter palavras em inglês #91
 
+Exibir palavras e índices #93
 
-
-
+Exibir hexadecimal da palavra #95
 
 
 
 
 Consertar contador #100
 Exibir endereço com recompensa #101
+
+Melhorar exibição 1248 #103
+Dando uma pintada no 1248 #104
+Binário índices de palavras #105
+Exibir na entropia 1248 completo #106
+Fork índice começando em 1 #107
+Adicionar bip39 no índice + 1 #108
