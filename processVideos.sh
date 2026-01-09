@@ -225,7 +225,7 @@ while IFS= read -r line; do
         if [ $(checkPatternOcurrence "$lineTitle" '#') = 3 ]; then
           index=$((${index}+1))
         fi
-        listLength=$(cat "config/$folder.json" | jq '.customUpdateIndexes | length' 2>/dev/null || echo 0)
+        listLength=$(cat "config/$folder.json" | jq '.customUpdateIndexes | length')
        if [[ ($listLength -gt 0 && "$index" == "$customUpdateIndex") || \
              ($listLength -eq 0 && "$index" -ge "$startUpdateIndex") ]]; then
           if [ $(checkPatternOcurrence "$lineTitle" '#') = 3 ]; then
