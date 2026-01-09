@@ -94,80 +94,80 @@
 [video](https://youtu.be/dJQlkoWOnUg)
 ## Primeiro contato com UAIBIT data #48
 [video](https://youtu.be/bvoWCC22vZw)
-## Configuração do flake nix UAIBIT data #49
-[video](https://youtu.be/VrlBxID-a2g)
-## Permitir caracteres especiais no UAIBIT data #50
-[video](https://youtu.be/2e4ba5r9YKg)
-## Adicionar comunidades no BTCMAP usando UAIBIT data #51
-[video](https://youtu.be/Su0hHXU2DTY)
-## Correção URL alias UAIBIT data #52
-[video](https://youtu.be/VY8grewWk0o)
-## Fechar issue de crição de comunidade BTCMAP UAIBIT data #53
-[video](https://youtu.be/vPcDYR8c70U)
-## Preparar dados de comunidade BTCMAP UAIBIT data #54
-[video](https://youtu.be/352fL7GndVk)
-## Definir meta de commits de forma dinâmica no reminder actions #55
-[video](https://youtu.be/RokdowCVL80)
-## Usuário de forma dinâmica reminder actions #56
-[video](https://youtu.be/QyUY_dS4Z4E)
-## Criar arquivo informações de commit reminder actions #57
-[video](https://youtu.be/IHcmdDBSGZk)
-## Salvar arquivo no git reminder actions #58
-[video](https://youtu.be/0PfLznJBwAk)
-## Salvar no git reminder actions #59
-[video](https://youtu.be/HuoRFIST_dY)
-## Resolver erros de lógica reminder actions #60
-[video](https://youtu.be/5u40IPbfnCs)
-## North Jersey Bitcoin BTCMAP #61
-[video](https://youtu.be/jYEzVNYNeaI)
-## Obter dados de issue no GITEA #62
-[video](https://youtu.be/HIZXvilKqks)
-## Obter corpo de issue no GITEA #63
-[video](https://youtu.be/_gVc6TJkbdA)
-## Montar JSON body da issue GITEA #64
-[video](https://youtu.be/AyEzg95zQXQ)
-## Salvar contatos como array GITEA #65
-[video](https://youtu.be/oP4yAgBxFDo)
-## Análise para obter OSM ID GITEA #66
-[video](https://youtu.be/ijvBxNYLWz8)
-## Obter nome da comunidade GITEA #67
-[video](https://youtu.be/jX6NiKHfYWA)
-## Preencher tipo de área GITEA #68
-[video](https://youtu.be/YCD0Yn8Vi0E)
-## Adicionar propriedade Continente GITEA #69
-[video](https://youtu.be/ciudH100miI)
-## Obter ícone GITEA #70
-[video](https://youtu.be/h-T2inZmB90)
-## Obter endereço lightning GITEA #71
-[video](https://youtu.be/7DADPKsB1Oc)
-## Obter contatos GITEA #72
-[video](https://youtu.be/A_Mq1XgHRaA)
-## Obter descrição GITEA #73
-[video](https://youtu.be/-mz4z1O34QE)
-## Adicionar propriedades identificador do Open Street Map e Organização GITEA #74
-[video](https://youtu.be/q8aBlvuIdis)
-## Adicionar novo modelo de geração de comunidade UAIBIT data #75
-[video](https://youtu.be/Sqp0dTCfjW4)
-## Adicionar mapa UAIBIT data #76
-[video](https://youtu.be/HQszJqsSilw)
-## Adicionar tipo de área UAIBIT data #77
-[video](https://youtu.be/GsGxJ_Y1baU)
-## Adicionar continente UAIBIT data #78
-[video](https://youtu.be/2KT2MigMmp4)
-## Adicionar ícone UAIBIT data #79
-[video](https://youtu.be/Avo8K01stEI)
-## Obter dados da issue no GITEA #80
-[video](https://youtu.be/DmatRPdF4Ug)
-## Adicionar url alias UAIBIT data #81
-[video](https://youtu.be/BLS-dfHFVSM)
-## Adicionar contatos UAIBIT data #82
-[video](https://youtu.be/iIaduPaDYog)
-## Adicionar descrição UAIBIT data #83
-[video](https://youtu.be/axgs146ShSg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Adicionar organização UAIBIT data #84
 [video](https://youtu.be/TILNq0tRgAg)
-## Adicionar link da communidade UAIBIT data #85
-[video](https://youtu.be/e_nrNhJ6BKs)
+
+
 ## Adicionar organização markdown UAIBIT data #86
 [video](https://youtu.be/sjbLCK1hexM)
 ## Adicionar contador de população e data de senso UAIBIT data #87
@@ -220,3 +220,73 @@
 [video](https://youtu.be/57WiuN1Pq8w)
 ## Estudo do BIP85 #111
 [video](https://youtu.be/XcFrPNUVYwQ)
+## Adicionar biblioteca BIP85 em js #112
+[video](https://youtu.be/TGJAQmKkXfE)
+## Quebrando a cabeça com BIP85 #113
+[video](https://youtu.be/Zz6VX6fbJj8)
+## Quebrando a cabeça com Renato Gravino BIP85 #114
+[video](https://youtu.be/DWwuvRO6kZQ)
+## Rodando BIP85 com node #115
+[video](https://youtu.be/jjztZzbbAfM)
+## Remover wiff BIP85 #116
+[video](https://youtu.be/A1AjzXzekbQ)
+## bs58Check BIP85 #117
+[video](https://youtu.be/qd6vfZPm2s4)
+## bs58 BIP85 #118
+[video](https://youtu.be/3O_ZofGehz0)
+## bip39 BIP85 #119
+[video](https://youtu.be/PKcPFY-vzBM)
+## sha512 parte 1 BIP85 #120
+[video](https://youtu.be/bGUv80XrpJ4)
+## sha512 parte 2 BIP85 #121
+[video](https://youtu.be/72KoBHyDr9c)
+## basex BIP85 #122
+[video](https://youtu.be/3senanjcip4)
+## safe buffer BIP85 #123
+[video](https://youtu.be/WMCBdkmHgVE)
+## buffer BIP85 #124
+[video](https://youtu.be/d07dPcCgQP8)
+## pbkdf2 BIP85 #125
+[video](https://youtu.be/cdxQ827o9iE)
+## hmac BIP85 #126
+[video](https://youtu.be/yhuCZ8nZIMk)
+## rs58 BIP85 #127
+[video](https://youtu.be/Va8GMGhz45A)
+## crypto BIP85 #128
+[video](https://youtu.be/6iizlnIb8NA)
+## bip32 parte 1 BIP85 #129
+[video](https://youtu.be/6-i0A9t0stE)
+## bip32 parte 2 BIP85 #130
+[video](https://youtu.be/7ad5033CTZY)
+## create hash BIP85 #131
+[video](https://youtu.be/GNMAW-1dCmE)
+## tiny secp256k1 BIP85 #132
+[video](https://youtu.be/Z_BBtzVf-Vw)
+## sha js BIP85 #133
+[video](https://youtu.be/_kJs1p56r10)
+## sha js hash BIP85 #134
+[video](https://youtu.be/5nVpyjnvAsI)
+## Remover bibliotecas duplicadas BIP85 #135
+[video](https://youtu.be/HsqZFnrDJE8)
+## to buffer BIP85 #136
+[video](https://youtu.be/yOSn4HP6UUM)
+## inherits BIP85 #137
+[video](https://youtu.be/rg1rBlK7-jU)
+## elliptic BIP85 #138
+[video](https://youtu.be/VVvT4iLwqUM)
+## elliptic signature BIP85 #139
+[video](https://youtu.be/sQZN7CBuclw)
+## elliptic key BIP85 #140
+[video](https://youtu.be/kBov2Kr9qQE)
+## brorand BIP85 #141
+[video](https://youtu.be/_P7NlY0g_vs)
+## elliptic curves BIP85 #142
+[video](https://youtu.be/NLAsm3KbfOM)
+## elliptic curve BIP85 #143
+[video](https://youtu.be/DD2AVewjj1k)
+## elliptic curve edwards BIP85 #144
+[video](https://youtu.be/HSGS5VDdO8w)
+## elliptic curve mount BIP85 #145
+[video](https://youtu.be/8WJjd_HqPqQ)
+## elliptic curve short parte 1 BIP85 #146
+[video](https://youtu.be/qU9sMjBk98w)
