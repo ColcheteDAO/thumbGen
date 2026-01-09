@@ -190,7 +190,8 @@ while IFS= read -r line; do
     else
       cat base.json > "config/$folder.json"
     fi
-    if [[ $run = true && $(cat "config/$folder.json" | jq '.customUpdateIndexes | length') -eq 0 ]]; then
+    # if [[ $run = true && $(cat "config/$folder.json" | jq '.customUpdateIndexes | length') -eq 0 ]]; then
+    if [[ $run = true ]]; then
       mkdir -p "out/titles/custom"
       mkdir -p "out/custom"
       touch "out/titles/custom/$folder.md"
