@@ -222,11 +222,14 @@ while IFS= read -r line; do
   elif [ $(checkPatternOcurrence "$line" '\*\*end\*\*') = 1 ]; then
     if [ $run = true ]; then
       while IFS= read -r lineTitle; do
-        customUpdateIndex=$(cat "config/$folder.json" | jq ".customUpdateIndexes[$customIndex]")
+        listLength=$(cat "config/$folder.json" | jq '.customUpdateIndexes | length')
+        if [[ "$listLength" -gt 0 ]]; then
+          customUpdateIndex=$(cat "config/$folder.json" | jq ".customUpdateIndexes[$customIndex]")
+        fi
+        customUpdateIndex=-1
         if [ $(checkPatternOcurrence "$lineTitle" '#') = 3 ]; then
           index=$((${index}+1))
         fi
-        listLength=$(cat "config/$folder.json" | jq '.customUpdateIndexes | length')
        if [[ ( "$listLength" -eq 0 && "$index" -ge "$startUpdateIndex" ) || \
              ( "$listLength" -gt 0 && "$index" -eq "$customUpdateIndex" ) ]]; then
           if [ $(checkPatternOcurrence "$lineTitle" '#') = 3 ]; then
