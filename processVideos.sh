@@ -230,6 +230,7 @@ while IFS= read -r line; do
         if [ $(checkPatternOcurrence "$lineTitle" '#') = 3 ]; then
           index=$((${index}+1))
         fi
+        echo "listLength $listLength index $index startUpdateIndex $startUpdateIndex customUpdateIndex $customUpdateIndex"
        if [[ ( "$listLength" -eq 0 && "$index" -ge "$startUpdateIndex" ) || \
              ( "$listLength" -gt 0 && "$index" -eq "$customUpdateIndex" ) ]]; then
           if [ $(checkPatternOcurrence "$lineTitle" '#') = 3 ]; then
