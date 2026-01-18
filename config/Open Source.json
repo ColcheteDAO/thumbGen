@@ -8,6 +8,6 @@
   "customUpdateIndexes":[],
   "tags": ["Open Source","Linux","Github Actions","BTCMAP","OSM","Open Street Map","ColcheteDAO","[]"],
   "genThumb": true,
-  "forceGenThumb": true,
-  "run": true
+  "forceGenThumb": false,
+  "run": false
 }
