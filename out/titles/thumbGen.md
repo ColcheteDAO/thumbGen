@@ -292,3 +292,39 @@
 [video](https://youtu.be/24uE_KPLMgM)
 ## Resolver erro de artefato #147
 [video](https://youtu.be/h4gw_fQWXrg)
+## Checar descrição que não atualiza #148
+[video](https://youtu.be/zbyxSpkDzxM)
+## Atualizar serie código aberto #149
+[video](https://youtu.be/k2PlDAScl_8)
+## Código aberto atualização completa #150
+[video](https://youtu.be/KsPzAzRn630)
+## Código aberto debug #151
+[video](https://youtu.be/qhK7LP0TKFo)
+## Código aberto rodar novamente #152
+[video](https://youtu.be/OpgEY7HzgLM)
+## Gerador de thumb debug #153
+[video](https://youtu.be/xXJtNkGOGBU)
+## Acompanhar serie código aberto #154
+[video](https://youtu.be/XV20r07FHBw)
+## Atualizar thumbs do código aberto #155
+[video](https://youtu.be/ZOoCsMg7kIQ)
+## Rescrita de títulos código aberto #156
+[video](https://youtu.be/IMRQR3wrhZw)
+## Recolocar títulos e descrições código aberto #157
+[video](https://youtu.be/qCfIIrpX6hM)
+## Atualização com quota código aberto #158
+[video](https://youtu.be/8iXeI28Abxo)
+## Base da atualização customizada de títulos #159
+[video](https://youtu.be/i7RtEpgv2_o)
+## Apenas atualizar se não tiver customizado #160
+[video](https://youtu.be/iqrKqg5ztTk)
+## Permitir atualizar vídeos selecionados #161
+[video](https://youtu.be/6WW5etdUix4)
+## Checar descrição atualização customizada #162
+[video](https://youtu.be/YHvYsHKNB1A)
+## Respeitar start update index #163
+[video](https://youtu.be/FVqob4PQZF8)
+## Respeitar start update index parte 2 #164
+[video](https://youtu.be/XPB1a4aeSk0)
+## Apanhando para as cotas #165
+[video](https://youtu.be/qDxVh9546mA)
