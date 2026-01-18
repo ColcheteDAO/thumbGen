@@ -130,3 +130,35 @@ Subir apenas se tiver mudanças #128
 
 
 Bug dos títulos personalizados #132
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Checar descrição que não atualiza thumbGen #148
+
+Código aberto atualização completa thumbGen #150
+
+
+
+
+
+
+Título/descrição código aberto #157
+Atualizar com quota código aberto #158
+Atualização customizada de títulos #159
+Atualizar se não tiver customizado #160
+Atualizar vídeos selecionados #161
+Descrição atualização customizada #162
+
+Start update index parte 2 #164
