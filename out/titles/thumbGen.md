@@ -328,5 +328,7 @@
 [video](https://youtu.be/XPB1a4aeSk0)
 ## Apanhando para as cotas #165
 [video](https://youtu.be/qDxVh9546mA)
-## Corrigir rodar costomizado #166
+## Corrigir rodar customizado #166
 [video](https://youtu.be/A37OPsfzLzc)
+## Rodar série principal #167
+[video](https://youtu.be/oBOdl_OTpFE)
