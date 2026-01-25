@@ -4,10 +4,10 @@
     "PLbWtSW17vSe6diSfeAdVqzF7aLwRw8UeA",
     "PLbWtSW17vSe5fIETshPhrUtKBojVar2Gs"
   ],
-  "startUpdateIndex": 89,
+  "startUpdateIndex": 156,
   "customUpdateIndexes":[],
   "tags": ["Open Source","Linux","Github Actions","BTCMAP","OSM","Open Street Map","ColcheteDAO","[]"],
   "genThumb": true,
   "forceGenThumb": false,
-  "run": false
+  "run": true
 }
