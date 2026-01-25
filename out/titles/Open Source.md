@@ -70,104 +70,104 @@
 [video](https://youtu.be/NG3TMjb5ps8)
 ## Erros no V0.dev OSM Field Filler UAIBIT #36
 [video](https://youtu.be/c9VId1pFEVk)
-## Sistema de ranking no BTCMAP #37
-[video](https://youtu.be/gjGh3an77WQ)
-## Requisições no CI BTC MAP #38
-[video](https://youtu.be/tqjl8oZRxyQ)
-## Obter itens do ranking BTC MAP #39
-[video](https://youtu.be/q8NF6M6aub4)
-## Salvar quantidade de merchants BTC MAP #40
-[video](https://youtu.be/PIJZlolUi0A)
-## Separar rankings BTC MAP #41
-[video](https://youtu.be/CXMOdBtqrTM)
-## Mostrar rankings no site BTC MAP #42
-[video](https://youtu.be/r2pqwoJVJz4)
-## Gráficos da página inicial #43
-[video](https://youtu.be/EklWUUV1w9s)
-## Leitura do código OSM Field Filler #44
-[video](https://youtu.be/31DlVVKT0Sk)
-## Debug BTC Ranking #45
-[video](https://youtu.be/Yc8jskSBPgk)
-## Debug sem arquivos BTC Ranking #46
-[video](https://youtu.be/a0kjMnJ0bKE)
-## Configuração inicial NIXOS #47
-[video](https://youtu.be/dJQlkoWOnUg)
-## Primeiro contato com UAIBIT data #48
-[video](https://youtu.be/bvoWCC22vZw)
-## Configuração do flake nix UAIBIT data #49
-[video](https://youtu.be/VrlBxID-a2g)
-## Permitir caracteres especiais no UAIBIT data #50
-[video](https://youtu.be/2e4ba5r9YKg)
-## Adicionar comunidades no BTCMAP usando UAIBIT data #51
-[video](https://youtu.be/Su0hHXU2DTY)
-## Correção URL alias UAIBIT data #52
-[video](https://youtu.be/VY8grewWk0o)
-## Fechar issue de crição de comunidade BTCMAP UAIBIT data #53
-[video](https://youtu.be/vPcDYR8c70U)
-## Preparar dados de comunidade BTCMAP UAIBIT data #54
-[video](https://youtu.be/352fL7GndVk)
-## Definir meta de commits de forma dinâmica no reminder actions #55
-[video](https://youtu.be/RokdowCVL80)
-## Usuário de forma dinâmica reminder actions #56
-[video](https://youtu.be/QyUY_dS4Z4E)
-## Criar arquivo informações de commit reminder actions #57
-[video](https://youtu.be/IHcmdDBSGZk)
-## Salvar arquivo no git reminder actions #58
-[video](https://youtu.be/0PfLznJBwAk)
-## Salvar no git reminder actions #59
-[video](https://youtu.be/HuoRFIST_dY)
-## Resolver erros de lógica reminder actions #60
-[video](https://youtu.be/5u40IPbfnCs)
-## North Jersey Bitcoin BTCMAP #61
-[video](https://youtu.be/jYEzVNYNeaI)
-## Obter dados de issue no GITEA #62
-[video](https://youtu.be/HIZXvilKqks)
-## Obter corpo de issue no GITEA #63
-[video](https://youtu.be/_gVc6TJkbdA)
-## Montar JSON body da issue GITEA #64
-[video](https://youtu.be/AyEzg95zQXQ)
-## Salvar contatos como array GITEA #65
-[video](https://youtu.be/oP4yAgBxFDo)
-## Análise para obter OSM ID GITEA #66
-[video](https://youtu.be/ijvBxNYLWz8)
-## Obter nome da comunidade GITEA #67
-[video](https://youtu.be/jX6NiKHfYWA)
-## Preencher tipo de área GITEA #68
-[video](https://youtu.be/YCD0Yn8Vi0E)
-## Adicionar propriedade Continente GITEA #69
-[video](https://youtu.be/ciudH100miI)
-## Obter ícone GITEA #70
-[video](https://youtu.be/h-T2inZmB90)
-## Obter endereço lightning GITEA #71
-[video](https://youtu.be/7DADPKsB1Oc)
-## Obter contatos GITEA #72
-[video](https://youtu.be/A_Mq1XgHRaA)
-## Obter descrição GITEA #73
-[video](https://youtu.be/-mz4z1O34QE)
-## Adicionar propriedades identificador do Open Street Map e Organização GITEA #74
-[video](https://youtu.be/q8aBlvuIdis)
-## Adicionar novo modelo de geração de comunidade UAIBIT data #75
-[video](https://youtu.be/Sqp0dTCfjW4)
-## Adicionar mapa UAIBIT data #76
-[video](https://youtu.be/HQszJqsSilw)
-## Adicionar tipo de área UAIBIT data #77
-[video](https://youtu.be/GsGxJ_Y1baU)
-## Adicionar continente UAIBIT data #78
-[video](https://youtu.be/2KT2MigMmp4)
-## Adicionar ícone UAIBIT data #79
-[video](https://youtu.be/Avo8K01stEI)
-## Obter dados da issue no GITEA #80
-[video](https://youtu.be/DmatRPdF4Ug)
-## Adicionar url alias UAIBIT data #81
-[video](https://youtu.be/BLS-dfHFVSM)
-## Adicionar contatos UAIBIT data #82
-[video](https://youtu.be/iIaduPaDYog)
-## Adicionar descrição UAIBIT data #83
-[video](https://youtu.be/axgs146ShSg)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## Adicionar organização UAIBIT data #84
 [video](https://youtu.be/TILNq0tRgAg)
-## Adicionar link da communidade UAIBIT data #85
-[video](https://youtu.be/e_nrNhJ6BKs)
+
+
 ## Adicionar organização markdown UAIBIT data #86
 [video](https://youtu.be/sjbLCK1hexM)
 ## Adicionar contador de população e data de senso UAIBIT data #87
@@ -460,3 +460,301 @@
 [video](https://youtu.be/DVNdsQzS3TA)
 ## Suporte a usuários BTCMAP #231
 [video](https://youtu.be/fJ-7HZlRfPw)
+## Adicionar imagem Columbus Bitcoin BTCMAP #232
+[video](https://youtu.be/kbM6c2v1OCQ)
+## Adicionar imagem Simcoe County Bitcoin BTCMAP #233
+[video](https://youtu.be/fYp6DxoALuc)
+## Adicionar imagem 603BTC BTCMAP #234
+[video](https://youtu.be/CvNWlYOqELI)
+## Adicionar imagem North Jersey Bitcoin BTCMAP #235
+[video](https://youtu.be/JiscqhLecEk)
+## Adicionar imagem Hoosier BItcoin BTCMAP #236
+[video](https://youtu.be/O1Q9nSsDVcU)
+## Adicionar imagem Central Florida Bitcoiners BTCMAP #237
+[video](https://youtu.be/UJOXbPmMtnU)
+## Adicionar imagem Bitcoin Grove BTCMAP #238
+[video](https://youtu.be/RpjEOAL2VGA)
+## Adicionar imagem Nola Bitcoin BTCMAP #239
+[video](https://youtu.be/fy76vY-ujPg)
+## Adicionar imagem Dallas Bitcoin BTCMAP #240
+[video](https://youtu.be/35W1_rHQtaY)
+## Adicionar imagem Bitcoin Ahuachapán BTCMAP #241
+[video](https://youtu.be/bAee9Iqu7yc)
+## Adicionar imagem Bitcoin Ciudad Guayana BTCMAP #242
+[video](https://youtu.be/G1jxyynIYJM)
+## Adicionar imagem BTC Conecta BTCMAP #243
+[video](https://youtu.be/D9-m3jPwR9o)
+## Adicionar imagem Fortalezas Canastra BTCMAP #244
+[video](https://youtu.be/ixHCTKuWeY0)
+## Adicionar imagem Triângulo Bitcoin BTCMAP #245
+[video](https://youtu.be/HiyI0usseTg)
+## Adicionar imagem Marata Bit BTCMAP #246
+[video](https://youtu.be/qDc3DmcciHk)
+## Adicionar imagem Bit Capivara JF BTCMAP #247
+[video](https://youtu.be/0R_fVxb1Iy8)
+## Adicionar imagem Bitcoin Búzios BTCMAP #248
+[video](https://youtu.be/8-tX7ErLJpM)
+## Adicionar imagem Pé Vermelho Bitcoin BTCMAP #249
+[video](https://youtu.be/ZDYm7ViL370)
+## Adicionar imagem Peixeiros do Bitcoin BTCMAP #250
+[video](https://youtu.be/nXMIPaU1f4I)
+## Adicionar imagem Bitcoin School Argentina BTCMAP #251
+[video](https://youtu.be/PF3neOUjG_E)
+## Adicionar imagem Bitcoin Kitui BTCMAP #252
+[video](https://youtu.be/ak5p947CFhU)
+## Adicionar imagem Melbourne Bitcoin Only BTCMAP #253
+[video](https://youtu.be/Eebqi6e2p3Q)
+## Adicionar imagem Avalon Bitcoiner's BTCMAP #254
+[video](https://youtu.be/uxHfNDgYAps)
+## Adicionar imagem Surfcoast Bitcoin BTCMAP #255
+[video](https://youtu.be/ZGQ_UeJsS-U)
+## Adicionar imagem Bitcoin Adelaide BTCMAP #256
+[video](https://youtu.be/saL0i-4hVYQ)
+## Adicionar imagem Bitcoin Only Gold Coast BTCMAP #257
+[video](https://youtu.be/ooqeyuMZzTw)
+## Adicionar imagem Bitcoin Noosa BTCMAP #258
+[video](https://youtu.be/WDSZ-TPV0DI)
+## Adicionar imagem Bitcoin FQN e Y BTC BTCMAP #259
+[video](https://youtu.be/DCo5EgxYMFA)
+## Adicionar imagem Samui Bits BTCMAP #260
+[video](https://youtu.be/UWTuAKMP938)
+## Adicionar imagem Larn Grong Mans BTCMAP #261
+[video](https://youtu.be/02gITuKD4NM)
+## Adicionar imagem Huai Phueng Project BTCMAP #262
+[video](https://youtu.be/9UF2_zHx9l4)
+## Adicionar imagem Bitcoin Uppsala BTCMAP #263
+[video](https://youtu.be/4KpMt8q_uUQ)
+## Adicionar imagem Enogtyve Samsø BTCMAP #264
+[video](https://youtu.be/aCUs6gkV8xM)
+## Adicionar imagem Bitcoin Leipzig BTCMAP #265
+[video](https://youtu.be/d56Ts8L_1mU)
+## Adicionar imagem Einundzwanzig Hochtaunus BTCMAP #266
+[video](https://youtu.be/mjRZY2aRPqE)
+## Adicionar imagem La Rochelle BTCMAP #267
+[video](https://youtu.be/q7rzmqRlsPs)
+## Adicionar imagem Newcastle Bitcoin Meetup BTCMAP #268
+[video](https://youtu.be/tgZxioLHsOg)
+## Adicionar imagem Lincolnshire Bitcoin Meetup BTCMAP #269
+[video](https://youtu.be/-gdMc2AfrD4)
+## Adicionar imagem Plymouth Bitcoiners Meetup BTCMAP #270
+[video](https://youtu.be/oL9uLwQlS40)
+## Adicionar imagem Bitcoin Apes Cascais Meetup BTCMAP #271
+[video](https://youtu.be/jbF6u3VjIWA)
+## Adicionar imagem Narbonne Meetup BTCMAP #272
+[video](https://youtu.be/8fRXjtmyFnc)
+## Adicionar imagem Cannes BTCMAP #273
+[video](https://youtu.be/NPd1H_Y2ZaQ)
+## Adicionar imagem Satoshi Spritz Bergamo BTCMAP #274
+[video](https://youtu.be/Gv6L2v4VwjE)
+## Adicionar imagem Einundzwanzig Ostschweiz BTCMAP #275
+[video](https://youtu.be/F0ePNj5ISCs)
+## Adicionar imagem Vingt et un Riviera Chablais BTCMAP #276
+[video](https://youtu.be/MckzaKAPtkE)
+## Adicionar imagem Chambery Bitcoin BTCMAP #277
+[video](https://youtu.be/I1VALro_iTk)
+## Adicionar imagem Bitcoin Beer BTCMAP #278
+[video](https://youtu.be/DkjG8MdWHMM)
+## Adicionar imagem Twenty One Kickoff BTCMAP #279
+[video](https://youtu.be/ijw82Bx09Jo)
+## Finalização atualização de imagens BTCMAP #280
+[video](https://youtu.be/ZNs_JXKPgCg)
+## Configuração inicial github BeloBTC #281
+[video](https://youtu.be/5HIKqIloM_w)
+## README base BeloBTC #282
+[video](https://youtu.be/TsI4WX8p6_s)
+## Timeline no perfil BeloBTC #283
+[video](https://youtu.be/LIZmyKNLsZY)
+## Código aberto no perfil BeloBTC #284
+[video](https://youtu.be/bDDSey24i48)
+## Doações no perfil BeloBTC #285
+[video](https://youtu.be/TXjd1SBZ90s)
+## Geração de chaves GPG BeloBTC #286
+[video](https://youtu.be/p_euqfUrPUY)
+## Issue template comunidade BeloBTC #287
+[video](https://youtu.be/5UxFfEZkiNE)
+## Issue template comércio BeloBTC #288
+[video](https://youtu.be/IcDPlpOLRPQ)
+## Eventos no perfil BeloBTC #289
+[video](https://youtu.be/SNox64Au2ew)
+## Resumo da timeline no perfil BeloBTC #290
+[video](https://youtu.be/OLxAemkcCSs)
+## Configuração inicial Streak Counter #291
+[video](https://youtu.be/LzeQh8sjRRY)
+## Retornar nome de usuário Streak Counter #292
+[video](https://youtu.be/nyl7W9_KYGg)
+## Retornar primeiro commit Streak Counter #293
+[video](https://youtu.be/GelgIldDiW0)
+## Retornar primeiro commit Streak Counter #294
+[video](https://youtu.be/LJrX675KGTU)
+## Contribuições do primeiro ano Streak Counter #295
+[video](https://youtu.be/k3ntpRTweA4)
+## Contribuições ano por ano Streak Counter #296
+[video](https://youtu.be/CHzVW3qPu6c)
+## Salvar arquivo com apenas contribuições do primeiro ano Streak Counter #297
+[video](https://youtu.be/6nbOY9ZoNZs)
+## Salvar arquivo com apenas contribuições do primeiro ano Streak Counter #298
+[video](https://youtu.be/4IpolL_YyAM)
+## Salvar contador diários de contribuições Streak Counter #299
+[video](https://youtu.be/D3F8oVjF1ZA)
+## Refatoração do Streak Counter #300
+[video](https://youtu.be/efDWbfCM-1E)
+## Implementação do Streak Counter #301
+[video](https://youtu.be/4BMsfAHz2J4)
+## Total contribuições Streak Counter #302
+[video](https://youtu.be/MxTA4Qr-nMI)
+## Média diária de contribuições Streak Counter #303
+[video](https://youtu.be/TboYqs6TIaI)
+## Recorde de Streak Counter #304
+[video](https://youtu.be/5z9M_uS51dU)
+## Salvar as informações Streak Counter #305
+[video](https://youtu.be/pFnAsTMW0kM)
+## Gerar badge Streak Counter #306
+[video](https://youtu.be/UJ__mnAdwWg)
+## Exibir data de início Streak Counter #307
+[video](https://youtu.be/FlCoD8Zv3f4)
+## Exibir data maior Streak Counter #308
+[video](https://youtu.be/9mE5E6V4RdE)
+## Corrigir espaçamento das barras Streak Counter #309
+[video](https://youtu.be/92shXTn0ims)
+## Rodar de forma dinâmica Streak Counter #310
+[video](https://youtu.be/lpu3OXjNpj8)
+## Configurar cron Streak Counter #311
+[video](https://youtu.be/bnT7psZf-TQ)
+## Resolver data atual da Streak Counter #312
+[video](https://youtu.be/MEuesmHtzR8)
+## Divisão por zero Streak Counter #313
+[video](https://youtu.be/p30CUSrxEME)
+## Silenciar requisições CURL Streak Counter #314
+[video](https://youtu.be/IiwLR56R-fk)
+## Validação não obter histórico de commit se usuário não existe Streak Counter #315
+[video](https://youtu.be/JabA6EZHRp0)
+## Validar data na geração de badges Streak Counter #316
+[video](https://youtu.be/3by21xi53bw)
+## Resolver alinhamento da badge Streak Counter #317
+[video](https://youtu.be/aCeqZEOSWoU)
+## Otimizar workflow para rodar mais rápido Streak Counter #318
+[video](https://youtu.be/CL_NaDySOWs)
+## Melhoria visual Streak Counter #319
+[video](https://youtu.be/LHLZiBMqBvs)
+## Lost media Streak Counter #320
+[video](https://youtu.be/qqv0xnTHQnE)
+## Otimizar cache CI Streak Counter #321
+[video](https://youtu.be/prATYfhWGT4)
+## Melhorar foguinho Streak Counter #322
+[video](https://youtu.be/w-0rcOroMXM)
+## Rodar separado cálculdo de Streak Counter #323
+[video](https://youtu.be/gfKn_bVbbuo)
+## Rodar separado salvar contribuições Streak Counter #324
+[video](https://youtu.be/LlMUXToT5qs)
+## Rodar separado gerador de badge Streak Counter #325
+[video](https://youtu.be/s8pleyM9f-M)
+## Rodar separado gerador de estatísticas Streak Counter #326
+[video](https://youtu.be/tl3Rv43ZBSc)
+## Exibir nome de usuário na badge Streak Counter #327
+[video](https://youtu.be/qcZChTZ4et0)
+## Mudar cor de fundo da badge Streak Counter #328
+[video](https://youtu.be/RdflYQk0Myg)
+## Mudar cor de texto da badge Streak Counter #329
+[video](https://youtu.be/R0bpN8L0BA4)
+## Mudar texto da badge Streak Counter #330
+[video](https://youtu.be/a7pIo6wwucU)
+## Testar badge no README Streak Counter #331
+[video](https://youtu.be/L09XmSKSRmM)
+## Permitir remover texto da badge README Streak Counter #332
+[video](https://youtu.be/vN4fdjkJArc)
+## Tamanho original se não usar tag Streak Counter #333
+[video](https://youtu.be/t0ELP6cJeRo)
+## Imagem de fundo na tag Streak Counter #334
+[video](https://youtu.be/A2L1ow4ZPow)
+## Permitir definir a cor da chama Streak Counter #335
+[video](https://youtu.be/KVLTZ_hu0tI)
+## Permitir definir a cor número total de contribuições Streak Counter #336
+[video](https://youtu.be/3Ufgyn8I9FE)
+## Permitir definir a cor texto total de contribuições Streak Counter #337
+[video](https://youtu.be/z5C_RyMSrD0)
+## Permitir definir a cor sub texto total de contribuições Streak Counter #338
+[video](https://youtu.be/aBF-AshCI8s)
+## Permitir definir a cor da Streak Counter #339
+[video](https://youtu.be/fs4MFUvpXkE)
+## Permitir definir a cor do texto da Streak Counter #340
+[video](https://youtu.be/GM9wKcTDDNA)
+## Permitir definir a cor do sub texto da Streak Counter #341
+[video](https://youtu.be/rQCabgBqQds)
+## Permitir definir a cor da máxima Streak Counter #342
+[video](https://youtu.be/YUAWGqkgf6Q)
+## Permitir definir a cor do texto da máxima Streak Counter #343
+[video](https://youtu.be/PKlorbhTI6c)
+## Permitir definir a cor do sub texto da máxima Streak Counter #344
+[video](https://youtu.be/k7i80COAu7w)
+## Permitir definir a cor do anel Streak Counter #345
+[video](https://youtu.be/aSmmxccGCJw)
+## Permitir definir a cor de fundo da badge Streak Counter #346
+[video](https://youtu.be/smXznsAWOlg)
+## Permitir definir a cor imagem de fundo da badge Streak Counter #347
+[video](https://youtu.be/pJgHjh1McvI)
+## Obter soma de contribuições por ano Streak Counter #348
+[video](https://youtu.be/DTPe8W6yjZQ)
+## Obter média de contribuição por ano Streak Counter #349
+[video](https://youtu.be/VlI_J09_C9o)
+## Escolher gráfico 3d de barra Streak Counter #350
+[video](https://youtu.be/B6eBYqc8zq0)
+## Máximo de contribuições em um dia Streak Counter #351
+[video](https://youtu.be/ihKjKSjd3Qk)
+## Montar dados do Skyscraper Streak Counter #352
+[video](https://youtu.be/g39S9UhrfQM)
+## Rodar Skyscraper Streak Counter #353
+[video](https://youtu.be/QcOsq-LmebY)
+## Alimentar dados no Skyscraper Streak Counter #354
+[video](https://youtu.be/ggAYAZgMC8s)
+## Páginas dinâmicas Skyscraper Streak Counter #355
+[video](https://youtu.be/UahwETrwANE)
+## Arquivos dinâmicos Skyscraper Streak Counter #356
+[video](https://youtu.be/faXkME9UL4E)
+## Largura dinâmica do Skyscraper Streak Counter #357
+[video](https://youtu.be/9gAGggomlQQ)
+## Skyscraper standalone Streak Counter #358
+[video](https://youtu.be/Gz0EO0r8M5I)
+## Escolher gráfico de dominância Streak Counter #359
+[video](https://youtu.be/9wSFSJRnYuI)
+## Gerar gráfico de dominância base Streak Counter #360
+[video](https://youtu.be/CGu3IMC91f4)
+## Popular gráfico de dominância Streak Counter #361
+[video](https://youtu.be/bzSw9wcoggg)
+## Escolher gráfico de commitment Streak Counter #362
+[video](https://youtu.be/4WDY_C1Nf2M)
+## Popular gráfico de commitment Streak Counter #363
+[video](https://youtu.be/dum0RKVibAw)
+## Blur na chama Streak Counter #364
+[video](https://youtu.be/jMl3QqF6VTA)
+## Definir se usa blur na chama Streak Counter #365
+[video](https://youtu.be/M2galnStsIk)
+## Definir intensidade blur na chama Streak Counter #366
+[video](https://youtu.be/VJKMIQqqZ5I)
+## Usar blur no anel Streak Counter #367
+[video](https://youtu.be/x5AOJ2DbFJ0)
+## Definir se usa blur no anel Streak Counter #368
+[video](https://youtu.be/LasNVmva_4Y)
+## Definir intensidade blur no anel Streak Counter #369
+[video](https://youtu.be/GlkRjb_MIkI)
+## Criar issue de organização de pastas Streak Counter #370
+[video](https://youtu.be/QogvUz4IOPQ)
+## Organizar pasta badges Streak Counter #371
+[video](https://youtu.be/Ogmux-fvzqY)
+## Organizar pasta config Streak Counter #372
+[video](https://youtu.be/Oira8nH9xLk)
+## Organizar pasta contributions Streak Counter #373
+[video](https://youtu.be/0oRA-Msup8M)
+## Organizar pasta data Streak Counter #374
+[video](https://youtu.be/rNAqKOQZq8k)
+## Organizar pasta images Streak Counter #375
+[video](https://youtu.be/LNZl_2uMMTY)
+## Organizar pasta statistics Streak Counter #376
+[video](https://youtu.be/SnmDe7EfQi4)
+## Organizar pasta data da Streak Counter #377
+[video](https://youtu.be/4ZTMVGhShn8)
+## Limpeza resiudal e teste de execução Streak Counter #378
+[video](https://youtu.be/uk2XwwFQKZE)
+## Workflow para rodar tudo Streak Counter #379
+[video](https://youtu.be/s8LpHmp-qUw)
+## Corrigir current Streak Counter #380
+[video](https://youtu.be/rq4PdAneip0)
