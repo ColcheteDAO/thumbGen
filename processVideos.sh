@@ -222,6 +222,7 @@ while IFS= read -r line; do
   elif [ $(checkPatternOcurrence "$line" '\*\*end\*\*') = 1 ]; then
     if [ $run = true ]; then
       while IFS= read -r lineTitle; do
+        imageIndex=$(echo "$lineTitle" | grep -oP '#\K\d+') 
         listLength=$(cat "config/$folder.json" | jq '.customUpdateIndexes | length')
         customUpdateIndex=-1
         if [[ "$listLength" -gt 0 ]]; then
@@ -230,51 +231,51 @@ while IFS= read -r line; do
         if [ $(checkPatternOcurrence "$lineTitle" '#') = 3 ]; then
           index=$((${index}+1))
         fi
-       if [[ ( "$listLength" -eq 0 && "$index" -ge "$startUpdateIndex" ) || \
-             ( "$listLength" -gt 0 && "$index" -eq "$customUpdateIndex" ) ]]; then
+       if [[ ( "$listLength" -eq 0 && "$imageIndex" -ge "$startUpdateIndex" ) || \
+             ( "$listLength" -gt 0 && "$imageIndex" -eq "$customUpdateIndex" ) ]]; then
           if [ $(checkPatternOcurrence "$lineTitle" '#') = 3 ]; then
             title=$(echo "$lineTitle" | cut -c 4-$((${#lineTitle}+2)))
             if [ "$4" = "Y" ] || [ $genThumb = true ]; then
-              if [ ${#customTitles[$folder$index]} -gt 10 ]; then
-                bash genThumb.sh "${customTitles[$folder$index]}" "$folder" 
+              if [ ${#customTitles[$folder$imageIndex]} -gt 10 ]; then
+                bash genThumb.sh "${customTitles[$folder$imageIndex]}" "$folder" 
               else
                 bash genThumb.sh "$title" "$folder" 
               fi
               mkdir -p "out/thumbs/$folder"
-              path="out/thumbs/$folder/$folder$index.png"
+              path="out/thumbs/$folder/$folder$imageIndex.png"
               echo "=========================="
               echo "out/thumbs/$folder"
               echo "$path"
               echo "=========================="
               diffCount=0
-              if [ -f "out/thumbs/$folder/$folder$index.png" ]; then
-                diffCount=$(compare -metric ae -fuzz XX% "out/thumbs/$folder/$folder$index.png" compose_under.png null: 2>&1) 
+              if [ -f "out/thumbs/$folder/$folder$imageIndex.png" ]; then
+                diffCount=$(compare -metric ae -fuzz XX% "out/thumbs/$folder/$folder$imageIndex.png" compose_under.png null: 2>&1) 
                 if [ "$diffCount" = 0 ]; then
-                  needUpdateThumb[$index]=false
+                  needUpdateThumb[$imageIndex]=false
                 else
                   mv compose_under.png "$path"
-                  needUpdateThumb[$index]=true
+                  needUpdateThumb[$imageIndex]=true
                 fi
               else
                 mv compose_under.png "$path"
-                needUpdateThumb[$index]=true
+                needUpdateThumb[$imageIndex]=true
               fi
             fi
           elif [ $(checkPatternOcurrence "$lineTitle" '\[video\]') = 1 ]; then
             customIndex=$((${customIndex}+1))
             videoId=$(echo "$lineTitle" | cut -c 26-$((${#lineTitle}-1)))
             fillSnippetVideo $videoId  
-            if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [ $index -ge $startUpdateIndex ]; then
+            if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [ $imageIndex -ge $startUpdateIndex ] || ( "$listLength" -gt 0 && "$imageIndex" -eq "$customUpdateIndex" ); then
               if [ "$4" = "Y" ] || [ $genThumb = true ]; then
-                if [ "${needUpdateThumb[$index]}" = true ] || [ $forceGenThumb = true ]; then
+                if [ "${needUpdateThumb[$imageIndex]}" = true ] || [ $forceGenThumb = true ]; then
                   echo "==============.................."
                   echo "UPDATED THE THUMB $videoId"
                   echo "==============.................."
                   sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path"
                 fi
               fi
-              description=$(jq '.['${index}-1'].description' "out/custom/$folder.json")
-              tags=$(jq '.['${index}-1'].tags' "out/custom/$folder.json")
+              description=$(jq '.['${imageIndex}-1'].description' "out/custom/$folder.json")
+              tags=$(jq '.['${imageIndex}-1'].tags' "out/custom/$folder.json")
               echo "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
               sendResquestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
               for row in $(echo ${playlists} | jq -c '.[]' -r); do
