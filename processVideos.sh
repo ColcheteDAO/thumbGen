@@ -265,15 +265,15 @@ while IFS= read -r line; do
             customIndex=$((${customIndex}+1))
             videoId=$(echo "$lineTitle" | cut -c 26-$((${#lineTitle}-1)))
             fillSnippetVideo $videoId  
-            if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [ $imageIndex -ge $startUpdateIndex ]; then
-              if [ "$4" = "Y" ] || [ $genThumb = true ]; then
-                if [ "${needUpdateThumb[$imageIndex]}" = true ] || [ $forceGenThumb = true ]; then
+            # if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [ $imageIndex -ge $startUpdateIndex ]; then
+            #   if [ "$4" = "Y" ] || [ $genThumb = true ]; then
+            #     if [ "${needUpdateThumb[$imageIndex]}" = true ] || [ $forceGenThumb = true ]; then
                   echo "==============.................."
                   echo "UPDATED THE THUMB $videoId"
                   echo "==============.................."
                   sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path"
-                fi
-              fi
+              #   fi
+              # fi
               description=$(jq '.['${imageIndex}-1'].description' "out/custom/$folder.json")
               tags=$(jq '.['${imageIndex}-1'].tags' "out/custom/$folder.json")
               echo "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
@@ -281,7 +281,7 @@ while IFS= read -r line; do
               for row in $(echo ${playlists} | jq -c '.[]' -r); do
                 addToPlaylist "POST" $row $videoId
               done
-            fi
+            # fi
           fi
         fi
       done < "out/titles/$folder.md"
