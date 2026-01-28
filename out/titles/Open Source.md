@@ -70,10 +70,10 @@
 [video](https://youtu.be/NG3TMjb5ps8)
 ## Erros no V0.dev OSM Field Filler UAIBIT #36
 [video](https://youtu.be/c9VId1pFEVk)
-
-
-
-
+## Sistema de ranking no BTCMAP #37
+[video](https://youtu.be/gjGh3an77WQ)
+## Requisições no CI BTC MAP #38
+[video](https://youtu.be/tqjl8oZRxyQ)
 
 
 
@@ -758,3 +758,7 @@
 [video](https://youtu.be/s8LpHmp-qUw)
 ## Corrigir current Streak Counter #380
 [video](https://youtu.be/rq4PdAneip0)
+## Obter commits de outra fonte reminder actions #381
+[video](https://youtu.be/D8mlk09p9Ro)
+## Sincronizar commits reminder actions #382
+[video](https://youtu.be/QsWVz7EMqR0)
