@@ -261,29 +261,30 @@ while IFS= read -r line; do
                 needUpdateThumb[$imageIndex]=true
               fi
             fi
-          elif [ $(checkPatternOcurrence "$lineTitle" '\[video\]') = 1 ]; then
+            fi
+          fi
+          if [ $(checkPatternOcurrence "$lineTitle" '\[video\]') = 1 ]; then
             customIndex=$((${customIndex}+1))
             videoId=$(echo "$lineTitle" | cut -c 26-$((${#lineTitle}-1)))
             fillSnippetVideo $videoId  
-            # if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [ $imageIndex -ge $startUpdateIndex ]; then
-            #   if [ "$4" = "Y" ] || [ $genThumb = true ]; then
-            #     if [ "${needUpdateThumb[$imageIndex]}" = true ] || [ $forceGenThumb = true ]; then
+            description=$(jq '.['${imageIndex}-1'].description' "out/custom/$folder.json")
+            if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [ $imageIndex -ge $startUpdateIndex ]; then
+              if [ "$4" = "Y" ] || [ $genThumb = true ]; then
+                if [ "${needUpdateThumb[$imageIndex]}" = true ] || [ $forceGenThumb = true ]; then
                   echo "==============.................."
                   echo "UPDATED THE THUMB $videoId"
                   echo "==============.................."
                   sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path"
-              #   fi
-              # fi
-              description=$(jq '.['${imageIndex}-1'].description' "out/custom/$folder.json")
+                fi
+              fi
               tags=$(jq '.['${imageIndex}-1'].tags' "out/custom/$folder.json")
               echo "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
               sendResquestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
               for row in $(echo ${playlists} | jq -c '.[]' -r); do
                 addToPlaylist "POST" $row $videoId
               done
-            # fi
+            fi
           fi
-        fi
       done < "out/titles/$folder.md"
     fi
   fi
