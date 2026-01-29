@@ -268,7 +268,7 @@ while IFS= read -r line; do
             videoId=$(echo "$lineTitle" | cut -c 26-$((${#lineTitle}-1)))
             fillSnippetVideo $videoId  
             description=$(jq '.['${imageIndex}-1'].description' "out/custom/$folder.json")
-            if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [ $imageIndex -ge $startUpdateIndex ]; then
+            if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [[ $imageIndex -ge $startUpdateIndex ]]; then
               if [ "$4" = "Y" ] || [ $genThumb = true ]; then
                 if [ "${needUpdateThumb[$imageIndex]}" = true ] || [ $forceGenThumb = true ]; then
                   echo "==============.................."
