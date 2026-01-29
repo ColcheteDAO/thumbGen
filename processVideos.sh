@@ -120,7 +120,7 @@ mountCustomTitles(){
 
 mountVideoCustomProps(){
   videoSeriesAmount=$(echo "$(expr $(wc -l < "out/titles/$1.md") / 2)")
-  defaultCustomVideoProp={"description":$(cat "config/$folder.json" | jq '.description'),"tags":$(cat "config/$folder.json" | jq '.tags'),"custom":false}
+  defaultCustomVideoProp={"description":$(cat "config/$folder.json" | jq '.description'),"tags":$(cat "config/$folder.json" | jq '.tags'),"custom":false,"updatedThumb":false}
   for i in $(seq 0 "$videoSeriesAmount");
   do
     isCustomProps=$(jq '.['$i'].custom // false' "out/custom/$1.json")
@@ -269,14 +269,15 @@ while IFS= read -r line; do
             videoId=$(echo "$lineTitle" | cut -c 26-$((${#lineTitle}-1)))
             fillSnippetVideo $videoId  
             description=$(jq '.['${imageIndex}-1'].description' "out/custom/$folder.json")
-            if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [[ $imageIndex -ge $startUpdateIndex ]]; then
-              if [ "$4" = "Y" ] || [ $genThumb = true ]; then
-                if [ "${needUpdateThumb[$imageIndex]}" = true ] || [ $forceGenThumb = true ]; then
+            if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [ $imageIndex -ge $startUpdateIndex ]; then
+              adjustedIndex=$((imageIndex-1))
+              isThumbUpdated=$(jq '.['$adjustedIndex'].updatedThumb // false' "out/custom/$adjustedIndex.json")
+              if [ "${needUpdateThumb[$imageIndex]}" = true ] || [ $forceGenThumb = true ] || [ $genThumb = true ] || [ $isThumbUpdated = false ]; then
                   echo "==============.................."
                   echo "UPDATED THE THUMB $videoId"
                   echo "==============.................."
                   sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path"
-                fi
+                  echo "$(jq '.['$adjustedIndex'].updatedThumb = true' "out/custom/$adjustedIndex.json")" > "out/custom/$adjustedIndex.json"
               fi
               tags=$(jq '.['${imageIndex}-1'].tags' "out/custom/$folder.json")
               echo "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
