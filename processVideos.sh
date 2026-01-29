@@ -1,4 +1,5 @@
 index=0
+imageIndex=0
 customIndex=0
 folder=''
 path=''
