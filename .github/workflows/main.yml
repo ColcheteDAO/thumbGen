@@ -8,6 +8,7 @@ jobs:
   thumGen:
     environment: main
     runs-on: ubuntu-latest
+    container: juancolchete/imagemagickgithubactions:latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
