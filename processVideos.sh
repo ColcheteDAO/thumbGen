@@ -271,13 +271,15 @@ while IFS= read -r line; do
             description=$(jq '.['${imageIndex}-1'].description' "out/custom/$folder.json")
             if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [[ $imageIndex -ge $startUpdateIndex ]]; then
               adjustedIndex=$((${imageIndex}-1))
-              isThumbUpdated=$(jq '.['$adjustedIndex'].updatedThumb // false' "out/custom/$adjustedIndex.json")
+              isThumbUpdated=$(jq '.['$adjustedIndex'].updatedThumb // false' "out/custom/$folder.json")
+              echo "isThumbUpdated: $isThumbUpdated"
+              echo "$(jq '.['$adjustedIndex']' "out/custom/$folder.json")"
               if [ "${needUpdateThumb[$imageIndex]}" = true ] || [ $forceGenThumb = true ] || [ $genThumb = true ] || [ $isThumbUpdated = false ]; then
                   echo "==============.................."
                   echo "UPDATED THE THUMB $videoId"
                   echo "==============.................."
                   sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path"
-                  echo "$(jq '.['$adjustedIndex'].updatedThumb = true' "out/custom/$adjustedIndex.json")" > "out/custom/$adjustedIndex.json"
+                  echo "$(jq '.['$adjustedIndex'].updatedThumb = true' "out/custom/$folder.json")" > "out/custom/$folder.json"
               fi
               tags=$(jq '.['${imageIndex}-1'].tags' "out/custom/$folder.json")
               echo "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
