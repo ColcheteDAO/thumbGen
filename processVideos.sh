@@ -276,7 +276,7 @@ while IFS= read -r line; do
               echo "$(jq '.['$adjustedIndex']' "out/custom/$folder.json")"
               if [ "${needUpdateThumb[$imageIndex]}" = true ] || [ $forceGenThumb = true ] || [ $genThumb = true ] || [ $isThumbUpdated = false ]; then
                   echo "==============.................."
-                  echo "UPDATED THE THUMB $videoId"
+                  echo "UPDATED THE THUMB $videoId $path"
                   echo "==============.................."
                   sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path"
                   echo "$(jq '.['$adjustedIndex'].updatedThumb = true' "out/custom/$folder.json")" > "out/custom/$folder.json"
