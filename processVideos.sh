@@ -223,14 +223,14 @@ while IFS= read -r line; do
   elif [ $(checkPatternOcurrence "$line" '\*\*end\*\*') = 1 ]; then
     if [ $run = true ]; then
       while IFS= read -r lineTitle; do
-        imageIndex=$(echo "$lineTitle" | grep -oP '#\K\d+') 
         listLength=$(cat "config/$folder.json" | jq '.customUpdateIndexes | length')
-        path="out/thumbs/$folder/$folder$imageIndex.png"
         customUpdateIndex=-1
         if [[ "$listLength" -gt 0 ]]; then
           customUpdateIndex=$(cat "config/$folder.json" | jq ".customUpdateIndexes[$customIndex]")
         fi
         if [ $(checkPatternOcurrence "$lineTitle" '#') = 3 ]; then
+          imageIndex=$(echo "$lineTitle" | grep -oP '#\K\d+') 
+          path="out/thumbs/$folder/$folder$imageIndex.png"
           index=$((${index}+1))
         fi
        if [[ ( "$listLength" -eq 0 && "$imageIndex" -ge "$startUpdateIndex" ) || \
