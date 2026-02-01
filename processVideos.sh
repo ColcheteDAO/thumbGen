@@ -225,6 +225,7 @@ while IFS= read -r line; do
       while IFS= read -r lineTitle; do
         imageIndex=$(echo "$lineTitle" | grep -oP '#\K\d+') 
         listLength=$(cat "config/$folder.json" | jq '.customUpdateIndexes | length')
+        path="out/thumbs/$folder/$folder$imageIndex.png"
         customUpdateIndex=-1
         if [[ "$listLength" -gt 0 ]]; then
           customUpdateIndex=$(cat "config/$folder.json" | jq ".customUpdateIndexes[$customIndex]")
@@ -243,7 +244,6 @@ while IFS= read -r line; do
                 bash genThumb.sh "$title" "$folder" 
               fi
               mkdir -p "out/thumbs/$folder"
-              path="out/thumbs/$folder/$folder$imageIndex.png"
               echo "=========================="
               echo "out/thumbs/$folder"
               echo "$path"
