@@ -28,6 +28,7 @@ jobs:
         id: uploadGit
         run: |
           if [[ `git status --porcelain` ]]; then
+            git config --global --add safe.directory /__w/thumbGen/thumbGen
             git config --global user.name "juancolchete"
             git config --global user.email "juancolchete@gmail.com"
             git add . 
