@@ -267,8 +267,8 @@ while IFS= read -r line; do
               customIndex=$((${customIndex}+1))
               videoId=$(echo "$lineTitle" | cut -c 26-$((${#lineTitle}-1)))
               fillSnippetVideo $videoId  
-              description=$(jq '.['${imageIndex}-1'].description' "out/custom/$folder.json")
               adjustedIndex=$((${imageIndex}-1))
+              description=$(jq '.['${adjustedIndex}'].description' "out/custom/$folder.json")
               isThumbUpdated=$(jq '.['$adjustedIndex'].updatedThumb // false' "out/custom/$folder.json")
               if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [[ $imageIndex -ge $startUpdateIndex ]] || [ $isThumbUpdated = false ]; then
                 if [ "${needUpdateThumb[$imageIndex]}" = true ] || [ $forceGenThumb = true ] || [ $genThumb = true ] || [ $isThumbUpdated = false ]; then
@@ -278,7 +278,7 @@ while IFS= read -r line; do
                     sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path"
                     echo "$(jq '.['$adjustedIndex'].updatedThumb = true' "out/custom/$folder.json")" > "out/custom/$folder.json"
                 fi
-                tags=$(jq '.['${imageIndex}-1'].tags' "out/custom/$folder.json")
+                tags=$(jq '.['${adjustedIndex}'].tags' "out/custom/$folder.json")
                 echo "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
                 sendResquestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
                 for row in $(echo ${playlists} | jq -c '.[]' -r); do
