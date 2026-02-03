@@ -26,6 +26,7 @@ jobs:
          path: out/titles
       - name: Upload to git
         id: uploadGit
+        shell: bash
         run: |
           if [[ `git status --porcelain` ]]; then
             git config --global --add safe.directory /__w/thumbGen/thumbGen
