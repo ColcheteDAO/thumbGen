@@ -271,7 +271,7 @@ while IFS= read -r line; do
               description=$(jq '.['${adjustedIndex}'].description' "out/custom/$folder.json")
               isThumbUpdated=$(jq '.['$adjustedIndex'].updatedThumb // false' "out/custom/$folder.json")
               if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [[ $imageIndex -ge $startUpdateIndex ]] || [ $isThumbUpdated = false ]; then
-                if [ "${needUpdateThumb[$imageIndex]}" = true ] || [ $forceGenThumb = true ] || [ $genThumb = true ] || [ $isThumbUpdated = false ]; then
+                if [ "${needUpdateThumb[$imageIndex]}" = true ] || [ $forceGenThumb = true ] || [ $isThumbUpdated = false ]; then
                     echo "==============.................."
                     echo "UPDATED THE THUMB $videoId $path"
                     echo "==============.................."
