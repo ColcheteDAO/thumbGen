@@ -102,12 +102,12 @@
 [video](https://youtu.be/Su0hHXU2DTY)
 ## Correção URL alias UAIBIT data #52
 [video](https://youtu.be/VY8grewWk0o)
-
-
-
-
-
-
+## Fechar issue de crição de comunidade BTCMAP UAIBIT data #53
+[video](https://youtu.be/vPcDYR8c70U)
+## Preparar dados de comunidade BTCMAP UAIBIT data #54
+[video](https://youtu.be/352fL7GndVk)
+## Definir meta de commits de forma dinâmica no reminder actions #55
+[video](https://youtu.be/RokdowCVL80)
 
 
 
@@ -796,3 +796,9 @@
 [video](https://youtu.be/KFt4P3JZVUk)
 ## Adicionar comunidade Bitcoin Santa Ana BTCMAP #399
 [video](https://youtu.be/g_9LBlJpXe8)
+## Commits repetitivos Streak Counter #400
+[video](https://youtu.be/7g9oQrKqyBs)
+## Resolver total de contribuições Streak Counter #401
+[video](https://youtu.be/xKOsE-KqgZY)
+## Exibir qual ação subiu arquivo Streak Counter #402
+[video](https://youtu.be/_Nk3K9WhZxA)
