@@ -128,7 +128,6 @@ mountVideoCustomProps(){
       videoTitle=$(sed "$lineIndex!d" "out/titles/$1.md" )
       defaultCustomVideoProp=$(jq -n --arg title "$videoTitle" --argjson config "$(cat "config/$folder.json")" \
       '{title: $title, description: $config.description, tags: $config.tags, custom: false, updatedThumb: false}' -c)
-      echo $defaultCustomVideoProp
       echo "$(jq '.['$i'] = '"$defaultCustomVideoProp"'' "out/custom/$1.json")" > "out/custom/$1.json" 
       lineIndex=$(( lineIndex + 2 ))
     }
