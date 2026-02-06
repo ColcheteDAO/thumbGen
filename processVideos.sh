@@ -237,7 +237,7 @@ while IFS= read -r line; do
              ( "$listLength" -gt 0 && "$imageIndex" -eq "$customUpdateIndex" ) ]]; then
           if [ $(checkPatternOcurrence "$lineTitle" '#') = 3 ]; then
             title=$(echo "$lineTitle" | cut -c 4-$((${#lineTitle}+2)))
-            if [ "$4" = "Y" ] || [ $genThumb = true ]; then
+            if [ "$4" = "Y" ] || [ $genThumb = true ] || [ $forceGenThumb = true ]; then
               if [ ${#customTitles[$folder$imageIndex]} -gt 10 ]; then
                 bash genThumb.sh "${customTitles[$folder$imageIndex]}" "$folder" 
               else
@@ -271,9 +271,9 @@ while IFS= read -r line; do
               description=$(jq '.['${adjustedIndex}'].description' "out/custom/$folder.json")
               isThumbUpdated=$(jq '.['$adjustedIndex'].updatedThumb // false' "out/custom/$folder.json")
               if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [[ $imageIndex -ge $startUpdateIndex ]] || [ $isThumbUpdated = false ]; then
-                if [ "${needUpdateThumb[$imageIndex]}" = true ] || [ $forceGenThumb = true ] || [ $genThumb = true ] || [ $isThumbUpdated = false ]; then
+                if [ "${needUpdateThumb[$imageIndex]}" = true ] || [ $forceGenThumb = true ] || [ $isThumbUpdated = false ]; then
                     echo "==============.................."
-                    echo "UPDATED THE THUMB $videoId $path ${needUpdateThumb[$imageIndex]} $forceGenThumb $genThumb $isThumbUpdated"
+                    echo "UPDATED THE THUMB $videoId $path"
                     echo "==============.................."
                     sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path"
                     echo "$(jq '.['$adjustedIndex'].updatedThumb = true' "out/custom/$folder.json")" > "out/custom/$folder.json"
