@@ -126,7 +126,7 @@ mountVideoCustomProps(){
     isCustomProps=$(jq '.['$i'].custom // false' "out/custom/$1.json")
     [[ $isCustomProps == false ]] && {
       videoTitle=$(sed "$lineIndex!d" "out/titles/$1.md" )
-      defaultCustomVideoProp={"title":"'$videoTitle'","description":$(cat "config/$folder.json" | jq '.description'),"tags":$(cat "config/$folder.json" | jq '.tags'),"custom":false,"updatedThumb":false}
+      defaultCustomVideoProp={"title":""$videoTitle"","description":$(cat "config/$folder.json" | jq '.description'),"tags":$(cat "config/$folder.json" | jq '.tags'),"custom":false,"updatedThumb":false}
       echo $defaultCustomVideoProp
       echo "$(jq '.['$i'] = '"$defaultCustomVideoProp"'' "out/custom/$1.json")" > "out/custom/$1.json" 
       lineIndex=$(( lineIndex + 2 ))
