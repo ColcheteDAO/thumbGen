@@ -121,14 +121,13 @@ mountCustomTitles(){
 mountVideoCustomProps(){
   videoSeriesAmount=$(echo "$(expr $(wc -l < "out/titles/$1.md") / 2)")
   lineIndex=1
-  defaultCustomVideoProp={"title":"","description":$(cat "config/$folder.json" | jq '.description'),"tags":$(cat "config/$folder.json" | jq '.tags'),"custom":false,"updatedThumb":false}
   for i in $(seq 0 "$videoSeriesAmount");
   do
     isCustomProps=$(jq '.['$i'].custom // false' "out/custom/$1.json")
     [[ $isCustomProps == false ]] && {
+      defaultCustomVideoProp={"title":"$videoTitle","description":$(cat "config/$folder.json" | jq '.description'),"tags":$(cat "config/$folder.json" | jq '.tags'),"custom":false,"updatedThumb":false}
       videoTitle=$(sed "$lineIndex!d" "out/titles/$1.md" )
       echo "$(jq '.['$i'] = '"$defaultCustomVideoProp"'' "out/custom/$1.json")" > "out/custom/$1.json" 
-      echo "$(jq '.['$i'].title = '"$videoTitle"'' "out/custom/$1.json")" > "out/custom/$1.json" 
       lineIndex=$(( lineIndex + 2 ))
     }
   done
