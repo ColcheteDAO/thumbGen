@@ -108,10 +108,10 @@
 [video](https://youtu.be/352fL7GndVk)
 ## Definir meta de commits de forma dinâmica no reminder actions #55
 [video](https://youtu.be/RokdowCVL80)
-
-
-
-
+## Usuário de forma dinâmica reminder actions #56
+[video](https://youtu.be/QyUY_dS4Z4E)
+## Criar arquivo informações de commit reminder actions #57
+[video](https://youtu.be/IHcmdDBSGZk)
 
 
 
@@ -802,3 +802,7 @@
 [video](https://youtu.be/xKOsE-KqgZY)
 ## Exibir qual ação subiu arquivo Streak Counter #402
 [video](https://youtu.be/_Nk3K9WhZxA)
+## Montar container de transmissão ao vivo streamLive #403
+[video](https://youtu.be/WnpNzKrCt_g)
+## Vídeo não encontrado streamLive #404
+[video](https://youtu.be/2Lzic8NMOSc)
