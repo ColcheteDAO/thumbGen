@@ -248,10 +248,6 @@ while IFS= read -r line; do
                 bash genThumb.sh "$title" "$folder" 
               fi
               mkdir -p "out/thumbs/$folder"
-              echo "=========================="
-              echo "out/thumbs/$folder"
-              echo "$path"
-              echo "=========================="
               diffCount=0
               if [ -f "out/thumbs/$folder/$folder$imageIndex.png" ]; then
                 diffCount=$(compare -metric ae -fuzz XX% "out/thumbs/$folder/$folder$imageIndex.png" compose_under.png null: 2>&1) 
@@ -277,14 +273,13 @@ while IFS= read -r line; do
               if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [[ $imageIndex -ge $startUpdateIndex ]] || [ $isThumbUpdated = false ]; then
                 if [ "${needUpdateThumb[$imageIndex]}" = true ] || [ $forceGenThumb = true ] || [ $isThumbUpdated = false ]; then
                     echo "==============.................."
-                    echo "UPDATED THE THUMB $videoId $path ${needUpdateThumb[$imageIndex]} $forceGenThumb $isThumbUpdated $folder $(jq '.['$adjustedIndex'].updatedThumb' "out/custom/$folder.json") $adjustedIndex"
-                    echo "$(jq '.['$adjustedIndex']' "out/custom/$folder.json")"
+                    echo "UPDATED THE THUMB $videoId $path"
                     echo "==============.................."
                     sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path"
                     echo "$(jq '.['$adjustedIndex'].updatedThumb = true' "out/custom/$folder.json")" > "out/custom/$folder.json"
                 fi
                 tags=$(jq '.['${adjustedIndex}'].tags' "out/custom/$folder.json")
-                echo "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
+                updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags"
                 sendResquestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
                 for row in $(echo ${playlists} | jq -c '.[]' -r); do
                   addToPlaylist "POST" $row $videoId
