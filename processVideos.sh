@@ -33,22 +33,6 @@ mountPlaylistPayload(){
   echo $updatePlaylistJSON
 }
 
-updateVideoPayload(){
-  updateVideoJSON=$(printf '{
-                            "id":"%s",
-                            "snippet":
-                            {
-                              "description":%s,
-                              "title":"%s",
-                              "categoryId":"%s",
-                              "defaultLanguage":"%s",
-                              "defaultAudioLanguage":"%s",
-                              "tags":%s
-                            }
-                          }' "$1" "$2" "$3" "$4" "$5" "$6" "$7")
-  echo $updateVideoJSON
-}
-
 handleRequestErrors(){
   if [ $(checkPatternOcurrence "$1" '"error":') = 1 ]; then
     echo "error" 
@@ -279,7 +263,6 @@ while IFS= read -r line; do
                     echo "$(jq '.['$adjustedIndex'].updatedThumb = true' "out/custom/$folder.json")" > "out/custom/$folder.json"
                 fi
                 tags=$(jq '.['${adjustedIndex}'].tags' "out/custom/$folder.json")
-                updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags"
                 sendResquestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")"
                 for row in $(echo ${playlists} | jq -c '.[]' -r); do
                   addToPlaylist "POST" $row $videoId
