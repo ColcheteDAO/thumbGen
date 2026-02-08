@@ -18,6 +18,8 @@ errors[0]="Quota Exceeded"
 urlBaseAPI='https://youtube.googleapis.com'
 urlBaseAuth='https://oauth2.googleapis.com'
 sendRequestWithPayloadData={}
+updatePlaylistData={}
+updateThumbData={}
 ACCESS_TOKEN=$(curl -s --location --request POST "$urlBaseAuth/token?client_secret=$1&grant_type=refresh_token&refresh_token=$2&client_id=$3" | jq .access_token | tr -d '"')
 mountPlaylistPayload(){
   updatePlaylistJSON=$(printf '{
@@ -276,12 +278,12 @@ while IFS= read -r line; do
                     echo "==============.................."
                     echo "UPDATED THE THUMB $videoId $path"
                     echo "==============.................."
-                    sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path"
+                    updateThumbData=$(sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path")
                     echo "$(jq '.['$adjustedIndex'].updatedThumb = true' "out/custom/$folder.json")" > "out/custom/$folder.json"
                     tags=$(jq '.['${adjustedIndex}'].tags' "out/custom/$folder.json")
                     sendRequestWithPayload=$(sendRequestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")")
                     for row in $(echo ${playlists} | jq -c '.[]' -r); do
-                      addToPlaylist "POST" $row $videoId
+                      updatePlaylistData=$(addToPlaylist "POST" $row $videoId)
                     done
                 fi
               fi
