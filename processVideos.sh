@@ -33,6 +33,22 @@ mountPlaylistPayload(){
   echo $updatePlaylistJSON
 }
 
+updateVideoPayload(){
+  updateVideoJSON=$(printf '{
+                            "id":"%s",
+                            "snippet":
+                            {
+                              "description":%s,
+                              "title":"%s",
+                              "categoryId":"%s",
+                              "defaultLanguage":"%s",
+                              "defaultAudioLanguage":"%s",
+                              "tags":%s
+                            }
+                          }' "$1" "$2" "$3" "$4" "$5" "$6" "$7")
+  echo $updateVideoJSON
+}
+
 handleRequestErrors(){
   if [ $(checkPatternOcurrence "$1" '"error":') = 1 ]; then
     echo "error" 
