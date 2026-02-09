@@ -76,7 +76,7 @@ sendGetRequest(){
 }
 
 sendDataBinaryRequest(){
-  req=$(curl -s --request $1 -v "$2" \
+  req=$(curl -sS --request $1 -v "$2" \
   --header "Authorization: Bearer $ACCESS_TOKEN" \
   --header "$3" \
   --data-binary "$4")
