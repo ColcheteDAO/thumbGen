@@ -76,7 +76,7 @@ sendGetRequest(){
 }
 
 sendDataBinaryRequest(){
-  req=$(curl -sS --request $1 -v "$2" \
+  req=$(curl -sS -o /dev/null --request $1 -v "$2" \
   --header "Authorization: Bearer $ACCESS_TOKEN" \
   --header "$3" \
   --data-binary "$4")
@@ -275,9 +275,6 @@ while IFS= read -r line; do
               isThumbUpdated=$(jq '.['$adjustedIndex'].updatedThumb // false' "out/custom/$folder.json")
               if [[ ! -z "$description" ]] && [ $descriptionLen -lt 10 ] || [ "$4" = "Y" ] || [[ $imageIndex -ge $startUpdateIndex ]] || [ $isThumbUpdated = false ]; then
                 if [ "${needUpdateThumb[$imageIndex]}" = true ] || [ $forceGenThumb = true ] || [ $isThumbUpdated = false ]; then
-                    echo "==============.................."
-                    echo "UPDATED THE THUMB $videoId $path"
-                    echo "==============.................."
                     updateThumbData=$(sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path")
                     echo "$(jq '.['$adjustedIndex'].updatedThumb = true' "out/custom/$folder.json")" > "out/custom/$folder.json"
                     tags=$(jq '.['${adjustedIndex}'].tags' "out/custom/$folder.json")
@@ -285,6 +282,9 @@ while IFS= read -r line; do
                     for row in $(echo ${playlists} | jq -c '.[]' -r); do
                       updatePlaylistData=$(addToPlaylist "POST" $row $videoId)
                     done
+                    echo "==============.................."
+                    echo "UPDATED THE THUMB $videoId $path"
+                    echo "==============.................."
                 fi
               fi
             fi
