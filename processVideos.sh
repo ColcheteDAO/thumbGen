@@ -66,7 +66,7 @@ sendRequestWithPayload(){
     --header "Accept: application/json" \
     --header "Content-Type: application/json" \
     --data "$(echo $3)")
-  echo "$(handleRequestErrors "$req")"
+  # echo "$(handleRequestErrors "$req")"
 }
 
 sendGetRequest(){
