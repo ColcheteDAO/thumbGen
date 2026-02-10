@@ -5533,7 +5533,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Permitir definir a cor do anel Streak Counter #347",
@@ -5549,7 +5549,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Permitir definir a cor de fundo da badge Streak Counter #348",
