@@ -76,11 +76,11 @@ sendGetRequest(){
 }
 
 sendDataBinaryRequest(){
-  req=$(curl -s --request $1 -v "$2" \
+  req=$(curl -s --request $1 "$2" \
   --header "Authorization: Bearer $ACCESS_TOKEN" \
   --header "$3" \
   --data-binary "$4")
-  # echo "$(handleRequestErrors "$req")"
+  echo "$(handleRequestErrors "$req")"
 }
 
 getPlaylistItemCount(){
