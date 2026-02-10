@@ -61,11 +61,16 @@ handleRequestErrors(){
 }
 
 sendRequestWithPayload(){
-  req=$(curl -s --request $1 \
+  # req=$(curl -s --request $1 \
+  #   $2 --header "Authorization: Bearer $ACCESS_TOKEN" \
+  #   --header "Accept: application/json" \
+  #   --header "Content-Type: application/json" \
+  #   --data "$(echo $3)")
+  curl -s --request $1 \
     $2 --header "Authorization: Bearer $ACCESS_TOKEN" \
     --header "Accept: application/json" \
     --header "Content-Type: application/json" \
-    --data "$(echo $3)")
+    --data "$(echo $3)" > /dev/null
   # echo "$(handleRequestErrors "$req")"
 }
 
