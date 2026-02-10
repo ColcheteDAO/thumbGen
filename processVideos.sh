@@ -283,7 +283,7 @@ while IFS= read -r line; do
                     updateThumbData=$(sendDataBinaryRequest "POST" "$urlBaseAPI/upload/youtube/v3/thumbnails/set?videoId=$videoId&uploadType=media" "Content-Type: image/jpeg" "@$path")
                     echo "$(jq '.['$adjustedIndex'].updatedThumb = true' "out/custom/$folder.json")" > "out/custom/$folder.json"
                     tags=$(jq '.['${adjustedIndex}'].tags' "out/custom/$folder.json")
-                    sendRequestWithPayload=$(sendRequestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")")
+                    # sendRequestWithPayload=$(sendRequestWithPayload "PUT" "$urlBaseAPI/youtube/v3/videos?part=snippet" "$(updateVideoPayload "$videoId" "$description" "$titleVideo" "28" "pt-BR" "pt-BR" "$tags")")
                     for row in $(echo ${playlists} | jq -c '.[]' -r); do
                       updatePlaylistData=$(addToPlaylist "POST" $row $videoId)
                     done
