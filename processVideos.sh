@@ -80,7 +80,7 @@ sendDataBinaryRequest(){
   --header "Authorization: Bearer $ACCESS_TOKEN" \
   --header "$3" \
   --data-binary "$4")
-  echo "$(handleRequestErrors "$req")"
+  # echo "$(handleRequestErrors "$req")"
 }
 
 getPlaylistItemCount(){
