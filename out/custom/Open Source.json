@@ -4797,7 +4797,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Salvar contador diários de contribuições Streak Counter #301",
@@ -4813,7 +4813,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Refatoração do Streak Counter #302",
@@ -4829,7 +4829,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Implementação do Streak Counter #303",
@@ -4845,7 +4845,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Total contribuições Streak Counter #304",
@@ -4861,7 +4861,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Média diária de contribuições Streak Counter #305",
@@ -4877,7 +4877,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Recorde de Streak Counter #306",
@@ -4893,7 +4893,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Salvar as informações Streak Counter #307",
@@ -4909,7 +4909,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Gerar badge Streak Counter #308",
@@ -4925,7 +4925,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Exibir data de início Streak Counter #309",
@@ -4941,7 +4941,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Exibir data maior Streak Counter #310",
@@ -4957,7 +4957,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Corrigir espaçamento das barras Streak Counter #311",
@@ -4973,7 +4973,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Rodar de forma dinâmica Streak Counter #312",
@@ -4989,7 +4989,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Configurar cron Streak Counter #313",
@@ -5005,7 +5005,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Resolver data atual da Streak Counter #314",
@@ -5021,7 +5021,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Divisão por zero Streak Counter #315",
@@ -5037,7 +5037,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Silenciar requisições CURL Streak Counter #316",
@@ -5053,7 +5053,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Validação não obter histórico de commit se usuário não existe Streak Counter #317",
@@ -5069,7 +5069,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Validar data na geração de badges Streak Counter #318",
@@ -5085,7 +5085,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Resolver alinhamento da badge Streak Counter #319",
@@ -5101,7 +5101,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Otimizar workflow para rodar mais rápido Streak Counter #320",
@@ -5117,7 +5117,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Melhoria visual Streak Counter #321",
@@ -5133,7 +5133,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Lost media Streak Counter #322",
@@ -5149,7 +5149,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Otimizar cache CI Streak Counter #323",
@@ -5165,7 +5165,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Melhorar foguinho Streak Counter #324",
@@ -5181,7 +5181,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Rodar separado cálculdo de Streak Counter #325",
@@ -5197,7 +5197,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Rodar separado salvar contribuições Streak Counter #326",
@@ -5213,7 +5213,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Rodar separado gerador de badge Streak Counter #327",
@@ -5229,7 +5229,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Rodar separado gerador de estatísticas Streak Counter #328",
@@ -5245,7 +5245,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Exibir nome de usuário na badge Streak Counter #329",
@@ -5261,7 +5261,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Mudar cor de fundo da badge Streak Counter #330",
@@ -5277,7 +5277,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Mudar cor de texto da badge Streak Counter #331",
@@ -5293,7 +5293,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Mudar texto da badge Streak Counter #332",
@@ -5309,7 +5309,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Testar badge no README Streak Counter #333",
@@ -5325,7 +5325,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Permitir remover texto da badge README Streak Counter #334",
@@ -5341,7 +5341,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Tamanho original se não usar tag Streak Counter #335",
@@ -5357,7 +5357,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Imagem de fundo na tag Streak Counter #336",
@@ -5373,7 +5373,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Permitir definir a cor da chama Streak Counter #337",
@@ -5389,7 +5389,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Permitir definir a cor número total de contribuições Streak Counter #338",
