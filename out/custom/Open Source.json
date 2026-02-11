@@ -5421,7 +5421,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Permitir definir a cor sub texto total de contribuições Streak Counter #340",
@@ -5437,7 +5437,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Permitir definir a cor da Streak Counter #341",
@@ -5453,7 +5453,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Permitir definir a cor do texto da Streak Counter #342",
@@ -5469,7 +5469,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Permitir definir a cor do sub texto da Streak Counter #343",
@@ -5485,7 +5485,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Permitir definir a cor da máxima Streak Counter #344",
@@ -5501,7 +5501,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Permitir definir a cor do texto da máxima Streak Counter #345",
@@ -5517,7 +5517,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Permitir definir a cor do sub texto da máxima Streak Counter #346",
@@ -6493,6 +6493,6 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   }
 ]
