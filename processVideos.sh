@@ -99,7 +99,7 @@ addToPlaylist(){
   playlistItemsCount=$(getPlaylistItemCount $2 $3)
   if [ $playlistItemsCount = 0 ]; then
     playlistPayload=$(mountPlaylistPayload $2 $videoId)
-    sendResquestWithPayload $1 "$urlBaseAPI/youtube/v3/playlistItems?part=snippet" "$playlistPayload"   
+    sendRequestWithPayload $1 "$urlBaseAPI/youtube/v3/playlistItems?part=snippet" "$playlistPayload"   
   fi
 }
 
