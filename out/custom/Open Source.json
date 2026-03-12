@@ -3837,7 +3837,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Adicionar imagem Bitcoin Ahuachapán BTCMAP #241",
@@ -3853,7 +3853,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Adicionar imagem Bitcoin Ciudad Guayana BTCMAP #242",
@@ -3869,7 +3869,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Adicionar imagem BTC Conecta BTCMAP #243",
@@ -3885,7 +3885,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Adicionar imagem Fortalezas Canastra BTCMAP #244",
@@ -3901,7 +3901,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Adicionar imagem Triângulo Bitcoin BTCMAP #245",
@@ -3917,7 +3917,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Adicionar imagem Bitcoin BH BTCMAP #246",
@@ -3933,7 +3933,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Adicionar imagem Marata Bit BTCMAP #247",
@@ -3949,7 +3949,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Adicionar imagem Bit Capivara JF BTCMAP #248",
@@ -3965,7 +3965,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Adicionar imagem Bitcoin Búzios BTCMAP #249",
@@ -3981,7 +3981,7 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
   },
   {
     "title": "## Adicionar imagem Pé Vermelho Bitcoin BTCMAP #250",
@@ -6509,6 +6509,9 @@
       "[]"
     ],
     "custom": true,
-    "updatedThumb": false
+    "updatedThumb": true
+  },
+  {
+    "updatedThumb": true
   }
 ]

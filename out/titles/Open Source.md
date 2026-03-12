@@ -114,10 +114,10 @@
 [video](https://youtu.be/IHcmdDBSGZk)
 ## Salvar arquivo no git reminder actions #58
 [video](https://youtu.be/0PfLznJBwAk)
-
-
-
-
+## Resolver erros de lógica reminder actions #59
+[video](https://youtu.be/5u40IPbfnCs)
+## North Jersey Bitcoin BTCMAP #60
+[video](https://youtu.be/jYEzVNYNeaI)
 
 
 
@@ -810,3 +810,7 @@
 [video](https://youtu.be/-RcgDFcTcZk)
 ## Multi transmissão streamLive #406
 [video](https://youtu.be/0dd0FdrW5FA)
+## Resolução Colchete turns 24 #407
+[video](https://youtu.be/shQ0QYSSoHA)
+## Inner html tratamento de strings admin BTCMAP #408
+[video](https://youtu.be/ckHE042KrM4)
