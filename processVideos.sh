@@ -245,7 +245,12 @@ while IFS= read -r line; do
           if [ $(checkPatternOcurrence "$lineTitle" '#') = 3 ]; then
             title=$(echo "$lineTitle" | cut -c 4-$((${#lineTitle}+2)))
             if [ "$4" = "Y" ] || [ $genThumb = true ] || [ $forceGenThumb = true ]; then
-              if [ ${#customTitles[$folder$imageIndex]} -gt 10 ]; then
+              customTitle=$(jq '.['$((${imageIndex}-1))'].title' "out/custom/$folder.json")
+              echo "-----------------"
+              echo "custom title"
+              echo $customTitle
+              echo "------------"
+              if [ ${#customTitle} -gt 10 ]; then
                 bash genThumb.sh "${customTitles[$folder$imageIndex]}" "$folder" 
               else
                 bash genThumb.sh "$title" "$folder" 
