@@ -251,7 +251,7 @@ while IFS= read -r line; do
               echo $customTitle
               echo "------------"
               if [ ${#customTitle} -gt 10 ]; then
-                bash genThumb.sh "${customTitles[$folder$imageIndex]}" "$folder" 
+                bash genThumb.sh "$customTitle" "$folder" 
               else
                 bash genThumb.sh "$title" "$folder" 
               fi
